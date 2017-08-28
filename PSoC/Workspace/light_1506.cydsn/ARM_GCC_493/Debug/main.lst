@@ -1,0 +1,1058 @@
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global _printf_float
+  19              		.section	.rodata
+  20              		.align	2
+  21              	.LC1:
+  22 0000 42746E30 		.ascii	"Btn0 Btn1 Slider\000"
+  22      2042746E 
+  22      3120536C 
+  22      69646572 
+  22      00
+  23              		.global	__aeabi_ui2f
+  24              		.global	__aeabi_fdiv
+  25              		.global	__aeabi_fmul
+  26              		.global	__aeabi_f2uiz
+  27 0011 000000   		.align	2
+  28              	.LC2:
+  29 0014 4F6E2000 		.ascii	"On \000"
+  30              		.align	2
+  31              	.LC3:
+  32 0018 4F666600 		.ascii	"Off\000"
+  33              		.align	2
+  34              	.LC4:
+  35 001c 2D2D2D2D 		.ascii	"----\000"
+  35      00
+  36 0021 000000   		.align	2
+  37              	.LC5:
+  38 0024 20202020 		.ascii	"    \000"
+  38      00
+  39              		.thumb
+  40 0029 000000   		.align	2
+  41              	.LC0:
+  42 002c 7878780D 		.ascii	"xxx\015\012\000"
+  42      0A00
+  43 0032 0000     		.section	.text.main,"ax",%progbits
+  44              		.align	2
+  45              		.global	main
+  46              		.thumb
+  47              		.thumb_func
+  48              		.type	main, %function
+  49              	main:
+  50              	.LFB63:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 2
+
+
+  51              		.file 1 ".\\main.c"
+   1:.\main.c      **** /******************************************************************************
+   2:.\main.c      **** * File Name: Main.c
+   3:.\main.c      **** * Version 1.1
+   4:.\main.c      **** *
+   5:.\main.c      **** * Description:
+   6:.\main.c      **** * This file contains the main function for the CapSense test.
+   7:.\main.c      **** *
+   8:.\main.c      **** * Note:
+   9:.\main.c      **** *
+  10:.\main.c      **** * Code tested with:
+  11:.\main.c      **** * PSoC Creator: 3.0
+  12:.\main.c      **** * Device Tested With: CY8C5868AXI-LP035
+  13:.\main.c      **** * Compiler    : ARMGCC 4.4.1, ARM RVDS Generic , ARM MDK Generic
+  14:.\main.c      **** *
+  15:.\main.c      **** ********************************************************************************
+  16:.\main.c      **** * Copyright (2013), Cypress Semiconductor Corporation. All Rights Reserved.
+  17:.\main.c      **** ********************************************************************************
+  18:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation (Cypress)
+  19:.\main.c      **** * and is protected by and subject to worldwide patent protection (United
+  20:.\main.c      **** * States and foreign), United States copyright laws and international treaty
+  21:.\main.c      **** * provisions. Cypress hereby grants to licensee a personal, non-exclusive,
+  22:.\main.c      **** * non-transferable license to copy, use, modify, create derivative works of,
+  23:.\main.c      **** * and compile the Cypress Source Code and derivative works for the sole
+  24:.\main.c      **** * purpose of creating custom software in support of licensee product to be
+  25:.\main.c      **** * used only in conjunction with a Cypress integrated circuit as specified in
+  26:.\main.c      **** * the applicable agreement. Any reproduction, modification, translation,
+  27:.\main.c      **** * compilation, or representation of this software except as specified above 
+  28:.\main.c      **** * is prohibited without the express written permission of Cypress.
+  29:.\main.c      **** *
+  30:.\main.c      **** * Disclaimer: CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH 
+  31:.\main.c      **** * REGARD TO THIS MATERIAL, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+  32:.\main.c      **** * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  33:.\main.c      **** * Cypress reserves the right to make changes without further notice to the 
+  34:.\main.c      **** * materials described herein. Cypress does not assume any liability arising out 
+  35:.\main.c      **** * of the application or use of any product or circuit described herein. Cypress 
+  36:.\main.c      **** * does not authorize its products for use as critical components in life-support 
+  37:.\main.c      **** * systems where a malfunction or failure may reasonably be expected to result in 
+  38:.\main.c      **** * significant injury to the user. The inclusion of Cypress' product in a life-
+  39:.\main.c      **** * support systems application implies that the manufacturer assumes all risk of 
+  40:.\main.c      **** * such use and in doing so indemnifies Cypress against all charges. 
+  41:.\main.c      **** *
+  42:.\main.c      **** * Use of this Software may be limited by and subject to the applicable Cypress
+  43:.\main.c      **** * software license agreement. 
+  44:.\main.c      **** *******************************************************************************/
+  45:.\main.c      **** 
+  46:.\main.c      **** /******************************************************************************
+  47:.\main.c      **** *                           THEORY OF OPERATION
+  48:.\main.c      **** * This project demonstrates the capsense application using on board 5 segment 
+  49:.\main.c      **** * capsense slider and 2 capsense buttons. The button state is displayed on the LCD
+  50:.\main.c      **** * as on or off. Finger position on the slider is displayed as 0 - 100%. If no 
+  51:.\main.c      **** * finger is there the slider position is displayed as "----".
+  52:.\main.c      **** *
+  53:.\main.c      **** * Hardware connection on the Kit
+  54:.\main.c      **** * Slider - P5[0] - P5[4]
+  55:.\main.c      **** * Button1 - P5[5]
+  56:.\main.c      **** * Button2 - P5[6]
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 3
+
+
+  57:.\main.c      **** * LCD 2[0-6]
+  58:.\main.c      **** ******************************************************************************/ 
+  59:.\main.c      **** #include <device.h>
+  60:.\main.c      **** #include <project.h>
+  61:.\main.c      **** 
+  62:.\main.c      **** #include "stdio.h"
+  63:.\main.c      **** 
+  64:.\main.c      **** #if defined (__GNUC__)
+  65:.\main.c      ****     /* Add an explicit reference to the floating point printf library */
+  66:.\main.c      ****     /* to allow the usage of floating point conversion specifiers. */
+  67:.\main.c      ****     /* This is not linked in by default with the newlib-nano library. */
+  68:.\main.c      ****     asm (".global _printf_float");
+  69:.\main.c      **** #endif
+  70:.\main.c      **** 
+  71:.\main.c      **** /* Define constants for capsense button and slider */
+  72:.\main.c      **** #define ON           (1)
+  73:.\main.c      **** #define OFF          (0)
+  74:.\main.c      **** #define NO_FINGER    (0xFF)
+  75:.\main.c      **** 
+  76:.\main.c      **** int main()
+  77:.\main.c      **** {
+  52              		.loc 1 77 0
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 16
+  55              		@ frame_needed = 1, uses_anonymous_args = 0
+  56 0000 80B5     		push	{r7, lr}
+  57              		.cfi_def_cfa_offset 8
+  58              		.cfi_offset 7, -8
+  59              		.cfi_offset 14, -4
+  60 0002 84B0     		sub	sp, sp, #16
+  61              		.cfi_def_cfa_offset 24
+  62 0004 00AF     		add	r7, sp, #0
+  63              		.cfi_def_cfa_register 7
+  78:.\main.c      ****     uint8 buffer[5] = "xxx\r\n";
+  64              		.loc 1 78 0
+  65 0006 6C4A     		ldr	r2, .L10
+  66 0008 3B46     		mov	r3, r7
+  67 000a 92E80300 		ldmia	r2, {r0, r1}
+  68 000e 1860     		str	r0, [r3]
+  69 0010 0433     		adds	r3, r3, #4
+  70 0012 1970     		strb	r1, [r3]
+  79:.\main.c      ****     uint8 statusButton0 = OFF;
+  71              		.loc 1 79 0
+  72 0014 0023     		movs	r3, #0
+  73 0016 7B72     		strb	r3, [r7, #9]
+  80:.\main.c      ****     uint8 statusButton1 = OFF;
+  74              		.loc 1 80 0
+  75 0018 0023     		movs	r3, #0
+  76 001a 3B72     		strb	r3, [r7, #8]
+  81:.\main.c      ****     uint16 sliderPosition = NO_FINGER;
+  77              		.loc 1 81 0
+  78 001c FF23     		movs	r3, #255
+  79 001e FB80     		strh	r3, [r7, #6]	@ movhi
+  82:.\main.c      ****     uint16 lastPosition = NO_FINGER;
+  80              		.loc 1 82 0
+  81 0020 FF23     		movs	r3, #255
+  82 0022 FB81     		strh	r3, [r7, #14]	@ movhi
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 4
+
+
+  83:.\main.c      ****     
+  84:.\main.c      ****     uint16 lastFlux = 50;
+  83              		.loc 1 84 0
+  84 0024 3223     		movs	r3, #50
+  85 0026 BB81     		strh	r3, [r7, #12]	@ movhi
+  85:.\main.c      ****     uint16 count = 0;
+  86              		.loc 1 85 0
+  87 0028 0023     		movs	r3, #0
+  88 002a 7B81     		strh	r3, [r7, #10]	@ movhi
+  86:.\main.c      ****     
+  87:.\main.c      ****     CYGlobalIntEnable; 
+  89              		.loc 1 87 0
+  90              	@ 87 ".\main.c" 1
+  91 002c 62B6     		CPSIE   i
+  92              	@ 0 "" 2
+  88:.\main.c      ****     
+  89:.\main.c      ****     PWM_Start();
+  93              		.loc 1 89 0
+  94              		.thumb
+  95 002e FFF7FEFF 		bl	PWM_Start
+  90:.\main.c      ****     
+  91:.\main.c      ****     USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
+  96              		.loc 1 91 0
+  97 0032 0020     		movs	r0, #0
+  98 0034 0021     		movs	r1, #0
+  99 0036 FFF7FEFF 		bl	USBUART_1_Start
+  92:.\main.c      **** 
+  93:.\main.c      ****     LCD_Start();
+ 100              		.loc 1 93 0
+ 101 003a FFF7FEFF 		bl	LCD_Start
+  94:.\main.c      ****     LCD_Position(0,0);
+ 102              		.loc 1 94 0
+ 103 003e 0020     		movs	r0, #0
+ 104 0040 0021     		movs	r1, #0
+ 105 0042 FFF7FEFF 		bl	LCD_Position
+  95:.\main.c      ****     LCD_PrintString("Btn0 Btn1 Slider");
+ 106              		.loc 1 95 0
+ 107 0046 5D48     		ldr	r0, .L10+4
+ 108 0048 FFF7FEFF 		bl	LCD_PrintString
+  96:.\main.c      **** 
+  97:.\main.c      ****     /* Start capsense and initialize baselines and enable scan */
+  98:.\main.c      ****     CapSense_Start();
+ 109              		.loc 1 98 0
+ 110 004c FFF7FEFF 		bl	CapSense_Start
+  99:.\main.c      ****     CapSense_InitializeAllBaselines();
+ 111              		.loc 1 99 0
+ 112 0050 FFF7FEFF 		bl	CapSense_InitializeAllBaselines
+ 100:.\main.c      ****     
+ 101:.\main.c      ****     
+ 102:.\main.c      ****     /* Wait for Device to enumerate */
+ 103:.\main.c      ****     // while(!USBUART_1_GetConfiguration());
+ 104:.\main.c      **** 
+ 105:.\main.c      ****     /* Enumeration is done, enable OUT endpoint for receive data from Host */
+ 106:.\main.c      ****     USBUART_1_CDC_Init();
+ 113              		.loc 1 106 0
+ 114 0054 FFF7FEFF 		bl	USBUART_1_CDC_Init
+ 115              	.L9:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 5
+
+
+ 107:.\main.c      ****     
+ 108:.\main.c      **** 
+ 109:.\main.c      ****     while(1)
+ 110:.\main.c      ****     {
+ 111:.\main.c      ****         count++;
+ 116              		.loc 1 111 0
+ 117 0058 7B89     		ldrh	r3, [r7, #10]
+ 118 005a 0133     		adds	r3, r3, #1
+ 119 005c 7B81     		strh	r3, [r7, #10]	@ movhi
+ 112:.\main.c      ****         PWM_WriteCompare((uint8)((float)lastFlux / 100 * 255));
+ 120              		.loc 1 112 0
+ 121 005e BB89     		ldrh	r3, [r7, #12]
+ 122 0060 1846     		mov	r0, r3
+ 123 0062 FFF7FEFF 		bl	__aeabi_ui2f
+ 124 0066 0346     		mov	r3, r0
+ 125 0068 1846     		mov	r0, r3
+ 126 006a 5549     		ldr	r1, .L10+8
+ 127 006c FFF7FEFF 		bl	__aeabi_fdiv
+ 128 0070 0346     		mov	r3, r0
+ 129 0072 1846     		mov	r0, r3
+ 130 0074 5349     		ldr	r1, .L10+12
+ 131 0076 FFF7FEFF 		bl	__aeabi_fmul
+ 132 007a 0346     		mov	r3, r0
+ 133 007c 1846     		mov	r0, r3
+ 134 007e FFF7FEFF 		bl	__aeabi_f2uiz
+ 135 0082 0346     		mov	r3, r0
+ 136 0084 DBB2     		uxtb	r3, r3
+ 137 0086 1846     		mov	r0, r3
+ 138 0088 FFF7FEFF 		bl	PWM_WriteCompare
+ 113:.\main.c      ****         buffer[0] = '0' + (lastFlux / 100 % 10);
+ 139              		.loc 1 113 0
+ 140 008c BB89     		ldrh	r3, [r7, #12]
+ 141 008e 4E4A     		ldr	r2, .L10+16
+ 142 0090 A2FB0323 		umull	r2, r3, r2, r3
+ 143 0094 5B09     		lsrs	r3, r3, #5
+ 144 0096 9AB2     		uxth	r2, r3
+ 145 0098 4C4B     		ldr	r3, .L10+20
+ 146 009a A3FB0213 		umull	r1, r3, r3, r2
+ 147 009e D908     		lsrs	r1, r3, #3
+ 148 00a0 0B46     		mov	r3, r1
+ 149 00a2 9B00     		lsls	r3, r3, #2
+ 150 00a4 0B44     		add	r3, r3, r1
+ 151 00a6 5B00     		lsls	r3, r3, #1
+ 152 00a8 D31A     		subs	r3, r2, r3
+ 153 00aa 9BB2     		uxth	r3, r3
+ 154 00ac DBB2     		uxtb	r3, r3
+ 155 00ae 3033     		adds	r3, r3, #48
+ 156 00b0 DBB2     		uxtb	r3, r3
+ 157 00b2 3B70     		strb	r3, [r7]
+ 114:.\main.c      ****         buffer[1] = '0' + (lastFlux / 10 % 10);
+ 158              		.loc 1 114 0
+ 159 00b4 BB89     		ldrh	r3, [r7, #12]
+ 160 00b6 454A     		ldr	r2, .L10+20
+ 161 00b8 A2FB0323 		umull	r2, r3, r2, r3
+ 162 00bc DB08     		lsrs	r3, r3, #3
+ 163 00be 9AB2     		uxth	r2, r3
+ 164 00c0 424B     		ldr	r3, .L10+20
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 6
+
+
+ 165 00c2 A3FB0213 		umull	r1, r3, r3, r2
+ 166 00c6 D908     		lsrs	r1, r3, #3
+ 167 00c8 0B46     		mov	r3, r1
+ 168 00ca 9B00     		lsls	r3, r3, #2
+ 169 00cc 0B44     		add	r3, r3, r1
+ 170 00ce 5B00     		lsls	r3, r3, #1
+ 171 00d0 D31A     		subs	r3, r2, r3
+ 172 00d2 9BB2     		uxth	r3, r3
+ 173 00d4 DBB2     		uxtb	r3, r3
+ 174 00d6 3033     		adds	r3, r3, #48
+ 175 00d8 DBB2     		uxtb	r3, r3
+ 176 00da 7B70     		strb	r3, [r7, #1]
+ 115:.\main.c      ****         buffer[2] = '0' + (lastFlux / 1 % 10);
+ 177              		.loc 1 115 0
+ 178 00dc BA89     		ldrh	r2, [r7, #12]
+ 179 00de 3B4B     		ldr	r3, .L10+20
+ 180 00e0 A3FB0213 		umull	r1, r3, r3, r2
+ 181 00e4 D908     		lsrs	r1, r3, #3
+ 182 00e6 0B46     		mov	r3, r1
+ 183 00e8 9B00     		lsls	r3, r3, #2
+ 184 00ea 0B44     		add	r3, r3, r1
+ 185 00ec 5B00     		lsls	r3, r3, #1
+ 186 00ee D31A     		subs	r3, r2, r3
+ 187 00f0 9BB2     		uxth	r3, r3
+ 188 00f2 DBB2     		uxtb	r3, r3
+ 189 00f4 3033     		adds	r3, r3, #48
+ 190 00f6 DBB2     		uxtb	r3, r3
+ 191 00f8 BB70     		strb	r3, [r7, #2]
+ 116:.\main.c      ****         
+ 117:.\main.c      ****         // while(USBUART_1_CDCIsReady() == 0u);    /* Wait till component is ready to send more dat
+ 118:.\main.c      ****         if (count % 100 == 0)
+ 119:.\main.c      ****         {
+ 120:.\main.c      ****             // USBUART_1_PutData(buffer, 5);       /* Send data back to PC */
+ 121:.\main.c      ****         }
+ 122:.\main.c      ****         
+ 123:.\main.c      ****         
+ 124:.\main.c      ****         
+ 125:.\main.c      ****         /* Update baseline for all the sensors */
+ 126:.\main.c      ****         CapSense_UpdateEnabledBaselines();
+ 192              		.loc 1 126 0
+ 193 00fa FFF7FEFF 		bl	CapSense_UpdateEnabledBaselines
+ 127:.\main.c      **** 		
+ 128:.\main.c      **** 	    CapSense_ScanEnabledWidgets();
+ 194              		.loc 1 128 0
+ 195 00fe FFF7FEFF 		bl	CapSense_ScanEnabledWidgets
+ 129:.\main.c      **** 		/* If scanning is completed update the baseline count and check if sensor is active */  
+ 130:.\main.c      ****         while(CapSense_IsBusy() != 0)
+ 196              		.loc 1 130 0
+ 197 0102 52E0     		b	.L2
+ 198              	.L8:
+ 131:.\main.c      ****         {
+ 132:.\main.c      **** 
+ 133:.\main.c      ****             /* Test if button widget is active */
+ 134:.\main.c      ****             statusButton0 = CapSense_CheckIsWidgetActive(CapSense_BUTTON0__BTN);
+ 199              		.loc 1 134 0
+ 200 0104 0120     		movs	r0, #1
+ 201 0106 FFF7FEFF 		bl	CapSense_CheckIsWidgetActive
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 7
+
+
+ 202 010a 0346     		mov	r3, r0
+ 203 010c 7B72     		strb	r3, [r7, #9]
+ 135:.\main.c      ****             statusButton1 = CapSense_CheckIsWidgetActive(CapSense_BUTTON1__BTN);
+ 204              		.loc 1 135 0
+ 205 010e 0220     		movs	r0, #2
+ 206 0110 FFF7FEFF 		bl	CapSense_CheckIsWidgetActive
+ 207 0114 0346     		mov	r3, r0
+ 208 0116 3B72     		strb	r3, [r7, #8]
+ 136:.\main.c      ****             sliderPosition =(uint8)CapSense_GetCentroidPos(CapSense_LINEARSLIDER0__LS);
+ 209              		.loc 1 136 0
+ 210 0118 0020     		movs	r0, #0
+ 211 011a FFF7FEFF 		bl	CapSense_GetCentroidPos
+ 212 011e 0346     		mov	r3, r0
+ 213 0120 DBB2     		uxtb	r3, r3
+ 214 0122 FB80     		strh	r3, [r7, #6]	@ movhi
+ 137:.\main.c      **** 
+ 138:.\main.c      ****             /* Display button 1 status on LCD */
+ 139:.\main.c      ****             LCD_Position(1,0);
+ 215              		.loc 1 139 0
+ 216 0124 0120     		movs	r0, #1
+ 217 0126 0021     		movs	r1, #0
+ 218 0128 FFF7FEFF 		bl	LCD_Position
+ 140:.\main.c      ****             if( statusButton0 == ON )
+ 219              		.loc 1 140 0
+ 220 012c 7B7A     		ldrb	r3, [r7, #9]	@ zero_extendqisi2
+ 221 012e 012B     		cmp	r3, #1
+ 222 0130 03D1     		bne	.L3
+ 141:.\main.c      ****             {
+ 142:.\main.c      ****                 LCD_PrintString("On ");
+ 223              		.loc 1 142 0
+ 224 0132 2748     		ldr	r0, .L10+24
+ 225 0134 FFF7FEFF 		bl	LCD_PrintString
+ 226 0138 02E0     		b	.L4
+ 227              	.L3:
+ 143:.\main.c      ****             }
+ 144:.\main.c      ****             else
+ 145:.\main.c      ****             {
+ 146:.\main.c      ****                 LCD_PrintString("Off");
+ 228              		.loc 1 146 0
+ 229 013a 2648     		ldr	r0, .L10+28
+ 230 013c FFF7FEFF 		bl	LCD_PrintString
+ 231              	.L4:
+ 147:.\main.c      ****             }
+ 148:.\main.c      **** 
+ 149:.\main.c      ****             /* Display button 1 status on LCD */
+ 150:.\main.c      ****             LCD_Position(1,5);
+ 232              		.loc 1 150 0
+ 233 0140 0120     		movs	r0, #1
+ 234 0142 0521     		movs	r1, #5
+ 235 0144 FFF7FEFF 		bl	LCD_Position
+ 151:.\main.c      ****             if( statusButton1 == ON )
+ 236              		.loc 1 151 0
+ 237 0148 3B7A     		ldrb	r3, [r7, #8]	@ zero_extendqisi2
+ 238 014a 012B     		cmp	r3, #1
+ 239 014c 03D1     		bne	.L5
+ 152:.\main.c      ****             {
+ 153:.\main.c      ****                 LCD_PrintString("On ");
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 8
+
+
+ 240              		.loc 1 153 0
+ 241 014e 2048     		ldr	r0, .L10+24
+ 242 0150 FFF7FEFF 		bl	LCD_PrintString
+ 243 0154 02E0     		b	.L6
+ 244              	.L5:
+ 154:.\main.c      ****             }
+ 155:.\main.c      ****             else
+ 156:.\main.c      ****             {
+ 157:.\main.c      ****                 LCD_PrintString("Off");
+ 245              		.loc 1 157 0
+ 246 0156 1F48     		ldr	r0, .L10+28
+ 247 0158 FFF7FEFF 		bl	LCD_PrintString
+ 248              	.L6:
+ 158:.\main.c      ****             }
+ 159:.\main.c      **** 
+ 160:.\main.c      **** 		    LCD_Position(1,10);
+ 249              		.loc 1 160 0
+ 250 015c 0120     		movs	r0, #1
+ 251 015e 0A21     		movs	r1, #10
+ 252 0160 FFF7FEFF 		bl	LCD_Position
+ 161:.\main.c      ****             
+ 162:.\main.c      **** 		    if(sliderPosition == NO_FINGER)
+ 253              		.loc 1 162 0
+ 254 0164 FB88     		ldrh	r3, [r7, #6]
+ 255 0166 FF2B     		cmp	r3, #255
+ 256 0168 05D1     		bne	.L7
+ 163:.\main.c      ****             {
+ 164:.\main.c      ****                 LCD_PrintString("----");
+ 257              		.loc 1 164 0
+ 258 016a 1B48     		ldr	r0, .L10+32
+ 259 016c FFF7FEFF 		bl	LCD_PrintString
+ 165:.\main.c      **** 				lastPosition = NO_FINGER;
+ 260              		.loc 1 165 0
+ 261 0170 FF23     		movs	r3, #255
+ 262 0172 FB81     		strh	r3, [r7, #14]	@ movhi
+ 263 0174 19E0     		b	.L2
+ 264              	.L7:
+ 166:.\main.c      ****             }
+ 167:.\main.c      ****             
+ 168:.\main.c      ****             /* Finger detected on the slider */
+ 169:.\main.c      ****             else
+ 170:.\main.c      ****             {
+ 171:.\main.c      ****                 /* If finger position on the slider is changed then update the LCD */
+ 172:.\main.c      ****                 if(sliderPosition != lastPosition)
+ 265              		.loc 1 172 0
+ 266 0176 FA88     		ldrh	r2, [r7, #6]
+ 267 0178 FB89     		ldrh	r3, [r7, #14]
+ 268 017a 9A42     		cmp	r2, r3
+ 269 017c 15D0     		beq	.L2
+ 173:.\main.c      ****                 {
+ 174:.\main.c      ****                     LCD_Position(1,10);
+ 270              		.loc 1 174 0
+ 271 017e 0120     		movs	r0, #1
+ 272 0180 0A21     		movs	r1, #10
+ 273 0182 FFF7FEFF 		bl	LCD_Position
+ 175:.\main.c      ****                     LCD_PrintString("    ");
+ 274              		.loc 1 175 0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 9
+
+
+ 275 0186 1548     		ldr	r0, .L10+36
+ 276 0188 FFF7FEFF 		bl	LCD_PrintString
+ 176:.\main.c      ****                     LCD_Position(1,10);
+ 277              		.loc 1 176 0
+ 278 018c 0120     		movs	r0, #1
+ 279 018e 0A21     		movs	r1, #10
+ 280 0190 FFF7FEFF 		bl	LCD_Position
+ 177:.\main.c      ****                     LCD_PrintNumber(sliderPosition);
+ 281              		.loc 1 177 0
+ 282 0194 FB88     		ldrh	r3, [r7, #6]
+ 283 0196 1846     		mov	r0, r3
+ 284 0198 FFF7FEFF 		bl	LCD_PrintNumber
+ 178:.\main.c      ****                     LCD_PutChar('%');
+ 285              		.loc 1 178 0
+ 286 019c 2520     		movs	r0, #37
+ 287 019e FFF7FEFF 		bl	LCD_PutChar
+ 179:.\main.c      ****                     lastPosition = sliderPosition; 
+ 288              		.loc 1 179 0
+ 289 01a2 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 290 01a4 FB81     		strh	r3, [r7, #14]	@ movhi
+ 180:.\main.c      ****                     lastFlux = sliderPosition;
+ 291              		.loc 1 180 0
+ 292 01a6 FB88     		ldrh	r3, [r7, #6]	@ movhi
+ 293 01a8 BB81     		strh	r3, [r7, #12]	@ movhi
+ 294              	.L2:
+ 130:.\main.c      ****         {
+ 295              		.loc 1 130 0
+ 296 01aa FFF7FEFF 		bl	CapSense_IsBusy
+ 297 01ae 0346     		mov	r3, r0
+ 298 01b0 002B     		cmp	r3, #0
+ 299 01b2 A7D1     		bne	.L8
+ 181:.\main.c      ****                 }
+ 182:.\main.c      ****             }
+ 183:.\main.c      ****         }
+ 184:.\main.c      ****     }    
+ 300              		.loc 1 184 0
+ 301 01b4 50E7     		b	.L9
+ 302              	.L11:
+ 303 01b6 00BF     		.align	2
+ 304              	.L10:
+ 305 01b8 2C000000 		.word	.LC0
+ 306 01bc 00000000 		.word	.LC1
+ 307 01c0 0000C842 		.word	1120403456
+ 308 01c4 00007F43 		.word	1132396544
+ 309 01c8 1F85EB51 		.word	1374389535
+ 310 01cc CDCCCCCC 		.word	-858993459
+ 311 01d0 14000000 		.word	.LC2
+ 312 01d4 18000000 		.word	.LC3
+ 313 01d8 1C000000 		.word	.LC4
+ 314 01dc 24000000 		.word	.LC5
+ 315              		.cfi_endproc
+ 316              	.LFE63:
+ 317              		.size	main, .-main
+ 318              		.text
+ 319              	.Letext0:
+ 320              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 321              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 10
+
+
+ 322              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 323              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 324              		.section	.debug_info,"",%progbits
+ 325              	.Ldebug_info0:
+ 326 0000 4F010000 		.4byte	0x14f
+ 327 0004 0400     		.2byte	0x4
+ 328 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 329 000a 04       		.byte	0x4
+ 330 000b 01       		.uleb128 0x1
+ 331 000c F6000000 		.4byte	.LASF24
+ 332 0010 01       		.byte	0x1
+ 333 0011 B4000000 		.4byte	.LASF25
+ 334 0015 33000000 		.4byte	.LASF26
+ 335 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 336 001d 00000000 		.4byte	0
+ 337 0021 00000000 		.4byte	.Ldebug_line0
+ 338 0025 02       		.uleb128 0x2
+ 339 0026 01       		.byte	0x1
+ 340 0027 06       		.byte	0x6
+ 341 0028 9E010000 		.4byte	.LASF0
+ 342 002c 02       		.uleb128 0x2
+ 343 002d 01       		.byte	0x1
+ 344 002e 08       		.byte	0x8
+ 345 002f D4000000 		.4byte	.LASF1
+ 346 0033 02       		.uleb128 0x2
+ 347 0034 02       		.byte	0x2
+ 348 0035 05       		.byte	0x5
+ 349 0036 BA010000 		.4byte	.LASF2
+ 350 003a 02       		.uleb128 0x2
+ 351 003b 02       		.byte	0x2
+ 352 003c 07       		.byte	0x7
+ 353 003d 0E000000 		.4byte	.LASF3
+ 354 0041 03       		.uleb128 0x3
+ 355 0042 AA010000 		.4byte	.LASF9
+ 356 0046 02       		.byte	0x2
+ 357 0047 3F       		.byte	0x3f
+ 358 0048 4C000000 		.4byte	0x4c
+ 359 004c 02       		.uleb128 0x2
+ 360 004d 04       		.byte	0x4
+ 361 004e 05       		.byte	0x5
+ 362 004f ED000000 		.4byte	.LASF4
+ 363 0053 02       		.uleb128 0x2
+ 364 0054 04       		.byte	0x4
+ 365 0055 07       		.byte	0x7
+ 366 0056 A2000000 		.4byte	.LASF5
+ 367 005a 02       		.uleb128 0x2
+ 368 005b 08       		.byte	0x8
+ 369 005c 05       		.byte	0x5
+ 370 005d 00000000 		.4byte	.LASF6
+ 371 0061 02       		.uleb128 0x2
+ 372 0062 08       		.byte	0x8
+ 373 0063 07       		.byte	0x7
+ 374 0064 BD000000 		.4byte	.LASF7
+ 375 0068 04       		.uleb128 0x4
+ 376 0069 04       		.byte	0x4
+ 377 006a 05       		.byte	0x5
+ 378 006b 696E7400 		.ascii	"int\000"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 11
+
+
+ 379 006f 02       		.uleb128 0x2
+ 380 0070 04       		.byte	0x4
+ 381 0071 07       		.byte	0x7
+ 382 0072 21000000 		.4byte	.LASF8
+ 383 0076 03       		.uleb128 0x3
+ 384 0077 CB010000 		.4byte	.LASF10
+ 385 007b 03       		.byte	0x3
+ 386 007c 2C       		.byte	0x2c
+ 387 007d 41000000 		.4byte	0x41
+ 388 0081 05       		.uleb128 0x5
+ 389 0082 8B010000 		.4byte	.LASF11
+ 390 0086 04       		.byte	0x4
+ 391 0087 3801     		.2byte	0x138
+ 392 0089 2C000000 		.4byte	0x2c
+ 393 008d 05       		.uleb128 0x5
+ 394 008e C4010000 		.4byte	.LASF12
+ 395 0092 04       		.byte	0x4
+ 396 0093 3901     		.2byte	0x139
+ 397 0095 3A000000 		.4byte	0x3a
+ 398 0099 02       		.uleb128 0x2
+ 399 009a 04       		.byte	0x4
+ 400 009b 04       		.byte	0x4
+ 401 009c B4010000 		.4byte	.LASF13
+ 402 00a0 02       		.uleb128 0x2
+ 403 00a1 08       		.byte	0x8
+ 404 00a2 04       		.byte	0x4
+ 405 00a3 84010000 		.4byte	.LASF14
+ 406 00a7 02       		.uleb128 0x2
+ 407 00a8 01       		.byte	0x1
+ 408 00a9 08       		.byte	0x8
+ 409 00aa E2000000 		.4byte	.LASF15
+ 410 00ae 02       		.uleb128 0x2
+ 411 00af 04       		.byte	0x4
+ 412 00b0 07       		.byte	0x7
+ 413 00b1 E7010000 		.4byte	.LASF16
+ 414 00b5 06       		.uleb128 0x6
+ 415 00b6 2E000000 		.4byte	.LASF27
+ 416 00ba 01       		.byte	0x1
+ 417 00bb 4C       		.byte	0x4c
+ 418 00bc 68000000 		.4byte	0x68
+ 419 00c0 00000000 		.4byte	.LFB63
+ 420 00c4 E0010000 		.4byte	.LFE63-.LFB63
+ 421 00c8 01       		.uleb128 0x1
+ 422 00c9 9C       		.byte	0x9c
+ 423 00ca 31010000 		.4byte	0x131
+ 424 00ce 07       		.uleb128 0x7
+ 425 00cf D3010000 		.4byte	.LASF17
+ 426 00d3 01       		.byte	0x1
+ 427 00d4 4E       		.byte	0x4e
+ 428 00d5 31010000 		.4byte	0x131
+ 429 00d9 02       		.uleb128 0x2
+ 430 00da 91       		.byte	0x91
+ 431 00db 68       		.sleb128 -24
+ 432 00dc 07       		.uleb128 0x7
+ 433 00dd 6E000000 		.4byte	.LASF18
+ 434 00e1 01       		.byte	0x1
+ 435 00e2 4F       		.byte	0x4f
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 12
+
+
+ 436 00e3 81000000 		.4byte	0x81
+ 437 00e7 02       		.uleb128 0x2
+ 438 00e8 91       		.byte	0x91
+ 439 00e9 71       		.sleb128 -15
+ 440 00ea 07       		.uleb128 0x7
+ 441 00eb 7C000000 		.4byte	.LASF19
+ 442 00ef 01       		.byte	0x1
+ 443 00f0 50       		.byte	0x50
+ 444 00f1 81000000 		.4byte	0x81
+ 445 00f5 02       		.uleb128 0x2
+ 446 00f6 91       		.byte	0x91
+ 447 00f7 70       		.sleb128 -16
+ 448 00f8 07       		.uleb128 0x7
+ 449 00f9 8A000000 		.4byte	.LASF20
+ 450 00fd 01       		.byte	0x1
+ 451 00fe 51       		.byte	0x51
+ 452 00ff 8D000000 		.4byte	0x8d
+ 453 0103 02       		.uleb128 0x2
+ 454 0104 91       		.byte	0x91
+ 455 0105 6E       		.sleb128 -18
+ 456 0106 07       		.uleb128 0x7
+ 457 0107 DA010000 		.4byte	.LASF21
+ 458 010b 01       		.byte	0x1
+ 459 010c 52       		.byte	0x52
+ 460 010d 8D000000 		.4byte	0x8d
+ 461 0111 02       		.uleb128 0x2
+ 462 0112 91       		.byte	0x91
+ 463 0113 76       		.sleb128 -10
+ 464 0114 07       		.uleb128 0x7
+ 465 0115 99000000 		.4byte	.LASF22
+ 466 0119 01       		.byte	0x1
+ 467 011a 54       		.byte	0x54
+ 468 011b 8D000000 		.4byte	0x8d
+ 469 011f 02       		.uleb128 0x2
+ 470 0120 91       		.byte	0x91
+ 471 0121 74       		.sleb128 -12
+ 472 0122 07       		.uleb128 0x7
+ 473 0123 E7000000 		.4byte	.LASF23
+ 474 0127 01       		.byte	0x1
+ 475 0128 55       		.byte	0x55
+ 476 0129 8D000000 		.4byte	0x8d
+ 477 012d 02       		.uleb128 0x2
+ 478 012e 91       		.byte	0x91
+ 479 012f 72       		.sleb128 -14
+ 480 0130 00       		.byte	0
+ 481 0131 08       		.uleb128 0x8
+ 482 0132 81000000 		.4byte	0x81
+ 483 0136 41010000 		.4byte	0x141
+ 484 013a 09       		.uleb128 0x9
+ 485 013b AE000000 		.4byte	0xae
+ 486 013f 04       		.byte	0x4
+ 487 0140 00       		.byte	0
+ 488 0141 0A       		.uleb128 0xa
+ 489 0142 91010000 		.4byte	.LASF28
+ 490 0146 05       		.byte	0x5
+ 491 0147 5506     		.2byte	0x655
+ 492 0149 4D010000 		.4byte	0x14d
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 13
+
+
+ 493 014d 0B       		.uleb128 0xb
+ 494 014e 76000000 		.4byte	0x76
+ 495 0152 00       		.byte	0
+ 496              		.section	.debug_abbrev,"",%progbits
+ 497              	.Ldebug_abbrev0:
+ 498 0000 01       		.uleb128 0x1
+ 499 0001 11       		.uleb128 0x11
+ 500 0002 01       		.byte	0x1
+ 501 0003 25       		.uleb128 0x25
+ 502 0004 0E       		.uleb128 0xe
+ 503 0005 13       		.uleb128 0x13
+ 504 0006 0B       		.uleb128 0xb
+ 505 0007 03       		.uleb128 0x3
+ 506 0008 0E       		.uleb128 0xe
+ 507 0009 1B       		.uleb128 0x1b
+ 508 000a 0E       		.uleb128 0xe
+ 509 000b 55       		.uleb128 0x55
+ 510 000c 17       		.uleb128 0x17
+ 511 000d 11       		.uleb128 0x11
+ 512 000e 01       		.uleb128 0x1
+ 513 000f 10       		.uleb128 0x10
+ 514 0010 17       		.uleb128 0x17
+ 515 0011 00       		.byte	0
+ 516 0012 00       		.byte	0
+ 517 0013 02       		.uleb128 0x2
+ 518 0014 24       		.uleb128 0x24
+ 519 0015 00       		.byte	0
+ 520 0016 0B       		.uleb128 0xb
+ 521 0017 0B       		.uleb128 0xb
+ 522 0018 3E       		.uleb128 0x3e
+ 523 0019 0B       		.uleb128 0xb
+ 524 001a 03       		.uleb128 0x3
+ 525 001b 0E       		.uleb128 0xe
+ 526 001c 00       		.byte	0
+ 527 001d 00       		.byte	0
+ 528 001e 03       		.uleb128 0x3
+ 529 001f 16       		.uleb128 0x16
+ 530 0020 00       		.byte	0
+ 531 0021 03       		.uleb128 0x3
+ 532 0022 0E       		.uleb128 0xe
+ 533 0023 3A       		.uleb128 0x3a
+ 534 0024 0B       		.uleb128 0xb
+ 535 0025 3B       		.uleb128 0x3b
+ 536 0026 0B       		.uleb128 0xb
+ 537 0027 49       		.uleb128 0x49
+ 538 0028 13       		.uleb128 0x13
+ 539 0029 00       		.byte	0
+ 540 002a 00       		.byte	0
+ 541 002b 04       		.uleb128 0x4
+ 542 002c 24       		.uleb128 0x24
+ 543 002d 00       		.byte	0
+ 544 002e 0B       		.uleb128 0xb
+ 545 002f 0B       		.uleb128 0xb
+ 546 0030 3E       		.uleb128 0x3e
+ 547 0031 0B       		.uleb128 0xb
+ 548 0032 03       		.uleb128 0x3
+ 549 0033 08       		.uleb128 0x8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 14
+
+
+ 550 0034 00       		.byte	0
+ 551 0035 00       		.byte	0
+ 552 0036 05       		.uleb128 0x5
+ 553 0037 16       		.uleb128 0x16
+ 554 0038 00       		.byte	0
+ 555 0039 03       		.uleb128 0x3
+ 556 003a 0E       		.uleb128 0xe
+ 557 003b 3A       		.uleb128 0x3a
+ 558 003c 0B       		.uleb128 0xb
+ 559 003d 3B       		.uleb128 0x3b
+ 560 003e 05       		.uleb128 0x5
+ 561 003f 49       		.uleb128 0x49
+ 562 0040 13       		.uleb128 0x13
+ 563 0041 00       		.byte	0
+ 564 0042 00       		.byte	0
+ 565 0043 06       		.uleb128 0x6
+ 566 0044 2E       		.uleb128 0x2e
+ 567 0045 01       		.byte	0x1
+ 568 0046 3F       		.uleb128 0x3f
+ 569 0047 19       		.uleb128 0x19
+ 570 0048 03       		.uleb128 0x3
+ 571 0049 0E       		.uleb128 0xe
+ 572 004a 3A       		.uleb128 0x3a
+ 573 004b 0B       		.uleb128 0xb
+ 574 004c 3B       		.uleb128 0x3b
+ 575 004d 0B       		.uleb128 0xb
+ 576 004e 49       		.uleb128 0x49
+ 577 004f 13       		.uleb128 0x13
+ 578 0050 11       		.uleb128 0x11
+ 579 0051 01       		.uleb128 0x1
+ 580 0052 12       		.uleb128 0x12
+ 581 0053 06       		.uleb128 0x6
+ 582 0054 40       		.uleb128 0x40
+ 583 0055 18       		.uleb128 0x18
+ 584 0056 9642     		.uleb128 0x2116
+ 585 0058 19       		.uleb128 0x19
+ 586 0059 01       		.uleb128 0x1
+ 587 005a 13       		.uleb128 0x13
+ 588 005b 00       		.byte	0
+ 589 005c 00       		.byte	0
+ 590 005d 07       		.uleb128 0x7
+ 591 005e 34       		.uleb128 0x34
+ 592 005f 00       		.byte	0
+ 593 0060 03       		.uleb128 0x3
+ 594 0061 0E       		.uleb128 0xe
+ 595 0062 3A       		.uleb128 0x3a
+ 596 0063 0B       		.uleb128 0xb
+ 597 0064 3B       		.uleb128 0x3b
+ 598 0065 0B       		.uleb128 0xb
+ 599 0066 49       		.uleb128 0x49
+ 600 0067 13       		.uleb128 0x13
+ 601 0068 02       		.uleb128 0x2
+ 602 0069 18       		.uleb128 0x18
+ 603 006a 00       		.byte	0
+ 604 006b 00       		.byte	0
+ 605 006c 08       		.uleb128 0x8
+ 606 006d 01       		.uleb128 0x1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 15
+
+
+ 607 006e 01       		.byte	0x1
+ 608 006f 49       		.uleb128 0x49
+ 609 0070 13       		.uleb128 0x13
+ 610 0071 01       		.uleb128 0x1
+ 611 0072 13       		.uleb128 0x13
+ 612 0073 00       		.byte	0
+ 613 0074 00       		.byte	0
+ 614 0075 09       		.uleb128 0x9
+ 615 0076 21       		.uleb128 0x21
+ 616 0077 00       		.byte	0
+ 617 0078 49       		.uleb128 0x49
+ 618 0079 13       		.uleb128 0x13
+ 619 007a 2F       		.uleb128 0x2f
+ 620 007b 0B       		.uleb128 0xb
+ 621 007c 00       		.byte	0
+ 622 007d 00       		.byte	0
+ 623 007e 0A       		.uleb128 0xa
+ 624 007f 34       		.uleb128 0x34
+ 625 0080 00       		.byte	0
+ 626 0081 03       		.uleb128 0x3
+ 627 0082 0E       		.uleb128 0xe
+ 628 0083 3A       		.uleb128 0x3a
+ 629 0084 0B       		.uleb128 0xb
+ 630 0085 3B       		.uleb128 0x3b
+ 631 0086 05       		.uleb128 0x5
+ 632 0087 49       		.uleb128 0x49
+ 633 0088 13       		.uleb128 0x13
+ 634 0089 3F       		.uleb128 0x3f
+ 635 008a 19       		.uleb128 0x19
+ 636 008b 3C       		.uleb128 0x3c
+ 637 008c 19       		.uleb128 0x19
+ 638 008d 00       		.byte	0
+ 639 008e 00       		.byte	0
+ 640 008f 0B       		.uleb128 0xb
+ 641 0090 35       		.uleb128 0x35
+ 642 0091 00       		.byte	0
+ 643 0092 49       		.uleb128 0x49
+ 644 0093 13       		.uleb128 0x13
+ 645 0094 00       		.byte	0
+ 646 0095 00       		.byte	0
+ 647 0096 00       		.byte	0
+ 648              		.section	.debug_aranges,"",%progbits
+ 649 0000 1C000000 		.4byte	0x1c
+ 650 0004 0200     		.2byte	0x2
+ 651 0006 00000000 		.4byte	.Ldebug_info0
+ 652 000a 04       		.byte	0x4
+ 653 000b 00       		.byte	0
+ 654 000c 0000     		.2byte	0
+ 655 000e 0000     		.2byte	0
+ 656 0010 00000000 		.4byte	.LFB63
+ 657 0014 E0010000 		.4byte	.LFE63-.LFB63
+ 658 0018 00000000 		.4byte	0
+ 659 001c 00000000 		.4byte	0
+ 660              		.section	.debug_ranges,"",%progbits
+ 661              	.Ldebug_ranges0:
+ 662 0000 00000000 		.4byte	.LFB63
+ 663 0004 E0010000 		.4byte	.LFE63
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 16
+
+
+ 664 0008 00000000 		.4byte	0
+ 665 000c 00000000 		.4byte	0
+ 666              		.section	.debug_line,"",%progbits
+ 667              	.Ldebug_line0:
+ 668 0000 99010000 		.section	.debug_str,"MS",%progbits,1
+ 668      02004901 
+ 668      00000201 
+ 668      FB0E0D00 
+ 668      01010101 
+ 669              	.LASF6:
+ 670 0000 6C6F6E67 		.ascii	"long long int\000"
+ 670      206C6F6E 
+ 670      6720696E 
+ 670      7400
+ 671              	.LASF3:
+ 672 000e 73686F72 		.ascii	"short unsigned int\000"
+ 672      7420756E 
+ 672      7369676E 
+ 672      65642069 
+ 672      6E7400
+ 673              	.LASF8:
+ 674 0021 756E7369 		.ascii	"unsigned int\000"
+ 674      676E6564 
+ 674      20696E74 
+ 674      00
+ 675              	.LASF27:
+ 676 002e 6D61696E 		.ascii	"main\000"
+ 676      00
+ 677              	.LASF26:
+ 678 0033 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\PSoC\\Workspace\\lig"
+ 678      726F6A65 
+ 678      6374735C 
+ 678      4553445C 
+ 678      7461736B 
+ 679 0060 68745F31 		.ascii	"ht_1506.cydsn\000"
+ 679      3530362E 
+ 679      63796473 
+ 679      6E00
+ 680              	.LASF18:
+ 681 006e 73746174 		.ascii	"statusButton0\000"
+ 681      75734275 
+ 681      74746F6E 
+ 681      3000
+ 682              	.LASF19:
+ 683 007c 73746174 		.ascii	"statusButton1\000"
+ 683      75734275 
+ 683      74746F6E 
+ 683      3100
+ 684              	.LASF20:
+ 685 008a 736C6964 		.ascii	"sliderPosition\000"
+ 685      6572506F 
+ 685      73697469 
+ 685      6F6E00
+ 686              	.LASF22:
+ 687 0099 6C617374 		.ascii	"lastFlux\000"
+ 687      466C7578 
+ 687      00
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 17
+
+
+ 688              	.LASF5:
+ 689 00a2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 689      20756E73 
+ 689      69676E65 
+ 689      6420696E 
+ 689      7400
+ 690              	.LASF25:
+ 691 00b4 2E5C6D61 		.ascii	".\\main.c\000"
+ 691      696E2E63 
+ 691      00
+ 692              	.LASF7:
+ 693 00bd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 693      206C6F6E 
+ 693      6720756E 
+ 693      7369676E 
+ 693      65642069 
+ 694              	.LASF1:
+ 695 00d4 756E7369 		.ascii	"unsigned char\000"
+ 695      676E6564 
+ 695      20636861 
+ 695      7200
+ 696              	.LASF15:
+ 697 00e2 63686172 		.ascii	"char\000"
+ 697      00
+ 698              	.LASF23:
+ 699 00e7 636F756E 		.ascii	"count\000"
+ 699      7400
+ 700              	.LASF4:
+ 701 00ed 6C6F6E67 		.ascii	"long int\000"
+ 701      20696E74 
+ 701      00
+ 702              	.LASF24:
+ 703 00f6 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 703      4320342E 
+ 703      392E3320 
+ 703      32303135 
+ 703      30333033 
+ 704 0129 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 704      20726576 
+ 704      6973696F 
+ 704      6E203232 
+ 704      31323230 
+ 705 015c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 705      66756E63 
+ 705      74696F6E 
+ 705      2D736563 
+ 705      74696F6E 
+ 706              	.LASF14:
+ 707 0184 646F7562 		.ascii	"double\000"
+ 707      6C6500
+ 708              	.LASF11:
+ 709 018b 75696E74 		.ascii	"uint8\000"
+ 709      3800
+ 710              	.LASF28:
+ 711 0191 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 711      52784275 
+ 711      66666572 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccMQ4oj7.s 			page 18
+
+
+ 711      00
+ 712              	.LASF0:
+ 713 019e 7369676E 		.ascii	"signed char\000"
+ 713      65642063 
+ 713      68617200 
+ 714              	.LASF9:
+ 715 01aa 5F5F696E 		.ascii	"__int32_t\000"
+ 715      7433325F 
+ 715      7400
+ 716              	.LASF13:
+ 717 01b4 666C6F61 		.ascii	"float\000"
+ 717      7400
+ 718              	.LASF2:
+ 719 01ba 73686F72 		.ascii	"short int\000"
+ 719      7420696E 
+ 719      7400
+ 720              	.LASF12:
+ 721 01c4 75696E74 		.ascii	"uint16\000"
+ 721      313600
+ 722              	.LASF10:
+ 723 01cb 696E7433 		.ascii	"int32_t\000"
+ 723      325F7400 
+ 724              	.LASF17:
+ 725 01d3 62756666 		.ascii	"buffer\000"
+ 725      657200
+ 726              	.LASF21:
+ 727 01da 6C617374 		.ascii	"lastPosition\000"
+ 727      506F7369 
+ 727      74696F6E 
+ 727      00
+ 728              	.LASF16:
+ 729 01e7 73697A65 		.ascii	"sizetype\000"
+ 729      74797065 
+ 729      00
+ 730              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

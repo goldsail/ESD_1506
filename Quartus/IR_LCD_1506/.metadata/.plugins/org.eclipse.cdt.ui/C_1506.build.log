@@ -1,0 +1,9 @@
+00:41:23 **** Build of configuration Nios II for project C_1506 ****
+make all 
+Info: Building ../C_1506_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_1506_bsp/
+[BSP build complete]
+[C_1506 build complete]
+
+00:41:23 Build Finished (took 588ms)
+

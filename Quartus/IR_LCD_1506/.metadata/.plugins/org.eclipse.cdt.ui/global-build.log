@@ -1,0 +1,14 @@
+02:03:01 **** Build of configuration Nios II for project C_Demo ****
+make all 
+Info: Building ../C_Demo_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_Demo_bsp/
+makefile:536: Warning: SOPC File D:/DE2_LCD_QSYS/LCD_Demo.sopcinfo could not be found.
+[BSP build complete]
+[C_Demo build complete]
+02:03:36 **** Build of configuration Nios II for project C_Demo ****
+make all 
+Info: Building ../C_Demo_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_Demo_bsp/
+makefile:536: Warning: SOPC File D:/DE2_LCD_QSYS/LCD_Demo.sopcinfo could not be found.
+[BSP build complete]
+[C_Demo build complete]

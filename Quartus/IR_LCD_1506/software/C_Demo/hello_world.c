@@ -1,0 +1,71 @@
+#include <stdio.h>
+#include "system.h"
+#include "LCD1602_Qsys.h"
+#include "sys/alt_irq.h"
+
+
+unsigned char LCD_Data[16]={"IR-LCD_Demo"};
+
+
+unsigned int *pUser_IR=IR_DEMO_0_BASE; //定义指针指向在Qsys中生成的IR驱动模块
+unsigned int IR_Data;
+unsigned char Data_Ready;
+
+void IR_Irq_Process()
+{
+	Data_Ready=1;
+	IR_Data=*(pUser_IR);
+}
+
+int IR_Irq_Init()
+{
+	/*重要提示： 2017.07.12
+	 * 1.在注册中断函数时，中断控制器标号和硬件中断号两个参数直接从system.h复制
+	 * 2.在Quartus15.0和之前的版本中，生成的system.h文件有Bug,即对于有中断输出信号的模块，其中断控制器标号和硬件中断号
+	 *   为-1。
+	 * 3.需要手动修改system.h的中断控制器标号和硬件中断号，该号可以在Qsys中看到，并且两个号相同。
+	 * */
+    int States;
+    States=alt_ic_isr_register(
+    		IR_DEMO_0_IRQ_INTERRUPT_CONTROLLER_ID,   // 中断控制器标号，从system.h复制
+    		IR_DEMO_0_IRQ,                           // 硬件中断号，从system.h复制
+    		IR_Irq_Process,                          // 中断服务子函数
+			NULL,                                    // 指向与设备驱动实例相关的数据结构体
+			0
+						);
+    return States;
+}
+
+int main()
+{
+	  int States;
+	  unsigned char KEY_CODE;
+      printf("Hello from Nios II!\n");
+
+      States=IR_Irq_Init();
+	  LCD_Disp(1, 2 , LCD_Data , 11); //在第一行显示“IR-LCD_Demo”
+
+	  while(1)
+	  {
+
+		  if(Data_Ready==1)
+		  {
+			  Data_Ready=0;
+			  KEY_CODE=(IR_Data>>16)&0xff;
+			  switch(KEY_CODE)
+			  {
+			  	  case 0x01: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: 1",6); break;
+			  	  case 0x02: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: 2",6); break;
+			  	  case 0x03: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: 3",6); break;
+			  	  case 0x04: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: 4",6); break;
+			  	  case 0x05: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: 5",6); break;
+			  	  case 0x1a: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: UP",7); break;
+			  	  case 0x1e: LCD_Disp(2,0,"                ",16); LCD_Disp(2,0,"Key: DOWN",9); break;
+			  	  default: break;
+			  }
+		  }
+	  }
+
+
+  return 0;
+}

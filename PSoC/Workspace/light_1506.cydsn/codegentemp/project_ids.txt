@@ -1,6 +1,6 @@
-D:\Projects\ESD\tasks_1506\PSoC\Workspace\light_1506.cydsn\light_1506.cyprj|0685f9bc-8fec-4e26-96eb-34912c012c25
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2169d3b6-48fe-47c7-87f1-2cc71cd28fe1
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|587ffe76-74a3-4092-ba86-999b31126d07
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c4336af1-a9a1-4641-8979-7ec961d175ba
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6a908b35-9497-4255-ad96-04df89222b2c
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|b2329514-f74f-46f5-871f-8bea2adb77eb
+D:\Projects\ESD\tasks_1506\PSoC\Workspace\light_1506.cydsn\light_1506.cyprj|6b040c6e-b21a-481f-8aac-8d9e1fe7b6d9
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|b542ebcd-f7b0-446c-9a56-476d4e1bff6a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|ce4a8d3b-fbed-4610-888b-fe14d600656a
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|3c29af2d-eae8-47a2-bb17-97f6d94307ee
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6daef257-89da-4ad6-9e3b-c1c5aff9aa92
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8e20392e-f183-4837-8041-ff4eaa5f8303

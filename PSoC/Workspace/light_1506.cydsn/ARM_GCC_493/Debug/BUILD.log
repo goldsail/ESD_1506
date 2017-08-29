@@ -1,4 +1,4 @@
---------------- Build Started: 08/28/2017 21:09:36 Project: light_1506, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+--------------- Build Started: 08/29/2017 08:55:01 Project: light_1506, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
 cydsfit.exe -.appdatapath "C:\Users\kingi\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\Projects\ESD\tasks_1506\PSoC\Workspace\light_1506.cydsn\light_1506.cyprj -d CY8C5868AXI-LP035 -s D:\Projects\ESD\tasks_1506\PSoC\Workspace\light_1506.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o0 -v11 -.fftcfgtype=LE
 Elaborating Design...
 HDL Generation ...
@@ -18,16 +18,6 @@ Static timing analysis ...
 API Generation ...
 Dependency Generation ...
 Clean Temporary Files ...
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/main.lst -g -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\main.c -o .\ARM_GCC_493\Debug\main.o
-.\main.c: In function 'main':
-.\main.c:78:11: warning: variable 'buffer' set but not used [-Wunused-but-set-variable]
-     uint8 buffer[5] = "xxx\r\n";
-           ^
-arm-none-eabi-ar.exe -rs .\ARM_GCC_493\Debug\light_1506.a .\ARM_GCC_493\Debug\cyfitter_cfg.o .\ARM_GCC_493\Debug\CapSense.o .\ARM_GCC_493\Debug\CapSense_CSHL.o .\ARM_GCC_493\Debug\CapSense_INT.o .\ARM_GCC_493\Debug\CapSense_Pins.o .\ARM_GCC_493\Debug\CapSense_PM.o .\ARM_GCC_493\Debug\CapSense_SMS_Wrapper.o .\ARM_GCC_493\Debug\CapSense_TunerHelper.o .\ARM_GCC_493\Debug\LCD.o .\ARM_GCC_493\Debug\LCD_PM.o .\ARM_GCC_493\Debug\USBUART_1.o .\ARM_GCC_493\Debug\USBUART_1_audio.o .\ARM_GCC_493\Debug\USBUART_1_boot.o .\ARM_GCC_493\Debug\USBUART_1_cdc.o .\ARM_GCC_493\Debug\USBUART_1_cls.o .\ARM_GCC_493\Debug\USBUART_1_descr.o .\ARM_GCC_493\Debug\USBUART_1_drv.o .\ARM_GCC_493\Debug\USBUART_1_episr.o .\ARM_GCC_493\Debug\USBUART_1_hid.o .\ARM_GCC_493\Debug\USBUART_1_pm.o .\ARM_GCC_493\Debug\USBUART_1_std.o .\ARM_GCC_493\Debug\USBUART_1_vnd.o .\ARM_GCC_493\Debug\USBUART_1_midi.o .\ARM_GCC_493\Debug\USBUART_1_msc.o .\ARM_GCC_493\Debug\Pin_LED.o .\ARM_GCC_493\Debug\PWM.o .\ARM_GCC_493\Debug\PWM_PM.o .\ARM_GCC_493\Debug\Clock_1.o .\ARM_GCC_493\Debug\CapSense_CompCH0.o .\ARM_GCC_493\Debug\CapSense_CompCH0_PM.o .\ARM_GCC_493\Debug\CapSense_IdacCH0.o .\ARM_GCC_493\Debug\CapSense_IdacCH0_PM.o .\ARM_GCC_493\Debug\CapSense_AMuxCH0.o .\ARM_GCC_493\Debug\CapSense_IntClock.o .\ARM_GCC_493\Debug\LCD_LCDPort.o .\ARM_GCC_493\Debug\USBUART_1_Dm.o .\ARM_GCC_493\Debug\USBUART_1_Dp.o .\ARM_GCC_493\Debug\CyBootAsmGnu.o .\ARM_GCC_493\Debug\CyDmac.o .\ARM_GCC_493\Debug\CyFlash.o .\ARM_GCC_493\Debug\CyLib.o .\ARM_GCC_493\Debug\cyPm.o .\ARM_GCC_493\Debug\CySpc.o .\ARM_GCC_493\Debug\cyutils.o
-arm-none-eabi-ar.exe: creating .\ARM_GCC_493\Debug\light_1506.a
-arm-none-eabi-gcc.exe -Wl,--start-group -o .\ARM_GCC_493\Debug\light_1506.elf .\ARM_GCC_493\Debug\main.o .\ARM_GCC_493\Debug\cymetadata.o .\ARM_GCC_493\Debug\Cm3Start.o .\ARM_GCC_493\Debug\light_1506.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -L Generated_Source\PSoC5 -Wl,-Map,.\ARM_GCC_493\Debug/light_1506.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
-cyelftool.exe -C D:\Projects\ESD\tasks_1506\PSoC\Workspace\light_1506.cydsn\ARM_GCC_493\Debug\light_1506.elf --flash_row_size 256 --flash_size 262144
-cyelftool.exe -S D:\Projects\ESD\tasks_1506\PSoC\Workspace\light_1506.cydsn\ARM_GCC_493\Debug\light_1506.elf
-Flash used: 20224 of 262144 bytes (7.7%).
-SRAM used: 2861 of 65536 bytes (4.4%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 08/28/2017 21:09:55 ---------------
+The compile step is up to date, no work needs to be done.
+The link step is up to date, no work needs to be done.
+--------------- Build Succeeded: 08/29/2017 08:55:22 ---------------

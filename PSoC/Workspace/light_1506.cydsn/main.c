@@ -87,20 +87,29 @@ int main()
     CYGlobalIntEnable; 
     
     PWM_Start();
-    
-    USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
 
     LCD_Start();
     LCD_Position(0,0);
-    LCD_PrintString("Btn0 Btn1 Slider");
+    LCD_PrintString("Waiting for ");
+    LCD_Position(1,0);
+    LCD_PrintString("connection");
 
     /* Start capsense and initialize baselines and enable scan */
     CapSense_Start();
     CapSense_InitializeAllBaselines();
     
-    
+    USBUART_1_Start(0u, USBUART_1_3V_OPERATION);
     /* Wait for Device to enumerate */
-    // while(!USBUART_1_GetConfiguration());
+    while(!USBUART_1_GetConfiguration());
+    
+    LCD_Position(0,0);
+    LCD_PrintString("                ");
+    LCD_Position(1,0);
+    LCD_PrintString("                ");
+    LCD_Position(0,0);
+    LCD_PrintString("Btn0 Btn1 Slider");
+    
+    PWM_WriteCompare(0);
 
     /* Enumeration is done, enable OUT endpoint for receive data from Host */
     USBUART_1_CDC_Init();
@@ -108,6 +117,7 @@ int main()
 
     while(1)
     {
+        CyDelay(200);
         count++;
         PWM_WriteCompare((uint8)((float)lastFlux / 100 * 255));
         buffer[0] = '0' + (lastFlux / 100 % 10);
@@ -115,9 +125,9 @@ int main()
         buffer[2] = '0' + (lastFlux / 1 % 10);
         
         // while(USBUART_1_CDCIsReady() == 0u);    /* Wait till component is ready to send more data to the PC */ 
-        if (count % 100 == 0)
+        if (count % 2 == 0)
         {
-            // USBUART_1_PutData(buffer, 5);       /* Send data back to PC */
+            USBUART_1_PutData(buffer, 5);       /* Send data back to PC */
         }
         
         

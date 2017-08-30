@@ -1,223 +1,75 @@
-10:30:08 **** Incremental Build of configuration Nios II for project C_1506 ****
+15:51:28 **** Incremental Build of configuration Nios II for project C_1506 ****
 make all 
 Info: Building ../C_1506_bsp/
 C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_1506_bsp/
 [BSP build complete]
 Info: Compiling main_1506.c to obj/default/main_1506.o
 nios2-elf-gcc -xc -MP -MMD -c -I../C_1506_bsp//HAL/inc -I../C_1506_bsp/ -I../C_1506_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main_1506.o main_1506.c
-In file included from main_1506.c:18:0:
-../C_1506_bsp/system.h:154:22: warning: initialization makes pointer from integer without a cast
- #define IR_1506_BASE 0x10001000
-                      ^
-main_1506.c:25:26: note: in expansion of macro 'IR_1506_BASE'
- unsigned int *pUser_IR = IR_1506_BASE; //定义指针指向在Qsys中生成的IR驱动模块
-                          ^
+main_1506.c:67:5: warning: built-in function 'index' declared as non-function
+ int index;
+     ^
+main_1506.c:73:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "1. Alma Mater   ",
+   ^
+main_1506.c:73:3: warning: (near initialization for 'titles[0]') [-Wpointer-sign]
+main_1506.c:74:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "2. Rock and Roll",
+   ^
+main_1506.c:74:3: warning: (near initialization for 'titles[1]') [-Wpointer-sign]
+main_1506.c:75:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "3. Rhythm Blues ",
+   ^
+main_1506.c:75:3: warning: (near initialization for 'titles[2]') [-Wpointer-sign]
+main_1506.c:76:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "4. Classical    ",
+   ^
+main_1506.c:76:3: warning: (near initialization for 'titles[3]') [-Wpointer-sign]
+main_1506.c:77:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "5. Rap          ",
+   ^
+main_1506.c:77:3: warning: (near initialization for 'titles[4]') [-Wpointer-sign]
+main_1506.c:78:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "6. Jazz         ",
+   ^
+main_1506.c:78:3: warning: (near initialization for 'titles[5]') [-Wpointer-sign]
+main_1506.c:80:1: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+ };
+ ^
+main_1506.c:80:1: warning: (near initialization for 'titles[6]') [-Wpointer-sign]
 main_1506.c: In function 'main':
-main_1506.c:66:5: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-     LCD_Disp(1, 0 , "                " , 16);
-     ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
+main_1506.c:89:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+main_1506.c: In function 'displayTitle':
+main_1506.c:289:2: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
+  LCD_Disp(1, 0, "                ", 16); delay();
+  ^
+In file included from main_1506.c:18:0:
+LCD_1506_Qsys.h:22:6: note: expected 'unsigned char *' but argument is of type 'char *'
  void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
       ^
-main_1506.c:70:5: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-     LCD_Disp(2, 0 , "                " , 16);
-     ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
+main_1506.c:290:2: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
+  LCD_Disp(1, 0, buffer, 13); delay();
+  ^
+In file included from main_1506.c:18:0:
+LCD_1506_Qsys.h:22:6: note: expected 'unsigned char *' but argument is of type 'char *'
  void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
       ^
-main_1506.c:83:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x00: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:0",7); delay(); numberInput(0, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:83:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x00: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:0",7); delay(); numberInput(0, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:84:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x01: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:1",7); delay(); numberInput(1, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:84:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x01: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:1",7); delay(); numberInput(1, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:85:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x02: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:2",7); delay(); numberInput(2, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:85:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x02: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:2",7); delay(); numberInput(2, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:86:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x03: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:3",7); delay(); numberInput(3, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:86:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x03: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:3",7); delay(); numberInput(3, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:87:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x04: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:4",7); delay(); numberInput(4, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:87:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x04: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:4",7); delay(); numberInput(4, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:88:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x05: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:5",7); delay(); numberInput(5, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:88:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x05: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:5",7); delay(); numberInput(5, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:89:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x06: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:6",7); delay(); numberInput(6, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:89:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x06: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:6",7); delay(); numberInput(6, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:90:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x07: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:7",7); delay(); numberInput(7, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:90:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x07: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:7",7); delay(); numberInput(7, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:91:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x08: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:8",7); delay(); numberInput(8, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:91:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x08: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:8",7); delay(); numberInput(8, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:92:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x09: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:9",7); delay(); numberInput(9, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:92:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x09: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:9",7); delay(); numberInput(9, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:93:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x17: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Bcksp",7); delay(); numberInput(-1, &currPos); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:93:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        case 0x17: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Bcksp",7); delay(); numberInput(-1, &currPos); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:94:19: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        default:   LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Unknw",7); delay(); break;
-                   ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:94:55: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-        default:   LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Unknw",7); delay(); break;
-                                                       ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c: In function 'numberInput':
-main_1506.c:115:4: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-    LCD_Disp(2, *currPos, " ", 1);
-    ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
- void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
-      ^
-main_1506.c:125:4: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
-    LCD_Disp(2, *currPos, " ", 1);
-    ^
-In file included from main_1506.c:19:0:
-LCD_1506_Qsys.h:15:6: note: expected 'unsigned char *' but argument is of type 'char *'
+main_1506.c:291:2: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
+  LCD_Disp(2, 0, "                ", 16); delay();
+  ^
+In file included from main_1506.c:18:0:
+LCD_1506_Qsys.h:22:6: note: expected 'unsigned char *' but argument is of type 'char *'
  void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
       ^
 Info: Linking C_1506.elf
 nios2-elf-g++  -T'../C_1506_bsp//linker.x' -msys-crt0='../C_1506_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../C_1506_bsp/   -Wl,-Map=C_1506.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o C_1506.elf obj/default/LCD_1506_Qsys.o obj/default/main_1506.o -lm -msys-lib=m
-nios2-elf-insert C_1506.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --id 2 --sidp 0x10001100 --timestamp 1504053489 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name kernel --quartus_project_dir "D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506" --jdi D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/software/C_1506_bsp/../../IR_LCD_Qsys.jdi --sopcinfo D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/software/C_1506_bsp/../../kernel.sopcinfo
-Info: (C_1506.elf) 69 KBytes program size (code + initialized data).
-Info:              130995 KBytes free for stack + heap.
+nios2-elf-insert C_1506.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --id 2 --sidp 0x100016a0 --timestamp 1504073683 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name kernel --quartus_project_dir "D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506" --jdi D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/software/C_1506_bsp/../../IR_LCD_Qsys.jdi --sopcinfo D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/software/C_1506_bsp/../../kernel.sopcinfo
+Info: (C_1506.elf) 31 KBytes program size (code + initialized data).
+Info:              131033 KBytes free for stack + heap.
 Info: Creating C_1506.objdump
 nios2-elf-objdump --disassemble --syms --all-header --source C_1506.elf >C_1506.objdump
 [C_1506 build complete]
 
-10:30:10 Build Finished (took 1s.823ms)
+15:51:30 Build Finished (took 1s.441ms)
 

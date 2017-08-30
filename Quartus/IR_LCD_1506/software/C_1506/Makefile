@@ -142,8 +142,8 @@ ACDS_VERSION := 15.0
 ELF := C_1506.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS += main_1506.c
 C_SRCS += LCD_1506_Qsys.c
+C_SRCS += main_1506.c
 CXX_SRCS :=
 ASM_SRCS :=
 

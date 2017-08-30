@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2017-8-30 8:55:48</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1504054548333</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>2017-8-30 14:24:13</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1504074253751</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Projects\ESD\tasks_1506\Quartus\IR_LCD_1506\software\C_1506_bsp</BspGeneratedLocation>
         <BspSettingsFile>.\settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\kernel.sopcinfo</SopcDesignFile>
@@ -905,14 +905,170 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_17</slaveDescriptor>
+                <addressRange>0x10001100 - 0x1000113F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_16</slaveDescriptor>
+                <addressRange>0x10001140 - 0x1000117F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_15</slaveDescriptor>
+                <addressRange>0x10001180 - 0x100011BF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_14</slaveDescriptor>
+                <addressRange>0x100011C0 - 0x100011FF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_13</slaveDescriptor>
+                <addressRange>0x10001200 - 0x1000123F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_12</slaveDescriptor>
+                <addressRange>0x10001240 - 0x1000127F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_11</slaveDescriptor>
+                <addressRange>0x10001280 - 0x100012BF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_10</slaveDescriptor>
+                <addressRange>0x100012C0 - 0x100012FF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_9</slaveDescriptor>
+                <addressRange>0x10001300 - 0x1000133F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_8</slaveDescriptor>
+                <addressRange>0x10001340 - 0x1000137F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_7</slaveDescriptor>
+                <addressRange>0x10001380 - 0x100013BF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_6</slaveDescriptor>
+                <addressRange>0x100013C0 - 0x100013FF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_5</slaveDescriptor>
+                <addressRange>0x10001400 - 0x1000143F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_4</slaveDescriptor>
+                <addressRange>0x10001440 - 0x1000147F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_3</slaveDescriptor>
+                <addressRange>0x10001480 - 0x100014BF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_2</slaveDescriptor>
+                <addressRange>0x100014C0 - 0x100014FF</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_1</slaveDescriptor>
+                <addressRange>0x10001500 - 0x1000153F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>User_GIO_PWM_0</slaveDescriptor>
+                <addressRange>0x10001540 - 0x1000157F</addressRange>
+                <addressSpan>64</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_7</slaveDescriptor>
+                <addressRange>0x10001620 - 0x1000162F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_6</slaveDescriptor>
+                <addressRange>0x10001630 - 0x1000163F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_5</slaveDescriptor>
+                <addressRange>0x10001640 - 0x1000164F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_4</slaveDescriptor>
+                <addressRange>0x10001650 - 0x1000165F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_3</slaveDescriptor>
+                <addressRange>0x10001660 - 0x1000166F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_2</slaveDescriptor>
+                <addressRange>0x10001670 - 0x1000167F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_1</slaveDescriptor>
+                <addressRange>0x10001680 - 0x1000168F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>pio_0</slaveDescriptor>
+                <addressRange>0x10001690 - 0x1000169F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid_qsys</slaveDescriptor>
-                <addressRange>0x10001100 - 0x10001107</addressRange>
+                <addressRange>0x100016A0 - 0x100016A7</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart</slaveDescriptor>
-                <addressRange>0x10001108 - 0x1000110F</addressRange>
+                <addressRange>0x100016A8 - 0x100016AF</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

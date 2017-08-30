@@ -1,3 +1,10 @@
+/*
+ * LCD1602_Qsys.h
+ *
+ *  Created on: 2017Äê7ÔÂ9ÈÕ
+ *      Author: DaYa
+ */
+
 #ifndef LCD_1506_QSYS_H_
 #define LCD_1506_QSYS_H_
 
@@ -30,4 +37,4 @@ void LCD_Clear();
  */
 void LCD_Reset();
 
-#endif /* LCD_1506_QSYS_H_ */
+#endif /* LCD1602_QSYS_H_ */

@@ -15,14 +15,15 @@
  */
 
 #include <stdio.h>
-#include "system.h"
 #include "LCD_1506_Qsys.h"
+#include "altera_avalon_pio_regs.h"
+
 #include "sys/alt_irq.h"
 
 unsigned char LCD_Data[17] = {"IR_1506  waiting"};
 
 
-unsigned int *pUser_IR = IR_1506_BASE; //定义指针指向在Qsys中生成的IR驱动模块
+unsigned int *pUser_IR;
 unsigned int IR_Data;
 unsigned char Data_Ready;
 
@@ -53,82 +54,222 @@ int IR_Init()
     return States;
 }
 
-void numberInput(int num, int *currPos); // 退格用 -1 表示
+
 void delay();
+
+unsigned int *pUser_GIO_PWM[18];
+unsigned int *pUser_PIO[8];
+
+void init();
+
+int process;
+int volume;
+int index;
+int mute;
+int isPlaying;
+int powerOn;
+
+unsigned char *titles[7] = {
+		"1. Alma Mater   ",
+		"2. Rock and Roll",
+		"3. Rhythm Blues ",
+		"4. Classical    ",
+		"5. Rap          ",
+		"6. Jazz         ",
+		"7. Folk         "
+};
+
+void displayTitle(int index);
+void displayProcess();
+void displayVolume();
+
+
+
 
 int main()
 {
-	int currPos = -1;
-	int States;
-	unsigned char KEY_CODE;
+	int i;
+    init();
     printf("Hello from Nios II!\n");
-    States = IR_Init();
-    LCD_Disp(1, 0 , "                " , 16);
-    delay();
-    LCD_Disp(1, 0 , LCD_Data , 16);
-    delay();
-    LCD_Disp(2, 0 , "                " , 16);
-    delay();
 
-	printf("States: %d\n", States);
+    unsigned char KEY_CODE;
 
-	while(1)
-	{
-        if(Data_Ready == 1)
-		{
-            Data_Ready = 0;
-			KEY_CODE = (IR_Data >> 16) & 0xff;
-			switch(KEY_CODE)
-			{
-			    case 0x00: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:0",7); delay(); numberInput(0, &currPos); break;
-			    case 0x01: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:1",7); delay(); numberInput(1, &currPos); break;
-			    case 0x02: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:2",7); delay(); numberInput(2, &currPos); break;
-			    case 0x03: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:3",7); delay(); numberInput(3, &currPos); break;
-			    case 0x04: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:4",7); delay(); numberInput(4, &currPos); break;
-			    case 0x05: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:5",7); delay(); numberInput(5, &currPos); break;
-			    case 0x06: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:6",7); delay(); numberInput(6, &currPos); break;
-			    case 0x07: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:7",7); delay(); numberInput(7, &currPos); break;
-			    case 0x08: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:8",7); delay(); numberInput(8, &currPos); break;
-			    case 0x09: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Key:9",7); delay(); numberInput(9, &currPos); break;
-			    case 0x17: LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Bcksp",7); delay(); numberInput(-1, &currPos); break;
-			    default:   LCD_Disp(1,9,"       ",7); delay(); LCD_Disp(1,9,"  Unknw",7); delay(); break;
-		    }
-		}
-	}
+    while (1)
+    {
+    	if (Data_Ready == 1)
+    	{
+    		Data_Ready = 0;
+    		KEY_CODE = (IR_Data >> 16) & 0xff;
+    		switch (KEY_CODE)
+    		{
+    		case 0x01:
+				index = 0;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x02:
+				index = 1;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x03:
+				index = 2;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x04:
+				index = 3;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x05:
+				index = 4;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x06:
+				index = 5;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x07:
+				index = 6;
+				process = 0;
+				displayTitle(index);
+				break;
+    		case 0x1B:
+    			volume++;
+    			if (volume > 8)
+    				volume = 8;
+    			displayVolume();
+    			break;
+    		case 0x1F:
+    			volume--;
+    			if (volume < 0)
+    				volume = 0;
+    			displayVolume();
+    			break;
+    		case 0x1A:
+    			index = (index + 1) % 7;
+    			displayTitle(index);
+    			process = 0;
+    			displayProcess();
+    			break;
+    		case 0x1E:
+				index = (index - 1) % 7;
+				displayTitle(index);
+				process = 0;
+				displayProcess();
+				break;
+    		case 0x14:
+				process -= 4;
+				if (process < 0)
+					process = 0;
+				displayProcess();
+				break;
+    		case 0x18:
+				process += 4;
+				if (process > 17)
+					process = 17;
+				displayProcess();
+				break;
+    		case 0x0c:
+    			mute = !mute;
+    			displayVolume();
+    			break;
+    		case 0x16:
+    			isPlaying = !isPlaying;
+    			break;
+    		case 0x12:
+    			powerOn = !powerOn;
+    			break;
+    		}
+    	}
 
+    	delay();
+    	delay();
+    	delay();
+    	delay();
+    	delay();
+		delay();
+		delay();
+		delay();
+		delay();
+		delay();
+		delay();
+		delay();
+
+    	if (process < 18)
+    	{
+    		if (isPlaying)
+    			process++;
+    		displayProcess();
+    	}
+    	else
+    	{
+    		index = (index + 1) % 7;
+    		displayTitle(index);
+    		process = 0;
+    		displayProcess();
+    	}
+    }
 
     return 0;
 }
 
-void numberInput(int num, int *currPos)
+void init()
 {
-	if (num > 9)
+	int i;
+
+	pUser_GIO_PWM[0] = (unsigned int *)USER_GIO_PWM_0_BASE;
+	pUser_GIO_PWM[1] = (unsigned int *)USER_GIO_PWM_1_BASE;
+	pUser_GIO_PWM[2] = (unsigned int *)USER_GIO_PWM_2_BASE;
+	pUser_GIO_PWM[3] = (unsigned int *)USER_GIO_PWM_3_BASE;
+	pUser_GIO_PWM[4] = (unsigned int *)USER_GIO_PWM_4_BASE;
+	pUser_GIO_PWM[5] = (unsigned int *)USER_GIO_PWM_5_BASE;
+	pUser_GIO_PWM[6] = (unsigned int *)USER_GIO_PWM_6_BASE;
+	pUser_GIO_PWM[7] = (unsigned int *)USER_GIO_PWM_7_BASE;
+	pUser_GIO_PWM[8] = (unsigned int *)USER_GIO_PWM_8_BASE;
+	pUser_GIO_PWM[9] = (unsigned int *)USER_GIO_PWM_9_BASE;
+	pUser_GIO_PWM[10] = (unsigned int *)USER_GIO_PWM_10_BASE;
+	pUser_GIO_PWM[11] = (unsigned int *)USER_GIO_PWM_11_BASE;
+	pUser_GIO_PWM[12] = (unsigned int *)USER_GIO_PWM_12_BASE;
+	pUser_GIO_PWM[13] = (unsigned int *)USER_GIO_PWM_13_BASE;
+	pUser_GIO_PWM[14] = (unsigned int *)USER_GIO_PWM_14_BASE;
+	pUser_GIO_PWM[15] = (unsigned int *)USER_GIO_PWM_15_BASE;
+	pUser_GIO_PWM[16] = (unsigned int *)USER_GIO_PWM_16_BASE;
+	pUser_GIO_PWM[17] = (unsigned int *)USER_GIO_PWM_17_BASE;
+
+	pUser_PIO[0] = (unsigned int *)PIO_0_BASE;
+	pUser_PIO[1] = (unsigned int *)PIO_1_BASE;
+	pUser_PIO[2] = (unsigned int *)PIO_2_BASE;
+	pUser_PIO[3] = (unsigned int *)PIO_3_BASE;
+	pUser_PIO[4] = (unsigned int *)PIO_4_BASE;
+	pUser_PIO[5] = (unsigned int *)PIO_5_BASE;
+	pUser_PIO[6] = (unsigned int *)PIO_6_BASE;
+	pUser_PIO[7] = (unsigned int *)PIO_7_BASE;
+
+	pUser_IR = (unsigned int *)IR_1506_BASE; //定义指针指向在Qsys中生成的IR驱动模块
+
+	IR_Init();
+
+	for (i = 0; i < 8; i++)
 	{
-		num = 9;
+		IOWR_ALTERA_AVALON_PIO_DATA(pUser_PIO[i], 0);
 	}
 
-	// 退格用 -1 表示
-	if (num < 0)
+	for (i = 0; i < 18; i++)
 	{
-		if (*currPos >= 0)
-		{
-			LCD_Disp(2, *currPos, " ", 1);
-			delay();
-			(*currPos)--;
-		}
+		*(pUser_GIO_PWM[i]) = 1000;
 	}
-	else
-	{
-		if (*currPos < 16)
-		{
-			(*currPos)++;
-			LCD_Disp(2, *currPos, " ", 1);
-			delay();
-			LCD_Disp(2, *currPos, numberConvert[num], 1);
-			delay();
-		}
-	}
+	volume = 3;
+	displayVolume();
 
+	mute = 1;
+	process = 0;
+	displayProcess();
+	isPlaying = 1;
+	powerOn = 1;
 }
 
 void delay()
@@ -137,5 +278,45 @@ void delay()
 	// 此想法  credit to 丁文泽
 	int i;
 	for (i = 0; i < 100000; i++);
+}
+
+void displayTitle(int index)
+{
+	if (index < 0)
+		index = 0;
+	if (index > 6)
+		index = 6;
+	char buffer[17] = "Playing x / 7";
+	buffer[8] = '1' + index;
+	LCD_Disp(1, 0, "                ", 16);	delay();
+	LCD_Disp(1, 0, buffer, 13);	delay();
+	LCD_Disp(2, 0, "                ", 16);	delay();
+	LCD_Disp(2, 0, titles[index], 16);	delay();
+}
+
+void displayProcess()
+{
+	int i;
+	for (i = 0; i < process; i++)
+	{
+		*(pUser_GIO_PWM[17 - i]) = 10;
+	}
+	for (i = process; i < 18; i++)
+	{
+		*(pUser_GIO_PWM[17 - i]) = 1000;
+	}
+}
+
+void displayVolume()
+{
+	int i;
+	for (i = 0; i < volume * mute; i++)
+	{
+		IOWR_ALTERA_AVALON_PIO_DATA(pUser_PIO[7 - i], 1);
+	}
+	for (i = volume * mute; i < 8; i++)
+	{
+		IOWR_ALTERA_AVALON_PIO_DATA(pUser_PIO[7 - i], 0);
+	}
 }
 

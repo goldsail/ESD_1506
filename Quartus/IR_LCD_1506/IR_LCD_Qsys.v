@@ -79,6 +79,36 @@ output		     [3:0]		DRAM_DQM;
 output		          		DRAM_RAS_N;
 output		          		DRAM_WE_N;
 
+wire User_GPIO_PWM_0;
+wire User_GPIO_PWM_1;
+wire User_GPIO_PWM_2;
+wire User_GPIO_PWM_3;
+wire User_GPIO_PWM_4;
+wire User_GPIO_PWM_5;
+wire User_GPIO_PWM_6;
+wire User_GPIO_PWM_7;
+wire User_GPIO_PWM_8;
+wire User_GPIO_PWM_9;
+wire User_GPIO_PWM_10;
+wire User_GPIO_PWM_11;
+wire User_GPIO_PWM_12;
+wire User_GPIO_PWM_13;
+wire User_GPIO_PWM_14;
+wire User_GPIO_PWM_15;
+wire User_GPIO_PWM_16;
+wire User_GPIO_PWM_17;
+
+wire User_Pio_0;
+wire User_Pio_1;
+wire User_Pio_2;
+wire User_Pio_3;
+wire User_Pio_4;
+wire User_Pio_5;
+wire User_Pio_6;
+wire User_Pio_7;
+
+
+
 
 //=======================================================
 //  REG/WIRE declarations
@@ -90,6 +120,21 @@ output		          		DRAM_WE_N;
 //=======================================================
 //  Structural coding
 //=======================================================
+
+reg[19:0] Cont;
+reg Reset_N;
+always @ (posedge CLOCK_50) begin
+	if (Cont != 20'hFFFFF) begin
+		Cont <= Cont + 1;
+		Reset_N <= 1'b0;
+	end
+	else begin
+		Reset_N <= 1'b1;
+	end
+end
+
+
+
 wire         reset_n;
 wire 								Clk_Core;
 wire							 	Clk_Sdram;
@@ -119,9 +164,65 @@ kernel u0 (
 			.lcd_1506_conduit_end_0_export_rs   (LCD_RS),            //                       .export_rs
 			.lcd_1506_conduit_end_0_export_blon (LCD_BLON),          //                       .export_blon
 			.lcd_1506_conduit_end_0_export_on   (LCD_ON),            //                       .export_on
-			.ir_1506_conduit_end_0_export      (IRDA_RXD)            // ir_1506_conduit_end_0.export_irda
+			.ir_1506_conduit_end_0_export      (IRDA_RXD),            // ir_1506_conduit_end_0.export_irda
+			
+			.user_gio_pwm_0_conduit_end_0_export (User_GPIO_PWM_0), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_1_conduit_end_0_export (User_GPIO_PWM_1), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_2_conduit_end_0_export (User_GPIO_PWM_2), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_3_conduit_end_0_export (User_GPIO_PWM_3), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_4_conduit_end_0_export (User_GPIO_PWM_4), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_5_conduit_end_0_export (User_GPIO_PWM_5), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_6_conduit_end_0_export (User_GPIO_PWM_6), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_7_conduit_end_0_export (User_GPIO_PWM_7), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_8_conduit_end_0_export (User_GPIO_PWM_8), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_9_conduit_end_0_export (User_GPIO_PWM_9), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_10_conduit_end_0_export (User_GPIO_PWM_10), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_11_conduit_end_0_export (User_GPIO_PWM_11), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_12_conduit_end_0_export (User_GPIO_PWM_12), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_13_conduit_end_0_export (User_GPIO_PWM_13), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_14_conduit_end_0_export (User_GPIO_PWM_14), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_15_conduit_end_0_export (User_GPIO_PWM_15), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_16_conduit_end_0_export (User_GPIO_PWM_16), // user_gio_pwm_1506_0_conduit_end_0.export
+			.user_gio_pwm_17_conduit_end_0_export (User_GPIO_PWM_17), // user_gio_pwm_1506_0_conduit_end_0.export
+			
+         .pio_0_external_connection_export           (User_Pio_0),            //           pio_external_connection.export
+			.pio_1_external_connection_export           (User_Pio_1),            //           pio_external_connection.export
+			.pio_2_external_connection_export           (User_Pio_2),            //           pio_external_connection.export
+			.pio_3_external_connection_export           (User_Pio_3),            //           pio_external_connection.export
+			.pio_4_external_connection_export           (User_Pio_4),            //           pio_external_connection.export
+			.pio_5_external_connection_export           (User_Pio_5),            //           pio_external_connection.export
+			.pio_6_external_connection_export           (User_Pio_6),            //           pio_external_connection.export
+			.pio_7_external_connection_export           (User_Pio_7)            //           pio_external_connection.export
+			
 );
 
+assign LEDG[0] = User_Pio_0;
+assign LEDG[1] = User_Pio_1;
+assign LEDG[2] = User_Pio_2;
+assign LEDG[3] = User_Pio_3;
+assign LEDG[4] = User_Pio_4;
+assign LEDG[5] = User_Pio_5;
+assign LEDG[6] = User_Pio_6;
+assign LEDG[7] = User_Pio_7;
 
+
+assign LEDR[0] = User_GPIO_PWM_0;
+assign LEDR[1] = User_GPIO_PWM_1;
+assign LEDR[2] = User_GPIO_PWM_2;
+assign LEDR[3] = User_GPIO_PWM_3;
+assign LEDR[4] = User_GPIO_PWM_4;
+assign LEDR[5] = User_GPIO_PWM_5;
+assign LEDR[6] = User_GPIO_PWM_6;
+assign LEDR[7] = User_GPIO_PWM_7;
+assign LEDR[8] = User_GPIO_PWM_8;
+assign LEDR[9] = User_GPIO_PWM_9;
+assign LEDR[10] = User_GPIO_PWM_10;
+assign LEDR[11] = User_GPIO_PWM_11;
+assign LEDR[12] = User_GPIO_PWM_12;
+assign LEDR[13] = User_GPIO_PWM_13;
+assign LEDR[14] = User_GPIO_PWM_14;
+assign LEDR[15] = User_GPIO_PWM_15;
+assign LEDR[16] = User_GPIO_PWM_16;
+assign LEDR[17] = User_GPIO_PWM_17;
 
 endmodule

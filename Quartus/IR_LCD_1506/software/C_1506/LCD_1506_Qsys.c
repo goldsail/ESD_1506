@@ -1,3 +1,9 @@
+/*
+ * LCD1602_Qsys.c
+ *
+ *  Created on: 2017年7月9日
+ *      Author: DaYa
+ */
 #include "LCD_1506_Qsys.h"
 
 unsigned int *pUser_LCD = LCD_1506_BASE; //定义指针指向在Qsys中生成的LCD1602控制模块

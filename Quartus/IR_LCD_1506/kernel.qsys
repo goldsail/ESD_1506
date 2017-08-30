@@ -89,6 +89,294 @@
          type = "String";
       }
    }
+   element User_GIO_PWM_0
+   {
+      datum _sortIndex
+      {
+         value = "7";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_0.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440896";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_1
+   {
+      datum _sortIndex
+      {
+         value = "8";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_1.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440832";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_10
+   {
+      datum _sortIndex
+      {
+         value = "17";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_10.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440256";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_11
+   {
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_11.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440192";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_12
+   {
+      datum _sortIndex
+      {
+         value = "19";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_12.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440128";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_13
+   {
+      datum _sortIndex
+      {
+         value = "20";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_13.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440064";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_14
+   {
+      datum _sortIndex
+      {
+         value = "21";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_14.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440000";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_15
+   {
+      datum _sortIndex
+      {
+         value = "22";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_15.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268439936";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_16
+   {
+      datum _sortIndex
+      {
+         value = "23";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_16.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268439872";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_17
+   {
+      datum _sortIndex
+      {
+         value = "24";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_17.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268439808";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_2
+   {
+      datum _sortIndex
+      {
+         value = "9";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_2.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440768";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_3
+   {
+      datum _sortIndex
+      {
+         value = "10";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_3.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440704";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_4
+   {
+      datum _sortIndex
+      {
+         value = "11";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_4.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440640";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_5
+   {
+      datum _sortIndex
+      {
+         value = "12";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_5.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440576";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_6
+   {
+      datum _sortIndex
+      {
+         value = "13";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_6.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440512";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_7
+   {
+      datum _sortIndex
+      {
+         value = "14";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_7.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440448";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_8
+   {
+      datum _sortIndex
+      {
+         value = "15";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_8.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440384";
+         type = "String";
+      }
+   }
+   element User_GIO_PWM_9
+   {
+      datum _sortIndex
+      {
+         value = "16";
+         type = "int";
+      }
+   }
+   element User_GIO_PWM_9.avalon_slave_0
+   {
+      datum baseAddress
+      {
+         value = "268440320";
+         type = "String";
+      }
+   }
    element clk
    {
       datum _sortIndex
@@ -109,7 +397,7 @@
    {
       datum baseAddress
       {
-         value = "268439816";
+         value = "268441256";
          type = "String";
       }
    }
@@ -118,6 +406,14 @@
       datum _tags
       {
          value = "";
+         type = "String";
+      }
+   }
+   element kernel
+   {
+      datum _originalDeviceFamily
+      {
+         value = "Cyclone IV E";
          type = "String";
       }
    }
@@ -177,6 +473,134 @@
          type = "String";
       }
    }
+   element pio_0
+   {
+      datum _sortIndex
+      {
+         value = "25";
+         type = "int";
+      }
+   }
+   element pio_0.s1
+   {
+      datum baseAddress
+      {
+         value = "268441232";
+         type = "String";
+      }
+   }
+   element pio_1
+   {
+      datum _sortIndex
+      {
+         value = "26";
+         type = "int";
+      }
+   }
+   element pio_1.s1
+   {
+      datum baseAddress
+      {
+         value = "268441216";
+         type = "String";
+      }
+   }
+   element pio_2
+   {
+      datum _sortIndex
+      {
+         value = "27";
+         type = "int";
+      }
+   }
+   element pio_2.s1
+   {
+      datum baseAddress
+      {
+         value = "268441200";
+         type = "String";
+      }
+   }
+   element pio_3
+   {
+      datum _sortIndex
+      {
+         value = "28";
+         type = "int";
+      }
+   }
+   element pio_3.s1
+   {
+      datum baseAddress
+      {
+         value = "268441184";
+         type = "String";
+      }
+   }
+   element pio_4
+   {
+      datum _sortIndex
+      {
+         value = "29";
+         type = "int";
+      }
+   }
+   element pio_4.s1
+   {
+      datum baseAddress
+      {
+         value = "268441168";
+         type = "String";
+      }
+   }
+   element pio_5
+   {
+      datum _sortIndex
+      {
+         value = "30";
+         type = "int";
+      }
+   }
+   element pio_5.s1
+   {
+      datum baseAddress
+      {
+         value = "268441152";
+         type = "String";
+      }
+   }
+   element pio_6
+   {
+      datum _sortIndex
+      {
+         value = "31";
+         type = "int";
+      }
+   }
+   element pio_6.s1
+   {
+      datum baseAddress
+      {
+         value = "268441136";
+         type = "String";
+      }
+   }
+   element pio_7
+   {
+      datum _sortIndex
+      {
+         value = "32";
+         type = "int";
+      }
+   }
+   element pio_7.s1
+   {
+      datum baseAddress
+      {
+         value = "268441120";
+         type = "String";
+      }
+   }
    element sysid_qsys
    {
       datum _sortIndex
@@ -189,7 +613,7 @@
    {
       datum baseAddress
       {
-         value = "268439808";
+         value = "268441248";
          type = "String";
       }
    }
@@ -230,9 +654,229 @@
    internal="new_sdram_controller.wire"
    type="conduit"
    dir="end" />
+ <interface
+   name="pio_0_external_connection"
+   internal="pio_0.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_1_external_connection"
+   internal="pio_1.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_2_external_connection"
+   internal="pio_2.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_3_external_connection"
+   internal="pio_3.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_4_external_connection"
+   internal="pio_4.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_5_external_connection"
+   internal="pio_5.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_6_external_connection"
+   internal="pio_6.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="pio_7_external_connection"
+   internal="pio_7.external_connection"
+   type="conduit"
+   dir="end" />
  <interface name="reset" internal="clk.clk_in_reset" type="reset" dir="end" />
+ <interface
+   name="user_gio_pwm_0_conduit_end_0"
+   internal="User_GIO_PWM_0.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_10_conduit_end_0"
+   internal="User_GIO_PWM_10.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_11_conduit_end_0"
+   internal="User_GIO_PWM_11.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_12_conduit_end_0"
+   internal="User_GIO_PWM_12.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_13_conduit_end_0"
+   internal="User_GIO_PWM_13.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_14_conduit_end_0"
+   internal="User_GIO_PWM_14.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_15_conduit_end_0"
+   internal="User_GIO_PWM_15.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_16_conduit_end_0"
+   internal="User_GIO_PWM_16.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_17_conduit_end_0"
+   internal="User_GIO_PWM_17.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_1_conduit_end_0"
+   internal="User_GIO_PWM_1.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_2_conduit_end_0"
+   internal="User_GIO_PWM_2.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_3_conduit_end_0"
+   internal="User_GIO_PWM_3.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_4_conduit_end_0"
+   internal="User_GIO_PWM_4.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_5_conduit_end_0"
+   internal="User_GIO_PWM_5.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_6_conduit_end_0"
+   internal="User_GIO_PWM_6.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_7_conduit_end_0"
+   internal="User_GIO_PWM_7.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_8_conduit_end_0"
+   internal="User_GIO_PWM_8.conduit_end_0"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="user_gio_pwm_9_conduit_end_0"
+   internal="User_GIO_PWM_9.conduit_end_0"
+   type="conduit"
+   dir="end" />
  <module name="IR_1506" kind="IR_1506" version="1.0" enabled="1" />
  <module name="LCD_1506" kind="LCD__1506" version="1.0" enabled="1" />
+ <module
+   name="User_GIO_PWM_0"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_1"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_10"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_11"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_12"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_13"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_14"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_15"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_16"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_17"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_2"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_3"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_4"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_5"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_6"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_7"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_8"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
+ <module
+   name="User_GIO_PWM_9"
+   kind="User_GIO_PWM_1506"
+   version="1.0"
+   enabled="1" />
  <module name="clk" kind="clock_source" version="15.0" enabled="1">
   <parameter name="clockFrequency" value="100000000" />
   <parameter name="clockFrequencyKnown" value="true" />
@@ -307,7 +951,7 @@
   <parameter name="dataAddrWidth" value="29" />
   <parameter name="dataMasterHighPerformanceAddrWidth" value="1" />
   <parameter name="dataMasterHighPerformanceMapParam" value="" />
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='new_sdram_controller.s1' start='0x8000000' end='0x10000000' /><slave name='nios2_gen2.debug_mem_slave' start='0x10000800' end='0x10001000' /><slave name='IR_1506.avalon_slave_0' start='0x10001000' end='0x10001080' /><slave name='LCD_1506.avalon_slave_0' start='0x10001080' end='0x10001100' /><slave name='sysid_qsys.control_slave' start='0x10001100' end='0x10001108' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10001108' end='0x10001110' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='new_sdram_controller.s1' start='0x8000000' end='0x10000000' /><slave name='nios2_gen2.debug_mem_slave' start='0x10000800' end='0x10001000' /><slave name='IR_1506.avalon_slave_0' start='0x10001000' end='0x10001080' /><slave name='LCD_1506.avalon_slave_0' start='0x10001080' end='0x10001100' /><slave name='User_GIO_PWM_17.avalon_slave_0' start='0x10001100' end='0x10001140' /><slave name='User_GIO_PWM_16.avalon_slave_0' start='0x10001140' end='0x10001180' /><slave name='User_GIO_PWM_15.avalon_slave_0' start='0x10001180' end='0x100011C0' /><slave name='User_GIO_PWM_14.avalon_slave_0' start='0x100011C0' end='0x10001200' /><slave name='User_GIO_PWM_13.avalon_slave_0' start='0x10001200' end='0x10001240' /><slave name='User_GIO_PWM_12.avalon_slave_0' start='0x10001240' end='0x10001280' /><slave name='User_GIO_PWM_11.avalon_slave_0' start='0x10001280' end='0x100012C0' /><slave name='User_GIO_PWM_10.avalon_slave_0' start='0x100012C0' end='0x10001300' /><slave name='User_GIO_PWM_9.avalon_slave_0' start='0x10001300' end='0x10001340' /><slave name='User_GIO_PWM_8.avalon_slave_0' start='0x10001340' end='0x10001380' /><slave name='User_GIO_PWM_7.avalon_slave_0' start='0x10001380' end='0x100013C0' /><slave name='User_GIO_PWM_6.avalon_slave_0' start='0x100013C0' end='0x10001400' /><slave name='User_GIO_PWM_5.avalon_slave_0' start='0x10001400' end='0x10001440' /><slave name='User_GIO_PWM_4.avalon_slave_0' start='0x10001440' end='0x10001480' /><slave name='User_GIO_PWM_3.avalon_slave_0' start='0x10001480' end='0x100014C0' /><slave name='User_GIO_PWM_2.avalon_slave_0' start='0x100014C0' end='0x10001500' /><slave name='User_GIO_PWM_1.avalon_slave_0' start='0x10001500' end='0x10001540' /><slave name='User_GIO_PWM_0.avalon_slave_0' start='0x10001540' end='0x10001580' /><slave name='pio_7.s1' start='0x10001620' end='0x10001630' /><slave name='pio_6.s1' start='0x10001630' end='0x10001640' /><slave name='pio_5.s1' start='0x10001640' end='0x10001650' /><slave name='pio_4.s1' start='0x10001650' end='0x10001660' /><slave name='pio_3.s1' start='0x10001660' end='0x10001670' /><slave name='pio_2.s1' start='0x10001670' end='0x10001680' /><slave name='pio_1.s1' start='0x10001680' end='0x10001690' /><slave name='pio_0.s1' start='0x10001690' end='0x100016A0' /><slave name='sysid_qsys.control_slave' start='0x100016A0' end='0x100016A8' /><slave name='jtag_uart.avalon_jtag_slave' start='0x100016A8' end='0x100016B0' /></address-map>]]></parameter>
   <parameter name="data_master_high_performance_paddr_base" value="0" />
   <parameter name="data_master_high_performance_paddr_size" value="0" />
   <parameter name="data_master_paddr_base" value="0" />
@@ -463,6 +1107,118 @@
   <parameter name="tracefilename" value="" />
   <parameter name="userDefinedSettings" value="" />
  </module>
+ <module name="pio_0" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_1" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_2" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_3" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_4" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_5" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_6" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
+ <module name="pio_7" kind="altera_avalon_pio" version="15.0" enabled="1">
+  <parameter name="bitClearingEdgeCapReg" value="false" />
+  <parameter name="bitModifyingOutReg" value="false" />
+  <parameter name="captureEdge" value="false" />
+  <parameter name="clockRate" value="100000000" />
+  <parameter name="direction" value="Output" />
+  <parameter name="edgeType" value="RISING" />
+  <parameter name="generateIRQ" value="false" />
+  <parameter name="irqType" value="LEVEL" />
+  <parameter name="resetValue" value="0" />
+  <parameter name="simDoTestBenchWiring" value="false" />
+  <parameter name="simDrivenValue" value="0" />
+  <parameter name="width" value="1" />
+ </module>
  <module
    name="sysid_qsys"
    kind="altera_avalon_sysid_qsys"
@@ -477,7 +1233,7 @@
    start="nios2_gen2.data_master"
    end="jtag_uart.avalon_jtag_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10001108" />
+  <parameter name="baseAddress" value="0x100016a8" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -502,9 +1258,171 @@
    kind="avalon"
    version="15.0"
    start="nios2_gen2.data_master"
-   end="sysid_qsys.control_slave">
+   end="User_GIO_PWM_0.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001540" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_1.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001500" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_2.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x100014c0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_3.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001480" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_4.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001440" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_5.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001400" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_6.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x100013c0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_7.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001380" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_8.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001340" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_9.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001300" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_10.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x100012c0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_11.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001280" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_12.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001240" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_13.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001200" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_14.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x100011c0" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_15.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001180" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_16.avalon_slave_0">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001140" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="User_GIO_PWM_17.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x10001100" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="sysid_qsys.control_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x100016a0" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -523,6 +1441,78 @@
    end="new_sdram_controller.s1">
   <parameter name="arbitrationPriority" value="1" />
   <parameter name="baseAddress" value="0x08000000" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_0.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001690" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_1.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001680" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_2.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001670" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_3.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001660" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_4.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001650" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_5.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001640" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_6.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001630" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="avalon"
+   version="15.0"
+   start="nios2_gen2.data_master"
+   end="pio_7.s1">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x10001620" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -551,8 +1541,106 @@
    end="new_sdram_controller.clk" />
  <connection kind="clock" version="15.0" start="clk.clk" end="sysid_qsys.clk" />
  <connection kind="clock" version="15.0" start="clk.clk" end="jtag_uart.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_0.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_1.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_2.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_3.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_4.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_5.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_6.clk" />
+ <connection kind="clock" version="15.0" start="clk.clk" end="pio_7.clk" />
  <connection kind="clock" version="15.0" start="clk.clk" end="LCD_1506.clock" />
  <connection kind="clock" version="15.0" start="clk.clk" end="IR_1506.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_0.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_1.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_2.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_3.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_4.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_5.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_6.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_7.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_8.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_9.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_10.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_11.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_12.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_13.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_14.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_15.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_16.clock" />
+ <connection
+   kind="clock"
+   version="15.0"
+   start="clk.clk"
+   end="User_GIO_PWM_17.clock" />
  <connection
    kind="interrupt"
    version="15.0"
@@ -581,6 +1669,96 @@
    kind="reset"
    version="15.0"
    start="clk.clk_reset"
+   end="User_GIO_PWM_0.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_1.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_2.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_3.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_4.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_5.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_6.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_7.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_8.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_9.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_10.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_11.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_12.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_13.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_14.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_15.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_16.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
+   end="User_GIO_PWM_17.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="clk.clk_reset"
    end="nios2_gen2.reset" />
  <connection
    kind="reset"
@@ -597,6 +1775,14 @@
    version="15.0"
    start="clk.clk_reset"
    end="jtag_uart.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_0.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_1.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_2.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_3.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_4.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_5.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_6.reset" />
+ <connection kind="reset" version="15.0" start="clk.clk_reset" end="pio_7.reset" />
  <connection
    kind="reset"
    version="15.0"
@@ -611,6 +1797,96 @@
    kind="reset"
    version="15.0"
    start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_0.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_1.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_2.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_3.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_4.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_5.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_6.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_7.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_8.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_9.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_10.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_11.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_12.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_13.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_14.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_15.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_16.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="User_GIO_PWM_17.clock_reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
    end="nios2_gen2.reset" />
  <connection
    kind="reset"
@@ -627,6 +1903,46 @@
    version="15.0"
    start="nios2_gen2.debug_reset_request"
    end="jtag_uart.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_0.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_1.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_2.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_3.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_4.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_5.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_6.reset" />
+ <connection
+   kind="reset"
+   version="15.0"
+   start="nios2_gen2.debug_reset_request"
+   end="pio_7.reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
  <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />

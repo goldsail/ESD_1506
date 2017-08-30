@@ -36,7 +36,7 @@ module kernel_sysid_qsys (
 
   wire    [ 31: 0] readdata;
   //control_slave, which is an e_avalon_slave
-  assign readdata = address ? 1504053489 : 2;
+  assign readdata = address ? 1504073683 : 2;
 
 endmodule
 

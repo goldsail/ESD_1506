@@ -11,14 +11,14 @@ preplace inst kernel.nios2_gen2.clock_bridge -pg 1
 preplace inst kernel.nios2_gen2 -pg 1 -lvl 2 -y 180
 preplace inst kernel.new_sdram_controller -pg 1 -lvl 3 -y 430
 preplace inst kernel.IR_1506 -pg 1 -lvl 3 -y 30
-preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.ir_1506_conduit_end_0,(SLAVE)IR_1506.conduit_end_0) 1 0 3 NJ 100 NJ 100 NJ
-preplace netloc FAN_OUT<net_container>kernel</net_container>(MASTER)nios2_gen2.irq,(SLAVE)jtag_uart.irq,(SLAVE)IR_1506.interrupt_sender_0) 1 2 1 800
-preplace netloc FAN_OUT<net_container>kernel</net_container>(SLAVE)new_sdram_controller.clk,(SLAVE)nios2_gen2.clk,(MASTER)clk.clk,(SLAVE)LCD_1506.clock,(SLAVE)IR_1506.clock,(SLAVE)jtag_uart.clk,(SLAVE)sysid_qsys.clk) 1 1 2 380 340 820
+preplace netloc FAN_OUT<net_container>kernel</net_container>(SLAVE)jtag_uart.irq,(MASTER)nios2_gen2.irq,(SLAVE)IR_1506.interrupt_sender_0) 1 2 1 800
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)LCD_1506.conduit_end_0,(SLAVE)kernel.lcd_1506_conduit_end_0) 1 0 3 NJ 140 NJ 140 NJ
 preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)clk.clk_in,(SLAVE)kernel.clk) 1 0 1 NJ
-preplace netloc INTERCONNECT<net_container>kernel</net_container>(SLAVE)LCD_1506.avalon_slave_0,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)IR_1506.avalon_slave_0,(SLAVE)new_sdram_controller.s1,(SLAVE)nios2_gen2.debug_mem_slave,(MASTER)nios2_gen2.data_master,(MASTER)nios2_gen2.instruction_master,(SLAVE)sysid_qsys.control_slave) 1 1 2 400 140 760
-preplace netloc INTERCONNECT<net_container>kernel</net_container>(SLAVE)IR_1506.clock_reset,(SLAVE)nios2_gen2.reset,(SLAVE)new_sdram_controller.reset,(SLAVE)LCD_1506.clock_reset,(SLAVE)sysid_qsys.reset,(SLAVE)jtag_uart.reset,(MASTER)nios2_gen2.debug_reset_request,(MASTER)clk.clk_reset) 1 1 2 400 360 780
+preplace netloc INTERCONNECT<net_container>kernel</net_container>(MASTER)nios2_gen2.debug_reset_request,(SLAVE)jtag_uart.reset,(MASTER)clk.clk_reset,(SLAVE)IR_1506.clock_reset,(SLAVE)LCD_1506.clock_reset,(SLAVE)sysid_qsys.reset,(SLAVE)nios2_gen2.reset,(SLAVE)new_sdram_controller.reset) 1 1 2 400 340 860
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)IR_1506.conduit_end_0,(SLAVE)kernel.ir_1506_conduit_end_0) 1 0 3 NJ 100 NJ 100 NJ
 preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)new_sdram_controller.wire,(SLAVE)kernel.new_sdram_controller_wire) 1 0 3 NJ 500 NJ 500 NJ
+preplace netloc FAN_OUT<net_container>kernel</net_container>(MASTER)clk.clk,(SLAVE)jtag_uart.clk,(SLAVE)LCD_1506.clock,(SLAVE)sysid_qsys.clk,(SLAVE)IR_1506.clock,(SLAVE)new_sdram_controller.clk,(SLAVE)nios2_gen2.clk) 1 1 2 380 320 820
 preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
-preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.lcd_1506_conduit_end_0,(SLAVE)LCD_1506.conduit_end_0) 1 0 3 NJ 320 NJ 320 NJ
-levelinfo -pg 1 0 170 1050
-levelinfo -hier kernel 180 210 520 890 1040
+preplace netloc INTERCONNECT<net_container>kernel</net_container>(SLAVE)LCD_1506.avalon_slave_0,(SLAVE)new_sdram_controller.s1,(MASTER)nios2_gen2.instruction_master,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)IR_1506.avalon_slave_0,(SLAVE)sysid_qsys.control_slave,(MASTER)nios2_gen2.data_master,(SLAVE)jtag_uart.avalon_jtag_slave) 1 1 2 420 360 780
+levelinfo -pg 1 0 170 1090
+levelinfo -hier kernel 180 210 540 930 1080

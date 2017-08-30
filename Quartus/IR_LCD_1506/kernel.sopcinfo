@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="kernel" kind="kernel" version="1.0" fabric="QSYS">
  <!-- Format version 15.0 145 (Future versions may contain additional information.) -->
- <!-- 2017.08.30.01:28:08 -->
+ <!-- 2017.08.30.08:38:09 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1504027687</value>
+  <value>1504053489</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -4881,7 +4881,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="dataSlaveMapParam">
    <type>java.lang.String</type>
-   <value><![CDATA[<address-map><slave name='new_sdram_controller.s1' start='0x8000000' end='0x10000000' /><slave name='nios2_gen2.debug_mem_slave' start='0x10000800' end='0x10001000' /><slave name='LCD_1506.avalon_slave_0' start='0x10001000' end='0x10001080' /><slave name='IR_1506.avalon_slave_0' start='0x10001080' end='0x10001100' /><slave name='sysid_qsys.control_slave' start='0x10001100' end='0x10001108' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10001108' end='0x10001110' /></address-map>]]></value>
+   <value><![CDATA[<address-map><slave name='new_sdram_controller.s1' start='0x8000000' end='0x10000000' /><slave name='nios2_gen2.debug_mem_slave' start='0x10000800' end='0x10001000' /><slave name='IR_1506.avalon_slave_0' start='0x10001000' end='0x10001080' /><slave name='LCD_1506.avalon_slave_0' start='0x10001080' end='0x10001100' /><slave name='sysid_qsys.control_slave' start='0x10001100' end='0x10001108' /><slave name='jtag_uart.avalon_jtag_slave' start='0x10001108' end='0x10001110' /></address-map>]]></value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>false</visible>
@@ -5560,7 +5560,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>IR_1506</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>IR_1506.avalon_slave_0</name>
-    <baseAddress>268439680</baseAddress>
+    <baseAddress>268439552</baseAddress>
     <span>128</span>
    </memoryBlock>
    <memoryBlock>
@@ -5568,7 +5568,7 @@ parameters are a RESULT of the module parameters. -->
     <moduleName>LCD_1506</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>LCD_1506.avalon_slave_0</name>
-    <baseAddress>268439552</baseAddress>
+    <baseAddress>268439680</baseAddress>
     <span>128</span>
    </memoryBlock>
    <memoryBlock>
@@ -6542,7 +6542,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.CMacro.TIMESTAMP</name>
-   <value>1504027687</value>
+   <value>1504053489</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.compatible</name>
@@ -6562,7 +6562,7 @@ the requested settings for a module instance. -->
   </assignment>
   <assignment>
    <name>embeddedsw.dts.params.timestamp</name>
-   <value>1504027687</value>
+   <value>1504053489</value>
   </assignment>
   <assignment>
    <name>embeddedsw.dts.vendor</name>
@@ -6578,7 +6578,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="timestamp">
    <type>int</type>
-   <value>1504027687</value>
+   <value>1504053489</value>
    <derived>true</derived>
    <enabled>false</enabled>
    <visible>false</visible>
@@ -7116,7 +7116,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x10001080</value>
+   <value>0x10001000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -7167,7 +7167,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x10001000</value>
+   <value>0x10001080</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

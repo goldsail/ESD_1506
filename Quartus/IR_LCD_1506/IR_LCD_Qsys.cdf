@@ -4,10 +4,10 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPCS64) Path("D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/") File("IR_LCD_Qsys.pof") MfrSpec(OpMask(3) Child_OpMask(1 3));
+		Device PartName(EP4CE115F29) Path("D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/") File("IR_LCD_Qsys.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
 AlteraBegin;
-	ChainType(asc);
+	ChainType(JTAG);
 AlteraEnd;

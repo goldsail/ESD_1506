@@ -113,13 +113,13 @@ kernel u0 (
 			.new_sdram_controller_wire_ras_n          (DRAM_RAS_N),        //                           .ras_n
 			.new_sdram_controller_wire_we_n           (DRAM_WE_N),         //                           .we_n
 			.reset_reset_n                            (reset_n),           //                           reset.reset_n
-			.lcd_1506_conduit_end_0_export_data (LCD_DATA),          // lcd1602_demo_conduit_end_0.export_data
-			.lcd_1506_conduit_end_0_export_rw   (LCD_RW),            //                           .export_rw
-			.lcd_1506_conduit_end_0_export_en   (LCD_EN),            //                           .export_en
-			.lcd_1506_conduit_end_0_export_rs   (LCD_RS),            //                           .export_rs
-			.lcd_1506_conduit_end_0_export_blon (LCD_BLON),          //                           .export_blon
-			.lcd_1506_conduit_end_0_export_on   (LCD_ON),             //                           .export_on
-			.ir_1506_conduit_end_0_export      (IRDA_RXD)           //      ir_demo_0_conduit_end_0.export_irda
+			.lcd_1506_conduit_end_0_export_data (LCD_DATA),          // lcd_1506_conduit_end_0.export_data
+			.lcd_1506_conduit_end_0_export_rw   (LCD_RW),            //                       .export_rw
+			.lcd_1506_conduit_end_0_export_en   (LCD_EN),            //                       .export_en
+			.lcd_1506_conduit_end_0_export_rs   (LCD_RS),            //                       .export_rs
+			.lcd_1506_conduit_end_0_export_blon (LCD_BLON),          //                       .export_blon
+			.lcd_1506_conduit_end_0_export_on   (LCD_ON),            //                       .export_on
+			.ir_1506_conduit_end_0_export      (IRDA_RXD)            // ir_1506_conduit_end_0.export_irda
 );
 
 

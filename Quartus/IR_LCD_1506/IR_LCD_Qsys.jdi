@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="0ff0ce2a01e913ca7efe"/>
+    <hash md5_digest_80b="fa06ced2a071a3dd5fe9"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="IR_LCD_Qsys.sof" usercode="0xFFFFFFFF"/>
@@ -99,7 +99,7 @@
     </sld_info>
     <sld_info hpath="kernel:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME kernel HAS_SOPCINFO 1 GENERATION_ID 1504027687"/>
+        <assignment_value text="QSYS_NAME kernel HAS_SOPCINFO 1 GENERATION_ID 1504053489"/>
       </assignment_values>
       <parameters/>
     </sld_info>

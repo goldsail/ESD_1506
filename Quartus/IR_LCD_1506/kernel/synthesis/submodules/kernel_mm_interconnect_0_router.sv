@@ -212,14 +212,14 @@ module kernel_mm_interconnect_0_router
 
     // ( 0x10001000 .. 0x10001080 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 29'h10001000   ) begin
-            src_channel = 6'b000100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+            src_channel = 6'b000010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
     // ( 0x10001080 .. 0x10001100 )
     if ( {address[RG:PAD3],{PAD3{1'b0}}} == 29'h10001080   ) begin
-            src_channel = 6'b000010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
+            src_channel = 6'b000100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 
     // ( 0x10001100 .. 0x10001108 )

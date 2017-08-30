@@ -37,4 +37,10 @@
 		<nature>com.altera.sbtgui.project.SBTGUIAppNature</nature>
 		<nature>com.altera.sbtgui.project.SBTGUIManagedNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>bsp</name>
+			<value>$%7BPARENT-1-PROJECT_LOC%7D/C_1506_bsp</value>
+		</variable>
+	</variableList>
 </projectDescription>

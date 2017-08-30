@@ -5,7 +5,7 @@
 
 BSP_DIR=../C_1506_bsp
 QUARTUS_PROJECT_DIR=../../
-NIOS2_APP_GEN_ARGS="--elf-name C_1506.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files hello_world.c"
+NIOS2_APP_GEN_ARGS="--elf-name C_1506.elf --set OBJDUMP_INCLUDE_SOURCE 1 --src-files main_1506.c"
 
 
 # First, check to see if $SOPC_KIT_NIOS2 environmental variable is set.

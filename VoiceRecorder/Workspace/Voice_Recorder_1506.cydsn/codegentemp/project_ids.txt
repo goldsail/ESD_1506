@@ -1,0 +1,6 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|17db0802-0f0c-40f6-ae38-f385f8f66be6
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|d4f525bd-9bfa-4cff-9d3a-a42ee06fc907
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1a8e3489-9f32-4d82-8f38-35609965aad2
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|385e17f7-f339-477f-b3da-c6bedbd78551
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8827d696-4ba5-44f5-833c-11c21f9a54c3
+D:\Projects\ESD\tasks_1506\VoiceRecorder\Workspace\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cyprj|94ad6a67-3c19-4431-acc3-7cfcedd04448

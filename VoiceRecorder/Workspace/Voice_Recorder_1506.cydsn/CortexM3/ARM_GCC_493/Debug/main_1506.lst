@@ -1,0 +1,571 @@
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main_1506.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.rodata
+  19              		.align	2
+  20              	.LC0:
+  21 0000 48656C6C 		.ascii	"Hello World\000"
+  21      6F20576F 
+  21      726C6400 
+  22              		.section	.text.main,"ax",%progbits
+  23              		.align	2
+  24              		.global	main
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	main, %function
+  28              	main:
+  29              	.LFB63:
+  30              		.file 1 ".\\main_1506.c"
+   1:.\main_1506.c **** 
+   2:.\main_1506.c **** #include <device.h>
+   3:.\main_1506.c **** 
+   4:.\main_1506.c **** #define THREASHOLD (32)
+   5:.\main_1506.c **** 
+   6:.\main_1506.c **** int main()
+   7:.\main_1506.c **** {
+  31              		.loc 1 7 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 0
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 B0B5     		push	{r4, r5, r7, lr}
+  36              		.cfi_def_cfa_offset 16
+  37              		.cfi_offset 4, -16
+  38              		.cfi_offset 5, -12
+  39              		.cfi_offset 7, -8
+  40              		.cfi_offset 14, -4
+  41 0002 00AF     		add	r7, sp, #0
+  42              		.cfi_def_cfa_register 7
+   8:.\main_1506.c ****     register int8 currVoltage;
+   9:.\main_1506.c ****     register int8 lastVoltage;
+  10:.\main_1506.c ****     
+  11:.\main_1506.c **** 	/* Initialization */
+  12:.\main_1506.c **** 	LCD_1506_Start();
+  43              		.loc 1 12 0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 2
+
+
+  44 0004 FFF7FEFF 		bl	LCD_1506_Start
+  13:.\main_1506.c ****     ADC_1506_Start();               
+  45              		.loc 1 13 0
+  46 0008 FFF7FEFF 		bl	ADC_1506_Start
+  14:.\main_1506.c ****     VDAC_1506_Start();             
+  47              		.loc 1 14 0
+  48 000c FFF7FEFF 		bl	VDAC_1506_Start
+  15:.\main_1506.c ****     Opamp_1506_Start();
+  49              		.loc 1 15 0
+  50 0010 FFF7FEFF 		bl	Opamp_1506_Start
+  16:.\main_1506.c **** 	
+  17:.\main_1506.c **** 	/* Print Hello World on LCD */
+  18:.\main_1506.c **** 	LCD_1506_PrintString("Hello World");
+  51              		.loc 1 18 0
+  52 0014 1148     		ldr	r0, .L5
+  53 0016 FFF7FEFF 		bl	LCD_1506_PrintString
+  19:.\main_1506.c ****     
+  20:.\main_1506.c ****     ADC_1506_StartConvert();
+  54              		.loc 1 20 0
+  55 001a FFF7FEFF 		bl	ADC_1506_StartConvert
+  56              	.L4:
+  21:.\main_1506.c **** 
+  22:.\main_1506.c ****     /* Loop forever */
+  23:.\main_1506.c **** 	for(;;)
+  24:.\main_1506.c ****     {
+  25:.\main_1506.c ****         lastVoltage = currVoltage;
+  57              		.loc 1 25 0
+  58 001e E5B2     		uxtb	r5, r4
+  26:.\main_1506.c ****         ADC_1506_IsEndConversion(ADC_1506_WAIT_FOR_RESULT);
+  59              		.loc 1 26 0
+  60 0020 0020     		movs	r0, #0
+  61 0022 FFF7FEFF 		bl	ADC_1506_IsEndConversion
+  27:.\main_1506.c ****         currVoltage = ADC_1506_GetResult8();
+  62              		.loc 1 27 0
+  63 0026 FFF7FEFF 		bl	ADC_1506_GetResult8
+  64 002a 0346     		mov	r3, r0
+  65 002c 1C46     		mov	r4, r3
+  28:.\main_1506.c ****         if (currVoltage > lastVoltage + THREASHOLD)
+  66              		.loc 1 28 0
+  67 002e 2246     		mov	r2, r4
+  68 0030 6BB2     		sxtb	r3, r5
+  69 0032 2033     		adds	r3, r3, #32
+  70 0034 9A42     		cmp	r2, r3
+  71 0036 03DD     		ble	.L2
+  29:.\main_1506.c ****         {
+  30:.\main_1506.c ****             currVoltage = lastVoltage + THREASHOLD;
+  72              		.loc 1 30 0
+  73 0038 EBB2     		uxtb	r3, r5
+  74 003a 2033     		adds	r3, r3, #32
+  75 003c DBB2     		uxtb	r3, r3
+  76 003e DCB2     		uxtb	r4, r3
+  77              	.L2:
+  31:.\main_1506.c ****         }
+  32:.\main_1506.c ****         if (currVoltage < lastVoltage - THREASHOLD)
+  78              		.loc 1 32 0
+  79 0040 62B2     		sxtb	r2, r4
+  80 0042 6BB2     		sxtb	r3, r5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 3
+
+
+  81 0044 203B     		subs	r3, r3, #32
+  82 0046 9A42     		cmp	r2, r3
+  83 0048 03DA     		bge	.L3
+  33:.\main_1506.c ****         {
+  34:.\main_1506.c ****             currVoltage = lastVoltage - THREASHOLD;
+  84              		.loc 1 34 0
+  85 004a EBB2     		uxtb	r3, r5
+  86 004c 203B     		subs	r3, r3, #32
+  87 004e DBB2     		uxtb	r3, r3
+  88 0050 DCB2     		uxtb	r4, r3
+  89              	.L3:
+  35:.\main_1506.c ****         }
+  36:.\main_1506.c ****         VDAC_1506_SetValue(currVoltage);
+  90              		.loc 1 36 0
+  91 0052 E3B2     		uxtb	r3, r4
+  92 0054 1846     		mov	r0, r3
+  93 0056 FFF7FEFF 		bl	VDAC_1506_SetValue
+  37:.\main_1506.c ****     }
+  94              		.loc 1 37 0
+  95 005a E0E7     		b	.L4
+  96              	.L6:
+  97              		.align	2
+  98              	.L5:
+  99 005c 00000000 		.word	.LC0
+ 100              		.cfi_endproc
+ 101              	.LFE63:
+ 102              		.size	main, .-main
+ 103              		.text
+ 104              	.Letext0:
+ 105              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 106              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 107              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 108              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 109              		.section	.debug_info,"",%progbits
+ 110              	.Ldebug_info0:
+ 111 0000 EB000000 		.4byte	0xeb
+ 112 0004 0400     		.2byte	0x4
+ 113 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 114 000a 04       		.byte	0x4
+ 115 000b 01       		.uleb128 0x1
+ 116 000c BB000000 		.4byte	.LASF18
+ 117 0010 01       		.byte	0x1
+ 118 0011 88000000 		.4byte	.LASF19
+ 119 0015 65010000 		.4byte	.LASF20
+ 120 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 121 001d 00000000 		.4byte	0
+ 122 0021 00000000 		.4byte	.Ldebug_line0
+ 123 0025 02       		.uleb128 0x2
+ 124 0026 01       		.byte	0x1
+ 125 0027 06       		.byte	0x6
+ 126 0028 49010000 		.4byte	.LASF0
+ 127 002c 02       		.uleb128 0x2
+ 128 002d 01       		.byte	0x1
+ 129 002e 08       		.byte	0x8
+ 130 002f 6E000000 		.4byte	.LASF1
+ 131 0033 02       		.uleb128 0x2
+ 132 0034 02       		.byte	0x2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 4
+
+
+ 133 0035 05       		.byte	0x5
+ 134 0036 B2010000 		.4byte	.LASF2
+ 135 003a 02       		.uleb128 0x2
+ 136 003b 02       		.byte	0x2
+ 137 003c 07       		.byte	0x7
+ 138 003d 0E000000 		.4byte	.LASF3
+ 139 0041 03       		.uleb128 0x3
+ 140 0042 55010000 		.4byte	.LASF9
+ 141 0046 02       		.byte	0x2
+ 142 0047 3F       		.byte	0x3f
+ 143 0048 4C000000 		.4byte	0x4c
+ 144 004c 02       		.uleb128 0x2
+ 145 004d 04       		.byte	0x4
+ 146 004e 05       		.byte	0x5
+ 147 004f 96000000 		.4byte	.LASF4
+ 148 0053 02       		.uleb128 0x2
+ 149 0054 04       		.byte	0x4
+ 150 0055 07       		.byte	0x7
+ 151 0056 45000000 		.4byte	.LASF5
+ 152 005a 02       		.uleb128 0x2
+ 153 005b 08       		.byte	0x8
+ 154 005c 05       		.byte	0x5
+ 155 005d 00000000 		.4byte	.LASF6
+ 156 0061 02       		.uleb128 0x2
+ 157 0062 08       		.byte	0x8
+ 158 0063 07       		.byte	0x7
+ 159 0064 57000000 		.4byte	.LASF7
+ 160 0068 04       		.uleb128 0x4
+ 161 0069 04       		.byte	0x4
+ 162 006a 05       		.byte	0x5
+ 163 006b 696E7400 		.ascii	"int\000"
+ 164 006f 02       		.uleb128 0x2
+ 165 0070 04       		.byte	0x4
+ 166 0071 07       		.byte	0x7
+ 167 0072 2E000000 		.4byte	.LASF8
+ 168 0076 03       		.uleb128 0x3
+ 169 0077 BC010000 		.4byte	.LASF10
+ 170 007b 03       		.byte	0x3
+ 171 007c 2C       		.byte	0x2c
+ 172 007d 41000000 		.4byte	0x41
+ 173 0081 05       		.uleb128 0x5
+ 174 0082 40000000 		.4byte	.LASF11
+ 175 0086 04       		.byte	0x4
+ 176 0087 3B01     		.2byte	0x13b
+ 177 0089 25000000 		.4byte	0x25
+ 178 008d 02       		.uleb128 0x2
+ 179 008e 04       		.byte	0x4
+ 180 008f 04       		.byte	0x4
+ 181 0090 5F010000 		.4byte	.LASF12
+ 182 0094 02       		.uleb128 0x2
+ 183 0095 08       		.byte	0x8
+ 184 0096 04       		.byte	0x4
+ 185 0097 AB000000 		.4byte	.LASF13
+ 186 009b 02       		.uleb128 0x2
+ 187 009c 01       		.byte	0x1
+ 188 009d 08       		.byte	0x8
+ 189 009e C4010000 		.4byte	.LASF14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 5
+
+
+ 190 00a2 02       		.uleb128 0x2
+ 191 00a3 04       		.byte	0x4
+ 192 00a4 07       		.byte	0x7
+ 193 00a5 B2000000 		.4byte	.LASF15
+ 194 00a9 06       		.uleb128 0x6
+ 195 00aa 3B000000 		.4byte	.LASF21
+ 196 00ae 01       		.byte	0x1
+ 197 00af 06       		.byte	0x6
+ 198 00b0 68000000 		.4byte	0x68
+ 199 00b4 00000000 		.4byte	.LFB63
+ 200 00b8 60000000 		.4byte	.LFE63-.LFB63
+ 201 00bc 01       		.uleb128 0x1
+ 202 00bd 9C       		.byte	0x9c
+ 203 00be DD000000 		.4byte	0xdd
+ 204 00c2 07       		.uleb128 0x7
+ 205 00c3 9F000000 		.4byte	.LASF16
+ 206 00c7 01       		.byte	0x1
+ 207 00c8 08       		.byte	0x8
+ 208 00c9 81000000 		.4byte	0x81
+ 209 00cd 01       		.uleb128 0x1
+ 210 00ce 54       		.byte	0x54
+ 211 00cf 07       		.uleb128 0x7
+ 212 00d0 7C000000 		.4byte	.LASF17
+ 213 00d4 01       		.byte	0x1
+ 214 00d5 09       		.byte	0x9
+ 215 00d6 81000000 		.4byte	0x81
+ 216 00da 01       		.uleb128 0x1
+ 217 00db 55       		.byte	0x55
+ 218 00dc 00       		.byte	0
+ 219 00dd 08       		.uleb128 0x8
+ 220 00de 21000000 		.4byte	.LASF22
+ 221 00e2 05       		.byte	0x5
+ 222 00e3 5506     		.2byte	0x655
+ 223 00e5 E9000000 		.4byte	0xe9
+ 224 00e9 09       		.uleb128 0x9
+ 225 00ea 76000000 		.4byte	0x76
+ 226 00ee 00       		.byte	0
+ 227              		.section	.debug_abbrev,"",%progbits
+ 228              	.Ldebug_abbrev0:
+ 229 0000 01       		.uleb128 0x1
+ 230 0001 11       		.uleb128 0x11
+ 231 0002 01       		.byte	0x1
+ 232 0003 25       		.uleb128 0x25
+ 233 0004 0E       		.uleb128 0xe
+ 234 0005 13       		.uleb128 0x13
+ 235 0006 0B       		.uleb128 0xb
+ 236 0007 03       		.uleb128 0x3
+ 237 0008 0E       		.uleb128 0xe
+ 238 0009 1B       		.uleb128 0x1b
+ 239 000a 0E       		.uleb128 0xe
+ 240 000b 55       		.uleb128 0x55
+ 241 000c 17       		.uleb128 0x17
+ 242 000d 11       		.uleb128 0x11
+ 243 000e 01       		.uleb128 0x1
+ 244 000f 10       		.uleb128 0x10
+ 245 0010 17       		.uleb128 0x17
+ 246 0011 00       		.byte	0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 6
+
+
+ 247 0012 00       		.byte	0
+ 248 0013 02       		.uleb128 0x2
+ 249 0014 24       		.uleb128 0x24
+ 250 0015 00       		.byte	0
+ 251 0016 0B       		.uleb128 0xb
+ 252 0017 0B       		.uleb128 0xb
+ 253 0018 3E       		.uleb128 0x3e
+ 254 0019 0B       		.uleb128 0xb
+ 255 001a 03       		.uleb128 0x3
+ 256 001b 0E       		.uleb128 0xe
+ 257 001c 00       		.byte	0
+ 258 001d 00       		.byte	0
+ 259 001e 03       		.uleb128 0x3
+ 260 001f 16       		.uleb128 0x16
+ 261 0020 00       		.byte	0
+ 262 0021 03       		.uleb128 0x3
+ 263 0022 0E       		.uleb128 0xe
+ 264 0023 3A       		.uleb128 0x3a
+ 265 0024 0B       		.uleb128 0xb
+ 266 0025 3B       		.uleb128 0x3b
+ 267 0026 0B       		.uleb128 0xb
+ 268 0027 49       		.uleb128 0x49
+ 269 0028 13       		.uleb128 0x13
+ 270 0029 00       		.byte	0
+ 271 002a 00       		.byte	0
+ 272 002b 04       		.uleb128 0x4
+ 273 002c 24       		.uleb128 0x24
+ 274 002d 00       		.byte	0
+ 275 002e 0B       		.uleb128 0xb
+ 276 002f 0B       		.uleb128 0xb
+ 277 0030 3E       		.uleb128 0x3e
+ 278 0031 0B       		.uleb128 0xb
+ 279 0032 03       		.uleb128 0x3
+ 280 0033 08       		.uleb128 0x8
+ 281 0034 00       		.byte	0
+ 282 0035 00       		.byte	0
+ 283 0036 05       		.uleb128 0x5
+ 284 0037 16       		.uleb128 0x16
+ 285 0038 00       		.byte	0
+ 286 0039 03       		.uleb128 0x3
+ 287 003a 0E       		.uleb128 0xe
+ 288 003b 3A       		.uleb128 0x3a
+ 289 003c 0B       		.uleb128 0xb
+ 290 003d 3B       		.uleb128 0x3b
+ 291 003e 05       		.uleb128 0x5
+ 292 003f 49       		.uleb128 0x49
+ 293 0040 13       		.uleb128 0x13
+ 294 0041 00       		.byte	0
+ 295 0042 00       		.byte	0
+ 296 0043 06       		.uleb128 0x6
+ 297 0044 2E       		.uleb128 0x2e
+ 298 0045 01       		.byte	0x1
+ 299 0046 3F       		.uleb128 0x3f
+ 300 0047 19       		.uleb128 0x19
+ 301 0048 03       		.uleb128 0x3
+ 302 0049 0E       		.uleb128 0xe
+ 303 004a 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 7
+
+
+ 304 004b 0B       		.uleb128 0xb
+ 305 004c 3B       		.uleb128 0x3b
+ 306 004d 0B       		.uleb128 0xb
+ 307 004e 49       		.uleb128 0x49
+ 308 004f 13       		.uleb128 0x13
+ 309 0050 11       		.uleb128 0x11
+ 310 0051 01       		.uleb128 0x1
+ 311 0052 12       		.uleb128 0x12
+ 312 0053 06       		.uleb128 0x6
+ 313 0054 40       		.uleb128 0x40
+ 314 0055 18       		.uleb128 0x18
+ 315 0056 9642     		.uleb128 0x2116
+ 316 0058 19       		.uleb128 0x19
+ 317 0059 01       		.uleb128 0x1
+ 318 005a 13       		.uleb128 0x13
+ 319 005b 00       		.byte	0
+ 320 005c 00       		.byte	0
+ 321 005d 07       		.uleb128 0x7
+ 322 005e 34       		.uleb128 0x34
+ 323 005f 00       		.byte	0
+ 324 0060 03       		.uleb128 0x3
+ 325 0061 0E       		.uleb128 0xe
+ 326 0062 3A       		.uleb128 0x3a
+ 327 0063 0B       		.uleb128 0xb
+ 328 0064 3B       		.uleb128 0x3b
+ 329 0065 0B       		.uleb128 0xb
+ 330 0066 49       		.uleb128 0x49
+ 331 0067 13       		.uleb128 0x13
+ 332 0068 02       		.uleb128 0x2
+ 333 0069 18       		.uleb128 0x18
+ 334 006a 00       		.byte	0
+ 335 006b 00       		.byte	0
+ 336 006c 08       		.uleb128 0x8
+ 337 006d 34       		.uleb128 0x34
+ 338 006e 00       		.byte	0
+ 339 006f 03       		.uleb128 0x3
+ 340 0070 0E       		.uleb128 0xe
+ 341 0071 3A       		.uleb128 0x3a
+ 342 0072 0B       		.uleb128 0xb
+ 343 0073 3B       		.uleb128 0x3b
+ 344 0074 05       		.uleb128 0x5
+ 345 0075 49       		.uleb128 0x49
+ 346 0076 13       		.uleb128 0x13
+ 347 0077 3F       		.uleb128 0x3f
+ 348 0078 19       		.uleb128 0x19
+ 349 0079 3C       		.uleb128 0x3c
+ 350 007a 19       		.uleb128 0x19
+ 351 007b 00       		.byte	0
+ 352 007c 00       		.byte	0
+ 353 007d 09       		.uleb128 0x9
+ 354 007e 35       		.uleb128 0x35
+ 355 007f 00       		.byte	0
+ 356 0080 49       		.uleb128 0x49
+ 357 0081 13       		.uleb128 0x13
+ 358 0082 00       		.byte	0
+ 359 0083 00       		.byte	0
+ 360 0084 00       		.byte	0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 8
+
+
+ 361              		.section	.debug_aranges,"",%progbits
+ 362 0000 1C000000 		.4byte	0x1c
+ 363 0004 0200     		.2byte	0x2
+ 364 0006 00000000 		.4byte	.Ldebug_info0
+ 365 000a 04       		.byte	0x4
+ 366 000b 00       		.byte	0
+ 367 000c 0000     		.2byte	0
+ 368 000e 0000     		.2byte	0
+ 369 0010 00000000 		.4byte	.LFB63
+ 370 0014 60000000 		.4byte	.LFE63-.LFB63
+ 371 0018 00000000 		.4byte	0
+ 372 001c 00000000 		.4byte	0
+ 373              		.section	.debug_ranges,"",%progbits
+ 374              	.Ldebug_ranges0:
+ 375 0000 00000000 		.4byte	.LFB63
+ 376 0004 60000000 		.4byte	.LFE63
+ 377 0008 00000000 		.4byte	0
+ 378 000c 00000000 		.4byte	0
+ 379              		.section	.debug_line,"",%progbits
+ 380              	.Ldebug_line0:
+ 381 0000 70010000 		.section	.debug_str,"MS",%progbits,1
+ 381      02004E01 
+ 381      00000201 
+ 381      FB0E0D00 
+ 381      01010101 
+ 382              	.LASF6:
+ 383 0000 6C6F6E67 		.ascii	"long long int\000"
+ 383      206C6F6E 
+ 383      6720696E 
+ 383      7400
+ 384              	.LASF3:
+ 385 000e 73686F72 		.ascii	"short unsigned int\000"
+ 385      7420756E 
+ 385      7369676E 
+ 385      65642069 
+ 385      6E7400
+ 386              	.LASF22:
+ 387 0021 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 387      52784275 
+ 387      66666572 
+ 387      00
+ 388              	.LASF8:
+ 389 002e 756E7369 		.ascii	"unsigned int\000"
+ 389      676E6564 
+ 389      20696E74 
+ 389      00
+ 390              	.LASF21:
+ 391 003b 6D61696E 		.ascii	"main\000"
+ 391      00
+ 392              	.LASF11:
+ 393 0040 696E7438 		.ascii	"int8\000"
+ 393      00
+ 394              	.LASF5:
+ 395 0045 6C6F6E67 		.ascii	"long unsigned int\000"
+ 395      20756E73 
+ 395      69676E65 
+ 395      6420696E 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 9
+
+
+ 395      7400
+ 396              	.LASF7:
+ 397 0057 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 397      206C6F6E 
+ 397      6720756E 
+ 397      7369676E 
+ 397      65642069 
+ 398              	.LASF1:
+ 399 006e 756E7369 		.ascii	"unsigned char\000"
+ 399      676E6564 
+ 399      20636861 
+ 399      7200
+ 400              	.LASF17:
+ 401 007c 6C617374 		.ascii	"lastVoltage\000"
+ 401      566F6C74 
+ 401      61676500 
+ 402              	.LASF19:
+ 403 0088 2E5C6D61 		.ascii	".\\main_1506.c\000"
+ 403      696E5F31 
+ 403      3530362E 
+ 403      6300
+ 404              	.LASF4:
+ 405 0096 6C6F6E67 		.ascii	"long int\000"
+ 405      20696E74 
+ 405      00
+ 406              	.LASF16:
+ 407 009f 63757272 		.ascii	"currVoltage\000"
+ 407      566F6C74 
+ 407      61676500 
+ 408              	.LASF13:
+ 409 00ab 646F7562 		.ascii	"double\000"
+ 409      6C6500
+ 410              	.LASF15:
+ 411 00b2 73697A65 		.ascii	"sizetype\000"
+ 411      74797065 
+ 411      00
+ 412              	.LASF18:
+ 413 00bb 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 413      4320342E 
+ 413      392E3320 
+ 413      32303135 
+ 413      30333033 
+ 414 00ee 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 414      20726576 
+ 414      6973696F 
+ 414      6E203232 
+ 414      31323230 
+ 415 0121 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 415      66756E63 
+ 415      74696F6E 
+ 415      2D736563 
+ 415      74696F6E 
+ 416              	.LASF0:
+ 417 0149 7369676E 		.ascii	"signed char\000"
+ 417      65642063 
+ 417      68617200 
+ 418              	.LASF9:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccQfLGi5.s 			page 10
+
+
+ 419 0155 5F5F696E 		.ascii	"__int32_t\000"
+ 419      7433325F 
+ 419      7400
+ 420              	.LASF12:
+ 421 015f 666C6F61 		.ascii	"float\000"
+ 421      7400
+ 422              	.LASF20:
+ 423 0165 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
+ 423      726F6A65 
+ 423      6374735C 
+ 423      4553445C 
+ 423      7461736B 
+ 424 0193 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
+ 424      5C566F69 
+ 424      63655F52 
+ 424      65636F72 
+ 424      6465725F 
+ 425              	.LASF2:
+ 426 01b2 73686F72 		.ascii	"short int\000"
+ 426      7420696E 
+ 426      7400
+ 427              	.LASF10:
+ 428 01bc 696E7433 		.ascii	"int32_t\000"
+ 428      325F7400 
+ 429              	.LASF14:
+ 430 01c4 63686172 		.ascii	"char\000"
+ 430      00
+ 431              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

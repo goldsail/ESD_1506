@@ -32,4 +32,4 @@
 
 # 照片
 
-![待机模式显示 Ready](https://i.loli.net/2017/09/01/59a90b011a7da.jpg)
+![待机模式显示 Ready](https://i.loli.net/2017/09/01/59a914b10a1fc.jpg)

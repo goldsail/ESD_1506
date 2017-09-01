@@ -1671,30 +1671,27 @@
 <v>Off-Chip</v>
 </tree_states_tab_names>
 <tree_states>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Analog\ADC\Delta Sigma ADC [v3.20]">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Cypress Component Catalog\Analog\Amplifiers\Opamp [v1.90]">
 <ExpandedNodeIds>
 <v>Cypress Component Catalog</v>
 <v>Cypress Component Catalog\Analog</v>
-<v>Cypress Component Catalog\Analog\ADC</v>
-<v>Cypress Component Catalog\Analog\DAC</v>
+<v>Cypress Component Catalog\Analog\Amplifiers</v>
 <v>Cypress Component Catalog\Communications\USB</v>
+<v>Cypress Component Catalog\Filters</v>
 <v>Cypress Component Catalog\Ports and Pins</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>Cypress Component Catalog</v>
 <v>Cypress Component Catalog\Analog</v>
 <v>Cypress Component Catalog\Analog\ADC</v>
-<v>Cypress Component Catalog\Analog\ADC\Delta Sigma ADC [v3.20]</v>
-<v>Cypress Component Catalog\Analog\ADC\SAR ADC [v3.0]</v>
-<v>Cypress Component Catalog\Analog\ADC\Sequencing SAR ADC [v2.0]</v>
 <v>Cypress Component Catalog\Analog\Amplifiers</v>
+<v>Cypress Component Catalog\Analog\Amplifiers\Inverting PGA [v2.0]</v>
+<v>Cypress Component Catalog\Analog\Amplifiers\Opamp [v1.90]</v>
+<v>Cypress Component Catalog\Analog\Amplifiers\PGA [v2.0]</v>
+<v>Cypress Component Catalog\Analog\Amplifiers\TIA [v2.0]</v>
 <v>Cypress Component Catalog\Analog\Analog MUX</v>
 <v>Cypress Component Catalog\Analog\Comparators</v>
 <v>Cypress Component Catalog\Analog\DAC</v>
-<v>Cypress Component Catalog\Analog\DAC\Current DAC (8-bit) [v2.0]</v>
-<v>Cypress Component Catalog\Analog\DAC\Dithered VDAC (9 to12 bits) [v2.10]</v>
-<v>Cypress Component Catalog\Analog\DAC\Voltage DAC (8-bit) [v1.90]</v>
-<v>Cypress Component Catalog\Analog\DAC\Waveform DAC (8-bit) [v2.0]</v>
 <v>Cypress Component Catalog\Analog\Manual Routing</v>
 <v>Cypress Component Catalog\Analog\Mixer [v2.0]</v>
 <v>Cypress Component Catalog\Analog\Sample/Track and Hold [v1.40]</v>
@@ -1704,6 +1701,8 @@
 <v>Cypress Component Catalog\Digital</v>
 <v>Cypress Component Catalog\Display</v>
 <v>Cypress Component Catalog\Filters</v>
+<v>Cypress Component Catalog\Filters\Digital Filter Block (DFB) Assembler [v1.40]</v>
+<v>Cypress Component Catalog\Filters\Filter [v2.30]</v>
 <v>Cypress Component Catalog\Ports and Pins</v>
 <v>Cypress Component Catalog\Ports and Pins\Analog Pin [v2.20]</v>
 <v>Cypress Component Catalog\Ports and Pins\Digital Bidirectional Pin [v2.20]</v>

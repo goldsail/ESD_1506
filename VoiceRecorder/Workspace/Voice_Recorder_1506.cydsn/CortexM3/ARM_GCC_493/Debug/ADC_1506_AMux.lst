@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
   24:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** * Function Name: ADC_1506_AMux_Start
   25:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** ********************************************************************************
   26:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** * Summary:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 2
 
 
   27:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** *  Disconnect all channels.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
   49:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** 
   50:.\Generated_Source\PSoC5/ADC_1506_AMux.c ****     ADC_1506_AMux_lastChannel = ADC_1506_AMux_NULL_CHANNEL;
   62              		.loc 1 50 0 is_stmt 1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 3
 
 
   63 0020 024B     		ldr	r3, .L4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
   97              		.cfi_def_cfa_offset 16
   98 0004 00AF     		add	r7, sp, #0
   99              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 4
 
 
  100 0006 0346     		mov	r3, r0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
   91:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** *  void
   92:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** *
   93:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** *******************************************************************************/
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 5
 
 
   94:.\Generated_Source\PSoC5/ADC_1506_AMux.c **** void ADC_1506_AMux_FastSelect(uint8 channel) 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  169              		.cfi_def_cfa_offset 8
  170 002c BD46     		mov	sp, r7
  171              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 6
 
 
  172              		@ sp needed
@@ -322,15 +322,15 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  190 000b 01       		.uleb128 0x1
  191 000c 1C000000 		.4byte	.LASF18
  192 0010 01       		.byte	0x1
- 193 0011 41010000 		.4byte	.LASF19
- 194 0015 BC010000 		.4byte	.LASF20
+ 193 0011 8C010000 		.4byte	.LASF19
+ 194 0015 16010000 		.4byte	.LASF20
  195 0019 00000000 		.4byte	.Ldebug_ranges0+0
  196 001d 00000000 		.4byte	0
  197 0021 00000000 		.4byte	.Ldebug_line0
  198 0025 02       		.uleb128 0x2
  199 0026 01       		.byte	0x1
  200 0027 06       		.byte	0x6
- 201 0028 B0010000 		.4byte	.LASF0
+ 201 0028 FB010000 		.4byte	.LASF0
  202 002c 02       		.uleb128 0x2
  203 002d 01       		.byte	0x1
  204 002e 08       		.byte	0x8
@@ -338,7 +338,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  206 0033 02       		.uleb128 0x2
  207 0034 02       		.byte	0x2
  208 0035 05       		.byte	0x5
- 209 0036 97010000 		.4byte	.LASF2
+ 209 0036 E2010000 		.4byte	.LASF2
  210 003a 02       		.uleb128 0x2
  211 003b 02       		.byte	0x2
  212 003c 07       		.byte	0x7
@@ -346,7 +346,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  214 0041 02       		.uleb128 0x2
  215 0042 04       		.byte	0x4
  216 0043 05       		.byte	0x5
- 217 0044 A7010000 		.4byte	.LASF4
+ 217 0044 F2010000 		.4byte	.LASF4
  218 0048 02       		.uleb128 0x2
  219 0049 04       		.byte	0x4
  220 004a 07       		.byte	0x7
@@ -354,14 +354,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  222 004f 02       		.uleb128 0x2
  223 0050 08       		.byte	0x8
  224 0051 05       		.byte	0x5
- 225 0052 6A010000 		.4byte	.LASF6
+ 225 0052 B5010000 		.4byte	.LASF6
  226 0056 02       		.uleb128 0x2
  227 0057 08       		.byte	0x8
  228 0058 07       		.byte	0x7
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 7
 
 
- 229 0059 2A010000 		.4byte	.LASF7
+ 229 0059 75010000 		.4byte	.LASF7
  230 005d 03       		.uleb128 0x3
  231 005e 04       		.byte	0x4
  232 005f 05       		.byte	0x5
@@ -369,9 +369,9 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  234 0064 02       		.uleb128 0x2
  235 0065 04       		.byte	0x4
  236 0066 07       		.byte	0x7
- 237 0067 1D010000 		.4byte	.LASF8
+ 237 0067 68010000 		.4byte	.LASF8
  238 006b 04       		.uleb128 0x4
- 239 006c A1010000 		.4byte	.LASF21
+ 239 006c EC010000 		.4byte	.LASF21
  240 0070 02       		.byte	0x2
  241 0071 3801     		.2byte	0x138
  242 0073 2C000000 		.4byte	0x2c
@@ -382,11 +382,11 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  247 007e 02       		.uleb128 0x2
  248 007f 08       		.byte	0x8
  249 0080 04       		.byte	0x4
- 250 0081 16010000 		.4byte	.LASF10
+ 250 0081 61010000 		.4byte	.LASF10
  251 0085 02       		.uleb128 0x2
  252 0086 01       		.byte	0x1
  253 0087 08       		.byte	0x8
- 254 0088 8D010000 		.4byte	.LASF11
+ 254 0088 D8010000 		.4byte	.LASF11
  255 008c 05       		.uleb128 0x5
  256 008d 08000000 		.4byte	.LASF12
  257 0091 01       		.byte	0x1
@@ -397,7 +397,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  262 009c 9C       		.byte	0x9c
  263 009d B0000000 		.4byte	0xb0
  264 00a1 06       		.uleb128 0x6
- 265 00a2 92010000 		.4byte	.LASF16
+ 265 00a2 DD010000 		.4byte	.LASF16
  266 00a6 01       		.byte	0x1
  267 00a7 26       		.byte	0x26
  268 00a8 6B000000 		.4byte	0x6b
@@ -406,7 +406,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  271 00ae 77       		.sleb128 -9
  272 00af 00       		.byte	0
  273 00b0 05       		.uleb128 0x5
- 274 00b1 78010000 		.4byte	.LASF13
+ 274 00b1 C3010000 		.4byte	.LASF13
  275 00b5 01       		.byte	0x1
  276 00b6 45       		.byte	0x45
  277 00b7 00000000 		.4byte	.LFB1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  283 00c6 00000000 		.4byte	.LASF15
  284 00ca 01       		.byte	0x1
  285 00cb 45       		.byte	0x45
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 8
 
 
  286 00cc 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  340 0014 24       		.uleb128 0x24
  341 0015 00       		.byte	0
  342 0016 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 9
 
 
  343 0017 0B       		.uleb128 0xb
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  397 004e 00       		.byte	0
  398 004f 00       		.byte	0
  399 0050 06       		.uleb128 0x6
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 10
 
 
  400 0051 34       		.uleb128 0x34
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  454 0018 00000000 		.4byte	0
  455 001c 00000000 		.4byte	0
  456              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 11
 
 
  457              	.Ldebug_line0:
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  476      69676E65 
  476      6420696E 
  476      7400
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 12
 
 
  477              	.LASF3:
@@ -667,70 +667,70 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 1
  478      7369676E 
  478      65642069 
  478      6E7400
- 479              	.LASF10:
- 480 0116 646F7562 		.ascii	"double\000"
- 480      6C6500
- 481              	.LASF8:
- 482 011d 756E7369 		.ascii	"unsigned int\000"
- 482      676E6564 
- 482      20696E74 
- 482      00
- 483              	.LASF7:
- 484 012a 6C6F6E67 		.ascii	"long long unsigned int\000"
- 484      206C6F6E 
- 484      6720756E 
- 484      7369676E 
- 484      65642069 
- 485              	.LASF19:
- 486 0141 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_1506_AMux.c\000"
- 486      6E657261 
- 486      7465645F 
- 486      536F7572 
- 486      63655C50 
- 487              	.LASF6:
- 488 016a 6C6F6E67 		.ascii	"long long int\000"
- 488      206C6F6E 
- 488      6720696E 
- 488      7400
- 489              	.LASF13:
- 490 0178 4144435F 		.ascii	"ADC_1506_AMux_Select\000"
- 490      31353036 
- 490      5F414D75 
- 490      785F5365 
- 490      6C656374 
- 491              	.LASF11:
- 492 018d 63686172 		.ascii	"char\000"
- 492      00
- 493              	.LASF16:
- 494 0192 6368616E 		.ascii	"chan\000"
- 494      00
- 495              	.LASF2:
- 496 0197 73686F72 		.ascii	"short int\000"
- 496      7420696E 
- 496      7400
- 497              	.LASF21:
- 498 01a1 75696E74 		.ascii	"uint8\000"
- 498      3800
- 499              	.LASF4:
- 500 01a7 6C6F6E67 		.ascii	"long int\000"
- 500      20696E74 
- 500      00
- 501              	.LASF0:
- 502 01b0 7369676E 		.ascii	"signed char\000"
- 502      65642063 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cckuXzUp.s 			page 13
+ 479              	.LASF20:
+ 480 0116 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
+ 480      726F6A65 
+ 480      6374735C 
+ 480      4553445C 
+ 480      4553445F 
+ 481 0144 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 481      6F696365 
+ 481      5F526563 
+ 481      6F726465 
+ 481      725F3135 
+ 482              	.LASF10:
+ 483 0161 646F7562 		.ascii	"double\000"
+ 483      6C6500
+ 484              	.LASF8:
+ 485 0168 756E7369 		.ascii	"unsigned int\000"
+ 485      676E6564 
+ 485      20696E74 
+ 485      00
+ 486              	.LASF7:
+ 487 0175 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 487      206C6F6E 
+ 487      6720756E 
+ 487      7369676E 
+ 487      65642069 
+ 488              	.LASF19:
+ 489 018c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_1506_AMux.c\000"
+ 489      6E657261 
+ 489      7465645F 
+ 489      536F7572 
+ 489      63655C50 
+ 490              	.LASF6:
+ 491 01b5 6C6F6E67 		.ascii	"long long int\000"
+ 491      206C6F6E 
+ 491      6720696E 
+ 491      7400
+ 492              	.LASF13:
+ 493 01c3 4144435F 		.ascii	"ADC_1506_AMux_Select\000"
+ 493      31353036 
+ 493      5F414D75 
+ 493      785F5365 
+ 493      6C656374 
+ 494              	.LASF11:
+ 495 01d8 63686172 		.ascii	"char\000"
+ 495      00
+ 496              	.LASF16:
+ 497 01dd 6368616E 		.ascii	"chan\000"
+ 497      00
+ 498              	.LASF2:
+ 499 01e2 73686F72 		.ascii	"short int\000"
+ 499      7420696E 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccwExKq2.s 			page 13
 
 
- 502      68617200 
- 503              	.LASF20:
- 504 01bc 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
- 504      726F6A65 
- 504      6374735C 
- 504      4553445C 
- 504      7461736B 
- 505 01ea 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 505      5C566F69 
- 505      63655F52 
- 505      65636F72 
- 505      6465725F 
+ 499      7400
+ 500              	.LASF21:
+ 501 01ec 75696E74 		.ascii	"uint8\000"
+ 501      3800
+ 502              	.LASF4:
+ 503 01f2 6C6F6E67 		.ascii	"long int\000"
+ 503      20696E74 
+ 503      00
+ 504              	.LASF0:
+ 505 01fb 7369676E 		.ascii	"signed char\000"
+ 505      65642063 
+ 505      68617200 
  506              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

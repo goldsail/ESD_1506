@@ -1,6 +1,6 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|17db0802-0f0c-40f6-ae38-f385f8f66be6
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|d4f525bd-9bfa-4cff-9d3a-a42ee06fc907
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1a8e3489-9f32-4d82-8f38-35609965aad2
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|385e17f7-f339-477f-b3da-c6bedbd78551
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8827d696-4ba5-44f5-833c-11c21f9a54c3
-D:\Projects\ESD\tasks_1506\VoiceRecorder\Workspace\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cyprj|94ad6a67-3c19-4431-acc3-7cfcedd04448
+D:\Projects\ESD\ESD_1506\VoiceRecorder\Workspace\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cyprj|4cd08285-8bc8-47c4-9e97-843b23333dba
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|93c7e031-f1dd-4ae9-ad3f-eb8f518cd528
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|be75e035-98e4-4b69-bb55-2bb803c68d73
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|28ff3364-35a0-4abc-a5fe-f2bb48a60e9c
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|d484da4c-2ff8-4849-82bc-ed67fe4a5c22
+C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|8d35549e-0369-458d-b0ac-26d751cf4c71

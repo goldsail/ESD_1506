@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
   55 001c 32       		.byte	50
   56 001d 09       		.byte	9
   57 001e 04       		.byte	4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 2
 
 
   58 001f 00       		.byte	0
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  112 0055 00       		.byte	0
  113 0056 00       		.byte	0
  114              		.global	USBUART_1506_STRING_DESCRIPTORS
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 3
 
 
  115 0057 00       		.align	2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  169 008a 55       		.byte	85
  170 008b 00       		.byte	0
  171 008c 53       		.byte	83
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 4
 
 
  172 008d 00       		.byte	0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  226 00c3 00       		.byte	0
  227 00c4 65       		.byte	101
  228 00c5 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 5
 
 
  229 00c6 72       		.byte	114
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  283 00f8 02       		.byte	2
  284 00f9 03       		.byte	3
  285              		.global	USBUART_1506_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 6
 
 
  286 00fa 0000     		.align	2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  340              		.type	USBUART_1506_DEVICE0_TABLE, %object
  341              		.size	USBUART_1506_DEVICE0_TABLE, 24
  342              	USBUART_1506_DEVICE0_TABLE:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 7
 
 
  343 0140 01       		.byte	1
@@ -391,15 +391,15 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  370 0006 00000000 		.4byte	.Ldebug_abbrev0
  371 000a 04       		.byte	0x4
  372 000b 01       		.uleb128 0x1
- 373 000c 1A010000 		.4byte	.LASF34
+ 373 000c 65010000 		.4byte	.LASF34
  374 0010 01       		.byte	0x1
  375 0011 EC000000 		.4byte	.LASF35
- 376 0015 C2020000 		.4byte	.LASF36
+ 376 0015 1A010000 		.4byte	.LASF36
  377 0019 00000000 		.4byte	.Ldebug_line0
  378 001d 02       		.uleb128 0x2
  379 001e 01       		.byte	0x1
  380 001f 06       		.byte	0x6
- 381 0020 B6020000 		.4byte	.LASF0
+ 381 0020 01030000 		.4byte	.LASF0
  382 0024 02       		.uleb128 0x2
  383 0025 01       		.byte	0x1
  384 0026 08       		.byte	0x8
@@ -407,7 +407,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  386 002b 02       		.uleb128 0x2
  387 002c 02       		.byte	0x2
  388 002d 05       		.byte	0x5
- 389 002e 69020000 		.4byte	.LASF2
+ 389 002e B4020000 		.4byte	.LASF2
  390 0032 02       		.uleb128 0x2
  391 0033 02       		.byte	0x2
  392 0034 07       		.byte	0x7
@@ -415,10 +415,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  394 0039 02       		.uleb128 0x2
  395 003a 04       		.byte	0x4
  396 003b 05       		.byte	0x5
- 397 003c AD020000 		.4byte	.LASF4
+ 397 003c F8020000 		.4byte	.LASF4
  398 0040 02       		.uleb128 0x2
  399 0041 04       		.byte	0x4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 8
 
 
  400 0042 07       		.byte	0x7
@@ -426,7 +426,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  402 0047 02       		.uleb128 0x2
  403 0048 08       		.byte	0x8
  404 0049 05       		.byte	0x5
- 405 004a F9010000 		.4byte	.LASF6
+ 405 004a 44020000 		.4byte	.LASF6
  406 004e 02       		.uleb128 0x2
  407 004f 08       		.byte	0x8
  408 0050 07       		.byte	0x7
@@ -438,14 +438,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  414 005c 02       		.uleb128 0x2
  415 005d 04       		.byte	0x4
  416 005e 07       		.byte	0x7
- 417 005f C9010000 		.4byte	.LASF8
+ 417 005f 14020000 		.4byte	.LASF8
  418 0063 04       		.uleb128 0x4
- 419 0064 73020000 		.4byte	.LASF9
+ 419 0064 BE020000 		.4byte	.LASF9
  420 0068 01       		.byte	0x1
  421 0069 3801     		.2byte	0x138
  422 006b 24000000 		.4byte	0x24
  423 006f 04       		.uleb128 0x4
- 424 0070 AF010000 		.4byte	.LASF10
+ 424 0070 FA010000 		.4byte	.LASF10
  425 0074 01       		.byte	0x1
  426 0075 3901     		.2byte	0x139
  427 0077 32000000 		.4byte	0x32
@@ -456,29 +456,29 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  432 0082 02       		.uleb128 0x2
  433 0083 08       		.byte	0x8
  434 0084 04       		.byte	0x4
- 435 0085 A8010000 		.4byte	.LASF12
+ 435 0085 F3010000 		.4byte	.LASF12
  436 0089 02       		.uleb128 0x2
  437 008a 01       		.byte	0x1
  438 008b 08       		.byte	0x8
- 439 008c 07020000 		.4byte	.LASF13
+ 439 008c 52020000 		.4byte	.LASF13
  440 0090 02       		.uleb128 0x2
  441 0091 04       		.byte	0x4
  442 0092 07       		.byte	0x7
- 443 0093 F0010000 		.4byte	.LASF14
+ 443 0093 3B020000 		.4byte	.LASF14
  444 0097 05       		.uleb128 0x5
  445 0098 08       		.byte	0x8
  446 0099 02       		.byte	0x2
  447 009a 9A       		.byte	0x9a
  448 009b E8000000 		.4byte	0xe8
  449 009f 06       		.uleb128 0x6
- 450 00a0 A3020000 		.4byte	.LASF15
+ 450 00a0 EE020000 		.4byte	.LASF15
  451 00a4 02       		.byte	0x2
  452 00a5 9C       		.byte	0x9c
  453 00a6 63000000 		.4byte	0x63
  454 00aa 00       		.byte	0
  455 00ab 06       		.uleb128 0x6
  456 00ac 7B000000 		.4byte	.LASF16
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 9
 
 
  457 00b0 02       		.byte	0x2
@@ -498,13 +498,13 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  471 00ca 63000000 		.4byte	0x63
  472 00ce 03       		.byte	0x3
  473 00cf 06       		.uleb128 0x6
- 474 00d0 5E020000 		.4byte	.LASF19
+ 474 00d0 A9020000 		.4byte	.LASF19
  475 00d4 02       		.byte	0x2
  476 00d5 A0       		.byte	0xa0
  477 00d6 6F000000 		.4byte	0x6f
  478 00da 04       		.byte	0x4
  479 00db 06       		.uleb128 0x6
- 480 00dc 0C020000 		.4byte	.LASF20
+ 480 00dc 57020000 		.4byte	.LASF20
  481 00e0 02       		.byte	0x2
  482 00e1 A1       		.byte	0xa1
  483 00e2 63000000 		.4byte	0x63
@@ -527,7 +527,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  500 0100 63000000 		.4byte	0x63
  501 0104 00       		.byte	0
  502 0105 06       		.uleb128 0x6
- 503 0106 E9010000 		.4byte	.LASF22
+ 503 0106 34020000 		.4byte	.LASF22
  504 010a 02       		.byte	0x2
  505 010b B4       		.byte	0xb4
  506 010c 12010000 		.4byte	0x112
@@ -538,10 +538,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  511 0114 18010000 		.4byte	0x118
  512 0118 0A       		.uleb128 0xa
  513 0119 07       		.uleb128 0x7
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 10
 
 
- 514 011a B6010000 		.4byte	.LASF23
+ 514 011a 01020000 		.4byte	.LASF23
  515 011e 02       		.byte	0x2
  516 011f B5       		.byte	0xb5
  517 0120 F3000000 		.4byte	0xf3
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  557 017e 02       		.byte	0x2
  558 017f 00       		.byte	0
  559 0180 0D       		.uleb128 0xd
- 560 0181 65030000 		.4byte	.LASF26
+ 560 0181 63030000 		.4byte	.LASF26
  561 0185 03       		.byte	0x3
  562 0186 D8       		.byte	0xd8
  563 0187 91010000 		.4byte	0x191
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  568 0192 70010000 		.4byte	0x170
  569 0196 0B       		.uleb128 0xb
  570 0197 63000000 		.4byte	0x63
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 11
 
 
  571 019b A6010000 		.4byte	0x1a6
@@ -607,7 +607,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  574 01a4 01       		.byte	0x1
  575 01a5 00       		.byte	0
  576 01a6 0D       		.uleb128 0xd
- 577 01a7 31030000 		.4byte	.LASF27
+ 577 01a7 2F030000 		.4byte	.LASF27
  578 01ab 03       		.byte	0x3
  579 01ac DE       		.byte	0xde
  580 01ad B7010000 		.4byte	0x1b7
@@ -624,7 +624,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  591 01ca 04       		.byte	0x4
  592 01cb 00       		.byte	0
  593 01cc 0D       		.uleb128 0xd
- 594 01cd 79020000 		.4byte	.LASF28
+ 594 01cd C4020000 		.4byte	.LASF28
  595 01d1 03       		.byte	0x3
  596 01d2 E6       		.byte	0xe6
  597 01d3 DD010000 		.4byte	0x1dd
@@ -658,10 +658,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  625 0216 00       		.byte	0
  626 0217 00       		.byte	0
  627 0218 0D       		.uleb128 0xd
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 12
 
 
- 628 0219 D6010000 		.4byte	.LASF30
+ 628 0219 21020000 		.4byte	.LASF30
  629 021d 03       		.byte	0x3
  630 021e F9       		.byte	0xf9
  631 021f 29020000 		.4byte	0x229
@@ -671,7 +671,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  635 0229 0E       		.uleb128 0xe
  636 022a 08020000 		.4byte	0x208
  637 022e 0D       		.uleb128 0xd
- 638 022f 0F030000 		.4byte	.LASF31
+ 638 022f 0D030000 		.4byte	.LASF31
  639 0233 03       		.byte	0x3
  640 0234 C9       		.byte	0xc9
  641 0235 3F020000 		.4byte	0x23f
@@ -688,7 +688,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  652 0252 9E       		.byte	0x9e
  653 0253 00       		.byte	0
  654 0254 0D       		.uleb128 0xd
- 655 0255 12020000 		.4byte	.LASF32
+ 655 0255 5D020000 		.4byte	.LASF32
  656 0259 03       		.byte	0x3
  657 025a 96       		.byte	0x96
  658 025b 65020000 		.4byte	0x265
@@ -705,7 +705,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  669 0278 21       		.byte	0x21
  670 0279 00       		.byte	0
  671 027a 0F       		.uleb128 0xf
- 672 027b 32020000 		.4byte	.LASF33
+ 672 027b 7D020000 		.4byte	.LASF33
  673 027f 03       		.byte	0x3
  674 0280 2701     		.2byte	0x127
  675 0282 6A020000 		.4byte	0x26a
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  682 0000 01       		.uleb128 0x1
  683 0001 11       		.uleb128 0x11
  684 0002 01       		.byte	0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 13
 
 
  685 0003 25       		.uleb128 0x25
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  739 0039 3B       		.uleb128 0x3b
  740 003a 0B       		.uleb128 0xb
  741 003b 01       		.uleb128 0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 14
 
 
  742 003c 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  796 0072 00       		.byte	0
  797 0073 0A       		.uleb128 0xa
  798 0074 26       		.uleb128 0x26
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 15
 
 
  799 0075 00       		.byte	0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  853 00ab 49       		.uleb128 0x49
  854 00ac 13       		.uleb128 0x13
  855 00ad 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 16
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 16
 
 
  856 00ae 19       		.uleb128 0x19
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  887              	.LASF1:
  888 0086 756E7369 		.ascii	"unsigned char\000"
  888      676E6564 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 17
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 17
 
 
  888      20636861 
@@ -994,139 +994,139 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 1
  900      7465645F 
  900      536F7572 
  900      63655C50 
- 901              	.LASF34:
- 902 011a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 902      4320342E 
- 902      392E3320 
- 902      32303135 
- 902      30333033 
- 903 014d 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 903      20726576 
- 903      6973696F 
- 903      6E203232 
- 903      31323230 
- 904 0180 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 904      66756E63 
- 904      74696F6E 
- 904      2D736563 
- 904      74696F6E 
- 905              	.LASF12:
- 906 01a8 646F7562 		.ascii	"double\000"
- 906      6C6500
- 907              	.LASF10:
- 908 01af 75696E74 		.ascii	"uint16\000"
- 908      313600
- 909              	.LASF23:
- 910 01b6 545F5553 		.ascii	"T_USBUART_1506_LUT\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 18
+ 901              	.LASF36:
+ 902 011a 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
+ 902      726F6A65 
+ 902      6374735C 
+ 902      4553445C 
+ 902      4553445F 
+ 903 0148 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 903      6F696365 
+ 903      5F526563 
+ 903      6F726465 
+ 903      725F3135 
+ 904              	.LASF34:
+ 905 0165 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 905      4320342E 
+ 905      392E3320 
+ 905      32303135 
+ 905      30333033 
+ 906 0198 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 906      20726576 
+ 906      6973696F 
+ 906      6E203232 
+ 906      31323230 
+ 907 01cb 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 907      66756E63 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 18
 
 
- 910      42554152 
- 910      545F3135 
- 910      30365F4C 
- 910      555400
- 911              	.LASF8:
- 912 01c9 756E7369 		.ascii	"unsigned int\000"
- 912      676E6564 
- 912      20696E74 
- 912      00
- 913              	.LASF30:
- 914 01d6 55534255 		.ascii	"USBUART_1506_TABLE\000"
- 914      4152545F 
- 914      31353036 
- 914      5F544142 
- 914      4C4500
- 915              	.LASF22:
- 916 01e9 705F6C69 		.ascii	"p_list\000"
- 916      737400
- 917              	.LASF14:
- 918 01f0 73697A65 		.ascii	"sizetype\000"
- 918      74797065 
- 918      00
- 919              	.LASF6:
- 920 01f9 6C6F6E67 		.ascii	"long long int\000"
- 920      206C6F6E 
- 920      6720696E 
- 920      7400
- 921              	.LASF13:
- 922 0207 63686172 		.ascii	"char\000"
- 922      00
- 923              	.LASF20:
- 924 020c 624D6973 		.ascii	"bMisc\000"
- 924      6300
- 925              	.LASF32:
- 926 0212 55534255 		.ascii	"USBUART_1506_STRING_DESCRIPTORS\000"
- 926      4152545F 
- 926      31353036 
- 926      5F535452 
- 926      494E475F 
- 927              	.LASF33:
- 928 0232 55534255 		.ascii	"USBUART_1506_idSerialNumberStringDescriptor\000"
- 928      4152545F 
- 928      31353036 
- 928      5F696453 
- 928      65726961 
- 929              	.LASF19:
- 930 025e 62756666 		.ascii	"bufferSize\000"
- 930      65725369 
- 930      7A6500
- 931              	.LASF2:
- 932 0269 73686F72 		.ascii	"short int\000"
- 932      7420696E 
- 932      7400
- 933              	.LASF9:
- 934 0273 75696E74 		.ascii	"uint8\000"
- 934      3800
- 935              	.LASF28:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9lrQTe.s 			page 19
+ 907      74696F6E 
+ 907      2D736563 
+ 907      74696F6E 
+ 908              	.LASF12:
+ 909 01f3 646F7562 		.ascii	"double\000"
+ 909      6C6500
+ 910              	.LASF10:
+ 911 01fa 75696E74 		.ascii	"uint16\000"
+ 911      313600
+ 912              	.LASF23:
+ 913 0201 545F5553 		.ascii	"T_USBUART_1506_LUT\000"
+ 913      42554152 
+ 913      545F3135 
+ 913      30365F4C 
+ 913      555400
+ 914              	.LASF8:
+ 915 0214 756E7369 		.ascii	"unsigned int\000"
+ 915      676E6564 
+ 915      20696E74 
+ 915      00
+ 916              	.LASF30:
+ 917 0221 55534255 		.ascii	"USBUART_1506_TABLE\000"
+ 917      4152545F 
+ 917      31353036 
+ 917      5F544142 
+ 917      4C4500
+ 918              	.LASF22:
+ 919 0234 705F6C69 		.ascii	"p_list\000"
+ 919      737400
+ 920              	.LASF14:
+ 921 023b 73697A65 		.ascii	"sizetype\000"
+ 921      74797065 
+ 921      00
+ 922              	.LASF6:
+ 923 0244 6C6F6E67 		.ascii	"long long int\000"
+ 923      206C6F6E 
+ 923      6720696E 
+ 923      7400
+ 924              	.LASF13:
+ 925 0252 63686172 		.ascii	"char\000"
+ 925      00
+ 926              	.LASF20:
+ 927 0257 624D6973 		.ascii	"bMisc\000"
+ 927      6300
+ 928              	.LASF32:
+ 929 025d 55534255 		.ascii	"USBUART_1506_STRING_DESCRIPTORS\000"
+ 929      4152545F 
+ 929      31353036 
+ 929      5F535452 
+ 929      494E475F 
+ 930              	.LASF33:
+ 931 027d 55534255 		.ascii	"USBUART_1506_idSerialNumberStringDescriptor\000"
+ 931      4152545F 
+ 931      31353036 
+ 931      5F696453 
+ 931      65726961 
+ 932              	.LASF19:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKYXvMT.s 			page 19
 
 
- 936 0279 55534255 		.ascii	"USBUART_1506_DEVICE0_CONFIGURATION0_TABLE\000"
- 936      4152545F 
- 936      31353036 
- 936      5F444556 
- 936      49434530 
- 937              	.LASF15:
- 938 02a3 696E7465 		.ascii	"interface\000"
- 938      72666163 
- 938      6500
- 939              	.LASF4:
- 940 02ad 6C6F6E67 		.ascii	"long int\000"
- 940      20696E74 
- 940      00
- 941              	.LASF0:
- 942 02b6 7369676E 		.ascii	"signed char\000"
- 942      65642063 
- 942      68617200 
- 943              	.LASF36:
- 944 02c2 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
- 944      726F6A65 
- 944      6374735C 
- 944      4553445C 
- 944      7461736B 
- 945 02f0 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 945      5C566F69 
- 945      63655F52 
- 945      65636F72 
- 945      6465725F 
+ 933 02a9 62756666 		.ascii	"bufferSize\000"
+ 933      65725369 
+ 933      7A6500
+ 934              	.LASF2:
+ 935 02b4 73686F72 		.ascii	"short int\000"
+ 935      7420696E 
+ 935      7400
+ 936              	.LASF9:
+ 937 02be 75696E74 		.ascii	"uint8\000"
+ 937      3800
+ 938              	.LASF28:
+ 939 02c4 55534255 		.ascii	"USBUART_1506_DEVICE0_CONFIGURATION0_TABLE\000"
+ 939      4152545F 
+ 939      31353036 
+ 939      5F444556 
+ 939      49434530 
+ 940              	.LASF15:
+ 941 02ee 696E7465 		.ascii	"interface\000"
+ 941      72666163 
+ 941      6500
+ 942              	.LASF4:
+ 943 02f8 6C6F6E67 		.ascii	"long int\000"
+ 943      20696E74 
+ 943      00
+ 944              	.LASF0:
+ 945 0301 7369676E 		.ascii	"signed char\000"
+ 945      65642063 
+ 945      68617200 
  946              	.LASF31:
- 947 030f 55534255 		.ascii	"USBUART_1506_SN_STRING_DESCRIPTOR\000"
+ 947 030d 55534255 		.ascii	"USBUART_1506_SN_STRING_DESCRIPTOR\000"
  947      4152545F 
  947      31353036 
  947      5F534E5F 
  947      53545249 
  948              	.LASF27:
- 949 0331 55534255 		.ascii	"USBUART_1506_DEVICE0_CONFIGURATION0_INTERFACE_CLASS"
+ 949 032f 55534255 		.ascii	"USBUART_1506_DEVICE0_CONFIGURATION0_INTERFACE_CLASS"
  949      4152545F 
  949      31353036 
  949      5F444556 
  949      49434530 
- 950 0364 00       		.ascii	"\000"
+ 950 0362 00       		.ascii	"\000"
  951              	.LASF26:
- 952 0365 55534255 		.ascii	"USBUART_1506_DEVICE0_CONFIGURATION0_EP_SETTINGS_TAB"
+ 952 0363 55534255 		.ascii	"USBUART_1506_DEVICE0_CONFIGURATION0_EP_SETTINGS_TAB"
  952      4152545F 
  952      31353036 
  952      5F444556 
  952      49434530 
- 953 0398 4C4500   		.ascii	"LE\000"
+ 953 0396 4C4500   		.ascii	"LE\000"
  954              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

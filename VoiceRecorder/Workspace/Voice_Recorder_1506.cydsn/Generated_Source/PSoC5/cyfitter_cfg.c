@@ -187,7 +187,7 @@ static void ClockSetup(void)
 {
 	/* CYDEV_CLKDIST_ACFG0_CFG0 Address: CYREG_CLKDIST_ACFG0_CFG0 Size (bytes): 4 */
 	static const uint8 CYCODE BS_CYDEV_CLKDIST_ACFG0_CFG0_VAL[] = {
-		0x0Eu, 0x00u, 0x18u, 0x01u};
+		0xBBu, 0x00u, 0x18u, 0x01u};
 
 	uint32 timeout;
 	uint8 pllLock;

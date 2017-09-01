@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
   25:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** ********************************************************************************
   26:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** *
   27:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** * Summary:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 2
 
 
   28:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** *  Saves the current user configuration registers.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
   53:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** * Return:
   54:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** *  void
   55:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** *
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 3
 
 
   56:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** *******************************************************************************/
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
   81:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** *******************************************************************************/
   82:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** void Opamp_1506_Sleep(void) 
   83:.\Generated_Source\PSoC5/Opamp_1506_PM.c **** {
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 4
 
 
   89              		.loc 1 83 0
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  127 0030 00000000 		.word	Opamp_1506_backup
  128              		.cfi_endproc
  129              	.LFE2:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 5
 
 
  130              		.size	Opamp_1506_Sleep, .-Opamp_1506_Sleep
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  128:.\Generated_Source\PSoC5/Opamp_1506_PM.c ****     {
  129:.\Generated_Source\PSoC5/Opamp_1506_PM.c ****         Opamp_1506_Enable();
  156              		.loc 1 129 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 6
 
 
  157 0010 FFF7FEFF 		bl	Opamp_1506_Enable
@@ -343,7 +343,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  194 0033 02       		.uleb128 0x2
  195 0034 02       		.byte	0x2
  196 0035 05       		.byte	0x5
- 197 0036 1F020000 		.4byte	.LASF2
+ 197 0036 1D020000 		.4byte	.LASF2
  198 003a 02       		.uleb128 0x2
  199 003b 02       		.byte	0x2
  200 003c 07       		.byte	0x7
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  209 004b 6F000000 		.4byte	.LASF5
  210 004f 02       		.uleb128 0x2
  211 0050 08       		.byte	0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 7
 
 
  212 0051 05       		.byte	0x5
@@ -393,7 +393,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  241 0087 08       		.byte	0x8
  242 0088 E7000000 		.4byte	.LASF11
  243 008c 04       		.uleb128 0x4
- 244 008d 29020000 		.4byte	.LASF13
+ 244 008d 27020000 		.4byte	.LASF13
  245 0091 02       		.byte	0x2
  246 0092 E201     		.2byte	0x1e2
  247 0094 98000000 		.4byte	0x98
@@ -402,7 +402,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  250 009d 02       		.uleb128 0x2
  251 009e 04       		.byte	0x4
  252 009f 07       		.byte	0x7
- 253 00a0 2E020000 		.4byte	.LASF14
+ 253 00a0 2C020000 		.4byte	.LASF14
  254 00a4 06       		.uleb128 0x6
  255 00a5 01       		.byte	0x1
  256 00a6 03       		.byte	0x3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  266 00b9 08       		.uleb128 0x8
  267 00ba 98000000 		.4byte	.LASF15
  268 00be 03       		.byte	0x3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 8
 
 
  269 00bf 29       		.byte	0x29
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  323 0009 1B       		.uleb128 0x1b
  324 000a 0E       		.uleb128 0xe
  325 000b 55       		.uleb128 0x55
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 9
 
 
  326 000c 17       		.uleb128 0x17
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  380 0042 3A       		.uleb128 0x3a
  381 0043 0B       		.uleb128 0xb
  382 0044 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 10
 
 
  383 0045 0B       		.uleb128 0xb
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  437 007c 00       		.byte	0
  438 007d 00       		.byte	0
  439 007e 0A       		.uleb128 0xa
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 11
 
 
  440 007f 2E       		.uleb128 0x2e
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  494 0030 00000000 		.4byte	0
  495 0034 00000000 		.4byte	0
  496              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 12
 
 
  497              	.Ldebug_ranges0:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  526 0081 6C6F6E67 		.ascii	"long long unsigned int\000"
  526      206C6F6E 
  526      6720756E 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 13
 
 
  526      7369676E 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  546      30365F53 
  546      6C656570 
  546      00
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmtGruu.s 			page 14
 
 
  547              	.LASF3:
@@ -801,25 +801,25 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cctlo7iX.s 			page 1
  554 01cc 666C6F61 		.ascii	"float\000"
  554      7400
  555              	.LASF22:
- 556 01d2 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
+ 556 01d2 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
  556      726F6A65 
  556      6374735C 
  556      4553445C 
- 556      7461736B 
- 557 0200 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 557      5C566F69 
- 557      63655F52 
- 557      65636F72 
- 557      6465725F 
+ 556      4553445F 
+ 557 0200 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 557      6F696365 
+ 557      5F526563 
+ 557      6F726465 
+ 557      725F3135 
  558              	.LASF2:
- 559 021f 73686F72 		.ascii	"short int\000"
+ 559 021d 73686F72 		.ascii	"short int\000"
  559      7420696E 
  559      7400
  560              	.LASF13:
- 561 0229 72656738 		.ascii	"reg8\000"
+ 561 0227 72656738 		.ascii	"reg8\000"
  561      00
  562              	.LASF14:
- 563 022e 73697A65 		.ascii	"sizetype\000"
+ 563 022c 73697A65 		.ascii	"sizetype\000"
  563      74797065 
  563      00
  564              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

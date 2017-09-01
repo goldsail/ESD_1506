@@ -1,5 +1,5 @@
--- Project:   D:\Projects\ESD\tasks_1506\VoiceRecorder\Workspace\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cyprj
--- Generated: 08/31/2017 19:01:06
+-- Project:   D:\Projects\ESD\ESD_1506\VoiceRecorder\Workspace\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cyprj
+-- Generated: 09/01/2017 10:32:48
 -- PSoC Creator  3.3 SP1
 
 ENTITY Voice_Recorder_1506 IS

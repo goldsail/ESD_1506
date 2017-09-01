@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
   18:.\Generated_Source\PSoC5/LCD_1506.c **** #include "LCD_1506.h"
   19:.\Generated_Source\PSoC5/LCD_1506.c **** 
   20:.\Generated_Source\PSoC5/LCD_1506.c **** 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 2
 
 
   21:.\Generated_Source\PSoC5/LCD_1506.c **** static void LCD_1506_WrDatNib(uint8 nibble) ;
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
   53 000c FFF7FEFF 		bl	LCD_1506_WrCntrlNib
   60:.\Generated_Source\PSoC5/LCD_1506.c ****     CyDelay(5u);                                                         /* Delay 5 ms */
   54              		.loc 1 60 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 3
 
 
   55 0010 0520     		movs	r0, #5
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
   95 0060 FFF7FEFF 		bl	LCD_1506_WriteControl
   75:.\Generated_Source\PSoC5/LCD_1506.c ****     CyDelay(5u);
   96              		.loc 1 75 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 4
 
 
   97 0064 0520     		movs	r0, #5
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  121              		.cfi_def_cfa_register 7
  106:.\Generated_Source\PSoC5/LCD_1506.c ****     LCD_1506_DisplayOn();
  122              		.loc 1 106 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 5
 
 
  123 0004 0C20     		movs	r0, #12
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  138:.\Generated_Source\PSoC5/LCD_1506.c **** {
  146              		.loc 1 138 0
  147              		.cfi_startproc
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 6
 
 
  148              		@ args = 0, pretend = 0, frame = 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  154:.\Generated_Source\PSoC5/LCD_1506.c **** *
  155:.\Generated_Source\PSoC5/LCD_1506.c **** * Summary:
  156:.\Generated_Source\PSoC5/LCD_1506.c **** *  Turns off the display of the LCD screen.
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 7
 
 
  157:.\Generated_Source\PSoC5/LCD_1506.c **** *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  177:.\Generated_Source\PSoC5/LCD_1506.c **** *  Function Name: LCD_1506_Position
  178:.\Generated_Source\PSoC5/LCD_1506.c **** ********************************************************************************
  179:.\Generated_Source\PSoC5/LCD_1506.c **** *
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 8
 
 
  180:.\Generated_Source\PSoC5/LCD_1506.c **** * Summary:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  253 002c BB79     		ldrb	r3, [r7, #6]
  254 002e 803B     		subs	r3, r3, #128
  255 0030 DBB2     		uxtb	r3, r3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 9
 
 
  256 0032 1846     		mov	r0, r3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  295              		.cfi_def_cfa_register 13
  296              		@ sp needed
  297 006a 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 10
 
 
  298              		.cfi_endproc
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  329              		.loc 1 239 0
  330 0012 0BE0     		b	.L22
  331              	.L23:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 11
 
 
  240:.\Generated_Source\PSoC5/LCD_1506.c ****     {
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  256:.\Generated_Source\PSoC5/LCD_1506.c **** *
  257:.\Generated_Source\PSoC5/LCD_1506.c **** * Parameters:
  258:.\Generated_Source\PSoC5/LCD_1506.c **** *  character: Character to be written to LCD
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 12
 
 
  259:.\Generated_Source\PSoC5/LCD_1506.c **** *
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  277:.\Generated_Source\PSoC5/LCD_1506.c **** * Parameters:
  278:.\Generated_Source\PSoC5/LCD_1506.c **** *  dByte: Byte to be written to the LCD module
  279:.\Generated_Source\PSoC5/LCD_1506.c **** *
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 13
 
 
  280:.\Generated_Source\PSoC5/LCD_1506.c **** * Return:
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  441              		.cfi_def_cfa_register 13
  442              		@ sp needed
  443 0030 80BD     		pop	{r7, pc}
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 14
 
 
  444              		.cfi_endproc
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  321:.\Generated_Source\PSoC5/LCD_1506.c ****     
  322:.\Generated_Source\PSoC5/LCD_1506.c ****     /* WrCntrlNib(High Nibble) */
  323:.\Generated_Source\PSoC5/LCD_1506.c ****     LCD_1506_WrCntrlNib(nibble);
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 15
 
 
  475              		.loc 1 323 0
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  348:.\Generated_Source\PSoC5/LCD_1506.c **** void LCD_1506_IsReady(void) 
  349:.\Generated_Source\PSoC5/LCD_1506.c **** {
  505              		.loc 1 349 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 16
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 16
 
 
  506              		.cfi_startproc
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  535 0028 4F4A     		ldr	r2, .L31+4
  536 002a FB78     		ldrb	r3, [r7, #3]
  537 002c 43F00F03 		orr	r3, r3, #15
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 17
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 17
 
 
  538 0030 DBB2     		uxtb	r3, r3
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  574 0074 DBB2     		uxtb	r3, r3
  575 0076 1370     		strb	r3, [r2]
  576              	.L30:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 18
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 18
 
 
  393:.\Generated_Source\PSoC5/LCD_1506.c **** 
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  608 00b2 03F00803 		and	r3, r3, #8
  609 00b6 FB70     		strb	r3, [r7, #3]
  416:.\Generated_Source\PSoC5/LCD_1506.c **** 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 19
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 19
 
 
  417:.\Generated_Source\PSoC5/LCD_1506.c ****         /* Set E high as we in 4-bit interface we need extra operation */
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  645              		.loc 1 435 0 is_stmt 0 discriminator 1
  646 00f6 7B68     		ldr	r3, [r7, #4]
  647 00f8 002B     		cmp	r3, #0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 20
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 20
 
 
  648 00fa BDD1     		bne	.L30
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  679 0136 FB70     		strb	r3, [r7, #3]
  459:.\Generated_Source\PSoC5/LCD_1506.c ****         /* Configure data pins to Strong Drive, others unchanged */
  460:.\Generated_Source\PSoC5/LCD_1506.c ****         LCD_1506_PORT_DM1_REG = value | (LCD_1506_STRONG_DM1 & LCD_1506_DATA_MASK);
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 21
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 21
 
 
  680              		.loc 1 460 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  472:.\Generated_Source\PSoC5/LCD_1506.c **** *  Function Name: LCD_1506_WrDatNib
  473:.\Generated_Source\PSoC5/LCD_1506.c **** ********************************************************************************
  474:.\Generated_Source\PSoC5/LCD_1506.c **** *
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 22
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 22
 
 
  475:.\Generated_Source\PSoC5/LCD_1506.c **** * Summary:
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  496:.\Generated_Source\PSoC5/LCD_1506.c ****     /* Clear data pins */
  497:.\Generated_Source\PSoC5/LCD_1506.c ****     LCD_1506_PORT_DR_REG &= ((uint8)(~LCD_1506_DATA_MASK));
  756              		.loc 1 497 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 23
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 23
 
 
  757 0030 104A     		ldr	r2, .L34
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  797              		.cfi_endproc
  798              	.LFE10:
  799              		.size	LCD_1506_WrDatNib, .-LCD_1506_WrDatNib
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 24
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 24
 
 
  800              		.section	.text.LCD_1506_WrCntrlNib,"ax",%progbits
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  830 001a 104A     		ldr	r2, .L37
  831 001c 0F4B     		ldr	r3, .L37
  832 001e 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 25
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 25
 
 
  833 0020 DBB2     		uxtb	r3, r3
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  873              		.section	.text.LCD_1506_PrintInt8,"ax",%progbits
  874              		.align	2
  875              		.global	LCD_1506_PrintInt8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 26
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 26
 
 
  876              		.thumb
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  906 001e 03F00F03 		and	r3, r3, #15
  907 0022 044A     		ldr	r2, .L40
  908 0024 D35C     		ldrb	r3, [r2, r3]	@ zero_extendqisi2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 27
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 27
 
 
  909 0026 1846     		mov	r0, r3
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  944              		.cfi_def_cfa_register 7
  945 0006 0346     		mov	r3, r0
  946 0008 FB80     		strh	r3, [r7, #6]	@ movhi
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 28
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 28
 
 
  593:.\Generated_Source\PSoC5/LCD_1506.c ****         LCD_1506_PrintInt8((uint8)(value >> LCD_1506_U16_UPPER_BYTE_SHIFT));
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  980              		@ frame_needed = 1, uses_anonymous_args = 0
  981 0000 80B5     		push	{r7, lr}
  982              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 29
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 29
 
 
  983              		.cfi_offset 7, -8
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1023              		.align	2
  1024              		.global	LCD_1506_PrintU32Number
  1025              		.thumb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 30
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 30
 
 
  1026              		.thumb_func
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  664:.\Generated_Source\PSoC5/LCD_1506.c ****         uint8 tmpDigit;
  665:.\Generated_Source\PSoC5/LCD_1506.c ****         char8 number[LCD_1506_NUMBER_OF_REMAINDERS_U32 + 1u];
  666:.\Generated_Source\PSoC5/LCD_1506.c ****         uint8 digIndex = LCD_1506_NUMBER_OF_REMAINDERS_U32;
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 31
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 31
 
 
  1043              		.loc 1 666 0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  686:.\Generated_Source\PSoC5/LCD_1506.c ****             value /= LCD_1506_TEN;
  1078              		.loc 1 686 0
  1079 004a 7B68     		ldr	r3, [r7, #4]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 32
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 32
 
 
  1080 004c 144A     		ldr	r2, .L49
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1121 009a BD46     		mov	sp, r7
  1122              		.cfi_def_cfa_register 13
  1123              		@ sp needed
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 33
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 33
 
 
  1124 009c 80BD     		pop	{r7, pc}
@@ -1948,10 +1948,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1145 0006 00000000 		.4byte	.Ldebug_abbrev0
  1146 000a 04       		.byte	0x4
  1147 000b 01       		.uleb128 0x1
- 1148 000c 45010000 		.4byte	.LASF51
+ 1148 000c 90010000 		.4byte	.LASF51
  1149 0010 01       		.byte	0x1
  1150 0011 06000000 		.4byte	.LASF52
- 1151 0015 1B030000 		.4byte	.LASF53
+ 1151 0015 37010000 		.4byte	.LASF53
  1152 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1153 001d 00000000 		.4byte	0
  1154 0021 00000000 		.4byte	.Ldebug_line0
@@ -1962,30 +1962,30 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1159 002c 03       		.uleb128 0x3
  1160 002d 04       		.byte	0x4
  1161 002e 07       		.byte	0x7
- 1162 002f 03020000 		.4byte	.LASF0
+ 1162 002f 4E020000 		.4byte	.LASF0
  1163 0033 03       		.uleb128 0x3
  1164 0034 01       		.byte	0x1
  1165 0035 06       		.byte	0x6
- 1166 0036 F1020000 		.4byte	.LASF1
+ 1166 0036 3C030000 		.4byte	.LASF1
  1167 003a 03       		.uleb128 0x3
  1168 003b 01       		.byte	0x1
  1169 003c 08       		.byte	0x8
- 1170 003d 37010000 		.4byte	.LASF2
+ 1170 003d 82010000 		.4byte	.LASF2
  1171 0041 03       		.uleb128 0x3
  1172 0042 02       		.byte	0x2
  1173 0043 05       		.byte	0x5
- 1174 0044 A8020000 		.4byte	.LASF3
+ 1174 0044 F3020000 		.4byte	.LASF3
  1175 0048 03       		.uleb128 0x3
  1176 0049 02       		.byte	0x2
  1177 004a 07       		.byte	0x7
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 34
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 34
 
 
  1178 004b 71000000 		.4byte	.LASF4
  1179 004f 03       		.uleb128 0x3
  1180 0050 04       		.byte	0x4
  1181 0051 05       		.byte	0x5
- 1182 0052 CD020000 		.4byte	.LASF5
+ 1182 0052 18030000 		.4byte	.LASF5
  1183 0056 03       		.uleb128 0x3
  1184 0057 04       		.byte	0x4
  1185 0058 07       		.byte	0x7
@@ -1993,31 +1993,31 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1187 005d 03       		.uleb128 0x3
  1188 005e 08       		.byte	0x8
  1189 005f 05       		.byte	0x5
- 1190 0060 6B020000 		.4byte	.LASF7
+ 1190 0060 B6020000 		.4byte	.LASF7
  1191 0064 03       		.uleb128 0x3
  1192 0065 08       		.byte	0x8
  1193 0066 07       		.byte	0x7
- 1194 0067 24020000 		.4byte	.LASF8
+ 1194 0067 6F020000 		.4byte	.LASF8
  1195 006b 03       		.uleb128 0x3
  1196 006c 04       		.byte	0x4
  1197 006d 07       		.byte	0x7
- 1198 006e 56020000 		.4byte	.LASF9
+ 1198 006e A1020000 		.4byte	.LASF9
  1199 0072 03       		.uleb128 0x3
  1200 0073 01       		.byte	0x1
  1201 0074 08       		.byte	0x8
- 1202 0075 D6020000 		.4byte	.LASF10
+ 1202 0075 21030000 		.4byte	.LASF10
  1203 0079 04       		.uleb128 0x4
  1204 007a 23010000 		.4byte	.LASF11
  1205 007e 02       		.byte	0x2
  1206 007f 3801     		.2byte	0x138
  1207 0081 3A000000 		.4byte	0x3a
  1208 0085 04       		.uleb128 0x4
- 1209 0086 DA010000 		.4byte	.LASF12
+ 1209 0086 25020000 		.4byte	.LASF12
  1210 008a 02       		.byte	0x2
  1211 008b 3901     		.2byte	0x139
  1212 008d 48000000 		.4byte	0x48
  1213 0091 04       		.uleb128 0x4
- 1214 0092 EA010000 		.4byte	.LASF13
+ 1214 0092 35020000 		.4byte	.LASF13
  1215 0096 02       		.byte	0x2
  1216 0097 3A01     		.2byte	0x13a
  1217 0099 56000000 		.4byte	0x56
@@ -2028,9 +2028,9 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1222 00a4 03       		.uleb128 0x3
  1223 00a5 08       		.byte	0x8
  1224 00a6 04       		.byte	0x4
- 1225 00a7 D3010000 		.4byte	.LASF15
+ 1225 00a7 1E020000 		.4byte	.LASF15
  1226 00ab 04       		.uleb128 0x4
- 1227 00ac 5F020000 		.4byte	.LASF16
+ 1227 00ac AA020000 		.4byte	.LASF16
  1228 00b0 02       		.byte	0x2
  1229 00b1 4901     		.2byte	0x149
  1230 00b3 72000000 		.4byte	0x72
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1232 00b8 0C010000 		.4byte	.LASF17
  1233 00bc 02       		.byte	0x2
  1234 00bd E201     		.2byte	0x1e2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 35
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 35
 
 
  1235 00bf C3000000 		.4byte	0xc3
@@ -2061,7 +2061,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1252 00e8 01       		.uleb128 0x1
  1253 00e9 9C       		.byte	0x9c
  1254 00ea 06       		.uleb128 0x6
- 1255 00eb 68030000 		.4byte	.LASF20
+ 1255 00eb 66030000 		.4byte	.LASF20
  1256 00ef 01       		.byte	0x1
  1257 00f0 89       		.byte	0x89
  1258 00f1 00000000 		.4byte	.LFB2
@@ -2077,7 +2077,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1268 010a 01       		.uleb128 0x1
  1269 010b 9C       		.byte	0x9c
  1270 010c 07       		.uleb128 0x7
- 1271 010d F1010000 		.4byte	.LASF23
+ 1271 010d 3C020000 		.4byte	.LASF23
  1272 0111 01       		.byte	0x1
  1273 0112 C4       		.byte	0xc4
  1274 0113 00000000 		.4byte	.LFB4
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1289 0134 01       		.byte	0x1
  1290 0135 C4       		.byte	0xc4
  1291 0136 79000000 		.4byte	0x79
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 36
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 36
 
 
  1292 013a 02       		.uleb128 0x2
@@ -2131,7 +2131,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1319 016d 91       		.byte	0x91
  1320 016e 77       		.sleb128 -9
  1321 016f 0A       		.uleb128 0xa
- 1322 0170 B2020000 		.4byte	.LASF27
+ 1322 0170 FD020000 		.4byte	.LASF27
  1323 0174 01       		.byte	0x1
  1324 0175 EC       		.byte	0xec
  1325 0176 AB000000 		.4byte	0xab
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1346 01a4 01       		.byte	0x1
  1347 01a5 0801     		.2byte	0x108
  1348 01a7 AB000000 		.4byte	0xab
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 37
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 37
 
 
  1349 01ab 02       		.uleb128 0x2
@@ -2166,7 +2166,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1351 01ad 77       		.sleb128 -9
  1352 01ae 00       		.byte	0
  1353 01af 0D       		.uleb128 0xd
- 1354 01b0 BA020000 		.4byte	.LASF30
+ 1354 01b0 05030000 		.4byte	.LASF30
  1355 01b4 01       		.byte	0x1
  1356 01b5 1C01     		.2byte	0x11c
  1357 01b7 00000000 		.4byte	.LFB7
@@ -2175,7 +2175,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1360 01c0 9C       		.byte	0x9c
  1361 01c1 E4010000 		.4byte	0x1e4
  1362 01c5 0E       		.uleb128 0xe
- 1363 01c6 FD020000 		.4byte	.LASF31
+ 1363 01c6 48030000 		.4byte	.LASF31
  1364 01ca 01       		.byte	0x1
  1365 01cb 1C01     		.2byte	0x11c
  1366 01cd 79000000 		.4byte	0x79
@@ -2183,7 +2183,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1368 01d2 91       		.byte	0x91
  1369 01d3 6F       		.sleb128 -17
  1370 01d4 0F       		.uleb128 0xf
- 1371 01d5 77030000 		.4byte	.LASF32
+ 1371 01d5 75030000 		.4byte	.LASF32
  1372 01d9 01       		.byte	0x1
  1373 01da 1E01     		.2byte	0x11e
  1374 01dc 79000000 		.4byte	0x79
@@ -2192,7 +2192,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1377 01e2 77       		.sleb128 -9
  1378 01e3 00       		.byte	0
  1379 01e4 0D       		.uleb128 0xd
- 1380 01e5 DB020000 		.4byte	.LASF33
+ 1380 01e5 26030000 		.4byte	.LASF33
  1381 01e9 01       		.byte	0x1
  1382 01ea 3A01     		.2byte	0x13a
  1383 01ec 00000000 		.4byte	.LFB8
@@ -2201,7 +2201,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1386 01f5 9C       		.byte	0x9c
  1387 01f6 19020000 		.4byte	0x219
  1388 01fa 0E       		.uleb128 0xe
- 1389 01fb 65020000 		.4byte	.LASF34
+ 1389 01fb B0020000 		.4byte	.LASF34
  1390 01ff 01       		.byte	0x1
  1391 0200 3A01     		.2byte	0x13a
  1392 0202 79000000 		.4byte	0x79
@@ -2209,7 +2209,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1394 0207 91       		.byte	0x91
  1395 0208 6F       		.sleb128 -17
  1396 0209 0F       		.uleb128 0xf
- 1397 020a 77030000 		.4byte	.LASF32
+ 1397 020a 75030000 		.4byte	.LASF32
  1398 020e 01       		.byte	0x1
  1399 020f 3C01     		.2byte	0x13c
  1400 0211 79000000 		.4byte	0x79
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1403 0217 77       		.sleb128 -9
  1404 0218 00       		.byte	0
  1405 0219 0D       		.uleb128 0xd
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 38
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 38
 
 
  1406 021a FB000000 		.4byte	.LASF35
@@ -2238,7 +2238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1420 023c 91       		.byte	0x91
  1421 023d 73       		.sleb128 -13
  1422 023e 0F       		.uleb128 0xf
- 1423 023f 79020000 		.4byte	.LASF37
+ 1423 023f C4020000 		.4byte	.LASF37
  1424 0243 01       		.byte	0x1
  1425 0244 5F01     		.2byte	0x15f
  1426 0246 91000000 		.4byte	0x91
@@ -2256,7 +2256,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1438 025f 9C       		.byte	0x9c
  1439 0260 74020000 		.4byte	0x274
  1440 0264 0E       		.uleb128 0xe
- 1441 0265 77030000 		.4byte	.LASF32
+ 1441 0265 75030000 		.4byte	.LASF32
  1442 0269 01       		.byte	0x1
  1443 026a E601     		.2byte	0x1e6
  1444 026c 79000000 		.4byte	0x79
@@ -2274,11 +2274,11 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1456 0285 9C       		.byte	0x9c
  1457 0286 9A020000 		.4byte	0x29a
  1458 028a 0E       		.uleb128 0xe
- 1459 028b 77030000 		.4byte	.LASF32
+ 1459 028b 75030000 		.4byte	.LASF32
  1460 028f 01       		.byte	0x1
  1461 0290 1002     		.2byte	0x210
  1462 0292 79000000 		.4byte	0x79
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 39
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 39
 
 
  1463 0296 02       		.uleb128 0x2
@@ -2303,7 +2303,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1482 02bd 91       		.byte	0x91
  1483 02be 77       		.sleb128 -9
  1484 02bf 0F       		.uleb128 0xf
- 1485 02c0 81020000 		.4byte	.LASF41
+ 1485 02c0 CC020000 		.4byte	.LASF41
  1486 02c4 01       		.byte	0x1
  1487 02c5 3A02     		.2byte	0x23a
  1488 02c7 E2020000 		.4byte	0x2e2
@@ -2321,7 +2321,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1500 02e2 0C       		.uleb128 0xc
  1501 02e3 D2020000 		.4byte	0x2d2
  1502 02e7 0D       		.uleb128 0xd
- 1503 02e8 10020000 		.4byte	.LASF42
+ 1503 02e8 5B020000 		.4byte	.LASF42
  1504 02ec 01       		.byte	0x1
  1505 02ed 4F02     		.2byte	0x24f
  1506 02ef 00000000 		.4byte	.LFB13
@@ -2338,11 +2338,11 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1517 030a 91       		.byte	0x91
  1518 030b 76       		.sleb128 -10
  1519 030c 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 40
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 40
 
 
  1520 030d 0D       		.uleb128 0xd
- 1521 030e 3B020000 		.4byte	.LASF43
+ 1521 030e 86020000 		.4byte	.LASF43
  1522 0312 01       		.byte	0x1
  1523 0313 6402     		.2byte	0x264
  1524 0315 00000000 		.4byte	.LFB14
@@ -2368,7 +2368,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1544 0340 77       		.sleb128 -9
  1545 0341 00       		.byte	0
  1546 0342 0D       		.uleb128 0xd
- 1547 0343 03030000 		.4byte	.LASF45
+ 1547 0343 4E030000 		.4byte	.LASF45
  1548 0347 01       		.byte	0x1
  1549 0348 9602     		.2byte	0x296
  1550 034a 00000000 		.4byte	.LFB15
@@ -2385,7 +2385,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1561 0365 91       		.byte	0x91
  1562 0366 64       		.sleb128 -28
  1563 0367 0F       		.uleb128 0xf
- 1564 0368 8E020000 		.4byte	.LASF46
+ 1564 0368 D9020000 		.4byte	.LASF46
  1565 036c 01       		.byte	0x1
  1566 036d 9802     		.2byte	0x298
  1567 036f 79000000 		.4byte	0x79
@@ -2393,18 +2393,18 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1569 0374 91       		.byte	0x91
  1570 0375 76       		.sleb128 -10
  1571 0376 0F       		.uleb128 0xf
- 1572 0377 4F020000 		.4byte	.LASF47
+ 1572 0377 9A020000 		.4byte	.LASF47
  1573 037b 01       		.byte	0x1
  1574 037c 9902     		.2byte	0x299
  1575 037e 95030000 		.4byte	0x395
  1576 0382 02       		.uleb128 0x2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 41
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 41
 
 
  1577 0383 91       		.byte	0x91
  1578 0384 68       		.sleb128 -24
  1579 0385 0F       		.uleb128 0xf
- 1580 0386 E1010000 		.4byte	.LASF48
+ 1580 0386 2C020000 		.4byte	.LASF48
  1581 038a 01       		.byte	0x1
  1582 038b 9A02     		.2byte	0x29a
  1583 038d 79000000 		.4byte	0x79
@@ -2420,7 +2420,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1593 03a3 0A       		.byte	0xa
  1594 03a4 00       		.byte	0
  1595 03a5 13       		.uleb128 0x13
- 1596 03a6 97020000 		.4byte	.LASF49
+ 1596 03a6 E2020000 		.4byte	.LASF49
  1597 03aa 01       		.byte	0x1
  1598 03ab 1D       		.byte	0x1d
  1599 03ac 79000000 		.4byte	0x79
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1631 0011 00       		.byte	0
  1632 0012 00       		.byte	0
  1633 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 42
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 42
 
 
  1634 0014 24       		.uleb128 0x24
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1688 004a 11       		.uleb128 0x11
  1689 004b 01       		.uleb128 0x1
  1690 004c 12       		.uleb128 0x12
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 43
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 43
 
 
  1691 004d 06       		.uleb128 0x6
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1745 0085 3B       		.uleb128 0x3b
  1746 0086 0B       		.uleb128 0xb
  1747 0087 49       		.uleb128 0x49
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 44
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 44
 
 
  1748 0088 13       		.uleb128 0x13
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1802 00be 18       		.uleb128 0x18
  1803 00bf 9642     		.uleb128 0x2116
  1804 00c1 19       		.uleb128 0x19
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 45
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 45
 
 
  1805 00c2 01       		.uleb128 0x1
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1859 00f9 13       		.uleb128 0x13
  1860 00fa 00       		.byte	0
  1861 00fb 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 46
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 46
 
 
  1862 00fc 11       		.uleb128 0x11
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1916 0038 00000000 		.4byte	.LFB5
  1917 003c 38000000 		.4byte	.LFE5-.LFB5
  1918 0040 00000000 		.4byte	.LFB6
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 47
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 47
 
 
  1919 0044 18000000 		.4byte	.LFE6-.LFB6
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1973 007c A4000000 		.4byte	.LFE15
  1974 0080 00000000 		.4byte	0
  1975 0084 00000000 		.4byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 48
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 48
 
 
  1976              		.section	.debug_line,"",%progbits
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  1998      78553800 
  1999              	.LASF18:
  2000 009e 4C43445F 		.ascii	"LCD_1506_Init\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 49
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 49
 
 
  2000      31353036 
@@ -2934,170 +2934,170 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 1
  2022      31353036 
  2022      5F53746F 
  2022      7000
- 2023              	.LASF2:
- 2024 0137 756E7369 		.ascii	"unsigned char\000"
- 2024      676E6564 
- 2024      20636861 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 50
+ 2023              	.LASF53:
+ 2024 0137 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
+ 2024      726F6A65 
+ 2024      6374735C 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 50
 
 
- 2024      7200
- 2025              	.LASF51:
- 2026 0145 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 2026      4320342E 
- 2026      392E3320 
- 2026      32303135 
- 2026      30333033 
- 2027 0178 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 2027      20726576 
- 2027      6973696F 
- 2027      6E203232 
- 2027      31323230 
- 2028 01ab 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 2028      66756E63 
- 2028      74696F6E 
- 2028      2D736563 
- 2028      74696F6E 
- 2029              	.LASF15:
- 2030 01d3 646F7562 		.ascii	"double\000"
- 2030      6C6500
- 2031              	.LASF12:
- 2032 01da 75696E74 		.ascii	"uint16\000"
- 2032      313600
- 2033              	.LASF48:
- 2034 01e1 64696749 		.ascii	"digIndex\000"
- 2034      6E646578 
- 2034      00
- 2035              	.LASF13:
- 2036 01ea 75696E74 		.ascii	"uint32\000"
- 2036      333200
- 2037              	.LASF23:
- 2038 01f1 4C43445F 		.ascii	"LCD_1506_Position\000"
- 2038      31353036 
- 2038      5F506F73 
- 2038      6974696F 
- 2038      6E00
- 2039              	.LASF0:
- 2040 0203 756E7369 		.ascii	"unsigned int\000"
- 2040      676E6564 
- 2040      20696E74 
- 2040      00
- 2041              	.LASF42:
- 2042 0210 4C43445F 		.ascii	"LCD_1506_PrintInt16\000"
- 2042      31353036 
- 2042      5F507269 
- 2042      6E74496E 
- 2042      74313600 
- 2043              	.LASF8:
- 2044 0224 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2044      206C6F6E 
- 2044      6720756E 
- 2044      7369676E 
- 2044      65642069 
- 2045              	.LASF43:
- 2046 023b 4C43445F 		.ascii	"LCD_1506_PrintInt32\000"
- 2046      31353036 
- 2046      5F507269 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 51
+ 2024      4553445C 
+ 2024      4553445F 
+ 2025 0165 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 2025      6F696365 
+ 2025      5F526563 
+ 2025      6F726465 
+ 2025      725F3135 
+ 2026              	.LASF2:
+ 2027 0182 756E7369 		.ascii	"unsigned char\000"
+ 2027      676E6564 
+ 2027      20636861 
+ 2027      7200
+ 2028              	.LASF51:
+ 2029 0190 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 2029      4320342E 
+ 2029      392E3320 
+ 2029      32303135 
+ 2029      30333033 
+ 2030 01c3 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 2030      20726576 
+ 2030      6973696F 
+ 2030      6E203232 
+ 2030      31323230 
+ 2031 01f6 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 2031      66756E63 
+ 2031      74696F6E 
+ 2031      2D736563 
+ 2031      74696F6E 
+ 2032              	.LASF15:
+ 2033 021e 646F7562 		.ascii	"double\000"
+ 2033      6C6500
+ 2034              	.LASF12:
+ 2035 0225 75696E74 		.ascii	"uint16\000"
+ 2035      313600
+ 2036              	.LASF48:
+ 2037 022c 64696749 		.ascii	"digIndex\000"
+ 2037      6E646578 
+ 2037      00
+ 2038              	.LASF13:
+ 2039 0235 75696E74 		.ascii	"uint32\000"
+ 2039      333200
+ 2040              	.LASF23:
+ 2041 023c 4C43445F 		.ascii	"LCD_1506_Position\000"
+ 2041      31353036 
+ 2041      5F506F73 
+ 2041      6974696F 
+ 2041      6E00
+ 2042              	.LASF0:
+ 2043 024e 756E7369 		.ascii	"unsigned int\000"
+ 2043      676E6564 
+ 2043      20696E74 
+ 2043      00
+ 2044              	.LASF42:
+ 2045 025b 4C43445F 		.ascii	"LCD_1506_PrintInt16\000"
+ 2045      31353036 
+ 2045      5F507269 
+ 2045      6E74496E 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 51
 
 
- 2046      6E74496E 
- 2046      74333200 
- 2047              	.LASF47:
- 2048 024f 6E756D62 		.ascii	"number\000"
- 2048      657200
- 2049              	.LASF9:
- 2050 0256 73697A65 		.ascii	"sizetype\000"
- 2050      74797065 
- 2050      00
- 2051              	.LASF16:
- 2052 025f 63686172 		.ascii	"char8\000"
- 2052      3800
- 2053              	.LASF34:
- 2054 0265 63427974 		.ascii	"cByte\000"
- 2054      6500
- 2055              	.LASF7:
- 2056 026b 6C6F6E67 		.ascii	"long long int\000"
- 2056      206C6F6E 
- 2056      6720696E 
- 2056      7400
- 2057              	.LASF37:
- 2058 0279 74696D65 		.ascii	"timeout\000"
- 2058      6F757400 
- 2059              	.LASF41:
- 2060 0281 4C43445F 		.ascii	"LCD_1506_hex\000"
- 2060      31353036 
- 2060      5F686578 
- 2060      00
- 2061              	.LASF46:
- 2062 028e 746D7044 		.ascii	"tmpDigit\000"
- 2062      69676974 
- 2062      00
- 2063              	.LASF49:
- 2064 0297 4C43445F 		.ascii	"LCD_1506_initVar\000"
- 2064      31353036 
- 2064      5F696E69 
- 2064      74566172 
- 2064      00
- 2065              	.LASF3:
- 2066 02a8 73686F72 		.ascii	"short int\000"
- 2066      7420696E 
- 2066      7400
- 2067              	.LASF27:
- 2068 02b2 63757272 		.ascii	"current\000"
- 2068      656E7400 
- 2069              	.LASF30:
- 2070 02ba 4C43445F 		.ascii	"LCD_1506_WriteData\000"
- 2070      31353036 
- 2070      5F577269 
- 2070      74654461 
- 2070      746100
- 2071              	.LASF5:
- 2072 02cd 6C6F6E67 		.ascii	"long int\000"
- 2072      20696E74 
- 2072      00
- 2073              	.LASF10:
- 2074 02d6 63686172 		.ascii	"char\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKPVHYV.s 			page 52
+ 2045      74313600 
+ 2046              	.LASF8:
+ 2047 026f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2047      206C6F6E 
+ 2047      6720756E 
+ 2047      7369676E 
+ 2047      65642069 
+ 2048              	.LASF43:
+ 2049 0286 4C43445F 		.ascii	"LCD_1506_PrintInt32\000"
+ 2049      31353036 
+ 2049      5F507269 
+ 2049      6E74496E 
+ 2049      74333200 
+ 2050              	.LASF47:
+ 2051 029a 6E756D62 		.ascii	"number\000"
+ 2051      657200
+ 2052              	.LASF9:
+ 2053 02a1 73697A65 		.ascii	"sizetype\000"
+ 2053      74797065 
+ 2053      00
+ 2054              	.LASF16:
+ 2055 02aa 63686172 		.ascii	"char8\000"
+ 2055      3800
+ 2056              	.LASF34:
+ 2057 02b0 63427974 		.ascii	"cByte\000"
+ 2057      6500
+ 2058              	.LASF7:
+ 2059 02b6 6C6F6E67 		.ascii	"long long int\000"
+ 2059      206C6F6E 
+ 2059      6720696E 
+ 2059      7400
+ 2060              	.LASF37:
+ 2061 02c4 74696D65 		.ascii	"timeout\000"
+ 2061      6F757400 
+ 2062              	.LASF41:
+ 2063 02cc 4C43445F 		.ascii	"LCD_1506_hex\000"
+ 2063      31353036 
+ 2063      5F686578 
+ 2063      00
+ 2064              	.LASF46:
+ 2065 02d9 746D7044 		.ascii	"tmpDigit\000"
+ 2065      69676974 
+ 2065      00
+ 2066              	.LASF49:
+ 2067 02e2 4C43445F 		.ascii	"LCD_1506_initVar\000"
+ 2067      31353036 
+ 2067      5F696E69 
+ 2067      74566172 
+ 2067      00
+ 2068              	.LASF3:
+ 2069 02f3 73686F72 		.ascii	"short int\000"
+ 2069      7420696E 
+ 2069      7400
+ 2070              	.LASF27:
+ 2071 02fd 63757272 		.ascii	"current\000"
+ 2071      656E7400 
+ 2072              	.LASF30:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccdU14Ev.s 			page 52
 
 
- 2074      00
- 2075              	.LASF33:
- 2076 02db 4C43445F 		.ascii	"LCD_1506_WriteControl\000"
- 2076      31353036 
- 2076      5F577269 
- 2076      7465436F 
- 2076      6E74726F 
- 2077              	.LASF1:
- 2078 02f1 7369676E 		.ascii	"signed char\000"
- 2078      65642063 
- 2078      68617200 
- 2079              	.LASF31:
- 2080 02fd 64427974 		.ascii	"dByte\000"
- 2080      6500
- 2081              	.LASF45:
- 2082 0303 4C43445F 		.ascii	"LCD_1506_PrintU32Number\000"
- 2082      31353036 
- 2082      5F507269 
- 2082      6E745533 
- 2082      324E756D 
- 2083              	.LASF53:
- 2084 031b 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
- 2084      726F6A65 
- 2084      6374735C 
- 2084      4553445C 
- 2084      7461736B 
- 2085 0349 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 2085      5C566F69 
- 2085      63655F52 
- 2085      65636F72 
- 2085      6465725F 
+ 2073 0305 4C43445F 		.ascii	"LCD_1506_WriteData\000"
+ 2073      31353036 
+ 2073      5F577269 
+ 2073      74654461 
+ 2073      746100
+ 2074              	.LASF5:
+ 2075 0318 6C6F6E67 		.ascii	"long int\000"
+ 2075      20696E74 
+ 2075      00
+ 2076              	.LASF10:
+ 2077 0321 63686172 		.ascii	"char\000"
+ 2077      00
+ 2078              	.LASF33:
+ 2079 0326 4C43445F 		.ascii	"LCD_1506_WriteControl\000"
+ 2079      31353036 
+ 2079      5F577269 
+ 2079      7465436F 
+ 2079      6E74726F 
+ 2080              	.LASF1:
+ 2081 033c 7369676E 		.ascii	"signed char\000"
+ 2081      65642063 
+ 2081      68617200 
+ 2082              	.LASF31:
+ 2083 0348 64427974 		.ascii	"dByte\000"
+ 2083      6500
+ 2084              	.LASF45:
+ 2085 034e 4C43445F 		.ascii	"LCD_1506_PrintU32Number\000"
+ 2085      31353036 
+ 2085      5F507269 
+ 2085      6E745533 
+ 2085      324E756D 
  2086              	.LASF20:
- 2087 0368 4C43445F 		.ascii	"LCD_1506_Start\000"
+ 2087 0366 4C43445F 		.ascii	"LCD_1506_Start\000"
  2087      31353036 
  2087      5F537461 
  2087      727400
  2088              	.LASF32:
- 2089 0377 6E696262 		.ascii	"nibble\000"
+ 2089 0375 6E696262 		.ascii	"nibble\000"
  2089      6C6500
  2090              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

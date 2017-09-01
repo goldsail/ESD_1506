@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
   51      00000000 
   52              		.global	cy_metadata
   53              		.section	.cymeta,"a",%progbits
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 2
 
 
   54              		.align	2
@@ -91,12 +91,12 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
   81 000c 00000000 		.4byte	.LASF18
   82 0010 01       		.byte	0x1
   83 0011 8E000000 		.4byte	.LASF19
-  84 0015 AA010000 		.4byte	.LASF20
+  84 0015 F9000000 		.4byte	.LASF20
   85 0019 00000000 		.4byte	.Ldebug_line0
   86 001d 02       		.uleb128 0x2
   87 001e 01       		.byte	0x1
   88 001f 06       		.byte	0x6
-  89 0020 9E010000 		.4byte	.LASF0
+  89 0020 E9010000 		.4byte	.LASF0
   90 0024 02       		.uleb128 0x2
   91 0025 01       		.byte	0x1
   92 0026 08       		.byte	0x8
@@ -104,7 +104,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
   94 002b 02       		.uleb128 0x2
   95 002c 02       		.byte	0x2
   96 002d 05       		.byte	0x5
-  97 002e 85010000 		.4byte	.LASF2
+  97 002e D0010000 		.4byte	.LASF2
   98 0032 02       		.uleb128 0x2
   99 0033 02       		.byte	0x2
  100 0034 07       		.byte	0x7
@@ -112,22 +112,22 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  102 0039 02       		.uleb128 0x2
  103 003a 04       		.byte	0x4
  104 003b 05       		.byte	0x5
- 105 003c 95010000 		.4byte	.LASF4
+ 105 003c E0010000 		.4byte	.LASF4
  106 0040 02       		.uleb128 0x2
  107 0041 04       		.byte	0x4
  108 0042 07       		.byte	0x7
  109 0043 D4000000 		.4byte	.LASF5
  110 0047 02       		.uleb128 0x2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 3
 
 
  111 0048 08       		.byte	0x8
  112 0049 05       		.byte	0x5
- 113 004a 72010000 		.4byte	.LASF6
+ 113 004a BD010000 		.4byte	.LASF6
  114 004e 02       		.uleb128 0x2
  115 004f 08       		.byte	0x8
  116 0050 07       		.byte	0x7
- 117 0051 2F010000 		.4byte	.LASF7
+ 117 0051 7A010000 		.4byte	.LASF7
  118 0055 03       		.uleb128 0x3
  119 0056 04       		.byte	0x4
  120 0057 05       		.byte	0x5
@@ -135,9 +135,9 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  122 005c 02       		.uleb128 0x2
  123 005d 04       		.byte	0x4
  124 005e 07       		.byte	0x7
- 125 005f 22010000 		.4byte	.LASF8
+ 125 005f 6D010000 		.4byte	.LASF8
  126 0063 04       		.uleb128 0x4
- 127 0064 8F010000 		.4byte	.LASF21
+ 127 0064 DA010000 		.4byte	.LASF21
  128 0068 02       		.byte	0x2
  129 0069 3801     		.2byte	0x138
  130 006b 24000000 		.4byte	0x24
@@ -148,11 +148,11 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  135 0076 02       		.uleb128 0x2
  136 0077 08       		.byte	0x8
  137 0078 04       		.byte	0x4
- 138 0079 F9000000 		.4byte	.LASF10
+ 138 0079 44010000 		.4byte	.LASF10
  139 007d 02       		.uleb128 0x2
  140 007e 01       		.byte	0x1
  141 007f 08       		.byte	0x8
- 142 0080 80010000 		.4byte	.LASF11
+ 142 0080 CB010000 		.4byte	.LASF11
  143 0084 05       		.uleb128 0x5
  144 0085 63000000 		.4byte	0x63
  145 0089 94000000 		.4byte	0x94
@@ -163,9 +163,9 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  150 0094 02       		.uleb128 0x2
  151 0095 04       		.byte	0x4
  152 0096 07       		.byte	0x7
- 153 0097 69010000 		.4byte	.LASF12
+ 153 0097 B4010000 		.4byte	.LASF12
  154 009b 07       		.uleb128 0x7
- 155 009c 10010000 		.4byte	.LASF13
+ 155 009c 5B010000 		.4byte	.LASF13
  156 00a0 01       		.byte	0x1
  157 00a1 1F       		.byte	0x1f
  158 00a2 AC000000 		.4byte	0xac
@@ -178,14 +178,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  165 00b2 63000000 		.4byte	0x63
  166 00b6 C1000000 		.4byte	0xc1
  167 00ba 06       		.uleb128 0x6
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 4
 
 
  168 00bb 94000000 		.4byte	0x94
  169 00bf 03       		.byte	0x3
  170 00c0 00       		.byte	0
  171 00c1 07       		.uleb128 0x7
- 172 00c2 00010000 		.4byte	.LASF14
+ 172 00c2 4B010000 		.4byte	.LASF14
  173 00c6 01       		.byte	0x1
  174 00c7 2D       		.byte	0x2d
  175 00c8 D2000000 		.4byte	0xd2
@@ -195,7 +195,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  179 00d2 08       		.uleb128 0x8
  180 00d3 B1000000 		.4byte	0xb1
  181 00d7 07       		.uleb128 0x7
- 182 00d8 5B010000 		.4byte	.LASF15
+ 182 00d8 A6010000 		.4byte	.LASF15
  183 00dc 01       		.byte	0x1
  184 00dd 3B       		.byte	0x3b
  185 00de E8000000 		.4byte	0xe8
@@ -212,7 +212,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  196 00fb FF       		.byte	0xff
  197 00fc 00       		.byte	0
  198 00fd 07       		.uleb128 0x7
- 199 00fe 46010000 		.4byte	.LASF16
+ 199 00fe 91010000 		.4byte	.LASF16
  200 0102 01       		.byte	0x1
  201 0103 49       		.byte	0x49
  202 0104 0E010000 		.4byte	0x10e
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  222 0130 00000000 		.4byte	cy_metadata
  223 0134 08       		.uleb128 0x8
  224 0135 13010000 		.4byte	0x113
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 5
 
 
  225 0139 00       		.byte	0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  279 0033 01       		.uleb128 0x1
  280 0034 01       		.byte	0x1
  281 0035 49       		.uleb128 0x49
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 6
 
 
  282 0036 13       		.uleb128 0x13
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  333      FB0E0D00 
  333      01010101 
  334              	.LASF18:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 7
 
 
  335 0000 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
@@ -406,84 +406,84 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 1
  349      7369676E 
  349      65642069 
  349      6E7400
- 350              	.LASF10:
- 351 00f9 646F7562 		.ascii	"double\000"
- 351      6C6500
- 352              	.LASF14:
- 353 0100 63795F6D 		.ascii	"cy_meta_custnvl\000"
- 353      6574615F 
- 353      63757374 
- 353      6E766C00 
- 354              	.LASF13:
- 355 0110 63795F6D 		.ascii	"cy_meta_configecc\000"
- 355      6574615F 
- 355      636F6E66 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 8
+ 350              	.LASF20:
+ 351 00f9 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
+ 351      726F6A65 
+ 351      6374735C 
+ 351      4553445C 
+ 351      4553445F 
+ 352 0127 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 352      6F696365 
+ 352      5F526563 
+ 352      6F726465 
+ 352      725F3135 
+ 353              	.LASF10:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 8
 
 
- 355      69676563 
- 355      6300
- 356              	.LASF8:
- 357 0122 756E7369 		.ascii	"unsigned int\000"
- 357      676E6564 
- 357      20696E74 
- 357      00
- 358              	.LASF7:
- 359 012f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 359      206C6F6E 
- 359      6720756E 
- 359      7369676E 
- 359      65642069 
- 360              	.LASF16:
- 361 0146 63795F6D 		.ascii	"cy_meta_flashprotect\000"
- 361      6574615F 
- 361      666C6173 
- 361      6870726F 
- 361      74656374 
- 362              	.LASF15:
- 363 015b 63795F6D 		.ascii	"cy_meta_wonvl\000"
- 363      6574615F 
- 363      776F6E76 
- 363      6C00
- 364              	.LASF12:
- 365 0169 73697A65 		.ascii	"sizetype\000"
- 365      74797065 
- 365      00
- 366              	.LASF6:
- 367 0172 6C6F6E67 		.ascii	"long long int\000"
- 367      206C6F6E 
- 367      6720696E 
- 367      7400
- 368              	.LASF11:
- 369 0180 63686172 		.ascii	"char\000"
- 369      00
- 370              	.LASF2:
- 371 0185 73686F72 		.ascii	"short int\000"
- 371      7420696E 
- 371      7400
- 372              	.LASF21:
- 373 018f 75696E74 		.ascii	"uint8\000"
- 373      3800
- 374              	.LASF4:
- 375 0195 6C6F6E67 		.ascii	"long int\000"
- 375      20696E74 
- 375      00
- 376              	.LASF0:
- 377 019e 7369676E 		.ascii	"signed char\000"
- 377      65642063 
- 377      68617200 
- 378              	.LASF20:
- 379 01aa 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
- 379      726F6A65 
- 379      6374735C 
- 379      4553445C 
- 379      7461736B 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmTILrO.s 			page 9
+ 354 0144 646F7562 		.ascii	"double\000"
+ 354      6C6500
+ 355              	.LASF14:
+ 356 014b 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 356      6574615F 
+ 356      63757374 
+ 356      6E766C00 
+ 357              	.LASF13:
+ 358 015b 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 358      6574615F 
+ 358      636F6E66 
+ 358      69676563 
+ 358      6300
+ 359              	.LASF8:
+ 360 016d 756E7369 		.ascii	"unsigned int\000"
+ 360      676E6564 
+ 360      20696E74 
+ 360      00
+ 361              	.LASF7:
+ 362 017a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 362      206C6F6E 
+ 362      6720756E 
+ 362      7369676E 
+ 362      65642069 
+ 363              	.LASF16:
+ 364 0191 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 364      6574615F 
+ 364      666C6173 
+ 364      6870726F 
+ 364      74656374 
+ 365              	.LASF15:
+ 366 01a6 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 366      6574615F 
+ 366      776F6E76 
+ 366      6C00
+ 367              	.LASF12:
+ 368 01b4 73697A65 		.ascii	"sizetype\000"
+ 368      74797065 
+ 368      00
+ 369              	.LASF6:
+ 370 01bd 6C6F6E67 		.ascii	"long long int\000"
+ 370      206C6F6E 
+ 370      6720696E 
+ 370      7400
+ 371              	.LASF11:
+ 372 01cb 63686172 		.ascii	"char\000"
+ 372      00
+ 373              	.LASF2:
+ 374 01d0 73686F72 		.ascii	"short int\000"
+ 374      7420696E 
+ 374      7400
+ 375              	.LASF21:
+ 376 01da 75696E74 		.ascii	"uint8\000"
+ 376      3800
+ 377              	.LASF4:
+ 378 01e0 6C6F6E67 		.ascii	"long int\000"
+ 378      20696E74 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBkOkes.s 			page 9
 
 
- 380 01d8 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 380      5C566F69 
- 380      63655F52 
- 380      65636F72 
- 380      6465725F 
+ 378      00
+ 379              	.LASF0:
+ 380 01e9 7369676E 		.ascii	"signed char\000"
+ 380      65642063 
+ 380      68617200 
  381              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

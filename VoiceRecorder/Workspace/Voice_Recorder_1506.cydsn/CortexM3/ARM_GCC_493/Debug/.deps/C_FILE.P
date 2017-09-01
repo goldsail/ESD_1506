@@ -1,94 +1,94 @@
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/CortexM3/ARM_GCC_493/Debug/main_1506.o : D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_AMux.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_Ext_CP_Clk.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_IRQ.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_theACLK.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyDmac.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyFlash.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyLib.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CySpc.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort_aliases.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Opamp_1506.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin_aliases.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout_aliases.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm_aliases.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp_aliases.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_audio.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cdc.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cydmac.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_hid.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_midi.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_msc.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_pvt.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/VDAC_1506.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmFunc.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmInstr.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyPm.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cypins.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cytypes.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/project.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/cyapicallbacks.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/device.h D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/main_1506.c 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/CortexM3/ARM_GCC_493/Debug/main_1506.o : D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_AMux.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_Ext_CP_Clk.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_IRQ.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_theACLK.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyDmac.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyFlash.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyLib.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CySpc.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort_aliases.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Opamp_1506.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin_aliases.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout_aliases.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm_aliases.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp_aliases.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_audio.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cdc.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cydmac.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_hid.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_midi.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_msc.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_pvt.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/VDAC_1506.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmFunc.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmInstr.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyPm.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydisabledsheets.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cypins.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cytypes.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/project.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/cyapicallbacks.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/device.h D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/main_1506.c 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_AMux.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_AMux.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_Ext_CP_Clk.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_Ext_CP_Clk.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_IRQ.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_IRQ.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_theACLK.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/ADC_1506_theACLK.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyDmac.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyFlash.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyLib.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CyLib.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CySpc.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort_aliases.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/LCD_1506_LCDPort_aliases.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Opamp_1506.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Opamp_1506.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin_aliases.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sin_aliases.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout_aliases.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/Sout_aliases.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm_aliases.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dm_aliases.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp_aliases.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_Dp_aliases.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_audio.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_audio.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cdc.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cdc.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cydmac.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_cydmac.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_hid.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_hid.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_midi.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_midi.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_msc.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_msc.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_pvt.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/USBUART_1506_pvt.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/VDAC_1506.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/VDAC_1506.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyPm.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyPm.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cypins.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cypins.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cytypes.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/cytypes.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/project.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/Generated_Source/PSoC5/project.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/cyapicallbacks.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/cyapicallbacks.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/device.h : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/device.h : 
 
-D:/Projects/ESD/tasks_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/main_1506.c : 
+D:/Projects/ESD/ESD_1506/VoiceRecorder/Workspace/Voice_Recorder_1506.cydsn/main_1506.c : 
 

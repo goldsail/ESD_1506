@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
   29:.\Generated_Source\PSoC5/ADC_1506_INT.c **** /* `#END`  */
   30:.\Generated_Source\PSoC5/ADC_1506_INT.c **** 
   31:.\Generated_Source\PSoC5/ADC_1506_INT.c **** #if(ADC_1506_IRQ_REMOVE == 0u)
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/ADC_1506_INT.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
   76:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         #endif /* Single sample conversion mode with resolution above 16 bits */
   77:.\Generated_Source\PSoC5/ADC_1506_INT.c **** 
   78:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         #ifdef ADC_1506_ISR1_EXIT_CALLBACK
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 3
 
 
   79:.\Generated_Source\PSoC5/ADC_1506_INT.c ****             ADC_1506_ISR1_ExitCallback();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  104:.\Generated_Source\PSoC5/ADC_1506_INT.c ****             ADC_1506_ISR2_EntryCallback();
  105:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         #endif /* ADC_1506_ISR2_ENTRY_CALLBACK */
  106:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 4
 
 
  107:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  142:.\Generated_Source\PSoC5/ADC_1506_INT.c ****     *  None
  143:.\Generated_Source\PSoC5/ADC_1506_INT.c ****     *
  144:.\Generated_Source\PSoC5/ADC_1506_INT.c ****     * Return:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 5
 
 
  145:.\Generated_Source\PSoC5/ADC_1506_INT.c ****     *  None
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  102 000a 7047     		bx	lr
  103              		.cfi_endproc
  104              	.LFE2:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 6
 
 
  105              		.size	ADC_1506_ISR3, .-ADC_1506_ISR3
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  217:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         *  resolution is above 16 bits.
  218:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         */
  219:.\Generated_Source\PSoC5/ADC_1506_INT.c ****         #if(ADC_1506_CFG4_RESOLUTION > 16 && \
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 7
 
 
  220:.\Generated_Source\PSoC5/ADC_1506_INT.c ****             ADC_1506_CFG4_CONVMODE == ADC_1506_MODE_SINGLE_SAMPLE)
@@ -393,40 +393,40 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  141 0006 00000000 		.4byte	.Ldebug_abbrev0
  142 000a 04       		.byte	0x4
  143 000b 01       		.uleb128 0x1
- 144 000c 88000000 		.4byte	.LASF17
+ 144 000c D3000000 		.4byte	.LASF17
  145 0010 01       		.byte	0x1
- 146 0011 57000000 		.4byte	.LASF18
- 147 0015 7A010000 		.4byte	.LASF19
+ 146 0011 A2000000 		.4byte	.LASF18
+ 147 0015 1B000000 		.4byte	.LASF19
  148 0019 00000000 		.4byte	.Ldebug_ranges0+0
  149 001d 00000000 		.4byte	0
  150 0021 00000000 		.4byte	.Ldebug_line0
  151 0025 02       		.uleb128 0x2
  152 0026 01       		.byte	0x1
  153 0027 06       		.byte	0x6
- 154 0028 68010000 		.4byte	.LASF0
+ 154 0028 B3010000 		.4byte	.LASF0
  155 002c 02       		.uleb128 0x2
  156 002d 01       		.byte	0x1
  157 002e 08       		.byte	0x8
- 158 002f 44000000 		.4byte	.LASF1
+ 158 002f 8F000000 		.4byte	.LASF1
  159 0033 02       		.uleb128 0x2
  160 0034 02       		.byte	0x2
  161 0035 05       		.byte	0x5
- 162 0036 C7010000 		.4byte	.LASF2
+ 162 0036 C5010000 		.4byte	.LASF2
  163 003a 02       		.uleb128 0x2
  164 003b 02       		.byte	0x2
  165 003c 07       		.byte	0x7
- 166 003d 55010000 		.4byte	.LASF3
+ 166 003d A0010000 		.4byte	.LASF3
  167 0041 02       		.uleb128 0x2
  168 0042 04       		.byte	0x4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 8
 
 
  169 0043 05       		.byte	0x5
- 170 0044 7F000000 		.4byte	.LASF4
+ 170 0044 CA000000 		.4byte	.LASF4
  171 0048 02       		.uleb128 0x2
  172 0049 04       		.byte	0x4
  173 004a 07       		.byte	0x7
- 174 004b 1B000000 		.4byte	.LASF5
+ 174 004b 66000000 		.4byte	.LASF5
  175 004f 02       		.uleb128 0x2
  176 0050 08       		.byte	0x8
  177 0051 05       		.byte	0x5
@@ -434,7 +434,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  179 0056 02       		.uleb128 0x2
  180 0057 08       		.byte	0x8
  181 0058 07       		.byte	0x7
- 182 0059 2D000000 		.4byte	.LASF7
+ 182 0059 78000000 		.4byte	.LASF7
  183 005d 03       		.uleb128 0x3
  184 005e 04       		.byte	0x4
  185 005f 05       		.byte	0x5
@@ -446,21 +446,21 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  191 006b 02       		.uleb128 0x2
  192 006c 04       		.byte	0x4
  193 006d 04       		.byte	0x4
- 194 006e 74010000 		.4byte	.LASF9
+ 194 006e BF010000 		.4byte	.LASF9
  195 0072 02       		.uleb128 0x2
  196 0073 08       		.byte	0x8
  197 0074 04       		.byte	0x4
- 198 0075 16010000 		.4byte	.LASF10
+ 198 0075 61010000 		.4byte	.LASF10
  199 0079 02       		.uleb128 0x2
  200 007a 01       		.byte	0x1
  201 007b 08       		.byte	0x8
- 202 007c 52000000 		.4byte	.LASF11
+ 202 007c 9D000000 		.4byte	.LASF11
  203 0080 02       		.uleb128 0x2
  204 0081 04       		.byte	0x4
  205 0082 07       		.byte	0x7
- 206 0083 D1010000 		.4byte	.LASF12
+ 206 0083 CF010000 		.4byte	.LASF12
  207 0087 04       		.uleb128 0x4
- 208 0088 1D010000 		.4byte	.LASF13
+ 208 0088 68010000 		.4byte	.LASF13
  209 008c 01       		.byte	0x1
  210 008d 33       		.byte	0x33
  211 008e 00000000 		.4byte	.LFB0
@@ -468,7 +468,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  213 0096 01       		.uleb128 0x1
  214 0097 9C       		.byte	0x9c
  215 0098 04       		.uleb128 0x4
- 216 0099 2B010000 		.4byte	.LASF14
+ 216 0099 76010000 		.4byte	.LASF14
  217 009d 01       		.byte	0x1
  218 009e 65       		.byte	0x65
  219 009f 00000000 		.4byte	.LFB1
@@ -476,9 +476,9 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  221 00a7 01       		.uleb128 0x1
  222 00a8 9C       		.byte	0x9c
  223 00a9 04       		.uleb128 0x4
- 224 00aa 39010000 		.4byte	.LASF15
+ 224 00aa 84010000 		.4byte	.LASF15
  225 00ae 01       		.byte	0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 9
 
 
  226 00af 97       		.byte	0x97
@@ -487,7 +487,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  229 00b8 01       		.uleb128 0x1
  230 00b9 9C       		.byte	0x9c
  231 00ba 04       		.uleb128 0x4
- 232 00bb 47010000 		.4byte	.LASF16
+ 232 00bb 92010000 		.4byte	.LASF16
  233 00bf 01       		.byte	0x1
  234 00c0 C9       		.byte	0xc9
  235 00c1 00000000 		.4byte	.LFB3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  280 0026 08       		.uleb128 0x8
  281 0027 00       		.byte	0
  282 0028 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 10
 
 
  283 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  337              		.section	.debug_line,"",%progbits
  338              	.Ldebug_line0:
  339 0000 8F000000 		.section	.debug_str,"MS",%progbits,1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 11
 
 
  339      02003E00 
@@ -615,110 +615,110 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 1
  343      676E6564 
  343      20696E74 
  343      00
- 344              	.LASF5:
- 345 001b 6C6F6E67 		.ascii	"long unsigned int\000"
- 345      20756E73 
- 345      69676E65 
- 345      6420696E 
- 345      7400
- 346              	.LASF7:
- 347 002d 6C6F6E67 		.ascii	"long long unsigned int\000"
- 347      206C6F6E 
- 347      6720756E 
- 347      7369676E 
- 347      65642069 
- 348              	.LASF1:
- 349 0044 756E7369 		.ascii	"unsigned char\000"
- 349      676E6564 
- 349      20636861 
- 349      7200
- 350              	.LASF11:
- 351 0052 63686172 		.ascii	"char\000"
- 351      00
- 352              	.LASF18:
- 353 0057 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_1506_INT.c\000"
- 353      6E657261 
- 353      7465645F 
- 353      536F7572 
- 353      63655C50 
- 354              	.LASF4:
- 355 007f 6C6F6E67 		.ascii	"long int\000"
- 355      20696E74 
- 355      00
- 356              	.LASF17:
- 357 0088 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 357      4320342E 
- 357      392E3320 
- 357      32303135 
- 357      30333033 
- 358 00bb 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 358      20726576 
- 358      6973696F 
- 358      6E203232 
- 358      31323230 
- 359 00ee 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 359      66756E63 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 12
+ 344              	.LASF19:
+ 345 001b 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
+ 345      726F6A65 
+ 345      6374735C 
+ 345      4553445C 
+ 345      4553445F 
+ 346 0049 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 346      6F696365 
+ 346      5F526563 
+ 346      6F726465 
+ 346      725F3135 
+ 347              	.LASF5:
+ 348 0066 6C6F6E67 		.ascii	"long unsigned int\000"
+ 348      20756E73 
+ 348      69676E65 
+ 348      6420696E 
+ 348      7400
+ 349              	.LASF7:
+ 350 0078 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 350      206C6F6E 
+ 350      6720756E 
+ 350      7369676E 
+ 350      65642069 
+ 351              	.LASF1:
+ 352 008f 756E7369 		.ascii	"unsigned char\000"
+ 352      676E6564 
+ 352      20636861 
+ 352      7200
+ 353              	.LASF11:
+ 354 009d 63686172 		.ascii	"char\000"
+ 354      00
+ 355              	.LASF18:
+ 356 00a2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_1506_INT.c\000"
+ 356      6E657261 
+ 356      7465645F 
+ 356      536F7572 
+ 356      63655C50 
+ 357              	.LASF4:
+ 358 00ca 6C6F6E67 		.ascii	"long int\000"
+ 358      20696E74 
+ 358      00
+ 359              	.LASF17:
+ 360 00d3 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 12
 
 
- 359      74696F6E 
- 359      2D736563 
- 359      74696F6E 
- 360              	.LASF10:
- 361 0116 646F7562 		.ascii	"double\000"
- 361      6C6500
- 362              	.LASF13:
- 363 011d 4144435F 		.ascii	"ADC_1506_ISR1\000"
- 363      31353036 
- 363      5F495352 
- 363      3100
- 364              	.LASF14:
- 365 012b 4144435F 		.ascii	"ADC_1506_ISR2\000"
- 365      31353036 
- 365      5F495352 
- 365      3200
- 366              	.LASF15:
- 367 0139 4144435F 		.ascii	"ADC_1506_ISR3\000"
- 367      31353036 
- 367      5F495352 
- 367      3300
- 368              	.LASF16:
- 369 0147 4144435F 		.ascii	"ADC_1506_ISR4\000"
- 369      31353036 
- 369      5F495352 
- 369      3400
- 370              	.LASF3:
- 371 0155 73686F72 		.ascii	"short unsigned int\000"
- 371      7420756E 
- 371      7369676E 
- 371      65642069 
- 371      6E7400
- 372              	.LASF0:
- 373 0168 7369676E 		.ascii	"signed char\000"
- 373      65642063 
- 373      68617200 
- 374              	.LASF9:
- 375 0174 666C6F61 		.ascii	"float\000"
- 375      7400
- 376              	.LASF19:
- 377 017a 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
- 377      726F6A65 
- 377      6374735C 
- 377      4553445C 
- 377      7461736B 
- 378 01a8 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 378      5C566F69 
- 378      63655F52 
- 378      65636F72 
- 378      6465725F 
+ 360      4320342E 
+ 360      392E3320 
+ 360      32303135 
+ 360      30333033 
+ 361 0106 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 361      20726576 
+ 361      6973696F 
+ 361      6E203232 
+ 361      31323230 
+ 362 0139 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 362      66756E63 
+ 362      74696F6E 
+ 362      2D736563 
+ 362      74696F6E 
+ 363              	.LASF10:
+ 364 0161 646F7562 		.ascii	"double\000"
+ 364      6C6500
+ 365              	.LASF13:
+ 366 0168 4144435F 		.ascii	"ADC_1506_ISR1\000"
+ 366      31353036 
+ 366      5F495352 
+ 366      3100
+ 367              	.LASF14:
+ 368 0176 4144435F 		.ascii	"ADC_1506_ISR2\000"
+ 368      31353036 
+ 368      5F495352 
+ 368      3200
+ 369              	.LASF15:
+ 370 0184 4144435F 		.ascii	"ADC_1506_ISR3\000"
+ 370      31353036 
+ 370      5F495352 
+ 370      3300
+ 371              	.LASF16:
+ 372 0192 4144435F 		.ascii	"ADC_1506_ISR4\000"
+ 372      31353036 
+ 372      5F495352 
+ 372      3400
+ 373              	.LASF3:
+ 374 01a0 73686F72 		.ascii	"short unsigned int\000"
+ 374      7420756E 
+ 374      7369676E 
+ 374      65642069 
+ 374      6E7400
+ 375              	.LASF0:
+ 376 01b3 7369676E 		.ascii	"signed char\000"
+ 376      65642063 
+ 376      68617200 
+ 377              	.LASF9:
+ 378 01bf 666C6F61 		.ascii	"float\000"
+ 378      7400
  379              	.LASF2:
- 380 01c7 73686F72 		.ascii	"short int\000"
+ 380 01c5 73686F72 		.ascii	"short int\000"
  380      7420696E 
  380      7400
  381              	.LASF12:
- 382 01d1 73697A65 		.ascii	"sizetype\000"
+ 382 01cf 73697A65 		.ascii	"sizetype\000"
  382      74797065 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmdP9eH.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccKolZ0A.s 			page 13
 
 
  382      00

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
   29:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** * \brief Writes the value to the physical port (data output register), masking
   30:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** *  and shifting the bits appropriately. 
   31:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** *
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** * The data output register controls the signal applied to the physical pin in 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
   52 001e 03F04003 		and	r3, r3, #64
   53 0022 DAB2     		uxtb	r2, r3
   54 0024 FB7B     		ldrb	r3, [r7, #15]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 3
 
 
   55 0026 1343     		orrs	r3, r3, r2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
   87:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** * \funcusage
   88:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** *  \snippet USBUART_1506_Dp_SUT.c usage_USBUART_1506_Dp_SetDriveMode
   89:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** *******************************************************************************/
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 4
 
 
   90:.\Generated_Source\PSoC5/USBUART_1506_Dp.c **** void USBUART_1506_Dp_SetDriveMode(uint8 mode)
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  133              		.thumb_func
  134              		.type	USBUART_1506_Dp_Read, %function
  135              	USBUART_1506_Dp_Read:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 5
 
 
  136              	.LFB2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  167              		.cfi_endproc
  168              	.LFE2:
  169              		.size	USBUART_1506_Dp_Read, .-USBUART_1506_Dp_Read
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 6
 
 
  170              		.section	.text.USBUART_1506_Dp_ReadDataReg,"ax",%progbits
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  196 0012 1846     		mov	r0, r3
  197 0014 BD46     		mov	sp, r7
  198              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 7
 
 
  199              		@ sp needed
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  179:.\Generated_Source\PSoC5/USBUART_1506_Dp.c ****     *  It is recommended that the interrupt be disabled before calling this 
  180:.\Generated_Source\PSoC5/USBUART_1506_Dp.c ****     *  function to avoid unintended interrupt requests. Note that the interrupt
  181:.\Generated_Source\PSoC5/USBUART_1506_Dp.c ****     *  type is port wide, and therefore will trigger for any enabled pin on the 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 8
 
 
  182:.\Generated_Source\PSoC5/USBUART_1506_Dp.c ****     *  port.
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  261              		.cfi_endproc
  262              	.LFE4:
  263              		.size	USBUART_1506_Dp_SetInterruptMode, .-USBUART_1506_Dp_SetInterruptMode
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 9
 
 
  264              		.section	.text.USBUART_1506_Dp_ClearInterrupt,"ax",%progbits
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  292              		.cfi_def_cfa_register 13
  293              		@ sp needed
  294 0016 5DF8047B 		ldr	r7, [sp], #4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 10
 
 
  295              		.cfi_restore 7
@@ -563,15 +563,15 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  314 000b 01       		.uleb128 0x1
  315 000c 11000000 		.4byte	.LASF24
  316 0010 01       		.byte	0x1
- 317 0011 3E010000 		.4byte	.LASF25
- 318 0015 24020000 		.4byte	.LASF26
+ 317 0011 89010000 		.4byte	.LASF25
+ 318 0015 1B010000 		.4byte	.LASF26
  319 0019 00000000 		.4byte	.Ldebug_ranges0+0
  320 001d 00000000 		.4byte	0
  321 0021 00000000 		.4byte	.Ldebug_line0
  322 0025 02       		.uleb128 0x2
  323 0026 01       		.byte	0x1
  324 0027 06       		.byte	0x6
- 325 0028 18020000 		.4byte	.LASF0
+ 325 0028 63020000 		.4byte	.LASF0
  326 002c 02       		.uleb128 0x2
  327 002d 01       		.byte	0x1
  328 002e 08       		.byte	0x8
@@ -579,7 +579,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  330 0033 02       		.uleb128 0x2
  331 0034 02       		.byte	0x2
  332 0035 05       		.byte	0x5
- 333 0036 CD010000 		.4byte	.LASF2
+ 333 0036 18020000 		.4byte	.LASF2
  334 003a 02       		.uleb128 0x2
  335 003b 02       		.byte	0x2
  336 003c 07       		.byte	0x7
@@ -587,7 +587,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  338 0041 02       		.uleb128 0x2
  339 0042 04       		.byte	0x4
  340 0043 05       		.byte	0x5
- 341 0044 0F020000 		.4byte	.LASF4
+ 341 0044 5A020000 		.4byte	.LASF4
  342 0048 02       		.uleb128 0x2
  343 0049 04       		.byte	0x4
  344 004a 07       		.byte	0x7
@@ -595,14 +595,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  346 004f 02       		.uleb128 0x2
  347 0050 08       		.byte	0x8
  348 0051 05       		.byte	0x5
- 349 0052 BA010000 		.4byte	.LASF6
+ 349 0052 05020000 		.4byte	.LASF6
  350 0056 02       		.uleb128 0x2
  351 0057 08       		.byte	0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 11
 
 
  352 0058 07       		.byte	0x7
- 353 0059 9E010000 		.4byte	.LASF7
+ 353 0059 E9010000 		.4byte	.LASF7
  354 005d 03       		.uleb128 0x3
  355 005e 04       		.byte	0x4
  356 005f 05       		.byte	0x5
@@ -610,14 +610,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  358 0064 02       		.uleb128 0x2
  359 0065 04       		.byte	0x4
  360 0066 07       		.byte	0x7
- 361 0067 91010000 		.4byte	.LASF8
+ 361 0067 DC010000 		.4byte	.LASF8
  362 006b 04       		.uleb128 0x4
- 363 006c F3010000 		.4byte	.LASF9
+ 363 006c 3E020000 		.4byte	.LASF9
  364 0070 02       		.byte	0x2
  365 0071 3801     		.2byte	0x138
  366 0073 2C000000 		.4byte	0x2c
  367 0077 04       		.uleb128 0x4
- 368 0078 22010000 		.4byte	.LASF10
+ 368 0078 6D010000 		.4byte	.LASF10
  369 007c 02       		.byte	0x2
  370 007d 3901     		.2byte	0x139
  371 007f 3A000000 		.4byte	0x3a
@@ -628,11 +628,11 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  376 008a 02       		.uleb128 0x2
  377 008b 08       		.byte	0x8
  378 008c 04       		.byte	0x4
- 379 008d 1B010000 		.4byte	.LASF12
+ 379 008d 66010000 		.4byte	.LASF12
  380 0091 02       		.uleb128 0x2
  381 0092 01       		.byte	0x1
  382 0093 08       		.byte	0x8
- 383 0094 C8010000 		.4byte	.LASF13
+ 383 0094 13020000 		.4byte	.LASF13
  384 0098 04       		.uleb128 0x4
  385 0099 D4000000 		.4byte	.LASF14
  386 009d 02       		.byte	0x2
@@ -641,7 +641,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  389 00a4 05       		.uleb128 0x5
  390 00a5 6B000000 		.4byte	0x6b
  391 00a9 06       		.uleb128 0x6
- 392 00aa F9010000 		.4byte	.LASF15
+ 392 00aa 44020000 		.4byte	.LASF15
  393 00ae 01       		.byte	0x1
  394 00af 39       		.byte	0x39
  395 00b0 00000000 		.4byte	.LFB0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  406 00ca 91       		.byte	0x91
  407 00cb 6F       		.sleb128 -17
  408 00cc 08       		.uleb128 0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 12
 
 
  409 00cd 06000000 		.4byte	.LASF27
@@ -679,7 +679,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  424 00eb 9C       		.byte	0x9c
  425 00ec FF000000 		.4byte	0xff
  426 00f0 07       		.uleb128 0x7
- 427 00f1 B5010000 		.4byte	.LASF18
+ 427 00f1 00020000 		.4byte	.LASF18
  428 00f5 01       		.byte	0x1
  429 00f6 5A       		.byte	0x5a
  430 00f7 6B000000 		.4byte	0x6b
@@ -688,7 +688,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  433 00fd 77       		.sleb128 -9
  434 00fe 00       		.byte	0
  435 00ff 09       		.uleb128 0x9
- 436 0100 29010000 		.4byte	.LASF19
+ 436 0100 74010000 		.4byte	.LASF19
  437 0104 01       		.byte	0x1
  438 0105 71       		.byte	0x71
  439 0106 6B000000 		.4byte	0x6b
@@ -697,7 +697,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  442 0112 01       		.uleb128 0x1
  443 0113 9C       		.byte	0x9c
  444 0114 09       		.uleb128 0x9
- 445 0115 D7010000 		.4byte	.LASF20
+ 445 0115 22020000 		.4byte	.LASF20
  446 0119 01       		.byte	0x1
  447 011a 8D       		.byte	0x8d
  448 011b 6B000000 		.4byte	0x6b
@@ -715,10 +715,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  460 0139 9C       		.byte	0x9c
  461 013a 5B010000 		.4byte	0x15b
  462 013e 07       		.uleb128 0x7
- 463 013f 88010000 		.4byte	.LASF22
+ 463 013f D3010000 		.4byte	.LASF22
  464 0143 01       		.byte	0x1
  465 0144 BB       		.byte	0xbb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 13
 
 
  466 0145 77000000 		.4byte	0x77
@@ -726,7 +726,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  468 014a 91       		.byte	0x91
  469 014b 76       		.sleb128 -10
  470 014c 07       		.uleb128 0x7
- 471 014d B5010000 		.4byte	.LASF18
+ 471 014d 00020000 		.4byte	.LASF18
  472 0151 01       		.byte	0x1
  473 0152 BB       		.byte	0xbb
  474 0153 77000000 		.4byte	0x77
@@ -735,7 +735,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  477 0159 74       		.sleb128 -12
  478 015a 00       		.byte	0
  479 015b 09       		.uleb128 0x9
- 480 015c 69010000 		.4byte	.LASF23
+ 480 015c B4010000 		.4byte	.LASF23
  481 0160 01       		.byte	0x1
  482 0161 D8       		.byte	0xd8
  483 0162 6B000000 		.4byte	0x6b
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  520 001d 00       		.byte	0
  521 001e 03       		.uleb128 0x3
  522 001f 24       		.uleb128 0x24
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 14
 
 
  523 0020 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  577 0057 07       		.uleb128 0x7
  578 0058 05       		.uleb128 0x5
  579 0059 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 15
 
 
  580 005a 03       		.uleb128 0x3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  634 0000 44000000 		.4byte	0x44
  635 0004 0200     		.2byte	0x2
  636 0006 00000000 		.4byte	.Ldebug_info0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 16
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 16
 
 
  637 000a 04       		.byte	0x4
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  680 0044 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
  680      20726576 
  680      6973696F 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 17
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 17
 
 
  680      6E203232 
@@ -1003,98 +1003,98 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 1
  695      31353036 
  695      5F44705F 
  695      53657444 
- 696              	.LASF12:
- 697 011b 646F7562 		.ascii	"double\000"
- 697      6C6500
- 698              	.LASF10:
- 699 0122 75696E74 		.ascii	"uint16\000"
- 699      313600
- 700              	.LASF19:
- 701 0129 55534255 		.ascii	"USBUART_1506_Dp_Read\000"
- 701      4152545F 
- 701      31353036 
- 701      5F44705F 
- 701      52656164 
- 702              	.LASF25:
- 703 013e 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_1506_Dp.c\000"
- 703      6E657261 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 18
+ 696              	.LASF26:
+ 697 011b 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
+ 697      726F6A65 
+ 697      6374735C 
+ 697      4553445C 
+ 697      4553445F 
+ 698 0149 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 698      6F696365 
+ 698      5F526563 
+ 698      6F726465 
+ 698      725F3135 
+ 699              	.LASF12:
+ 700 0166 646F7562 		.ascii	"double\000"
+ 700      6C6500
+ 701              	.LASF10:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 18
 
 
- 703      7465645F 
- 703      536F7572 
- 703      63655C50 
- 704              	.LASF23:
- 705 0169 55534255 		.ascii	"USBUART_1506_Dp_ClearInterrupt\000"
- 705      4152545F 
- 705      31353036 
- 705      5F44705F 
- 705      436C6561 
- 706              	.LASF22:
- 707 0188 706F7369 		.ascii	"position\000"
- 707      74696F6E 
- 707      00
- 708              	.LASF8:
- 709 0191 756E7369 		.ascii	"unsigned int\000"
- 709      676E6564 
- 709      20696E74 
- 709      00
- 710              	.LASF7:
- 711 019e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 711      206C6F6E 
- 711      6720756E 
- 711      7369676E 
- 711      65642069 
- 712              	.LASF18:
- 713 01b5 6D6F6465 		.ascii	"mode\000"
- 713      00
- 714              	.LASF6:
- 715 01ba 6C6F6E67 		.ascii	"long long int\000"
- 715      206C6F6E 
- 715      6720696E 
- 715      7400
- 716              	.LASF13:
- 717 01c8 63686172 		.ascii	"char\000"
- 717      00
- 718              	.LASF2:
- 719 01cd 73686F72 		.ascii	"short int\000"
- 719      7420696E 
- 719      7400
- 720              	.LASF20:
- 721 01d7 55534255 		.ascii	"USBUART_1506_Dp_ReadDataReg\000"
- 721      4152545F 
- 721      31353036 
- 721      5F44705F 
- 721      52656164 
- 722              	.LASF9:
- 723 01f3 75696E74 		.ascii	"uint8\000"
- 723      3800
- 724              	.LASF15:
- 725 01f9 55534255 		.ascii	"USBUART_1506_Dp_Write\000"
- 725      4152545F 
- 725      31353036 
- 725      5F44705F 
- 725      57726974 
- 726              	.LASF4:
- 727 020f 6C6F6E67 		.ascii	"long int\000"
- 727      20696E74 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccoUbL7e.s 			page 19
+ 702 016d 75696E74 		.ascii	"uint16\000"
+ 702      313600
+ 703              	.LASF19:
+ 704 0174 55534255 		.ascii	"USBUART_1506_Dp_Read\000"
+ 704      4152545F 
+ 704      31353036 
+ 704      5F44705F 
+ 704      52656164 
+ 705              	.LASF25:
+ 706 0189 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\USBUART_1506_Dp.c\000"
+ 706      6E657261 
+ 706      7465645F 
+ 706      536F7572 
+ 706      63655C50 
+ 707              	.LASF23:
+ 708 01b4 55534255 		.ascii	"USBUART_1506_Dp_ClearInterrupt\000"
+ 708      4152545F 
+ 708      31353036 
+ 708      5F44705F 
+ 708      436C6561 
+ 709              	.LASF22:
+ 710 01d3 706F7369 		.ascii	"position\000"
+ 710      74696F6E 
+ 710      00
+ 711              	.LASF8:
+ 712 01dc 756E7369 		.ascii	"unsigned int\000"
+ 712      676E6564 
+ 712      20696E74 
+ 712      00
+ 713              	.LASF7:
+ 714 01e9 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 714      206C6F6E 
+ 714      6720756E 
+ 714      7369676E 
+ 714      65642069 
+ 715              	.LASF18:
+ 716 0200 6D6F6465 		.ascii	"mode\000"
+ 716      00
+ 717              	.LASF6:
+ 718 0205 6C6F6E67 		.ascii	"long long int\000"
+ 718      206C6F6E 
+ 718      6720696E 
+ 718      7400
+ 719              	.LASF13:
+ 720 0213 63686172 		.ascii	"char\000"
+ 720      00
+ 721              	.LASF2:
+ 722 0218 73686F72 		.ascii	"short int\000"
+ 722      7420696E 
+ 722      7400
+ 723              	.LASF20:
+ 724 0222 55534255 		.ascii	"USBUART_1506_Dp_ReadDataReg\000"
+ 724      4152545F 
+ 724      31353036 
+ 724      5F44705F 
+ 724      52656164 
+ 725              	.LASF9:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccUs4GAV.s 			page 19
 
 
- 727      00
- 728              	.LASF0:
- 729 0218 7369676E 		.ascii	"signed char\000"
- 729      65642063 
- 729      68617200 
- 730              	.LASF26:
- 731 0224 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
- 731      726F6A65 
- 731      6374735C 
- 731      4553445C 
- 731      7461736B 
- 732 0252 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 732      5C566F69 
- 732      63655F52 
- 732      65636F72 
- 732      6465725F 
+ 726 023e 75696E74 		.ascii	"uint8\000"
+ 726      3800
+ 727              	.LASF15:
+ 728 0244 55534255 		.ascii	"USBUART_1506_Dp_Write\000"
+ 728      4152545F 
+ 728      31353036 
+ 728      5F44705F 
+ 728      57726974 
+ 729              	.LASF4:
+ 730 025a 6C6F6E67 		.ascii	"long int\000"
+ 730      20696E74 
+ 730      00
+ 731              	.LASF0:
+ 732 0263 7369676E 		.ascii	"signed char\000"
+ 732      65642063 
+ 732      68617200 
  733              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
   22:.\Generated_Source\PSoC5/ADC_1506_PM.c ****     ADC_1506_DISABLED,
   23:.\Generated_Source\PSoC5/ADC_1506_PM.c ****     ADC_1506_CFG1_DEC_CR
   24:.\Generated_Source\PSoC5/ADC_1506_PM.c **** };
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 2
 
 
   25:.\Generated_Source\PSoC5/ADC_1506_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
   63              		.cfi_endproc
   64              	.LFE0:
   65              		.size	ADC_1506_SaveConfig, .-ADC_1506_SaveConfig
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 3
 
 
   66              		.section	.text.ADC_1506_RestoreConfig,"ax",%progbits
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
   95              		.cfi_def_cfa_offset 0
   96 0012 7047     		bx	lr
   97              	.L6:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 4
 
 
   98              		.align	2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  128 000e 002B     		cmp	r3, #0
  129 0010 1AD0     		beq	.L8
   99:.\Generated_Source\PSoC5/ADC_1506_PM.c ****        (ADC_1506_ACT_PWR_DSM_EN == (ADC_1506_PWRMGR_DSM_REG & ADC_1506_ACT_PWR_DSM_EN)))
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 5
 
 
  130              		.loc 1 99 0 discriminator 1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  117:.\Generated_Source\PSoC5/ADC_1506_PM.c **** 
  118:.\Generated_Source\PSoC5/ADC_1506_PM.c ****     /* Save the user configuration */
  119:.\Generated_Source\PSoC5/ADC_1506_PM.c ****     ADC_1506_SaveConfig();
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 6
 
 
  166              		.loc 1 119 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  143:.\Generated_Source\PSoC5/ADC_1506_PM.c ****     /* Restore the configuration */
  144:.\Generated_Source\PSoC5/ADC_1506_PM.c ****     ADC_1506_RestoreConfig();
  197              		.loc 1 144 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 7
 
 
  198 0004 FFF7FEFF 		bl	ADC_1506_RestoreConfig
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  241 0021 00000000 		.4byte	.Ldebug_line0
  242 0025 02       		.uleb128 0x2
  243 0026 01       		.byte	0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 8
 
 
  244 0027 06       		.byte	0x6
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  297 0087 08       		.byte	0x8
  298 0088 BA000000 		.4byte	.LASF11
  299 008c 04       		.uleb128 0x4
- 300 008d 0A020000 		.4byte	.LASF13
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 9
+ 300 008d 08020000 		.4byte	.LASF13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 9
 
 
  301 0091 02       		.byte	0x2
@@ -489,7 +489,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  306 009d 02       		.uleb128 0x2
  307 009e 04       		.byte	0x4
  308 009f 07       		.byte	0x7
- 309 00a0 0F020000 		.4byte	.LASF14
+ 309 00a0 0D020000 		.4byte	.LASF14
  310 00a4 06       		.uleb128 0x6
  311 00a5 02       		.byte	0x2
  312 00a6 03       		.byte	0x3
@@ -509,7 +509,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  326 00c3 01       		.byte	0x1
  327 00c4 00       		.byte	0
  328 00c5 08       		.uleb128 0x8
- 329 00c6 18020000 		.4byte	.LASF17
+ 329 00c6 16020000 		.4byte	.LASF17
  330 00ca 03       		.byte	0x3
  331 00cb 2C       		.byte	0x2c
  332 00cc A4000000 		.4byte	0xa4
@@ -522,7 +522,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  339 00df 01       		.uleb128 0x1
  340 00e0 9C       		.byte	0x9c
  341 00e1 09       		.uleb128 0x9
- 342 00e2 F3010000 		.4byte	.LASF19
+ 342 00e2 F1010000 		.4byte	.LASF19
  343 00e6 01       		.byte	0x1
  344 00e7 47       		.byte	0x47
  345 00e8 00000000 		.4byte	.LFB1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  355 0101 01       		.uleb128 0x1
  356 0102 9C       		.byte	0x9c
  357 0103 0A       		.uleb128 0xa
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 10
 
 
  358 0104 9C000000 		.4byte	.LASF21
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  412 0024 0B       		.uleb128 0xb
  413 0025 03       		.uleb128 0x3
  414 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 11
 
 
  415 0027 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  469 005d 0E       		.uleb128 0xe
  470 005e 3A       		.uleb128 0x3a
  471 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 12
 
 
  472 0060 3B       		.uleb128 0x3b
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  526 0098 00       		.byte	0
  527 0099 03       		.uleb128 0x3
  528 009a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 13
 
 
  529 009b 3A       		.uleb128 0x3a
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  576 000e 656E6162 		.ascii	"enableState\000"
  576      6C655374 
  576      61746500 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 14
 
 
  577              	.LASF8:
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  600 00c8 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
  600      4320342E 
  600      392E3320 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 15
 
 
  600      32303135 
@@ -883,34 +883,34 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 1
  616 01a0 666C6F61 		.ascii	"float\000"
  616      7400
  617              	.LASF24:
- 618 01a6 443A5C50 		.ascii	"D:\\Projects\\ESD\\tasks_1506\\VoiceRecorder\\Works"
+ 618 01a6 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\VoiceRecorder\\Workspa"
  618      726F6A65 
  618      6374735C 
  618      4553445C 
- 618      7461736B 
- 619 01d4 70616365 		.ascii	"pace\\Voice_Recorder_1506.cydsn\000"
- 619      5C566F69 
- 619      63655F52 
- 619      65636F72 
- 619      6465725F 
+ 618      4553445F 
+ 619 01d4 63655C56 		.ascii	"ce\\Voice_Recorder_1506.cydsn\000"
+ 619      6F696365 
+ 619      5F526563 
+ 619      6F726465 
+ 619      725F3135 
  620              	.LASF19:
- 621 01f3 4144435F 		.ascii	"ADC_1506_RestoreConfig\000"
+ 621 01f1 4144435F 		.ascii	"ADC_1506_RestoreConfig\000"
  621      31353036 
  621      5F526573 
  621      746F7265 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc0xBAqA.s 			page 16
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cccbp4Zs.s 			page 16
 
 
  621      436F6E66 
  622              	.LASF13:
- 623 020a 72656738 		.ascii	"reg8\000"
+ 623 0208 72656738 		.ascii	"reg8\000"
  623      00
  624              	.LASF14:
- 625 020f 73697A65 		.ascii	"sizetype\000"
+ 625 020d 73697A65 		.ascii	"sizetype\000"
  625      74797065 
  625      00
  626              	.LASF17:
- 627 0218 4144435F 		.ascii	"ADC_1506_BACKUP_STRUCT\000"
+ 627 0216 4144435F 		.ascii	"ADC_1506_BACKUP_STRUCT\000"
  627      31353036 
  627      5F424143 
  627      4B55505F 

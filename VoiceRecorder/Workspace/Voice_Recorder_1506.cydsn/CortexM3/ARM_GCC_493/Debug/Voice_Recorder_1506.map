@@ -3,15 +3,31 @@ Archive member included because of file (symbol)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
                               .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o (cyfitter_cfg)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                              .\CortexM3\ARM_GCC_493\Debug\main_1506.o (LCD_1506_Start)
+                              .\CortexM3\ARM_GCC_493\Debug\main_1506.o (LCD_1506_WriteControl)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
                               .\CortexM3\ARM_GCC_493\Debug\main_1506.o (VDAC_1506_Start)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                              .\CortexM3\ARM_GCC_493\Debug\main_1506.o (USBUART_1506_Start)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                              .\CortexM3\ARM_GCC_493\Debug\main_1506.o (USBUART_1506_CDC_Init)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o) (USBUART_1506_EP)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o) (USBUART_1506_EP_1_ISR)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o) (USBUART_1506_DP_ISR)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o) (USBUART_1506_HandleStandardRqst)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o) (USBUART_1506_HandleVendorRqst)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
                               .\CortexM3\ARM_GCC_493\Debug\main_1506.o (ADC_1506_Start)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
                               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o) (ADC_1506_ISR1)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
                               .\CortexM3\ARM_GCC_493\Debug\main_1506.o (Opamp_1506_Start)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o) (USBUART_1506_Dp_ClearInterrupt)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
                               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o) (ADC_1506_AMux_Select)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
@@ -24,6 +40,10 @@ Archive member included because of file (symbol)
                               .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o (CyResetStatus)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
                               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o) (CyPmReadStatus)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o) (USBUART_1506_DispatchClassRqst)
+.\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+                              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o) (USBUART_1506_DEVICE0_DESCR)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
                               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o) (CyFlash_SetWaitCycles)
 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
@@ -54,10 +74,61 @@ c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.
 Allocating common symbols
 Common symbol       size              file
 
+USBUART_1506_deviceAddress
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_ep0Mode
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_lastPacketSize
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_linesControlBitmap
+                    0x4               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+USBUART_1506_cdcDataOutEp
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+USBUART_1506_cdcDataInEp
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+USBUART_1506_interfaceSettingLast
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_ep0Count
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
 ADC_1506_CountsPerVolt
                     0x4               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+USBUART_1506_transferByteCount
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_device
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_cdcCommInInterruptEp
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+buffer              0x8000            .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+USBUART_1506_configuration
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_ep0Toggle
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_deviceStatus
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_interfaceStatus
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
 ADC_1506_Offset     0x4               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+USBUART_1506_EP     0x6c              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_currentTD
+                    0xc               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_linesChanged
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+USBUART_1506_interfaceSetting
+                    0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+buf                 0x4f              .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+USBUART_1506_idSerialNumberStringDescriptor
+                    0x22              .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+USBUART_1506_interfaceClass
+                    0x4               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_transferState
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+USBUART_1506_serialStateBitmap
+                    0x4               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+USBUART_1506_interfaceNumber
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
 dieTemperature      0x2               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+USBUART_1506_configurationChanged
+                    0x1               .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
 
 Discarded input sections
 
@@ -100,13 +171,101 @@ Discarded input sections
                 0x00000000       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
  .text.LCD_1506_PrintInt32
                 0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
- .text.LCD_1506_PrintU32Number
-                0x00000000       0xa4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
  .rodata        0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
  .text.VDAC_1506_Stop
                 0x00000000       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_Stop
+                0x00000000       0xd8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_CheckActivity
+                0x00000000       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_IsConfigurationChanged
+                0x00000000       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_GetInterfaceSetting
+                0x00000000       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_DisableOutEP
+                0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_Force
+                0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_GetEPAckState
+                0x00000000       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_SetPowerStatus
+                0x00000000       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_RWUEnabled
+                0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_GetDeviceAddress
+                0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_EnableSofInt
+                0x00000000       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text.USBUART_1506_DisableSofInt
+                0x00000000       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_StrLen
+                0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_PutString
+                0x00000000       0xdc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_PutChar
+                0x00000000       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .rodata        0x00000000        0x4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_PutCRLF
+                0x00000000       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetCount
+                0x00000000       0x50 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetData
+                0x00000000       0x3c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetChar
+                0x00000000       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_IsLineChanged
+                0x00000000       0x58 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetDTERate
+                0x00000000       0x8c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetCharFormat
+                0x00000000       0x2c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetParityType
+                0x00000000       0x2c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetDataBits
+                0x00000000       0x2c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetLineControl
+                0x00000000       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_SendSerialState
+                0x00000000       0xa8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetSerialState
+                0x00000000       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_NotificationIsReady
+                0x00000000       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_SetComPort
+                0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text.USBUART_1506_GetComPort
+                0x00000000       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .bss           0x00000000        0x4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .text.USBUART_1506_SaveConfig
+                0x00000000        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .text.USBUART_1506_RestoreConfig
+                0x00000000       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .text.USBUART_1506_Suspend
+                0x00000000      0x11c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .text.USBUART_1506_Resume
+                0x00000000      0x100 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .text.USBUART_1506_EpStateInit
+                0x00000000       0x68 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .text.USBUART_1506_TerminateEP
+                0x00000000       0xb4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .text.ADC_1506_Stop
                 0x00000000      0x17c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
@@ -149,6 +308,19 @@ Discarded input sections
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
  .text.Opamp_1506_Stop
                 0x00000000       0x54 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .text.USBUART_1506_Dp_Write
+                0x00000000       0x3c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .text.USBUART_1506_Dp_SetDriveMode
+                0x00000000       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .text.USBUART_1506_Dp_Read
+                0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .text.USBUART_1506_Dp_ReadDataReg
+                0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .text.USBUART_1506_Dp_SetInterruptMode
+                0x00000000       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
  .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
  .text.ADC_1506_AMux_FastSelect
@@ -343,8 +515,6 @@ Discarded input sections
                 0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
  .text.CySysTickServiceCallbacks
                 0x00000000       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
- .text.CyGetUniqueId
-                0x00000000       0xc4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
  .bss           0x00000000       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
@@ -381,6 +551,12 @@ Discarded input sections
                 0x00000000       0xd4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
  .text.CyPmHviLviRestore
                 0x00000000       0x54 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+ .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+ .bss           0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
  .text          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
  .data          0x00000000        0x0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
  .bss           0x00000000        0x4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
@@ -536,7 +712,7 @@ END GROUP
                 0x00000040                CY_METADATA_SIZE = 0x40
                 0x00000000                CY_APPL_LOADABLE = 0x0
                 0x00000000                CY_CHECKSUM_EXCLUDE_SIZE = ALIGN (0x0, CY_FLASH_ROW_SIZE)
-                0x1fff8160                PROVIDE (__cy_heap_start, _end)
+                0x200002b0                PROVIDE (__cy_heap_start, _end)
                 0x00000001                PROVIDE (__cy_region_num, ((__cy_regions_end - __cy_regions) / 0x10))
                 0x20008000                PROVIDE (__cy_stack, (ORIGIN (ram) + 0x10000))
                 0x20007800                PROVIDE (__cy_heap_end, (__cy_stack - 0x800))
@@ -551,7 +727,7 @@ END GROUP
                 0x00000800                ee_size = (CY_APPL_LOADABLE && ! (CY_EE_IN_BTLDR))?(CY_EE_SIZE / CY_APPL_MAX):CY_EE_SIZE
                 0x00000000                PROVIDE (CY_ECC_OFFSET, ecc_offset)
 
-.text           0x00000000     0x1bb6
+.text           0x00000000     0x3f5e
  CREATE_OBJECT_SYMBOLS
                 0x00000000                PROVIDE (__cy_interrupt_vector, RomVectors)
  *(.romvectors)
@@ -568,188 +744,355 @@ END GROUP
                 0x00000001                ASSERT ((((appl_start + .) <= 0x10000) || 0x1), DMA Init must be within the first 64k of flash)
  *(.text .text.* .gnu.linkonce.t.*)
  .text          0x00000028       0x5c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .text.main     0x00000084       0x60 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+ .text.main     0x00000084      0x1b8 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
                 0x00000084                main
  .text.IntDefaultHandler
-                0x000000e4        0x8 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x000000e4                IntDefaultHandler
- .text.Start_c  0x000000ec       0x98 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x000000ec                Start_c
+                0x0000023c        0x8 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x0000023c                IntDefaultHandler
+ .text.Start_c  0x00000244       0x98 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x00000244                Start_c
  .text.initialize_psoc
-                0x00000184       0x8c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x00000184                initialize_psoc
+                0x000002dc       0x8c .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x000002dc                initialize_psoc
  .text.CYMEMZERO
-                0x00000210       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x00000368       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.CYCONFIGCPY
-                0x0000022c       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x00000384       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.CYCONFIGCPYCODE
-                0x00000248       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x000003a0       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.CyClockStartupError
-                0x00000264        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x000003bc        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.cfg_write_bytes32
-                0x00000270       0x74 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x000003c8       0x74 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.ClockSetup
-                0x000002e4      0x148 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x0000043c      0x148 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.AnalogSetDefault
-                0x0000042c       0x84 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x00000584       0x84 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .text.ADC_1506_AMux_Set
-                0x000004b0       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
-                0x000004b0                ADC_1506_AMux_Set
+                0x00000608       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x00000608                ADC_1506_AMux_Set
  .text.ADC_1506_AMux_Unset
-                0x000004f0       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
-                0x000004f0                ADC_1506_AMux_Unset
+                0x00000648       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x00000648                ADC_1506_AMux_Unset
  .text.cyfitter_cfg
-                0x00000534      0x134 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
-                0x00000534                cyfitter_cfg
+                0x0000068c      0x134 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x0000068c                cyfitter_cfg
  .text.LCD_1506_Init
-                0x00000668       0x6c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x00000668                LCD_1506_Init
+                0x000007c0       0x6c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x000007c0                LCD_1506_Init
  .text.LCD_1506_Enable
-                0x000006d4       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x000006d4                LCD_1506_Enable
+                0x0000082c       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x0000082c                LCD_1506_Enable
  .text.LCD_1506_Start
-                0x000006ec       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x000006ec                LCD_1506_Start
+                0x00000844       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x00000844                LCD_1506_Start
  .text.LCD_1506_PrintString
-                0x0000070c       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x0000070c                LCD_1506_PrintString
+                0x00000864       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x00000864                LCD_1506_PrintString
  .text.LCD_1506_WriteData
-                0x00000744       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x00000744                LCD_1506_WriteData
+                0x0000089c       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x0000089c                LCD_1506_WriteData
  .text.LCD_1506_WriteControl
-                0x00000778       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x00000778                LCD_1506_WriteControl
+                0x000008d0       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x000008d0                LCD_1506_WriteControl
  .text.LCD_1506_IsReady
-                0x000007ac      0x178 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x000007ac                LCD_1506_IsReady
+                0x00000904      0x178 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x00000904                LCD_1506_IsReady
  .text.LCD_1506_WrDatNib
-                0x00000924       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x00000a7c       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
  .text.LCD_1506_WrCntrlNib
-                0x0000099c       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x00000af4       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+ .text.LCD_1506_PrintU32Number
+                0x00000b54       0xa4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x00000b54                LCD_1506_PrintU32Number
  .text.VDAC_1506_Init
-                0x000009fc       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x000009fc                VDAC_1506_Init
+                0x00000bf8       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000bf8                VDAC_1506_Init
  .text.VDAC_1506_Enable
-                0x00000a24       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x00000a24                VDAC_1506_Enable
+                0x00000c20       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000c20                VDAC_1506_Enable
  .text.VDAC_1506_Start
-                0x00000a58       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x00000a58                VDAC_1506_Start
+                0x00000c54       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000c54                VDAC_1506_Start
  .text.VDAC_1506_SetSpeed
-                0x00000a80       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x00000a80                VDAC_1506_SetSpeed
+                0x00000c7c       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000c7c                VDAC_1506_SetSpeed
  .text.VDAC_1506_SetRange
-                0x00000ac0       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x00000ac0                VDAC_1506_SetRange
+                0x00000cbc       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000cbc                VDAC_1506_SetRange
  .text.VDAC_1506_SetValue
-                0x00000b00       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x00000b00                VDAC_1506_SetValue
+                0x00000cfc       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000cfc                VDAC_1506_SetValue
  .text.VDAC_1506_DacTrim
-                0x00000b20       0x3c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x00000b20                VDAC_1506_DacTrim
+                0x00000d1c       0x3c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x00000d1c                VDAC_1506_DacTrim
+ .text.USBUART_1506_Start
+                0x00000d58       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x00000d58                USBUART_1506_Start
+ .text.USBUART_1506_Init
+                0x00000d90      0x1a0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x00000d90                USBUART_1506_Init
+ .text.USBUART_1506_InitComponent
+                0x00000f30      0x100 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x00000f30                USBUART_1506_InitComponent
+ .text.USBUART_1506_ReInitComponent
+                0x00001030       0x68 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x00001030                USBUART_1506_ReInitComponent
+ .text.USBUART_1506_GetConfiguration
+                0x00001098       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x00001098                USBUART_1506_GetConfiguration
+ .text.USBUART_1506_GetEPState
+                0x000010b0       0x2c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x000010b0                USBUART_1506_GetEPState
+ .text.USBUART_1506_GetEPCount
+                0x000010dc       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x000010dc                USBUART_1506_GetEPCount
+ .text.USBUART_1506_LoadInEP
+                0x0000113c       0xf8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x0000113c                USBUART_1506_LoadInEP
+ .text.USBUART_1506_ReadOutEP
+                0x00001234       0x8c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x00001234                USBUART_1506_ReadOutEP
+ .text.USBUART_1506_EnableOutEP
+                0x000012c0       0x54 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x000012c0                USBUART_1506_EnableOutEP
+ .text.USBUART_1506_DispatchCDCClassRqst
+                0x00001314       0xe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x00001314                USBUART_1506_DispatchCDCClassRqst
+ .text.USBUART_1506_GetInterfaceComPort
+                0x000013fc       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x000013fc                USBUART_1506_GetInterfaceComPort
+ .text.USBUART_1506_CDC_Init
+                0x0000145c       0xa8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x0000145c                USBUART_1506_CDC_Init
+ .text.USBUART_1506_PutData
+                0x00001504       0x6c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x00001504                USBUART_1506_PutData
+ .text.USBUART_1506_DataIsReady
+                0x00001570       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x00001570                USBUART_1506_DataIsReady
+ .text.USBUART_1506_CDCIsReady
+                0x00001594       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x00001594                USBUART_1506_CDCIsReady
+ .text.USBUART_1506_GetAll
+                0x000015b8       0x50 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x000015b8                USBUART_1506_GetAll
+ .text.USBUART_1506_Cdc_EpInit
+                0x00001608       0x94 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x00001608                USBUART_1506_Cdc_EpInit
+ .text.USBUART_1506_EP_0_ISR
+                0x0000169c       0xf8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x0000169c                USBUART_1506_EP_0_ISR
+ .text.USBUART_1506_HandleSetup
+                0x00001794       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001794                USBUART_1506_HandleSetup
+ .text.USBUART_1506_HandleIN
+                0x0000181c       0x4c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x0000181c                USBUART_1506_HandleIN
+ .text.USBUART_1506_HandleOUT
+                0x00001868       0x58 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001868                USBUART_1506_HandleOUT
+ .text.USBUART_1506_LoadEP0
+                0x000018c0       0xd0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x000018c0                USBUART_1506_LoadEP0
+ .text.USBUART_1506_InitControlRead
+                0x00001990       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001990                USBUART_1506_InitControlRead
+ .text.USBUART_1506_InitZeroLengthControlTransfer
+                0x00001a00       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001a00                USBUART_1506_InitZeroLengthControlTransfer
+ .text.USBUART_1506_ControlReadDataStage
+                0x00001a44        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001a44                USBUART_1506_ControlReadDataStage
+ .text.USBUART_1506_ControlReadStatusStage
+                0x00001a50       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001a50                USBUART_1506_ControlReadStatusStage
+ .text.USBUART_1506_InitControlWrite
+                0x00001a90       0x64 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001a90                USBUART_1506_InitControlWrite
+ .text.USBUART_1506_ControlWriteDataStage
+                0x00001af4       0xb4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001af4                USBUART_1506_ControlWriteDataStage
+ .text.USBUART_1506_ControlWriteStatusStage
+                0x00001ba8       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001ba8                USBUART_1506_ControlWriteStatusStage
+ .text.USBUART_1506_InitNoDataControlTransfer
+                0x00001bc8       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001bc8                USBUART_1506_InitNoDataControlTransfer
+ .text.USBUART_1506_NoDataControlStatusStage
+                0x00001c00       0x48 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001c00                USBUART_1506_NoDataControlStatusStage
+ .text.USBUART_1506_UpdateStatusBlock
+                0x00001c48       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001c48                USBUART_1506_UpdateStatusBlock
+ .text.USBUART_1506_InitializeStatusBlock
+                0x00001c88       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x00001c88                USBUART_1506_InitializeStatusBlock
+ .text.USBUART_1506_EP_1_ISR
+                0x00001cbc       0x54 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                0x00001cbc                USBUART_1506_EP_1_ISR
+ .text.USBUART_1506_EP_2_ISR
+                0x00001d10       0x54 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                0x00001d10                USBUART_1506_EP_2_ISR
+ .text.USBUART_1506_EP_3_ISR
+                0x00001d64       0x5c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                0x00001d64                USBUART_1506_EP_3_ISR
+ .text.USBUART_1506_SOF_ISR
+                0x00001dc0        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                0x00001dc0                USBUART_1506_SOF_ISR
+ .text.USBUART_1506_BUS_RESET_ISR
+                0x00001dcc        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                0x00001dcc                USBUART_1506_BUS_RESET_ISR
+ .text.USBUART_1506_DP_ISR
+                0x00001dd8        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+                0x00001dd8                USBUART_1506_DP_ISR
+ .text.USBUART_1506_HandleStandardRqst
+                0x00001de4      0x47c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00001de4                USBUART_1506_HandleStandardRqst
+ .text.USBUART_1506_ReadDieID
+                0x00002260       0xd4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002260                USBUART_1506_ReadDieID
+ .text.USBUART_1506_ConfigReg
+                0x00002334      0x11c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002334                USBUART_1506_ConfigReg
+ .text.USBUART_1506_Config
+                0x00002450      0x3a4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002450                USBUART_1506_Config
+ .text.USBUART_1506_ConfigAltChanged
+                0x000027f4      0x23c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x000027f4                USBUART_1506_ConfigAltChanged
+ .text.USBUART_1506_GetConfigTablePtr
+                0x00002a30       0x54 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002a30                USBUART_1506_GetConfigTablePtr
+ .text.USBUART_1506_GetDeviceTablePtr
+                0x00002a84       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002a84                USBUART_1506_GetDeviceTablePtr
+ .text.USBUART_1506_GetInterfaceClassTablePtr
+                0x00002aa8       0x4c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002aa8                USBUART_1506_GetInterfaceClassTablePtr
+ .text.USBUART_1506_SetEndpointHalt
+                0x00002af4       0xdc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002af4                USBUART_1506_SetEndpointHalt
+ .text.USBUART_1506_ClearEndpointHalt
+                0x00002bd0      0x130 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002bd0                USBUART_1506_ClearEndpointHalt
+ .text.USBUART_1506_ValidateAlternateSetting
+                0x00002d00       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                0x00002d00                USBUART_1506_ValidateAlternateSetting
+ .text.USBUART_1506_HandleVendorRqst
+                0x00002d70       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+                0x00002d70                USBUART_1506_HandleVendorRqst
  .text.ADC_1506_Init
-                0x00000b5c      0x158 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x00000b5c                ADC_1506_Init
+                0x00002da8      0x158 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00002da8                ADC_1506_Init
  .text.ADC_1506_Enable
-                0x00000cb4      0x158 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x00000cb4                ADC_1506_Enable
+                0x00002f00      0x158 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00002f00                ADC_1506_Enable
  .text.ADC_1506_Start
-                0x00000e0c       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x00000e0c                ADC_1506_Start
+                0x00003058       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00003058                ADC_1506_Start
  .text.ADC_1506_StartConvert
-                0x00000e3c       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x00000e3c                ADC_1506_StartConvert
+                0x00003088       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00003088                ADC_1506_StartConvert
  .text.ADC_1506_IsEndConversion
-                0x00000e5c       0x50 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x00000e5c                ADC_1506_IsEndConversion
+                0x000030a8       0x50 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x000030a8                ADC_1506_IsEndConversion
  .text.ADC_1506_GetResult8
-                0x00000eac       0x68 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x00000eac                ADC_1506_GetResult8
+                0x000030f8       0x68 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x000030f8                ADC_1506_GetResult8
  .text.ADC_1506_InitConfig
-                0x00000f14      0x408 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00003160      0x408 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .text.ADC_1506_GainCompensation
-                0x0000131c      0x16c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00003568      0x16c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .text.ADC_1506_SetDSMRef0Reg
-                0x00001488       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x000036d4       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .text.ADC_1506_ISR1
-                0x00001500        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
-                0x00001500                ADC_1506_ISR1
+                0x0000374c        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                0x0000374c                ADC_1506_ISR1
  .text.ADC_1506_ISR2
-                0x0000150c        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
-                0x0000150c                ADC_1506_ISR2
+                0x00003758        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                0x00003758                ADC_1506_ISR2
  .text.ADC_1506_ISR3
-                0x00001518        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
-                0x00001518                ADC_1506_ISR3
+                0x00003764        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                0x00003764                ADC_1506_ISR3
  .text.ADC_1506_ISR4
-                0x00001524        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
-                0x00001524                ADC_1506_ISR4
+                0x00003770        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                0x00003770                ADC_1506_ISR4
  .text.Opamp_1506_Init
-                0x00001530        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
-                0x00001530                Opamp_1506_Init
+                0x0000377c        0xc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x0000377c                Opamp_1506_Init
  .text.Opamp_1506_Enable
-                0x0000153c       0x48 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
-                0x0000153c                Opamp_1506_Enable
+                0x00003788       0x48 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x00003788                Opamp_1506_Enable
  .text.Opamp_1506_Start
-                0x00001584       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
-                0x00001584                Opamp_1506_Start
+                0x000037d0       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x000037d0                Opamp_1506_Start
  .text.Opamp_1506_SetPower
-                0x000015a4       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
-                0x000015a4                Opamp_1506_SetPower
+                0x000037f0       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x000037f0                Opamp_1506_SetPower
+ .text.USBUART_1506_Dp_ClearInterrupt
+                0x00003830       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+                0x00003830                USBUART_1506_Dp_ClearInterrupt
  .text.ADC_1506_AMux_Start
-                0x000015e4       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
-                0x000015e4                ADC_1506_AMux_Start
+                0x00003850       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+                0x00003850                ADC_1506_AMux_Start
  .text.ADC_1506_AMux_Select
-                0x00001614       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
-                0x00001614                ADC_1506_AMux_Select
+                0x00003880       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+                0x00003880                ADC_1506_AMux_Select
  .text.ADC_1506_Ext_CP_Clk_SetDividerRegister
-                0x0000163c      0x160 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
-                0x0000163c                ADC_1506_Ext_CP_Clk_SetDividerRegister
+                0x000038a8      0x160 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                0x000038a8                ADC_1506_Ext_CP_Clk_SetDividerRegister
  .text.ADC_1506_Ext_CP_Clk_GetDividerRegister
-                0x0000179c       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
-                0x0000179c                ADC_1506_Ext_CP_Clk_GetDividerRegister
+                0x00003a08       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                0x00003a08                ADC_1506_Ext_CP_Clk_GetDividerRegister
  .text.ADC_1506_Ext_CP_Clk_SetModeRegister
-                0x000017b4       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
-                0x000017b4                ADC_1506_Ext_CP_Clk_SetModeRegister
+                0x00003a20       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                0x00003a20                ADC_1506_Ext_CP_Clk_SetModeRegister
  .text.ADC_1506_Ext_CP_Clk_GetSourceRegister
-                0x000017e8       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
-                0x000017e8                ADC_1506_Ext_CP_Clk_GetSourceRegister
+                0x00003a54       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                0x00003a54                ADC_1506_Ext_CP_Clk_GetSourceRegister
  .text.ADC_1506_theACLK_SetDividerRegister
-                0x00001808      0x160 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
-                0x00001808                ADC_1506_theACLK_SetDividerRegister
+                0x00003a74      0x160 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                0x00003a74                ADC_1506_theACLK_SetDividerRegister
  .text.ADC_1506_theACLK_GetDividerRegister
-                0x00001968       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
-                0x00001968                ADC_1506_theACLK_GetDividerRegister
+                0x00003bd4       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                0x00003bd4                ADC_1506_theACLK_GetDividerRegister
  .text.ADC_1506_theACLK_SetModeRegister
-                0x00001980       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
-                0x00001980                ADC_1506_theACLK_SetModeRegister
+                0x00003bec       0x34 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                0x00003bec                ADC_1506_theACLK_SetModeRegister
  .text.ADC_1506_theACLK_GetSourceRegister
-                0x000019b4       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
-                0x000019b4                ADC_1506_theACLK_GetSourceRegister
- *fill*         0x000019d4        0x4 
- .text          0x000019d8       0x58 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
-                0x000019d8                CyDelayCycles
-                0x00001a16                CyEnterCriticalSection
-                0x00001a1e                CyExitCriticalSection
- .text.CyHalt   0x00001a30       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                0x00001a30                CyHalt
- .text.CyDelay  0x00001a48       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                0x00001a48                CyDelay
+                0x00003c20       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                0x00003c20                ADC_1506_theACLK_GetSourceRegister
+ .text          0x00003c40       0x58 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+                0x00003c40                CyDelayCycles
+                0x00003c7e                CyEnterCriticalSection
+                0x00003c86                CyExitCriticalSection
+ .text.CyHalt   0x00003c98       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00003c98                CyHalt
+ .text.CyDelay  0x00003cb0       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00003cb0                CyDelay
  .text.CyDelayUs
-                0x00001a8c       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                0x00001a8c                CyDelayUs
+                0x00003cf4       0x24 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00003cf4                CyDelayUs
  .text.CyIntSetVector
-                0x00001ab0       0x50 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                0x00001ab0                CyIntSetVector
+                0x00003d18       0x50 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00003d18                CyIntSetVector
  .text.CyIntSetPriority
-                0x00001b00       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                0x00001b00                CyIntSetPriority
+                0x00003d68       0x44 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00003d68                CyIntSetPriority
+ .text.CyGetUniqueId
+                0x00003dac       0xc4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00003dac                CyGetUniqueId
+ .text.USBUART_1506_DispatchClassRqst
+                0x00003e70       0x7c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+                0x00003e70                USBUART_1506_DispatchClassRqst
  .text.__libc_init_array
-                0x00001b44       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
-                0x00001b44                __libc_init_array
- .text.memcpy   0x00001b90       0x16 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
-                0x00001b90                memcpy
- .text.memset   0x00001ba6       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
-                0x00001ba6                memset
+                0x00003eec       0x4c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x00003eec                __libc_init_array
+ .text.memcpy   0x00003f38       0x16 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00003f38                memcpy
+ .text.memset   0x00003f4e       0x10 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x00003f4e                memset
  *(.plt)
  *(.gnu.warning)
  *(.glue_7t)
@@ -762,80 +1105,92 @@ END GROUP
  *(.ARM.extab* .gnu.linkonce.armextab.*)
  *(.gcc_except_table)
 
-.v4_bx          0x00001bb8        0x0
+.v4_bx          0x00003f60        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00001bb8        0x0
+.iplt           0x00003f60        0x0
  .iplt          0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .eh_frame_hdr
  *(.eh_frame_hdr)
 
-.eh_frame       0x00001bb8        0x4
+.eh_frame       0x00003f60        0x4
  *(.eh_frame)
- .eh_frame      0x00001bb8        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .eh_frame      0x00001bb8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
-                0x00001bbc                PROVIDE (__exidx_start, .)
+ .eh_frame      0x00003f60        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .eh_frame      0x00003f60        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x00003f64                PROVIDE (__exidx_start, .)
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00001bbc                __exidx_end = .
+                0x00003f64                __exidx_end = .
 
-.rodata         0x00001bbc      0x15c
+.rodata         0x00003f64      0x304
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x00001bbc        0xc .\CortexM3\ARM_GCC_493\Debug\main_1506.o
- .rodata        0x00001bc8      0x11c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
-                0x00001bc8                ADC_1506_AMux__addrTable
-                0x00001bd0                ADC_1506_AMux__maskTable
-                0x00001ce4                . = ALIGN (0x4)
+ .rodata        0x00003f64       0x3c .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+ .rodata        0x00003fa0      0x11c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                0x00003fa0                ADC_1506_AMux__addrTable
+                0x00003fa8                ADC_1506_AMux__maskTable
+ .rodata        0x000040bc       0x14 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .rodata        0x000040d0      0x160 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+                0x000040d0                USBUART_1506_DEVICE0_DESCR
+                0x000040e4                USBUART_1506_DEVICE0_CONFIGURATION0_DESCR
+                0x00004128                USBUART_1506_STRING_DESCRIPTORS
+                0x000041c8                USBUART_1506_SN_STRING_DESCRIPTOR
+                0x000041cc                USBUART_1506_DEVICE0_CONFIGURATION0_EP_SETTINGS_TABLE
+                0x000041e4                USBUART_1506_DEVICE0_CONFIGURATION0_INTERFACE_CLASS
+                0x000041e8                USBUART_1506_DEVICE0_CONFIGURATION0_TABLE
+                0x00004210                USBUART_1506_DEVICE0_TABLE
+                0x00004228                USBUART_1506_TABLE
+                0x00004230                . = ALIGN (0x4)
  *(.init)
- .init          0x00001ce4        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00001ce4                _init
- .init          0x00001ce8        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00001cf0                . = ALIGN (0x4)
-                0x00001cf0                __preinit_array_start = .
+ .init          0x00004230        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00004230                _init
+ .init          0x00004234        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000423c                . = ALIGN (0x4)
+                0x0000423c                __preinit_array_start = .
  *(.preinit_array)
-                0x00001cf0                __preinit_array_end = .
-                0x00001cf0                . = ALIGN (0x4)
-                0x00001cf0                __init_array_start = .
+                0x0000423c                __preinit_array_end = .
+                0x0000423c                . = ALIGN (0x4)
+                0x0000423c                __init_array_start = .
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x00001cf0        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .init_array    0x00001cf4        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                0x00001cf8                __init_array_end = .
-                0x00001cf8                . = ALIGN (0x4)
+ .init_array    0x0000423c        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .init_array    0x00004240        0x4 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                0x00004244                __init_array_end = .
+                0x00004244                . = ALIGN (0x4)
  *(.fini)
- .fini          0x00001cf8        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
-                0x00001cf8                _fini
- .fini          0x00001cfc        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
-                0x00001d04                . = ALIGN (0x4)
-                0x00001d04                __fini_array_start = .
+ .fini          0x00004244        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x00004244                _fini
+ .fini          0x00004248        0x8 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x00004250                . = ALIGN (0x4)
+                0x00004250                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x00001d04        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .fini_array    0x00004250        0x4 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x00001d08                __fini_array_end = .
-                0x00001d08                . = ALIGN (0x4)
+                0x00004254                __fini_array_end = .
+                0x00004254                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x00001d08                . = ALIGN (0x4)
+                0x00004254                . = ALIGN (0x4)
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x00001d08                . = ALIGN (0x4)
-                0x00001d08                __cy_regions = .
-                0x00001d08        0x4 LONG 0x1d18 __cy_region_init_ram
-                0x00001d0c        0x4 LONG 0x1fff8108 __cy_region_start_data
-                0x00001d10        0x4 LONG 0x18 __cy_region_init_size_ram
-                0x00001d14        0x4 LONG 0x40 __cy_region_zero_size_ram
-                0x00001d18                __cy_regions_end = .
-                0x00001d18                . = ALIGN (0x8)
-                0x00001d18                _etext = .
+                0x00004254                . = ALIGN (0x4)
+                0x00004254                __cy_regions = .
+                0x00004254        0x4 LONG 0x4268 __cy_region_init_ram
+                0x00004258        0x4 LONG 0x1fff8108 __cy_region_start_data
+                0x0000425c        0x4 LONG 0x38 __cy_region_init_size_ram
+                0x00004260        0x4 LONG 0x8170 __cy_region_zero_size_ram
+                0x00004264                __cy_regions_end = .
+                0x00004268                . = ALIGN (0x8)
+ *fill*         0x00004264        0x4 
+                0x00004268                _etext = .
 
 .cy_checksum_exclude
-                0x00001d18        0x0
+                0x00004268        0x0
  *(.cy_checksum_exclude)
 
 .ramvectors     0x1fff8000      0x100
@@ -850,7 +1205,7 @@ END GROUP
  .noinit        0x1fff8104        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
                 0x1fff8104                CyResetStatus
 
-.data           0x1fff8108       0x18 load address 0x00001d18
+.data           0x1fff8108       0x38 load address 0x00004268
                 0x1fff8108                __cy_region_start_data = .
  *(.jcr)
  .jcr           0x1fff8108        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
@@ -859,60 +1214,101 @@ END GROUP
  *(.got)
  *(.shdata)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x1fff810c        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x1fff810c                ADC_1506_Config
- .data          0x1fff810d        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
- *fill*         0x1fff810e        0x2 
- .data          0x1fff8110       0x10 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                0x1fff8110                cydelay_freq_hz
-                0x1fff8114                cydelay_freq_khz
-                0x1fff8118                cydelay_freq_mhz
-                0x1fff811c                cydelay_32k_ms
-                0x1fff8120                . = ALIGN (0x8)
+ .data          0x1fff810c       0x1c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x1fff810c                USBUART_1506_linesCoding
+ .data          0x1fff8128        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x1fff8128                ADC_1506_Config
+ .data          0x1fff8129        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ *fill*         0x1fff812a        0x2 
+ .data          0x1fff812c       0x10 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x1fff812c                cydelay_freq_hz
+                0x1fff8130                cydelay_freq_khz
+                0x1fff8134                cydelay_freq_mhz
+                0x1fff8138                cydelay_32k_ms
+                0x1fff8140                . = ALIGN (0x8)
+ *fill*         0x1fff813c        0x4 
  *(.ram)
-                0x1fff8120                _edata = .
+                0x1fff8140                _edata = .
 
-.igot.plt       0x1fff8120        0x0 load address 0x00001d30
+.igot.plt       0x1fff8140        0x0 load address 0x000042a0
  .igot.plt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
-.bss            0x1fff8120       0x40 load address 0x00001d30
-                0x1fff8120                PROVIDE (__bss_start__, .)
+.bss            0x1fff8140     0x8170 load address 0x000042a0
+                0x1fff8140                PROVIDE (__bss_start__, .)
  *(.shbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x1fff8120       0x1c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
- .bss           0x1fff813c        0x2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                0x1fff813c                LCD_1506_enableState
-                0x1fff813d                LCD_1506_initVar
- .bss           0x1fff813e        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                0x1fff813e                VDAC_1506_initVar
- *fill*         0x1fff813f        0x1 
- .bss           0x1fff8140       0x14 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x1fff8140                ADC_1506_convDone
-                0x1fff8141                ADC_1506_stopConversion
-                0x1fff8142                ADC_1506_initVar
-                0x1fff8143                ADC_1506_started
- .bss           0x1fff8154        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
-                0x1fff8154                Opamp_1506_initVar
+ .bss           0x1fff8140       0x1c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .bss           0x1fff815c        0x2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                0x1fff815c                LCD_1506_enableState
+                0x1fff815d                LCD_1506_initVar
+ .bss           0x1fff815e        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                0x1fff815e                VDAC_1506_initVar
+ .bss           0x1fff815f        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                0x1fff815f                USBUART_1506_initVar
+ .bss           0x1fff8160        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ *fill*         0x1fff8161        0x3 
+ .bss           0x1fff8164        0x4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .bss           0x1fff8168       0x14 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x1fff8168                ADC_1506_convDone
+                0x1fff8169                ADC_1506_stopConversion
+                0x1fff816a                ADC_1506_initVar
+                0x1fff816b                ADC_1506_started
+ .bss           0x1fff817c        0x1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x1fff817c                Opamp_1506_initVar
  *(COMMON)
- *fill*         0x1fff8155        0x3 
- COMMON         0x1fff8158        0x8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                0x1fff8158                ADC_1506_CountsPerVolt
-                0x1fff815c                ADC_1506_Offset
-                0x1fff8160                . = ALIGN (0x8)
+ *fill*         0x1fff817d        0x3 
+ COMMON         0x1fff8180     0x804f .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+                0x1fff8180                buffer
+                0x20000180                buf
+ *fill*         0x200001cf        0x1 
+ COMMON         0x200001d0       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                0x200001d0                USBUART_1506_linesControlBitmap
+                0x200001d4                USBUART_1506_cdcDataOutEp
+                0x200001d8                USBUART_1506_cdcDataInEp
+                0x200001dc                USBUART_1506_cdcCommInInterruptEp
+                0x200001e0                USBUART_1506_linesChanged
+                0x200001e4                USBUART_1506_serialStateBitmap
+ COMMON         0x200001e8       0x97 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                0x200001e8                USBUART_1506_deviceAddress
+                0x200001e9                USBUART_1506_ep0Mode
+                0x200001ea                USBUART_1506_lastPacketSize
+                0x200001ec                USBUART_1506_interfaceSettingLast
+                0x200001ee                USBUART_1506_ep0Count
+                0x200001f0                USBUART_1506_transferByteCount
+                0x200001f2                USBUART_1506_device
+                0x200001f3                USBUART_1506_configuration
+                0x200001f4                USBUART_1506_ep0Toggle
+                0x200001f5                USBUART_1506_deviceStatus
+                0x200001f8                USBUART_1506_interfaceStatus
+                0x200001fc                USBUART_1506_EP
+                0x20000268                USBUART_1506_currentTD
+                0x20000274                USBUART_1506_interfaceSetting
+                0x20000278                USBUART_1506_interfaceClass
+                0x2000027c                USBUART_1506_transferState
+                0x2000027d                USBUART_1506_interfaceNumber
+                0x2000027e                USBUART_1506_configurationChanged
+ *fill*         0x2000027f        0x1 
+ COMMON         0x20000280        0x8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x20000280                ADC_1506_CountsPerVolt
+                0x20000284                ADC_1506_Offset
+ COMMON         0x20000288       0x22 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+                0x20000288                USBUART_1506_idSerialNumberStringDescriptor
+                0x200002b0                . = ALIGN (0x8)
+ *fill*         0x200002aa        0x6 
  *(.ram.b)
-                0x1fff8160                _end = .
-                0x1fff8160                __end = .
-                0x1fff8160                PROVIDE (end, .)
-                0x1fff8160                PROVIDE (__bss_end__, .)
-                0x00001d18                __cy_region_init_ram = LOADADDR (.data)
-                0x00000018                __cy_region_init_size_ram = (_edata - ADDR (.data))
-                0x00000040                __cy_region_zero_size_ram = (_end - _edata)
+                0x200002b0                _end = .
+                0x200002b0                __end = .
+                0x200002b0                PROVIDE (end, .)
+                0x200002b0                PROVIDE (__bss_end__, .)
+                0x00004268                __cy_region_init_ram = LOADADDR (.data)
+                0x00000038                __cy_region_init_size_ram = (_edata - ADDR (.data))
+                0x00008170                __cy_region_zero_size_ram = (_end - _edata)
 
-.heap           0x1fff8160       0x80 load address 0x00001d30
-                0x1fff8160                . = _end
-                0x1fff81e0                . = (. + 0x80)
- *fill*         0x1fff8160       0x80 
-                0x1fff81e0                __cy_heap_limit = .
+.heap           0x200002b0       0x80 load address 0x000042a0
+                0x200002b0                . = _end
+                0x20000330                . = (. + 0x80)
+ *fill*         0x200002b0       0x80 
+                0x20000330                __cy_heap_limit = .
 
 .stack          0x20007800      0x800
                 0x20007800                __cy_stack_limit = .
@@ -959,7 +1355,7 @@ END GROUP
  .cymeta        0x90500000        0xc .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
                 0x90500000                cy_metadata
 
-.rel.dyn        0x00001d30        0x0 load address 0x9050000c
+.rel.dyn        0x000042a0        0x0 load address 0x9050000c
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
 
 .stab
@@ -980,7 +1376,7 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x8b0
+.debug_aranges  0x00000000      0xc98
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x20 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
@@ -995,148 +1391,227 @@ END GROUP
  .debug_aranges
                 0x00000188       0x58 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
  .debug_aranges
-                0x000001e0       0xe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x000001e0       0xc8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
  .debug_aranges
-                0x000002c8       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                0x000002a8       0xe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
  .debug_aranges
-                0x00000300       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x00000390       0x98 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
  .debug_aranges
-                0x00000340       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+                0x00000428       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
  .debug_aranges
-                0x00000370       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                0x00000468       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
  .debug_aranges
-                0x000003e0       0x80 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                0x000004a8       0x80 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
  .debug_aranges
-                0x00000460       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+                0x00000528       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
  .debug_aranges
-                0x00000480      0x298 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x00000548       0xe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .debug_aranges
-                0x00000718       0x98 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+                0x00000630       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
  .debug_aranges
-                0x000007b0       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+                0x00000668       0x40 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
  .debug_aranges
-                0x00000838       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+                0x000006a8       0x48 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .debug_aranges
+                0x000006f0       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ .debug_aranges
+                0x00000720       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+ .debug_aranges
+                0x00000790       0x80 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+ .debug_aranges
+                0x00000810       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+ .debug_aranges
+                0x00000830      0x298 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+ .debug_aranges
+                0x00000ac8       0x98 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .debug_aranges
+                0x00000b60       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .debug_aranges
+                0x00000b80       0x18 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+ .debug_aranges
+                0x00000b98       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+ .debug_aranges
+                0x00000c20       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3aff
+.debug_info     0x00000000     0x644e
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000       0xef .\CortexM3\ARM_GCC_493\Debug\main_1506.o
- .debug_info    0x000000ef      0x13a .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_info    0x00000229      0x319 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_info    0x00000542      0x510 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
- .debug_info    0x00000a52      0x3c8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
- .debug_info    0x00000e1a      0x185 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
- .debug_info    0x00000f9f      0x725 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
- .debug_info    0x000016c4       0xcc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
- .debug_info    0x00001790      0x11e .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
- .debug_info    0x000018ae      0x10a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
- .debug_info    0x000019b8      0x25d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
- .debug_info    0x00001c15      0x299 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
- .debug_info    0x00001eae       0x9d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
- .debug_info    0x00001f4b      0xe36 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
- .debug_info    0x00002d81      0x562 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
- .debug_info    0x000032e3      0x3c3 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
- .debug_info    0x000036a6      0x459 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+ .debug_info    0x00000000      0x17a .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+ .debug_info    0x0000017a      0x13a .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_info    0x000002b4      0x319 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_info    0x000005cd      0x510 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+ .debug_info    0x00000add      0x3c8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+ .debug_info    0x00000ea5      0x185 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+ .debug_info    0x0000102a      0x70b .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .debug_info    0x00001735      0x903 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .debug_info    0x00002038      0x521 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .debug_info    0x00002559      0x22f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .debug_info    0x00002788      0x186 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .debug_info    0x0000290e      0x940 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .debug_info    0x0000324e       0xe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .debug_info    0x00003336      0x725 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+ .debug_info    0x00003a5b       0xcc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+ .debug_info    0x00003b27      0x11e .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .debug_info    0x00003c45      0x171 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .debug_info    0x00003db6      0x10a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ .debug_info    0x00003ec0      0x25d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+ .debug_info    0x0000411d      0x299 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+ .debug_info    0x000043b6       0x9b .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+ .debug_info    0x00004451      0xe36 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+ .debug_info    0x00005287      0x562 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .debug_info    0x000057e9      0x1bc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .debug_info    0x000059a5      0x28d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+ .debug_info    0x00005c32      0x3c3 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+ .debug_info    0x00005ff5      0x459 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
 
-.debug_abbrev   0x00000000     0x119b
+.debug_abbrev   0x00000000     0x1daf
  *(.debug_abbrev)
- .debug_abbrev  0x00000000       0x85 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
- .debug_abbrev  0x00000085       0x5d .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_abbrev  0x000000e2      0x1b6 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_abbrev  0x00000298      0x1b0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
- .debug_abbrev  0x00000448      0x120 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
- .debug_abbrev  0x00000568       0xeb .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
- .debug_abbrev  0x00000653      0x19d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
- .debug_abbrev  0x000007f0       0x42 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
- .debug_abbrev  0x00000832       0xa8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
- .debug_abbrev  0x000008da       0x6f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
- .debug_abbrev  0x00000949      0x11d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
- .debug_abbrev  0x00000a66      0x11d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
- .debug_abbrev  0x00000b83       0x14 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
- .debug_abbrev  0x00000b97      0x217 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
- .debug_abbrev  0x00000dae      0x161 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
- .debug_abbrev  0x00000f0f      0x120 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
- .debug_abbrev  0x0000102f      0x16c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+ .debug_abbrev  0x00000000       0xde .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+ .debug_abbrev  0x000000de       0x5d .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_abbrev  0x0000013b      0x1b6 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_abbrev  0x000002f1      0x1b0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+ .debug_abbrev  0x000004a1      0x120 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+ .debug_abbrev  0x000005c1       0xeb .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+ .debug_abbrev  0x000006ac      0x1f3 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .debug_abbrev  0x0000089f      0x233 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .debug_abbrev  0x00000ad2      0x161 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .debug_abbrev  0x00000c33       0xfd .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .debug_abbrev  0x00000d30       0xd1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .debug_abbrev  0x00000e01      0x1c2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .debug_abbrev  0x00000fc3       0x9b .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .debug_abbrev  0x0000105e      0x19d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+ .debug_abbrev  0x000011fb       0x42 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+ .debug_abbrev  0x0000123d       0xa8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .debug_abbrev  0x000012e5       0x90 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .debug_abbrev  0x00001375       0x6f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ .debug_abbrev  0x000013e4      0x11d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+ .debug_abbrev  0x00001501      0x11d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+ .debug_abbrev  0x0000161e       0x14 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+ .debug_abbrev  0x00001632      0x217 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+ .debug_abbrev  0x00001849      0x161 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .debug_abbrev  0x000019aa       0xc5 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .debug_abbrev  0x00001a6f       0xb4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+ .debug_abbrev  0x00001b23      0x120 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+ .debug_abbrev  0x00001c43      0x16c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
 
-.debug_line     0x00000000     0x22ce
+.debug_line     0x00000000     0x3457
  *(.debug_line)
- .debug_line    0x00000000      0x174 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
- .debug_line    0x00000174       0x53 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
- .debug_line    0x000001c7      0x1d6 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_line    0x0000039d      0x227 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
- .debug_line    0x000005c4      0x1e8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
- .debug_line    0x000007ac       0xf4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
- .debug_line    0x000008a0      0x3d1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
- .debug_line    0x00000c71       0x93 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
- .debug_line    0x00000d04       0xb4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
- .debug_line    0x00000db8       0xa4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
- .debug_line    0x00000e5c      0x1c7 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
- .debug_line    0x00001023      0x1e8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
- .debug_line    0x0000120b       0x7f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
- .debug_line    0x0000128a      0x872 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
- .debug_line    0x00001afc      0x381 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
- .debug_line    0x00001e7d      0x21a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
- .debug_line    0x00002097      0x237 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+ .debug_line    0x00000000      0x1e9 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+ .debug_line    0x000001e9       0x53 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+ .debug_line    0x0000023c      0x1d6 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_line    0x00000412      0x227 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+ .debug_line    0x00000639      0x1e8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+ .debug_line    0x00000821       0xf4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+ .debug_line    0x00000915      0x313 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .debug_line    0x00000c28      0x31d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .debug_line    0x00000f45      0x226 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .debug_line    0x0000116b      0x103 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .debug_line    0x0000126e       0xf2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .debug_line    0x00001360      0x46c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .debug_line    0x000017cc       0x85 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .debug_line    0x00001851      0x3d1 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+ .debug_line    0x00001c22       0x93 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+ .debug_line    0x00001cb5       0xb4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .debug_line    0x00001d69       0xc5 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .debug_line    0x00001e2e       0xa4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ .debug_line    0x00001ed2      0x1c7 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+ .debug_line    0x00002099      0x1e8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+ .debug_line    0x00002281       0x7f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+ .debug_line    0x00002300      0x872 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+ .debug_line    0x00002b72      0x381 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .debug_line    0x00002ef3       0xa6 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .debug_line    0x00002f99       0x6d .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+ .debug_line    0x00003006      0x21a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+ .debug_line    0x00003220      0x237 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
 
-.debug_frame    0x00000000     0x2300
+.debug_frame    0x00000000     0x31a8
  *(.debug_frame)
- .debug_frame   0x00000000       0x34 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
- .debug_frame   0x00000034       0xd8 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
- .debug_frame   0x0000010c      0x1bc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
- .debug_frame   0x000002c8      0x260 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
- .debug_frame   0x00000528      0x130 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
- .debug_frame   0x00000658      0x40c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
- .debug_frame   0x00000a64       0xa0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
- .debug_frame   0x00000b04       0xb8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
- .debug_frame   0x00000bbc       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
- .debug_frame   0x00000c44      0x1b4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
- .debug_frame   0x00000df8      0x200 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
- .debug_frame   0x00000ff8      0xbe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
- .debug_frame   0x00001be0      0x234 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
- .debug_frame   0x00001e14      0x238 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
- .debug_frame   0x0000204c      0x1f8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
- .debug_frame   0x00002244       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00002264       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
- .debug_frame   0x0000228c       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
- .debug_frame   0x000022b8       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
- .debug_frame   0x000022e0       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00000000       0x38 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+ .debug_frame   0x00000038       0xd8 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+ .debug_frame   0x00000110      0x1bc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+ .debug_frame   0x000002cc      0x260 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+ .debug_frame   0x0000052c      0x130 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+ .debug_frame   0x0000065c      0x37c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .debug_frame   0x000009d8      0x3ec .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .debug_frame   0x00000dc4      0x23c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .debug_frame   0x00001000       0xbc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .debug_frame   0x000010bc       0xbc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .debug_frame   0x00001178      0x224 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .debug_frame   0x0000139c       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .debug_frame   0x000013d4      0x40c .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+ .debug_frame   0x000017e0       0xa0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+ .debug_frame   0x00001880       0xb8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .debug_frame   0x00001938       0xf4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .debug_frame   0x00001a2c       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ .debug_frame   0x00001ab4      0x1b4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+ .debug_frame   0x00001c68      0x200 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+ .debug_frame   0x00001e68      0xbe8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+ .debug_frame   0x00002a50      0x234 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .debug_frame   0x00002c84       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .debug_frame   0x00002cbc      0x238 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+ .debug_frame   0x00002ef4      0x1f8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+ .debug_frame   0x000030ec       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x0000310c       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x00003134       0x2c c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x00003160       0x28 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .debug_frame   0x00003188       0x20 c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000     0x1ec3
+.debug_str      0x00000000     0x3358
  *(.debug_str)
- .debug_str     0x00000000      0x183 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
-                                0x1c9 (size before relaxing)
- .debug_str     0x00000183       0x7d .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
-                                0x1f7 (size before relaxing)
- .debug_str     0x00000200      0x13e .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
-                                0x2d8 (size before relaxing)
- .debug_str     0x0000033e      0x21f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
-                                0x3db (size before relaxing)
- .debug_str     0x0000055d      0x1dd .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
-                                0x37e (size before relaxing)
- .debug_str     0x0000073a       0xd2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
-                                0x254 (size before relaxing)
- .debug_str     0x0000080c      0x3b0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
-                                0x594 (size before relaxing)
- .debug_str     0x00000bbc       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
-                                0x1da (size before relaxing)
- .debug_str     0x00000c1c       0x96 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
-                                0x21b (size before relaxing)
- .debug_str     0x00000cb2       0x8a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
-                                0x209 (size before relaxing)
- .debug_str     0x00000d3c      0x1f2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
-                                0x38b (size before relaxing)
- .debug_str     0x00000f2e      0x1d2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
-                                0x3b4 (size before relaxing)
- .debug_str     0x00001100      0x7dc .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
-                                0x9d3 (size before relaxing)
- .debug_str     0x000018dc      0x367 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
-                                0x538 (size before relaxing)
- .debug_str     0x00001c43      0x15f .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
-                                0x30f (size before relaxing)
- .debug_str     0x00001da2      0x121 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
-                                0x2f4 (size before relaxing)
+ .debug_str     0x00000000      0x19b .\CortexM3\ARM_GCC_493\Debug\main_1506.o
+                                0x1e9 (size before relaxing)
+ .debug_str     0x0000019b       0x77 .\CortexM3\ARM_GCC_493\Debug\cymetadata.o
+                                0x1f5 (size before relaxing)
+ .debug_str     0x00000212      0x138 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
+                                0x2d6 (size before relaxing)
+ .debug_str     0x0000034a      0x218 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
+                                0x3d9 (size before relaxing)
+ .debug_str     0x00000562      0x1dd .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
+                                0x37c (size before relaxing)
+ .debug_str     0x0000073f       0xd2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+                                0x252 (size before relaxing)
+ .debug_str     0x00000811      0x4f4 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+                                0x6ad (size before relaxing)
+ .debug_str     0x00000d05      0x5a6 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+                                0x7fa (size before relaxing)
+ .debug_str     0x000012ab      0x310 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+                                0x6bc (size before relaxing)
+ .debug_str     0x000015bb       0xa0 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+                                0x2f8 (size before relaxing)
+ .debug_str     0x0000165b       0xca .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+                                0x297 (size before relaxing)
+ .debug_str     0x00001725      0x309 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+                                0x80e (size before relaxing)
+ .debug_str     0x00001a2e       0x4a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+                                0x1fb (size before relaxing)
+ .debug_str     0x00001a78      0x398 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                                0x592 (size before relaxing)
+ .debug_str     0x00001e10       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                                0x1d8 (size before relaxing)
+ .debug_str     0x00001e70       0x96 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                                0x219 (size before relaxing)
+ .debug_str     0x00001f06       0xe3 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+                                0x26f (size before relaxing)
+ .debug_str     0x00001fe9       0x8a .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+                                0x207 (size before relaxing)
+ .debug_str     0x00002073      0x1ec .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                                0x389 (size before relaxing)
+ .debug_str     0x0000225f      0x1d2 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                                0x3b2 (size before relaxing)
+ .debug_str     0x00002431      0x7d3 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                                0x9d1 (size before relaxing)
+ .debug_str     0x00002c04      0x367 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+                                0x536 (size before relaxing)
+ .debug_str     0x00002f6b       0x4b .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+                                0x2ac (size before relaxing)
+ .debug_str     0x00002fb6      0x129 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
+                                0x399 (size before relaxing)
+ .debug_str     0x000030df      0x158 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+                                0x30d (size before relaxing)
+ .debug_str     0x00003237      0x121 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+                                0x2f2 (size before relaxing)
 
 .debug_loc
  *(.debug_loc)
@@ -1144,23 +1619,32 @@ END GROUP
 .debug_macinfo
  *(.debug_macinfo)
 
-.debug_ranges   0x00000000      0x788
+.debug_ranges   0x00000000      0xac8
  *(.debug_ranges)
  .debug_ranges  0x00000000       0x10 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
  .debug_ranges  0x00000010       0x38 .\CortexM3\ARM_GCC_493\Debug\Cm3Start.o
  .debug_ranges  0x00000048       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .debug_ranges  0x000000a8       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
  .debug_ranges  0x00000130       0x48 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
- .debug_ranges  0x00000178       0xd8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
- .debug_ranges  0x00000250       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
- .debug_ranges  0x00000278       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
- .debug_ranges  0x000002a8       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
- .debug_ranges  0x000002c8       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
- .debug_ranges  0x00000328       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
- .debug_ranges  0x00000398      0x288 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
- .debug_ranges  0x00000620       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
- .debug_ranges  0x000006a8       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
- .debug_ranges  0x00000720       0x68 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+ .debug_ranges  0x00000178       0xb8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .debug_ranges  0x00000230       0xd8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .debug_ranges  0x00000308       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .debug_ranges  0x00000390       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .debug_ranges  0x000003c0       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .debug_ranges  0x000003f0       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .debug_ranges  0x00000460       0x10 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
+ .debug_ranges  0x00000470       0xd8 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+ .debug_ranges  0x00000548       0x28 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+ .debug_ranges  0x00000570       0x30 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .debug_ranges  0x000005a0       0x38 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
+ .debug_ranges  0x000005d8       0x20 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+ .debug_ranges  0x000005f8       0x60 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+ .debug_ranges  0x00000658       0x70 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+ .debug_ranges  0x000006c8      0x288 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+ .debug_ranges  0x00000950       0x88 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .debug_ranges  0x000009d8       0x10 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .debug_ranges  0x000009e8       0x78 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+ .debug_ranges  0x00000a60       0x68 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
 
 .comment        0x00000000       0x70
  .comment       0x00000000       0x70 .\CortexM3\ARM_GCC_493\Debug\main_1506.o
@@ -1170,14 +1654,24 @@ END GROUP
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyfitter_cfg.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(LCD_1506.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
+ .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
  .comment       0x00000000       0x71 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
 
@@ -1218,53 +1712,73 @@ END GROUP
  .ARM.attributes
                 0x00000164       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(VDAC_1506.o)
  .ARM.attributes
-                0x00000197       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
+                0x00000197       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506.o)
  .ARM.attributes
-                0x000001ca       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
+                0x000001ca       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cdc.o)
  .ARM.attributes
-                0x000001fd       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
+                0x000001fd       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_drv.o)
  .ARM.attributes
-                0x00000230       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
+                0x00000230       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_episr.o)
  .ARM.attributes
-                0x00000263       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
+                0x00000263       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_pm.o)
  .ARM.attributes
-                0x00000296       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
+                0x00000296       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_std.o)
  .ARM.attributes
-                0x000002c9       0x21 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
+                0x000002c9       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_vnd.o)
  .ARM.attributes
-                0x000002ea       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
+                0x000002fc       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506.o)
  .ARM.attributes
-                0x0000031d       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
+                0x0000032f       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_INT.o)
  .ARM.attributes
-                0x00000350       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
+                0x00000362       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(Opamp_1506.o)
  .ARM.attributes
-                0x00000383       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
+                0x00000395       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_Dp.o)
  .ARM.attributes
-                0x000003b6       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
+                0x000003c8       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_AMux.o)
  .ARM.attributes
-                0x000003d3       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
+                0x000003fb       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_Ext_CP_Clk.o)
  .ARM.attributes
-                0x000003f0       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+                0x0000042e       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(ADC_1506_theACLK.o)
  .ARM.attributes
-                0x0000040d       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+                0x00000461       0x21 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyBootAsmGnu.o)
  .ARM.attributes
-                0x0000042a       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunssfsi.o)
+                0x00000482       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyLib.o)
  .ARM.attributes
-                0x00000447       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+                0x000004b5       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(cyPm.o)
  .ARM.attributes
-                0x00000474       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+                0x000004e8       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_cls.o)
  .ARM.attributes
-                0x000004a1       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+                0x0000051b       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(USBUART_1506_descr.o)
  .ARM.attributes
-                0x000004ce       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+                0x0000054e       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CyFlash.o)
  .ARM.attributes
-                0x000004fb       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+                0x00000581       0x33 .\CortexM3\ARM_GCC_493\Debug\Voice_Recorder_1506.a(CySpc.o)
  .ARM.attributes
-                0x00000528       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+                0x000005b4       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubdf3.o)
  .ARM.attributes
-                0x00000555       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+                0x000005d1       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_cmpdf2.o)
  .ARM.attributes
-                0x00000582       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x000005ee       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x0000060b       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x00000628       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m\libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x00000645       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000672       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000069f       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x000006cc       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000006f9       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00000726       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x00000753       0x2d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .ARM.attributes
+                0x00000780       0x1d c:/program files (x86)/cypress/psoc creator/3.3/psoc creator/import/gnu/arm/4.9.3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
 
 /DISCARD/
  *(.note.GNU-stack)

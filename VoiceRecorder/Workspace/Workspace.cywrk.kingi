@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_theACLK\ADC_1506_theACLK.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace">
 <ExpandedNodeIds>
 <v>Workspace</v>
 <v>Workspace\Voice_Recorder_1506</v>
@@ -364,8 +364,6 @@
 <name v=".\Voice_Recorder_1506.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cydwr" />
 <name v=".\Voice_Recorder_1506.cydsn\main_1506.c" />
-<name v=".\Voice_Recorder_1506.cydsn\cyapicallbacks.h" />
-<name v=".\Voice_Recorder_1506.cydsn\device.h" />
 <name v=".\Voice_Recorder_1506.cydsn\Generated_Source\PSoC5\cm3gcc.ld" />
 </OpenDocs>
 <config v="" />

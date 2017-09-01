@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace\Voice_Recorder_1506\Source Files\main_1506.c">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Workspace\Voice_Recorder_1506\Generated_Source">
 <ExpandedNodeIds>
 <v>Workspace</v>
 <v>Workspace\Voice_Recorder_1506</v>
@@ -24,7 +24,6 @@
 <v>Workspace\Voice_Recorder_1506\Header Files\device.h</v>
 <v>Workspace\Voice_Recorder_1506\Source Files</v>
 <v>Workspace\Voice_Recorder_1506\Source Files\main_1506.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506\ADC_1506.c</v>
@@ -156,43 +155,6 @@
 <v>Workspace\Voice_Recorder_1506\Source Files</v>
 <v>Workspace\Voice_Recorder_1506\Source Files\main_1506.c</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506\ADC_1506.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506\ADC_1506.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506\ADC_1506_INT.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506\ADC_1506_PM.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_AMux</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_AMux\ADC_1506_AMux.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_AMux\ADC_1506_AMux.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_Ext_CP_Clk</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_Ext_CP_Clk\ADC_1506_Ext_CP_Clk.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_Ext_CP_Clk\ADC_1506_Ext_CP_Clk.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_IRQ</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_IRQ\ADC_1506_IRQ.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_IRQ\ADC_1506_IRQ.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_theACLK</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_theACLK\ADC_1506_theACLK.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506_theACLK\ADC_1506_theACLK.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cy_boot\cypins.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
@@ -364,7 +326,6 @@
 <name v=".\Voice_Recorder_1506.cydsn\TopDesign\TopDesign.cysch" />
 <name v=".\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cydwr" />
 <name v=".\Voice_Recorder_1506.cydsn\main_1506.c" />
-<name v=".\Voice_Recorder_1506.cydsn\Generated_Source\PSoC5\cm3gcc.ld" />
 </OpenDocs>
 <config v="" />
 <AutoUpdate v="true" />

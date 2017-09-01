@@ -1,5 +1,5 @@
 -- Project:   Voice_Recorder_1506
--- Generated: 09/01/2017 10:32:47
+-- Generated: 09/01/2017 14:35:03
 -- PSoC Creator  3.3 SP1
 
 ENTITY Voice_Recorder_1506 IS
@@ -120,14 +120,14 @@ ARCHITECTURE __DEFAULT__ OF Voice_Recorder_1506 IS
     ATTRIBUTE lib_model OF \LCD_1506:LCDPort(6)\ : LABEL IS "iocell8";
     ATTRIBUTE Location OF \LCD_1506:LCDPort(6)\ : LABEL IS "P2[6]";
     ATTRIBUTE lib_model OF Sin(0) : LABEL IS "iocell9";
-    ATTRIBUTE Location OF Sin(0) : LABEL IS "P6[0]";
+    ATTRIBUTE Location OF Sin(0) : LABEL IS "P6[6]";
     ATTRIBUTE lib_model OF \USBUART_1506:Dm(0)\ : LABEL IS "iocell10";
     ATTRIBUTE Location OF \USBUART_1506:Dm(0)\ : LABEL IS "P15[7]";
     ATTRIBUTE Location OF \USBUART_1506:Dp\ : LABEL IS "F(PICU,8)";
     ATTRIBUTE lib_model OF \USBUART_1506:Dp(0)\ : LABEL IS "iocell11";
     ATTRIBUTE Location OF \USBUART_1506:Dp(0)\ : LABEL IS "P15[6]";
     ATTRIBUTE lib_model OF Sout(0) : LABEL IS "iocell12";
-    ATTRIBUTE Location OF Sout(0) : LABEL IS "P6[6]";
+    ATTRIBUTE Location OF Sout(0) : LABEL IS "P6[0]";
     ATTRIBUTE Location OF \VDAC_1506:viDAC8\ : LABEL IS "F(VIDAC,3)";
     ATTRIBUTE Location OF \USBUART_1506:dp_int\ : LABEL IS "[IntrContainer=(0)][IntrId=(12)]";
     ATTRIBUTE Location OF \USBUART_1506:USB\ : LABEL IS "F(USB,0)";

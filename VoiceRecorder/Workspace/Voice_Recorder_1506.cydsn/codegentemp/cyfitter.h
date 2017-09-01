@@ -4,11 +4,11 @@
 #include "cydevice_trm.h"
 
 /* Sin */
-#define Sin__0__INTTYPE CYREG_PICU6_INTTYPE0
-#define Sin__0__MASK 0x01u
-#define Sin__0__PC CYREG_PRT6_PC0
+#define Sin__0__INTTYPE CYREG_PICU6_INTTYPE6
+#define Sin__0__MASK 0x40u
+#define Sin__0__PC CYREG_PRT6_PC6
 #define Sin__0__PORT 6u
-#define Sin__0__SHIFT 0
+#define Sin__0__SHIFT 6
 #define Sin__AG CYREG_PRT6_AG
 #define Sin__AMUX CYREG_PRT6_AMUX
 #define Sin__BIE CYREG_PRT6_BIE
@@ -23,7 +23,7 @@
 #define Sin__INTTYPE_BASE CYDEV_PICU_INTTYPE_PICU6_BASE
 #define Sin__LCD_COM_SEG CYREG_PRT6_LCD_COM_SEG
 #define Sin__LCD_EN CYREG_PRT6_LCD_EN
-#define Sin__MASK 0x01u
+#define Sin__MASK 0x40u
 #define Sin__PORT 6u
 #define Sin__PRT CYREG_PRT6_PRT
 #define Sin__PRTDSI__CAPS_SEL CYREG_PRT6_CAPS_SEL
@@ -34,15 +34,15 @@
 #define Sin__PRTDSI__OUT_SEL1 CYREG_PRT6_OUT_SEL1
 #define Sin__PRTDSI__SYNC_OUT CYREG_PRT6_SYNC_OUT
 #define Sin__PS CYREG_PRT6_PS
-#define Sin__SHIFT 0
+#define Sin__SHIFT 6
 #define Sin__SLW CYREG_PRT6_SLW
 
 /* Sout */
-#define Sout__0__INTTYPE CYREG_PICU6_INTTYPE6
-#define Sout__0__MASK 0x40u
-#define Sout__0__PC CYREG_PRT6_PC6
+#define Sout__0__INTTYPE CYREG_PICU6_INTTYPE0
+#define Sout__0__MASK 0x01u
+#define Sout__0__PC CYREG_PRT6_PC0
 #define Sout__0__PORT 6u
-#define Sout__0__SHIFT 6
+#define Sout__0__SHIFT 0
 #define Sout__AG CYREG_PRT6_AG
 #define Sout__AMUX CYREG_PRT6_AMUX
 #define Sout__BIE CYREG_PRT6_BIE
@@ -57,7 +57,7 @@
 #define Sout__INTTYPE_BASE CYDEV_PICU_INTTYPE_PICU6_BASE
 #define Sout__LCD_COM_SEG CYREG_PRT6_LCD_COM_SEG
 #define Sout__LCD_EN CYREG_PRT6_LCD_EN
-#define Sout__MASK 0x40u
+#define Sout__MASK 0x01u
 #define Sout__PORT 6u
 #define Sout__PRT CYREG_PRT6_PRT
 #define Sout__PRTDSI__CAPS_SEL CYREG_PRT6_CAPS_SEL
@@ -68,7 +68,7 @@
 #define Sout__PRTDSI__OUT_SEL1 CYREG_PRT6_OUT_SEL1
 #define Sout__PRTDSI__SYNC_OUT CYREG_PRT6_SYNC_OUT
 #define Sout__PS CYREG_PRT6_PS
-#define Sout__SHIFT 6
+#define Sout__SHIFT 0
 #define Sout__SLW CYREG_PRT6_SLW
 
 /* ADC_1506_DEC */

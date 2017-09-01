@@ -4,11 +4,11 @@
 .include "cydevicegnu_trm.inc"
 
 /* Sin */
-.set Sin__0__INTTYPE, CYREG_PICU6_INTTYPE0
-.set Sin__0__MASK, 0x01
-.set Sin__0__PC, CYREG_PRT6_PC0
+.set Sin__0__INTTYPE, CYREG_PICU6_INTTYPE6
+.set Sin__0__MASK, 0x40
+.set Sin__0__PC, CYREG_PRT6_PC6
 .set Sin__0__PORT, 6
-.set Sin__0__SHIFT, 0
+.set Sin__0__SHIFT, 6
 .set Sin__AG, CYREG_PRT6_AG
 .set Sin__AMUX, CYREG_PRT6_AMUX
 .set Sin__BIE, CYREG_PRT6_BIE
@@ -23,7 +23,7 @@
 .set Sin__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU6_BASE
 .set Sin__LCD_COM_SEG, CYREG_PRT6_LCD_COM_SEG
 .set Sin__LCD_EN, CYREG_PRT6_LCD_EN
-.set Sin__MASK, 0x01
+.set Sin__MASK, 0x40
 .set Sin__PORT, 6
 .set Sin__PRT, CYREG_PRT6_PRT
 .set Sin__PRTDSI__CAPS_SEL, CYREG_PRT6_CAPS_SEL
@@ -34,15 +34,15 @@
 .set Sin__PRTDSI__OUT_SEL1, CYREG_PRT6_OUT_SEL1
 .set Sin__PRTDSI__SYNC_OUT, CYREG_PRT6_SYNC_OUT
 .set Sin__PS, CYREG_PRT6_PS
-.set Sin__SHIFT, 0
+.set Sin__SHIFT, 6
 .set Sin__SLW, CYREG_PRT6_SLW
 
 /* Sout */
-.set Sout__0__INTTYPE, CYREG_PICU6_INTTYPE6
-.set Sout__0__MASK, 0x40
-.set Sout__0__PC, CYREG_PRT6_PC6
+.set Sout__0__INTTYPE, CYREG_PICU6_INTTYPE0
+.set Sout__0__MASK, 0x01
+.set Sout__0__PC, CYREG_PRT6_PC0
 .set Sout__0__PORT, 6
-.set Sout__0__SHIFT, 6
+.set Sout__0__SHIFT, 0
 .set Sout__AG, CYREG_PRT6_AG
 .set Sout__AMUX, CYREG_PRT6_AMUX
 .set Sout__BIE, CYREG_PRT6_BIE
@@ -57,7 +57,7 @@
 .set Sout__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU6_BASE
 .set Sout__LCD_COM_SEG, CYREG_PRT6_LCD_COM_SEG
 .set Sout__LCD_EN, CYREG_PRT6_LCD_EN
-.set Sout__MASK, 0x40
+.set Sout__MASK, 0x01
 .set Sout__PORT, 6
 .set Sout__PRT, CYREG_PRT6_PRT
 .set Sout__PRTDSI__CAPS_SEL, CYREG_PRT6_CAPS_SEL
@@ -68,7 +68,7 @@
 .set Sout__PRTDSI__OUT_SEL1, CYREG_PRT6_OUT_SEL1
 .set Sout__PRTDSI__SYNC_OUT, CYREG_PRT6_SYNC_OUT
 .set Sout__PS, CYREG_PRT6_PS
-.set Sout__SHIFT, 6
+.set Sout__SHIFT, 0
 .set Sout__SLW, CYREG_PRT6_SLW
 
 /* ADC_1506_DEC */

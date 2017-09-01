@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
   23:.\Generated_Source\PSoC5/Opamp_1506.c **** /*******************************************************************************   
   24:.\Generated_Source\PSoC5/Opamp_1506.c **** * Function Name: Opamp_1506_Init
   25:.\Generated_Source\PSoC5/Opamp_1506.c **** ********************************************************************************
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 2
 
 
   26:.\Generated_Source\PSoC5/Opamp_1506.c **** *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
   54:.\Generated_Source\PSoC5/Opamp_1506.c **** *
   55:.\Generated_Source\PSoC5/Opamp_1506.c **** * Return:
   56:.\Generated_Source\PSoC5/Opamp_1506.c **** *  void
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 3
 
 
   57:.\Generated_Source\PSoC5/Opamp_1506.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  100 003a 7047     		bx	lr
  101              	.L4:
  102              		.align	2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 4
 
 
  103              	.L3:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  132 000a 04D1     		bne	.L6
   95:.\Generated_Source\PSoC5/Opamp_1506.c ****     {
   96:.\Generated_Source\PSoC5/Opamp_1506.c ****         Opamp_1506_initVar = 1u;
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 5
 
 
  133              		.loc 1 96 0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  164 0000 80B4     		push	{r7}
  165              		.cfi_def_cfa_offset 4
  166              		.cfi_offset 7, -4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 6
 
 
  167 0002 00AF     		add	r7, sp, #0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  209 0046 00BF     		.align	2
  210              	.L11:
  211 0048 A4430040 		.word	1073759140
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 7
 
 
  212 004c B4430040 		.word	1073759156
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  245 0016 DBB2     		uxtb	r3, r3
  246 0018 1370     		strb	r3, [r2]
  153:.\Generated_Source\PSoC5/Opamp_1506.c ****         Opamp_1506_CR_REG |= power & Opamp_1506_PWR_MASK;      /* Set device power */
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 8
 
 
  247              		.loc 1 153 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  297 002d 01       		.byte	0x1
  298 002e 08       		.byte	0x8
  299 002f 84000000 		.4byte	.LASF1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 9
 
 
  300 0033 02       		.uleb128 0x2
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  354 0098 05       		.uleb128 0x5
  355 0099 6B000000 		.4byte	0x6b
  356 009d 02       		.uleb128 0x2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 10
 
 
  357 009e 04       		.byte	0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  411 010d 1B000000 		.4byte	.LASF24
  412 0111 01       		.byte	0x1
  413 0112 14       		.byte	0x14
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 11
 
 
  414 0113 6B000000 		.4byte	0x6b
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  468 002f 0B       		.uleb128 0xb
  469 0030 3B       		.uleb128 0x3b
  470 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 12
 
 
  471 0032 49       		.uleb128 0x49
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  525 006a 19       		.uleb128 0x19
  526 006b 00       		.byte	0
  527 006c 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 13
 
 
  528 006d 08       		.uleb128 0x8
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  582 00a4 18       		.uleb128 0x18
  583 00a5 00       		.byte	0
  584 00a6 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 14
 
 
  585 00a7 00       		.byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  628      705F3135 
  628      30365F69 
  628      6E697456 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 15
 
 
  628      617200
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  650      66756E63 
  650      74696F6E 
  650      2D736563 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 16
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 16
 
 
  650      74696F6E 
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 1
  671      6E697400 
  672              	.LASF14:
  673 020a 73697A65 		.ascii	"sizetype\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc8zGBik.s 			page 17
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccXBXiCx.s 			page 17
 
 
  673      74797065 

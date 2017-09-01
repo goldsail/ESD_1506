@@ -1,7 +1,7 @@
 
 #include <device.h>
 
-
+#define THRESHOLD (1)
 #define PackageSize (0x40)
 #define BufferSize (0x8000)
 #define PackageNumber (BufferSize / PackageSize)
@@ -15,9 +15,11 @@ void Init();
 
 int main()
 {
-    int i;
-    int j;
+    int32 i;
+    int32 j;
     register int8 Voltage;
+    register int8 lastVoltage;
+    int32 length;
     
     Init();
 
@@ -36,9 +38,9 @@ int main()
                     if (USBUART_1506_DataIsReady() != 0u)
                     {
                         USBUART_1506_GetAll(package);
-                        if (package[0] == 0x01)
+                        if (package[0] == 0x00)
                         {
-                            PrintString("Recorded");
+                            PrintString("Ready");
                             break;
                         }
                     }
@@ -50,13 +52,24 @@ int main()
                     
                     ADC_1506_IsEndConversion(ADC_1506_WAIT_FOR_RESULT);
                     Voltage = ADC_1506_GetResult8();
+                    
+                    if (Voltage > lastVoltage + THRESHOLD)
+                    {
+                        Voltage = lastVoltage + THRESHOLD;
+                    }
+                    if (Voltage < lastVoltage - THRESHOLD)
+                    {
+                        Voltage = lastVoltage - THRESHOLD;
+                    }
+                    lastVoltage = Voltage;
+                    
                     buffer[i] = Voltage;
                     package[i % PackageSize] = Voltage;
                     
                 }
                 
             }
-            else if (package[0] == 0x02) // replay the current buffer
+            else if (package[0] == 0x01) // replay the current buffer
             {
                 PrintString("Replaying");
                 for (i = 0; i < BufferSize; i++)
@@ -67,11 +80,43 @@ int main()
                 }
                 PrintString("Ready");
             }
-            else if (package[0] == 0x03)
+            else if (package[0] == 0x02) // transfer and play the record in hexadecimal
             {
-                
+                PrintString("Playing");
+                length = (((int32)package[1]) << 24) | (((int32)package[2]) << 16) | (((int32)package[3]) << 8) | (((int32)package[4]) << 0);
+                for (i = 0, j = 5; i < length; i++, j++)
+                {
+                    if (j == PackageSize)
+                    {
+                        while (USBUART_1506_DataIsReady() == 0u);
+                        USBUART_1506_GetAll(package);
+                        j = 0;
+                    }
+                    ADC_1506_IsEndConversion(ADC_1506_WAIT_FOR_RESULT);
+                    ADC_1506_GetResult8();
+                    VDAC_1506_SetValue(package[j]);
+                }
+                PrintString("Ready");
             }
-            
+            else if (package[0] == 0x03) // direct access
+            {
+                PrintString("Direct Access");
+                while (1)
+                {
+                    if (USBUART_1506_DataIsReady() != 0u)
+                    {
+                        USBUART_1506_GetAll(package);
+                        if (package[0] == 0x03)
+                        {
+                            break;
+                        }
+                    }
+                    ADC_1506_IsEndConversion(ADC_1506_WAIT_FOR_RESULT);
+                    Voltage = ADC_1506_GetResult8();
+                    VDAC_1506_SetValue(Voltage);
+                }
+                PrintString("Ready");
+            }
         }
     }
     

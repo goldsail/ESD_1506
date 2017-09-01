@@ -24,6 +24,7 @@
 <v>Workspace\Voice_Recorder_1506\Header Files\device.h</v>
 <v>Workspace\Voice_Recorder_1506\Source Files</v>
 <v>Workspace\Voice_Recorder_1506\Source Files\main_1506.c</v>
+<v>Workspace\Voice_Recorder_1506\Generated_Source</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\ADC_1506\ADC_1506.c</v>
@@ -144,18 +145,7 @@
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\cymetadata.c</v>
 <v>Workspace\Voice_Recorder_1506\Generated_Source\PSoC5\project.h</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>Workspace</v>
-<v>Workspace\Voice_Recorder_1506</v>
-<v>Workspace\Voice_Recorder_1506\TopDesign</v>
-<v>Workspace\Voice_Recorder_1506\Voice_Recorder_1506.cydwr</v>
-<v>Workspace\Voice_Recorder_1506\Header Files</v>
-<v>Workspace\Voice_Recorder_1506\Header Files\cyapicallbacks.h</v>
-<v>Workspace\Voice_Recorder_1506\Header Files\device.h</v>
-<v>Workspace\Voice_Recorder_1506\Source Files</v>
-<v>Workspace\Voice_Recorder_1506\Source Files\main_1506.c</v>
-<v>Workspace\Voice_Recorder_1506\Generated_Source</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -164,12 +154,7 @@
 <v>Workspace\Voice_Recorder_1506\TopDesign</v>
 <v>Workspace\Voice_Recorder_1506\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>Workspace</v>
-<v>Workspace\Voice_Recorder_1506</v>
-<v>Workspace\Voice_Recorder_1506\TopDesign</v>
-<v>Workspace\Voice_Recorder_1506\TopDesign\TopDesign.cysch</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -229,55 +214,7 @@
 <v>Workspace\Voice_Recorder_1506\Voice_Recorder_1506.rpt</v>
 <v>Workspace\Voice_Recorder_1506\Voice_Recorder_1506_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>Workspace</v>
-<v>Workspace\Voice_Recorder_1506</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506_AMux.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506_Ext_CP_Clk.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506_INT.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506_IRQ.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506_PM.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_1506_theACLK.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_1506.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_1506_LCDPort.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_1506_PM.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\main_1506.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\Opamp_1506.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\Opamp_1506_PM.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\Sin.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\Sout.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_audio.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_boot.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_cdc.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_cls.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_descr.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_Dm.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_Dp.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_drv.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_episr.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_hid.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_midi.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_msc.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_pm.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_std.lst</v>
-<v>Workspace\Voice_Recorder_1506\CortexM3\ARM_GCC_493\Debug\Listing Files\USBUART_1506_vnd.lst</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -300,21 +237,7 @@
 <v>Workspace\Voice_Recorder_1506\USBFS_v3_0.pdf</v>
 <v>Workspace\Voice_Recorder_1506\VDAC8_v1_90.pdf</v>
 </ExpandedNodeIds>
-<VisibleNodeIds>
-<v>Workspace</v>
-<v>Workspace\Voice_Recorder_1506</v>
-<v>Workspace\Voice_Recorder_1506\PSoC 5 Architecture TRM</v>
-<v>Workspace\Voice_Recorder_1506\CY8C58LP Family Datasheet</v>
-<v>Workspace\Voice_Recorder_1506\System Reference Guides</v>
-<v>Workspace\Voice_Recorder_1506\System Reference Guides\cy_boot_v5_30</v>
-<v>Workspace\Voice_Recorder_1506\ADC_DelSig_v3_20.pdf</v>
-<v>Workspace\Voice_Recorder_1506\CharLCD_v2_20.pdf</v>
-<v>Workspace\Voice_Recorder_1506\cy_pins_v1_90</v>
-<v>Workspace\Voice_Recorder_1506\cy_pins_v1_90\cy_pins_v1_90.pdf</v>
-<v>Workspace\Voice_Recorder_1506\OpAmp_v1_90.pdf</v>
-<v>Workspace\Voice_Recorder_1506\USBFS_v3_0.pdf</v>
-<v>Workspace\Voice_Recorder_1506\VDAC8_v1_90.pdf</v>
-</VisibleNodeIds>
+<VisibleNodeIds />
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>

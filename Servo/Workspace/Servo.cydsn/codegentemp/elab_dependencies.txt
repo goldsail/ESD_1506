@@ -1,6 +1,6 @@
-D:\Projects\ESD\Servo\Workspace\Servo.cydsn\TopDesign\PSoC5\TopDesign.ctl
-D:\Projects\ESD\Servo\Workspace\Servo.cydsn\TopDesign\PSoC5\TopDesign.cysch
-D:\Projects\ESD\Servo\Workspace\Servo.cydsn\TopDesign
+D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\TopDesign\PSoC5\TopDesign.ctl
+D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\TopDesign\PSoC5\TopDesign.cysch
+D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\TopDesign
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cysym
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.pdf
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\cy_pins_v2_20.cystate
@@ -241,7 +241,7 @@ C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprim
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\aliases.h
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.c
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_pins_v2_20\PSoC5\API\pins.h
-D:\Projects\ESD\Servo\Workspace\Servo.cydsn\Servo.cydwr
+D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\Servo.cydwr
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_30\PSoC5\API\cm3gcc.ld
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_30\PSoC5\API\Cm3RealView.scat
 C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\cy_boot_v5_30\PSoC5\API\Cm3Start.c

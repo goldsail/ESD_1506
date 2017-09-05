@@ -6,12 +6,14 @@
 #include <project.h>
 #include "stdio.h"
 
-#define ID_TOP (4)  
-#define ID_LEFT (1)
-#define ID_RIGHT (3)
+#define ID (254)
+    
+#define _TOP (0)
+#define _LEFT (1)
+#define _RIGHT (2)
     
 
-void setServoMode(uint8 id);
+void SetServoMode(uint8 id);
 
 // postiion ranges from 0x0000 to 0x03ff
 // speed ranges from 0x0000 to 0x03ff

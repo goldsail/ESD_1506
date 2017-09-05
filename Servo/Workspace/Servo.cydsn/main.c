@@ -75,16 +75,16 @@ int main()
     UART_2_Start();
     UART_3_Start();
     
-    SetMotorMode(ID_LEFT);
-    SetMotorMode(ID_RIGHT);
+    SetMotorMode(_LEFT);
+    SetMotorMode(_RIGHT);
     
     CyDelay(500);
     
-    SetMotorSpeed(ID_LEFT, 512, 0x10);
+    SetMotorSpeed(_LEFT, 512, 0x10);
     
     CyDelay(500);
     
-    SetMotorSpeed(ID_RIGHT, -512, 0x10);
+    SetMotorSpeed(_RIGHT, -512, 0x10);
     
     CyDelay(500);
     
@@ -94,7 +94,7 @@ int main()
         uint8 i;
         for (i = 0; i < 0xF; i++)
         {
-            SetServoPosition(ID_TOP, 0x40 * i, 0x03ff);
+            SetServoPosition(_TOP, 0x40 * i, 0x03ff);
             CyDelay(500);
         }
     }

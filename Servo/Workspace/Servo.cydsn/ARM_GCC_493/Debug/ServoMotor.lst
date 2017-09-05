@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 1
 
 
    1              		.syntax unified
@@ -27,12 +27,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 1
   24              	SetServoPosition:
   25              	.LFB63:
   26              		.file 1 ".\\ServoMotor.c"
-   1:.\ServoMotor.c **** #include "ServoMotor.h"
-   2:.\ServoMotor.c **** #include "stdio.h"
-   3:.\ServoMotor.c **** 
-   4:.\ServoMotor.c **** void SetServoPosition(uint8 id, uint16 position, uint16 speed)
-   5:.\ServoMotor.c **** {
-  27              		.loc 1 5 0
+   1:.\ServoMotor.c **** // author: Fan JIN
+   2:.\ServoMotor.c **** 
+   3:.\ServoMotor.c **** #include "ServoMotor.h"
+   4:.\ServoMotor.c **** #include "stdio.h"
+   5:.\ServoMotor.c **** 
+   6:.\ServoMotor.c **** void SetServoPosition(uint8 id, uint16 position, uint16 speed)
+   7:.\ServoMotor.c **** {
+  27              		.loc 1 7 0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 16
   30              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -50,1326 +52,1292 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 1
   42 000c BB80     		strh	r3, [r7, #4]	@ movhi
   43 000e 1346     		mov	r3, r2	@ movhi
   44 0010 7B80     		strh	r3, [r7, #2]	@ movhi
-   6:.\ServoMotor.c ****     // position ranges from 0x0000 to 0x03ff
-   7:.\ServoMotor.c ****     
-   8:.\ServoMotor.c ****     uint8 checksum;
-   9:.\ServoMotor.c ****     checksum = id + 0x07 + 0x03 + 0x1e + (position & 0xFF) + (position >> 8) + (speed & 0xff) + (sp
-  45              		.loc 1 9 0
+   8:.\ServoMotor.c ****     // position ranges from 0x0000 to 0x03ff
+   9:.\ServoMotor.c ****     
+  10:.\ServoMotor.c ****     uint8 checksum;
+  11:.\ServoMotor.c ****     checksum = ID + 0x07 + 0x03 + 0x1e + (position & 0xFF) + (position >> 8) + (speed & 0xff) + (sp
+  45              		.loc 1 11 0
   46 0012 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 2
+
+
   47 0014 DAB2     		uxtb	r2, r3
-  48 0016 FB79     		ldrb	r3, [r7, #7]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 2
+  48 0016 BB88     		ldrh	r3, [r7, #4]
+  49 0018 1B0A     		lsrs	r3, r3, #8
+  50 001a 9BB2     		uxth	r3, r3
+  51 001c DBB2     		uxtb	r3, r3
+  52 001e 1344     		add	r3, r3, r2
+  53 0020 DAB2     		uxtb	r2, r3
+  54 0022 7B88     		ldrh	r3, [r7, #2]	@ movhi
+  55 0024 DBB2     		uxtb	r3, r3
+  56 0026 1344     		add	r3, r3, r2
+  57 0028 DAB2     		uxtb	r2, r3
+  58 002a 7B88     		ldrh	r3, [r7, #2]
+  59 002c 1B0A     		lsrs	r3, r3, #8
+  60 002e 9BB2     		uxth	r3, r3
+  61 0030 DBB2     		uxtb	r3, r3
+  62 0032 1344     		add	r3, r3, r2
+  63 0034 DBB2     		uxtb	r3, r3
+  64 0036 2633     		adds	r3, r3, #38
+  65 0038 FB73     		strb	r3, [r7, #15]
+  12:.\ServoMotor.c ****     checksum ^= 0xFF;
+  66              		.loc 1 12 0
+  67 003a FB7B     		ldrb	r3, [r7, #15]
+  68 003c DB43     		mvns	r3, r3
+  69 003e FB73     		strb	r3, [r7, #15]
+  13:.\ServoMotor.c ****     
+  14:.\ServoMotor.c ****     if (id == _TOP)
+  70              		.loc 1 14 0
+  71 0040 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+  72 0042 002B     		cmp	r3, #0
+  73 0044 30D1     		bne	.L1
+  15:.\ServoMotor.c ****     {
+  16:.\ServoMotor.c ****         UART_1_PutChar(0xff);
+  74              		.loc 1 16 0
+  75 0046 FF20     		movs	r0, #255
+  76 0048 FFF7FEFF 		bl	UART_1_PutChar
+  17:.\ServoMotor.c ****         UART_1_PutChar(0xff);
+  77              		.loc 1 17 0
+  78 004c FF20     		movs	r0, #255
+  79 004e FFF7FEFF 		bl	UART_1_PutChar
+  18:.\ServoMotor.c ****         UART_1_PutChar(ID);
+  80              		.loc 1 18 0
+  81 0052 FE20     		movs	r0, #254
+  82 0054 FFF7FEFF 		bl	UART_1_PutChar
+  19:.\ServoMotor.c ****         UART_1_PutChar(0x07);
+  83              		.loc 1 19 0
+  84 0058 0720     		movs	r0, #7
+  85 005a FFF7FEFF 		bl	UART_1_PutChar
+  20:.\ServoMotor.c ****         UART_1_PutChar(0x03);
+  86              		.loc 1 20 0
+  87 005e 0320     		movs	r0, #3
+  88 0060 FFF7FEFF 		bl	UART_1_PutChar
+  21:.\ServoMotor.c ****         UART_1_PutChar(0x1e);
+  89              		.loc 1 21 0
+  90 0064 1E20     		movs	r0, #30
+  91 0066 FFF7FEFF 		bl	UART_1_PutChar
+  22:.\ServoMotor.c ****         UART_1_PutChar(position & 0xFF);
+  92              		.loc 1 22 0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 3
 
 
-  49 0018 1344     		add	r3, r3, r2
-  50 001a DAB2     		uxtb	r2, r3
-  51 001c BB88     		ldrh	r3, [r7, #4]
-  52 001e 1B0A     		lsrs	r3, r3, #8
-  53 0020 9BB2     		uxth	r3, r3
-  54 0022 DBB2     		uxtb	r3, r3
-  55 0024 1344     		add	r3, r3, r2
-  56 0026 DAB2     		uxtb	r2, r3
-  57 0028 7B88     		ldrh	r3, [r7, #2]	@ movhi
-  58 002a DBB2     		uxtb	r3, r3
-  59 002c 1344     		add	r3, r3, r2
-  60 002e DAB2     		uxtb	r2, r3
-  61 0030 7B88     		ldrh	r3, [r7, #2]
-  62 0032 1B0A     		lsrs	r3, r3, #8
-  63 0034 9BB2     		uxth	r3, r3
-  64 0036 DBB2     		uxtb	r3, r3
-  65 0038 1344     		add	r3, r3, r2
-  66 003a DBB2     		uxtb	r3, r3
-  67 003c 2833     		adds	r3, r3, #40
-  68 003e FB73     		strb	r3, [r7, #15]
-  10:.\ServoMotor.c ****     checksum ^= 0xFF;
-  69              		.loc 1 10 0
-  70 0040 FB7B     		ldrb	r3, [r7, #15]
-  71 0042 DB43     		mvns	r3, r3
-  72 0044 FB73     		strb	r3, [r7, #15]
-  11:.\ServoMotor.c ****     
-  12:.\ServoMotor.c ****     UART_1_PutChar(0xff);
-  73              		.loc 1 12 0
-  74 0046 FF20     		movs	r0, #255
-  75 0048 FFF7FEFF 		bl	UART_1_PutChar
-  13:.\ServoMotor.c ****     UART_1_PutChar(0xff);
-  76              		.loc 1 13 0
-  77 004c FF20     		movs	r0, #255
-  78 004e FFF7FEFF 		bl	UART_1_PutChar
-  14:.\ServoMotor.c ****     UART_1_PutChar(id);
-  79              		.loc 1 14 0
-  80 0052 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
-  81 0054 1846     		mov	r0, r3
-  82 0056 FFF7FEFF 		bl	UART_1_PutChar
-  15:.\ServoMotor.c ****     UART_1_PutChar(0x07);
-  83              		.loc 1 15 0
-  84 005a 0720     		movs	r0, #7
-  85 005c FFF7FEFF 		bl	UART_1_PutChar
-  16:.\ServoMotor.c ****     UART_1_PutChar(0x03);
-  86              		.loc 1 16 0
-  87 0060 0320     		movs	r0, #3
-  88 0062 FFF7FEFF 		bl	UART_1_PutChar
-  17:.\ServoMotor.c ****     UART_1_PutChar(0x1e);
-  89              		.loc 1 17 0
-  90 0066 1E20     		movs	r0, #30
-  91 0068 FFF7FEFF 		bl	UART_1_PutChar
-  18:.\ServoMotor.c ****     UART_1_PutChar(position & 0xFF);
-  92              		.loc 1 18 0
-  93 006c BB88     		ldrh	r3, [r7, #4]	@ movhi
-  94 006e DBB2     		uxtb	r3, r3
-  95 0070 1846     		mov	r0, r3
-  96 0072 FFF7FEFF 		bl	UART_1_PutChar
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 3
+  93 006a BB88     		ldrh	r3, [r7, #4]	@ movhi
+  94 006c DBB2     		uxtb	r3, r3
+  95 006e 1846     		mov	r0, r3
+  96 0070 FFF7FEFF 		bl	UART_1_PutChar
+  23:.\ServoMotor.c ****         UART_1_PutChar(position >> 8);
+  97              		.loc 1 23 0
+  98 0074 BB88     		ldrh	r3, [r7, #4]
+  99 0076 1B0A     		lsrs	r3, r3, #8
+ 100 0078 9BB2     		uxth	r3, r3
+ 101 007a DBB2     		uxtb	r3, r3
+ 102 007c 1846     		mov	r0, r3
+ 103 007e FFF7FEFF 		bl	UART_1_PutChar
+  24:.\ServoMotor.c ****         UART_1_PutChar(speed & 0xff);
+ 104              		.loc 1 24 0
+ 105 0082 7B88     		ldrh	r3, [r7, #2]	@ movhi
+ 106 0084 DBB2     		uxtb	r3, r3
+ 107 0086 1846     		mov	r0, r3
+ 108 0088 FFF7FEFF 		bl	UART_1_PutChar
+  25:.\ServoMotor.c ****         UART_1_PutChar(speed >> 8);
+ 109              		.loc 1 25 0
+ 110 008c 7B88     		ldrh	r3, [r7, #2]
+ 111 008e 1B0A     		lsrs	r3, r3, #8
+ 112 0090 9BB2     		uxth	r3, r3
+ 113 0092 DBB2     		uxtb	r3, r3
+ 114 0094 1846     		mov	r0, r3
+ 115 0096 FFF7FEFF 		bl	UART_1_PutChar
+  26:.\ServoMotor.c ****         UART_1_PutChar(checksum);
+ 116              		.loc 1 26 0
+ 117 009a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 118 009c 1846     		mov	r0, r3
+ 119 009e FFF7FEFF 		bl	UART_1_PutChar
+  27:.\ServoMotor.c ****         CyDelay(2);
+ 120              		.loc 1 27 0
+ 121 00a2 0220     		movs	r0, #2
+ 122 00a4 FFF7FEFF 		bl	CyDelay
+ 123              	.L1:
+  28:.\ServoMotor.c ****     }
+  29:.\ServoMotor.c **** }
+ 124              		.loc 1 29 0
+ 125 00a8 1037     		adds	r7, r7, #16
+ 126              		.cfi_def_cfa_offset 8
+ 127 00aa BD46     		mov	sp, r7
+ 128              		.cfi_def_cfa_register 13
+ 129              		@ sp needed
+ 130 00ac 80BD     		pop	{r7, pc}
+ 131              		.cfi_endproc
+ 132              	.LFE63:
+ 133              		.size	SetServoPosition, .-SetServoPosition
+ 134 00ae 00BF     		.section	.text.SetServoMode,"ax",%progbits
+ 135              		.align	2
+ 136              		.global	SetServoMode
+ 137              		.thumb
+ 138              		.thumb_func
+ 139              		.type	SetServoMode, %function
+ 140              	SetServoMode:
+ 141              	.LFB64:
+  30:.\ServoMotor.c **** 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 4
 
 
-  19:.\ServoMotor.c ****     UART_1_PutChar(position >> 8);
-  97              		.loc 1 19 0
-  98 0076 BB88     		ldrh	r3, [r7, #4]
-  99 0078 1B0A     		lsrs	r3, r3, #8
- 100 007a 9BB2     		uxth	r3, r3
- 101 007c DBB2     		uxtb	r3, r3
- 102 007e 1846     		mov	r0, r3
- 103 0080 FFF7FEFF 		bl	UART_1_PutChar
-  20:.\ServoMotor.c ****     UART_1_PutChar(speed & 0xff);
- 104              		.loc 1 20 0
- 105 0084 7B88     		ldrh	r3, [r7, #2]	@ movhi
- 106 0086 DBB2     		uxtb	r3, r3
- 107 0088 1846     		mov	r0, r3
- 108 008a FFF7FEFF 		bl	UART_1_PutChar
-  21:.\ServoMotor.c ****     UART_1_PutChar(speed >> 8);
- 109              		.loc 1 21 0
- 110 008e 7B88     		ldrh	r3, [r7, #2]
- 111 0090 1B0A     		lsrs	r3, r3, #8
- 112 0092 9BB2     		uxth	r3, r3
- 113 0094 DBB2     		uxtb	r3, r3
- 114 0096 1846     		mov	r0, r3
- 115 0098 FFF7FEFF 		bl	UART_1_PutChar
-  22:.\ServoMotor.c ****     UART_1_PutChar(checksum);
- 116              		.loc 1 22 0
- 117 009c FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 118 009e 1846     		mov	r0, r3
- 119 00a0 FFF7FEFF 		bl	UART_1_PutChar
-  23:.\ServoMotor.c ****     CyDelay(2);
- 120              		.loc 1 23 0
- 121 00a4 0220     		movs	r0, #2
- 122 00a6 FFF7FEFF 		bl	CyDelay
-  24:.\ServoMotor.c **** }
- 123              		.loc 1 24 0
- 124 00aa 1037     		adds	r7, r7, #16
- 125              		.cfi_def_cfa_offset 8
- 126 00ac BD46     		mov	sp, r7
- 127              		.cfi_def_cfa_register 13
- 128              		@ sp needed
- 129 00ae 80BD     		pop	{r7, pc}
- 130              		.cfi_endproc
- 131              	.LFE63:
- 132              		.size	SetServoPosition, .-SetServoPosition
- 133              		.section	.text.SetServoMode,"ax",%progbits
- 134              		.align	2
- 135              		.global	SetServoMode
- 136              		.thumb
- 137              		.thumb_func
- 138              		.type	SetServoMode, %function
- 139              	SetServoMode:
- 140              	.LFB64:
-  25:.\ServoMotor.c **** 
-  26:.\ServoMotor.c **** void SetServoMode(uint8 id)
-  27:.\ServoMotor.c **** {
- 141              		.loc 1 27 0
- 142              		.cfi_startproc
- 143              		@ args = 0, pretend = 0, frame = 16
- 144              		@ frame_needed = 1, uses_anonymous_args = 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 4
+  31:.\ServoMotor.c **** void SetServoMode(uint8 id)
+  32:.\ServoMotor.c **** {
+ 142              		.loc 1 32 0
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 16
+ 145              		@ frame_needed = 1, uses_anonymous_args = 0
+ 146 0000 80B5     		push	{r7, lr}
+ 147              		.cfi_def_cfa_offset 8
+ 148              		.cfi_offset 7, -8
+ 149              		.cfi_offset 14, -4
+ 150 0002 84B0     		sub	sp, sp, #16
+ 151              		.cfi_def_cfa_offset 24
+ 152 0004 00AF     		add	r7, sp, #0
+ 153              		.cfi_def_cfa_register 7
+ 154 0006 0346     		mov	r3, r0
+ 155 0008 FB71     		strb	r3, [r7, #7]
+  33:.\ServoMotor.c ****     uint8 checksum;
+  34:.\ServoMotor.c ****     
+  35:.\ServoMotor.c ****     checksum = ID + 0x07 + 0x03 + 0x06 + 0x00 + 0xff + 0x03 + 0x00;
+ 156              		.loc 1 35 0
+ 157 000a 1023     		movs	r3, #16
+ 158 000c FB73     		strb	r3, [r7, #15]
+  36:.\ServoMotor.c ****     checksum ^= 0xFF;
+ 159              		.loc 1 36 0
+ 160 000e FB7B     		ldrb	r3, [r7, #15]
+ 161 0010 DB43     		mvns	r3, r3
+ 162 0012 FB73     		strb	r3, [r7, #15]
+  37:.\ServoMotor.c ****     
+  38:.\ServoMotor.c ****     if (id == _TOP)
+ 163              		.loc 1 38 0
+ 164 0014 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 165 0016 002B     		cmp	r3, #0
+ 166 0018 21D1     		bne	.L4
+  39:.\ServoMotor.c ****     {
+  40:.\ServoMotor.c ****         UART_1_PutChar(0xff);
+ 167              		.loc 1 40 0
+ 168 001a FF20     		movs	r0, #255
+ 169 001c FFF7FEFF 		bl	UART_1_PutChar
+  41:.\ServoMotor.c ****         UART_1_PutChar(0xff);
+ 170              		.loc 1 41 0
+ 171 0020 FF20     		movs	r0, #255
+ 172 0022 FFF7FEFF 		bl	UART_1_PutChar
+  42:.\ServoMotor.c ****         UART_1_PutChar(ID);
+ 173              		.loc 1 42 0
+ 174 0026 FE20     		movs	r0, #254
+ 175 0028 FFF7FEFF 		bl	UART_1_PutChar
+  43:.\ServoMotor.c ****         UART_1_PutChar(0x07);
+ 176              		.loc 1 43 0
+ 177 002c 0720     		movs	r0, #7
+ 178 002e FFF7FEFF 		bl	UART_1_PutChar
+  44:.\ServoMotor.c ****         UART_1_PutChar(0x03);
+ 179              		.loc 1 44 0
+ 180 0032 0320     		movs	r0, #3
+ 181 0034 FFF7FEFF 		bl	UART_1_PutChar
+  45:.\ServoMotor.c ****         UART_1_PutChar(0x06);
+ 182              		.loc 1 45 0
+ 183 0038 0620     		movs	r0, #6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 5
 
 
- 145 0000 80B5     		push	{r7, lr}
- 146              		.cfi_def_cfa_offset 8
- 147              		.cfi_offset 7, -8
- 148              		.cfi_offset 14, -4
- 149 0002 84B0     		sub	sp, sp, #16
- 150              		.cfi_def_cfa_offset 24
- 151 0004 00AF     		add	r7, sp, #0
- 152              		.cfi_def_cfa_register 7
- 153 0006 0346     		mov	r3, r0
- 154 0008 FB71     		strb	r3, [r7, #7]
-  28:.\ServoMotor.c ****     uint8 checksum;
-  29:.\ServoMotor.c ****     
-  30:.\ServoMotor.c ****     checksum = id + 0x07 + 0x03 + 0x06 + 0x00 + 0xff + 0x03 + 0x00;
- 155              		.loc 1 30 0
- 156 000a FB79     		ldrb	r3, [r7, #7]
- 157 000c 1233     		adds	r3, r3, #18
- 158 000e FB73     		strb	r3, [r7, #15]
-  31:.\ServoMotor.c ****     checksum ^= 0xFF;
- 159              		.loc 1 31 0
- 160 0010 FB7B     		ldrb	r3, [r7, #15]
- 161 0012 DB43     		mvns	r3, r3
- 162 0014 FB73     		strb	r3, [r7, #15]
-  32:.\ServoMotor.c ****     
-  33:.\ServoMotor.c ****     switch (id)
- 163              		.loc 1 33 0
- 164 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 165 0018 042B     		cmp	r3, #4
- 166 001a 23D1     		bne	.L3
-  34:.\ServoMotor.c ****     {
-  35:.\ServoMotor.c ****     case ID_TOP:
-  36:.\ServoMotor.c ****         UART_1_PutChar(0xff);
- 167              		.loc 1 36 0
- 168 001c FF20     		movs	r0, #255
- 169 001e FFF7FEFF 		bl	UART_1_PutChar
-  37:.\ServoMotor.c ****         UART_1_PutChar(0xff);
- 170              		.loc 1 37 0
- 171 0022 FF20     		movs	r0, #255
- 172 0024 FFF7FEFF 		bl	UART_1_PutChar
-  38:.\ServoMotor.c ****         UART_1_PutChar(id);
- 173              		.loc 1 38 0
- 174 0028 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 175 002a 1846     		mov	r0, r3
- 176 002c FFF7FEFF 		bl	UART_1_PutChar
-  39:.\ServoMotor.c ****         UART_1_PutChar(0x07);
- 177              		.loc 1 39 0
- 178 0030 0720     		movs	r0, #7
- 179 0032 FFF7FEFF 		bl	UART_1_PutChar
-  40:.\ServoMotor.c ****         UART_1_PutChar(0x03);
- 180              		.loc 1 40 0
- 181 0036 0320     		movs	r0, #3
- 182 0038 FFF7FEFF 		bl	UART_1_PutChar
-  41:.\ServoMotor.c ****         UART_1_PutChar(0x06);
- 183              		.loc 1 41 0
- 184 003c 0620     		movs	r0, #6
- 185 003e FFF7FEFF 		bl	UART_1_PutChar
-  42:.\ServoMotor.c ****         UART_1_PutChar(0x00);
- 186              		.loc 1 42 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 5
+ 184 003a FFF7FEFF 		bl	UART_1_PutChar
+  46:.\ServoMotor.c ****         UART_1_PutChar(0x00);
+ 185              		.loc 1 46 0
+ 186 003e 0020     		movs	r0, #0
+ 187 0040 FFF7FEFF 		bl	UART_1_PutChar
+  47:.\ServoMotor.c ****         UART_1_PutChar(0x00);
+ 188              		.loc 1 47 0
+ 189 0044 0020     		movs	r0, #0
+ 190 0046 FFF7FEFF 		bl	UART_1_PutChar
+  48:.\ServoMotor.c ****         UART_1_PutChar(0xff);
+ 191              		.loc 1 48 0
+ 192 004a FF20     		movs	r0, #255
+ 193 004c FFF7FEFF 		bl	UART_1_PutChar
+  49:.\ServoMotor.c ****         UART_1_PutChar(0x03);
+ 194              		.loc 1 49 0
+ 195 0050 0320     		movs	r0, #3
+ 196 0052 FFF7FEFF 		bl	UART_1_PutChar
+  50:.\ServoMotor.c ****         UART_1_PutChar(checksum);
+ 197              		.loc 1 50 0
+ 198 0056 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 199 0058 1846     		mov	r0, r3
+ 200 005a FFF7FEFF 		bl	UART_1_PutChar
+ 201              	.L4:
+  51:.\ServoMotor.c ****     }
+  52:.\ServoMotor.c ****     
+  53:.\ServoMotor.c ****     CyDelay(2);
+ 202              		.loc 1 53 0
+ 203 005e 0220     		movs	r0, #2
+ 204 0060 FFF7FEFF 		bl	CyDelay
+  54:.\ServoMotor.c ****     
+  55:.\ServoMotor.c **** }
+ 205              		.loc 1 55 0
+ 206 0064 1037     		adds	r7, r7, #16
+ 207              		.cfi_def_cfa_offset 8
+ 208 0066 BD46     		mov	sp, r7
+ 209              		.cfi_def_cfa_register 13
+ 210              		@ sp needed
+ 211 0068 80BD     		pop	{r7, pc}
+ 212              		.cfi_endproc
+ 213              	.LFE64:
+ 214              		.size	SetServoMode, .-SetServoMode
+ 215 006a 00BF     		.section	.text.SetMotorMode,"ax",%progbits
+ 216              		.align	2
+ 217              		.global	SetMotorMode
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	SetMotorMode, %function
+ 221              	SetMotorMode:
+ 222              	.LFB65:
+  56:.\ServoMotor.c **** 
+  57:.\ServoMotor.c **** void SetMotorMode(uint8 id)
+  58:.\ServoMotor.c **** {
+ 223              		.loc 1 58 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 16
+ 226              		@ frame_needed = 1, uses_anonymous_args = 0
+ 227 0000 80B5     		push	{r7, lr}
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 6
 
 
- 187 0042 0020     		movs	r0, #0
- 188 0044 FFF7FEFF 		bl	UART_1_PutChar
-  43:.\ServoMotor.c ****         UART_1_PutChar(0x00);
- 189              		.loc 1 43 0
- 190 0048 0020     		movs	r0, #0
- 191 004a FFF7FEFF 		bl	UART_1_PutChar
-  44:.\ServoMotor.c ****         UART_1_PutChar(0xff);
- 192              		.loc 1 44 0
- 193 004e FF20     		movs	r0, #255
- 194 0050 FFF7FEFF 		bl	UART_1_PutChar
-  45:.\ServoMotor.c ****         UART_1_PutChar(0x03);
- 195              		.loc 1 45 0
- 196 0054 0320     		movs	r0, #3
- 197 0056 FFF7FEFF 		bl	UART_1_PutChar
-  46:.\ServoMotor.c ****         UART_1_PutChar(checksum);
- 198              		.loc 1 46 0
- 199 005a FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 200 005c 1846     		mov	r0, r3
- 201 005e FFF7FEFF 		bl	UART_1_PutChar
-  47:.\ServoMotor.c ****         break;
- 202              		.loc 1 47 0
- 203 0062 00BF     		nop
- 204              	.L3:
-  48:.\ServoMotor.c ****     }
-  49:.\ServoMotor.c ****     
-  50:.\ServoMotor.c ****     CyDelay(2);
- 205              		.loc 1 50 0
- 206 0064 0220     		movs	r0, #2
- 207 0066 FFF7FEFF 		bl	CyDelay
-  51:.\ServoMotor.c ****     
-  52:.\ServoMotor.c **** }
- 208              		.loc 1 52 0
- 209 006a 1037     		adds	r7, r7, #16
- 210              		.cfi_def_cfa_offset 8
- 211 006c BD46     		mov	sp, r7
- 212              		.cfi_def_cfa_register 13
- 213              		@ sp needed
- 214 006e 80BD     		pop	{r7, pc}
- 215              		.cfi_endproc
- 216              	.LFE64:
- 217              		.size	SetServoMode, .-SetServoMode
- 218              		.section	.text.SetMotorMode,"ax",%progbits
- 219              		.align	2
- 220              		.global	SetMotorMode
- 221              		.thumb
- 222              		.thumb_func
- 223              		.type	SetMotorMode, %function
- 224              	SetMotorMode:
- 225              	.LFB65:
-  53:.\ServoMotor.c **** 
-  54:.\ServoMotor.c **** void SetMotorMode(uint8 id)
-  55:.\ServoMotor.c **** {
- 226              		.loc 1 55 0
- 227              		.cfi_startproc
- 228              		@ args = 0, pretend = 0, frame = 16
- 229              		@ frame_needed = 1, uses_anonymous_args = 0
- 230 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 6
-
-
- 231              		.cfi_def_cfa_offset 8
- 232              		.cfi_offset 7, -8
- 233              		.cfi_offset 14, -4
- 234 0002 84B0     		sub	sp, sp, #16
- 235              		.cfi_def_cfa_offset 24
- 236 0004 00AF     		add	r7, sp, #0
- 237              		.cfi_def_cfa_register 7
- 238 0006 0346     		mov	r3, r0
- 239 0008 FB71     		strb	r3, [r7, #7]
-  56:.\ServoMotor.c ****     uint8 checksum;
-  57:.\ServoMotor.c ****     
-  58:.\ServoMotor.c ****     checksum = id + 0x07 + 0x03 + 0x06 + 0x00 + 0x00 + 0x00 + 0x00;
- 240              		.loc 1 58 0
- 241 000a FB79     		ldrb	r3, [r7, #7]
- 242 000c 1033     		adds	r3, r3, #16
- 243 000e FB73     		strb	r3, [r7, #15]
-  59:.\ServoMotor.c ****     checksum ^= 0xFF;
- 244              		.loc 1 59 0
- 245 0010 FB7B     		ldrb	r3, [r7, #15]
- 246 0012 DB43     		mvns	r3, r3
- 247 0014 FB73     		strb	r3, [r7, #15]
+ 228              		.cfi_def_cfa_offset 8
+ 229              		.cfi_offset 7, -8
+ 230              		.cfi_offset 14, -4
+ 231 0002 84B0     		sub	sp, sp, #16
+ 232              		.cfi_def_cfa_offset 24
+ 233 0004 00AF     		add	r7, sp, #0
+ 234              		.cfi_def_cfa_register 7
+ 235 0006 0346     		mov	r3, r0
+ 236 0008 FB71     		strb	r3, [r7, #7]
+  59:.\ServoMotor.c ****     uint8 checksum;
   60:.\ServoMotor.c ****     
-  61:.\ServoMotor.c ****     switch (id)
- 248              		.loc 1 61 0
- 249 0016 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 250 0018 012B     		cmp	r3, #1
- 251 001a 02D0     		beq	.L7
- 252 001c 032B     		cmp	r3, #3
- 253 001e 24D0     		beq	.L8
- 254 0020 47E0     		b	.L6
- 255              	.L7:
-  62:.\ServoMotor.c ****     {
-  63:.\ServoMotor.c ****     case ID_LEFT:
-  64:.\ServoMotor.c ****         UART_2_PutChar(0xff);
- 256              		.loc 1 64 0
- 257 0022 FF20     		movs	r0, #255
- 258 0024 FFF7FEFF 		bl	UART_2_PutChar
-  65:.\ServoMotor.c ****         UART_2_PutChar(0xff);
- 259              		.loc 1 65 0
- 260 0028 FF20     		movs	r0, #255
- 261 002a FFF7FEFF 		bl	UART_2_PutChar
-  66:.\ServoMotor.c ****         UART_2_PutChar(id);
- 262              		.loc 1 66 0
- 263 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 264 0030 1846     		mov	r0, r3
- 265 0032 FFF7FEFF 		bl	UART_2_PutChar
-  67:.\ServoMotor.c ****         UART_2_PutChar(0x07);
- 266              		.loc 1 67 0
- 267 0036 0720     		movs	r0, #7
- 268 0038 FFF7FEFF 		bl	UART_2_PutChar
-  68:.\ServoMotor.c ****         UART_2_PutChar(0x03);
- 269              		.loc 1 68 0
- 270 003c 0320     		movs	r0, #3
- 271 003e FFF7FEFF 		bl	UART_2_PutChar
-  69:.\ServoMotor.c ****         UART_2_PutChar(0x06);
- 272              		.loc 1 69 0
- 273 0042 0620     		movs	r0, #6
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 7
-
-
- 274 0044 FFF7FEFF 		bl	UART_2_PutChar
-  70:.\ServoMotor.c ****         UART_2_PutChar(0x00);
- 275              		.loc 1 70 0
- 276 0048 0020     		movs	r0, #0
- 277 004a FFF7FEFF 		bl	UART_2_PutChar
-  71:.\ServoMotor.c ****         UART_2_PutChar(0x00);
- 278              		.loc 1 71 0
- 279 004e 0020     		movs	r0, #0
- 280 0050 FFF7FEFF 		bl	UART_2_PutChar
+  61:.\ServoMotor.c ****     checksum = ID + 0x07 + 0x03 + 0x06 + 0x00 + 0x00 + 0x00 + 0x00;
+ 237              		.loc 1 61 0
+ 238 000a 0E23     		movs	r3, #14
+ 239 000c FB73     		strb	r3, [r7, #15]
+  62:.\ServoMotor.c ****     checksum ^= 0xFF;
+ 240              		.loc 1 62 0
+ 241 000e FB7B     		ldrb	r3, [r7, #15]
+ 242 0010 DB43     		mvns	r3, r3
+ 243 0012 FB73     		strb	r3, [r7, #15]
+  63:.\ServoMotor.c ****     
+  64:.\ServoMotor.c ****     if (id == _LEFT)
+ 244              		.loc 1 64 0
+ 245 0014 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 246 0016 012B     		cmp	r3, #1
+ 247 0018 21D1     		bne	.L6
+  65:.\ServoMotor.c ****     {
+  66:.\ServoMotor.c ****         UART_2_PutChar(0xff);
+ 248              		.loc 1 66 0
+ 249 001a FF20     		movs	r0, #255
+ 250 001c FFF7FEFF 		bl	UART_2_PutChar
+  67:.\ServoMotor.c ****         UART_2_PutChar(0xff);
+ 251              		.loc 1 67 0
+ 252 0020 FF20     		movs	r0, #255
+ 253 0022 FFF7FEFF 		bl	UART_2_PutChar
+  68:.\ServoMotor.c ****         UART_2_PutChar(ID);
+ 254              		.loc 1 68 0
+ 255 0026 FE20     		movs	r0, #254
+ 256 0028 FFF7FEFF 		bl	UART_2_PutChar
+  69:.\ServoMotor.c ****         UART_2_PutChar(0x07);
+ 257              		.loc 1 69 0
+ 258 002c 0720     		movs	r0, #7
+ 259 002e FFF7FEFF 		bl	UART_2_PutChar
+  70:.\ServoMotor.c ****         UART_2_PutChar(0x03);
+ 260              		.loc 1 70 0
+ 261 0032 0320     		movs	r0, #3
+ 262 0034 FFF7FEFF 		bl	UART_2_PutChar
+  71:.\ServoMotor.c ****         UART_2_PutChar(0x06);
+ 263              		.loc 1 71 0
+ 264 0038 0620     		movs	r0, #6
+ 265 003a FFF7FEFF 		bl	UART_2_PutChar
   72:.\ServoMotor.c ****         UART_2_PutChar(0x00);
- 281              		.loc 1 72 0
- 282 0054 0020     		movs	r0, #0
- 283 0056 FFF7FEFF 		bl	UART_2_PutChar
+ 266              		.loc 1 72 0
+ 267 003e 0020     		movs	r0, #0
+ 268 0040 FFF7FEFF 		bl	UART_2_PutChar
   73:.\ServoMotor.c ****         UART_2_PutChar(0x00);
- 284              		.loc 1 73 0
- 285 005a 0020     		movs	r0, #0
- 286 005c FFF7FEFF 		bl	UART_2_PutChar
-  74:.\ServoMotor.c ****         UART_2_PutChar(checksum);
- 287              		.loc 1 74 0
- 288 0060 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 289 0062 1846     		mov	r0, r3
- 290 0064 FFF7FEFF 		bl	UART_2_PutChar
-  75:.\ServoMotor.c ****         break;
- 291              		.loc 1 75 0
- 292 0068 23E0     		b	.L6
- 293              	.L8:
-  76:.\ServoMotor.c ****         
-  77:.\ServoMotor.c ****     case ID_RIGHT:
-  78:.\ServoMotor.c ****         UART_3_PutChar(0xff);
- 294              		.loc 1 78 0
- 295 006a FF20     		movs	r0, #255
- 296 006c FFF7FEFF 		bl	UART_3_PutChar
-  79:.\ServoMotor.c ****         UART_3_PutChar(0xff);
- 297              		.loc 1 79 0
- 298 0070 FF20     		movs	r0, #255
- 299 0072 FFF7FEFF 		bl	UART_3_PutChar
-  80:.\ServoMotor.c ****         UART_3_PutChar(id);
- 300              		.loc 1 80 0
- 301 0076 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 302 0078 1846     		mov	r0, r3
- 303 007a FFF7FEFF 		bl	UART_3_PutChar
-  81:.\ServoMotor.c ****         UART_3_PutChar(0x07);
- 304              		.loc 1 81 0
- 305 007e 0720     		movs	r0, #7
- 306 0080 FFF7FEFF 		bl	UART_3_PutChar
-  82:.\ServoMotor.c ****         UART_3_PutChar(0x03);
- 307              		.loc 1 82 0
- 308 0084 0320     		movs	r0, #3
- 309 0086 FFF7FEFF 		bl	UART_3_PutChar
-  83:.\ServoMotor.c ****         UART_3_PutChar(0x06);
- 310              		.loc 1 83 0
- 311 008a 0620     		movs	r0, #6
- 312 008c FFF7FEFF 		bl	UART_3_PutChar
-  84:.\ServoMotor.c ****         UART_3_PutChar(0x00);
- 313              		.loc 1 84 0
- 314 0090 0020     		movs	r0, #0
- 315 0092 FFF7FEFF 		bl	UART_3_PutChar
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 8
+ 269              		.loc 1 73 0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 7
 
 
-  85:.\ServoMotor.c ****         UART_3_PutChar(0x00);
- 316              		.loc 1 85 0
- 317 0096 0020     		movs	r0, #0
- 318 0098 FFF7FEFF 		bl	UART_3_PutChar
-  86:.\ServoMotor.c ****         UART_3_PutChar(0x00);
- 319              		.loc 1 86 0
- 320 009c 0020     		movs	r0, #0
- 321 009e FFF7FEFF 		bl	UART_3_PutChar
+ 270 0044 0020     		movs	r0, #0
+ 271 0046 FFF7FEFF 		bl	UART_2_PutChar
+  74:.\ServoMotor.c ****         UART_2_PutChar(0x00);
+ 272              		.loc 1 74 0
+ 273 004a 0020     		movs	r0, #0
+ 274 004c FFF7FEFF 		bl	UART_2_PutChar
+  75:.\ServoMotor.c ****         UART_2_PutChar(0x00);
+ 275              		.loc 1 75 0
+ 276 0050 0020     		movs	r0, #0
+ 277 0052 FFF7FEFF 		bl	UART_2_PutChar
+  76:.\ServoMotor.c ****         UART_2_PutChar(checksum);
+ 278              		.loc 1 76 0
+ 279 0056 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 280 0058 1846     		mov	r0, r3
+ 281 005a FFF7FEFF 		bl	UART_2_PutChar
+ 282              	.L6:
+  77:.\ServoMotor.c ****     }
+  78:.\ServoMotor.c ****         
+  79:.\ServoMotor.c ****     if (id == _RIGHT)
+ 283              		.loc 1 79 0
+ 284 005e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 285 0060 022B     		cmp	r3, #2
+ 286 0062 21D1     		bne	.L7
+  80:.\ServoMotor.c ****     {
+  81:.\ServoMotor.c ****         UART_3_PutChar(0xff);
+ 287              		.loc 1 81 0
+ 288 0064 FF20     		movs	r0, #255
+ 289 0066 FFF7FEFF 		bl	UART_3_PutChar
+  82:.\ServoMotor.c ****         UART_3_PutChar(0xff);
+ 290              		.loc 1 82 0
+ 291 006a FF20     		movs	r0, #255
+ 292 006c FFF7FEFF 		bl	UART_3_PutChar
+  83:.\ServoMotor.c ****         UART_3_PutChar(ID);
+ 293              		.loc 1 83 0
+ 294 0070 FE20     		movs	r0, #254
+ 295 0072 FFF7FEFF 		bl	UART_3_PutChar
+  84:.\ServoMotor.c ****         UART_3_PutChar(0x07);
+ 296              		.loc 1 84 0
+ 297 0076 0720     		movs	r0, #7
+ 298 0078 FFF7FEFF 		bl	UART_3_PutChar
+  85:.\ServoMotor.c ****         UART_3_PutChar(0x03);
+ 299              		.loc 1 85 0
+ 300 007c 0320     		movs	r0, #3
+ 301 007e FFF7FEFF 		bl	UART_3_PutChar
+  86:.\ServoMotor.c ****         UART_3_PutChar(0x06);
+ 302              		.loc 1 86 0
+ 303 0082 0620     		movs	r0, #6
+ 304 0084 FFF7FEFF 		bl	UART_3_PutChar
   87:.\ServoMotor.c ****         UART_3_PutChar(0x00);
- 322              		.loc 1 87 0
- 323 00a2 0020     		movs	r0, #0
- 324 00a4 FFF7FEFF 		bl	UART_3_PutChar
-  88:.\ServoMotor.c ****         UART_3_PutChar(checksum);
- 325              		.loc 1 88 0
- 326 00a8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 327 00aa 1846     		mov	r0, r3
- 328 00ac FFF7FEFF 		bl	UART_3_PutChar
-  89:.\ServoMotor.c ****         break;
- 329              		.loc 1 89 0
- 330 00b0 00BF     		nop
- 331              	.L6:
-  90:.\ServoMotor.c ****     }
-  91:.\ServoMotor.c ****     
-  92:.\ServoMotor.c ****     CyDelay(2);
- 332              		.loc 1 92 0
- 333 00b2 0220     		movs	r0, #2
- 334 00b4 FFF7FEFF 		bl	CyDelay
+ 305              		.loc 1 87 0
+ 306 0088 0020     		movs	r0, #0
+ 307 008a FFF7FEFF 		bl	UART_3_PutChar
+  88:.\ServoMotor.c ****         UART_3_PutChar(0x00);
+ 308              		.loc 1 88 0
+ 309 008e 0020     		movs	r0, #0
+ 310 0090 FFF7FEFF 		bl	UART_3_PutChar
+  89:.\ServoMotor.c ****         UART_3_PutChar(0x00);
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 8
+
+
+ 311              		.loc 1 89 0
+ 312 0094 0020     		movs	r0, #0
+ 313 0096 FFF7FEFF 		bl	UART_3_PutChar
+  90:.\ServoMotor.c ****         UART_3_PutChar(0x00);
+ 314              		.loc 1 90 0
+ 315 009a 0020     		movs	r0, #0
+ 316 009c FFF7FEFF 		bl	UART_3_PutChar
+  91:.\ServoMotor.c ****         UART_3_PutChar(checksum);
+ 317              		.loc 1 91 0
+ 318 00a0 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 319 00a2 1846     		mov	r0, r3
+ 320 00a4 FFF7FEFF 		bl	UART_3_PutChar
+ 321              	.L7:
+  92:.\ServoMotor.c ****     }
   93:.\ServoMotor.c ****     
-  94:.\ServoMotor.c ****     
+  94:.\ServoMotor.c ****     CyDelay(2);
+ 322              		.loc 1 94 0
+ 323 00a8 0220     		movs	r0, #2
+ 324 00aa FFF7FEFF 		bl	CyDelay
   95:.\ServoMotor.c ****     
   96:.\ServoMotor.c **** }
- 335              		.loc 1 96 0
- 336 00b8 1037     		adds	r7, r7, #16
- 337              		.cfi_def_cfa_offset 8
- 338 00ba BD46     		mov	sp, r7
- 339              		.cfi_def_cfa_register 13
- 340              		@ sp needed
- 341 00bc 80BD     		pop	{r7, pc}
- 342              		.cfi_endproc
- 343              	.LFE65:
- 344              		.size	SetMotorMode, .-SetMotorMode
- 345 00be 00BF     		.section	.text.SetMotorSpeed,"ax",%progbits
- 346              		.align	2
- 347              		.global	SetMotorSpeed
- 348              		.thumb
- 349              		.thumb_func
- 350              		.type	SetMotorSpeed, %function
- 351              	SetMotorSpeed:
- 352              	.LFB66:
+ 325              		.loc 1 96 0
+ 326 00ae 1037     		adds	r7, r7, #16
+ 327              		.cfi_def_cfa_offset 8
+ 328 00b0 BD46     		mov	sp, r7
+ 329              		.cfi_def_cfa_register 13
+ 330              		@ sp needed
+ 331 00b2 80BD     		pop	{r7, pc}
+ 332              		.cfi_endproc
+ 333              	.LFE65:
+ 334              		.size	SetMotorMode, .-SetMotorMode
+ 335              		.section	.text.SetMotorSpeed,"ax",%progbits
+ 336              		.align	2
+ 337              		.global	SetMotorSpeed
+ 338              		.thumb
+ 339              		.thumb_func
+ 340              		.type	SetMotorSpeed, %function
+ 341              	SetMotorSpeed:
+ 342              	.LFB66:
   97:.\ServoMotor.c **** 
   98:.\ServoMotor.c **** void SetMotorSpeed(uint8 id, int16 speed, uint8 acceleration)
   99:.\ServoMotor.c **** {
- 353              		.loc 1 99 0
- 354              		.cfi_startproc
- 355              		@ args = 0, pretend = 0, frame = 16
- 356              		@ frame_needed = 1, uses_anonymous_args = 0
- 357 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 9
+ 343              		.loc 1 99 0
+ 344              		.cfi_startproc
+ 345              		@ args = 0, pretend = 0, frame = 16
+ 346              		@ frame_needed = 1, uses_anonymous_args = 0
+ 347 0000 80B5     		push	{r7, lr}
+ 348              		.cfi_def_cfa_offset 8
+ 349              		.cfi_offset 7, -8
+ 350              		.cfi_offset 14, -4
+ 351 0002 84B0     		sub	sp, sp, #16
+ 352              		.cfi_def_cfa_offset 24
+ 353 0004 00AF     		add	r7, sp, #0
+ 354              		.cfi_def_cfa_register 7
+ 355 0006 0346     		mov	r3, r0
+ 356 0008 FB71     		strb	r3, [r7, #7]
+ 357 000a 0B46     		mov	r3, r1	@ movhi
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 9
 
 
- 358              		.cfi_def_cfa_offset 8
- 359              		.cfi_offset 7, -8
- 360              		.cfi_offset 14, -4
- 361 0002 84B0     		sub	sp, sp, #16
- 362              		.cfi_def_cfa_offset 24
- 363 0004 00AF     		add	r7, sp, #0
- 364              		.cfi_def_cfa_register 7
- 365 0006 0346     		mov	r3, r0
- 366 0008 FB71     		strb	r3, [r7, #7]
- 367 000a 0B46     		mov	r3, r1	@ movhi
- 368 000c BB80     		strh	r3, [r7, #4]	@ movhi
- 369 000e 1346     		mov	r3, r2
- 370 0010 BB71     		strb	r3, [r7, #6]
+ 358 000c BB80     		strh	r3, [r7, #4]	@ movhi
+ 359 000e 1346     		mov	r3, r2
+ 360 0010 BB71     		strb	r3, [r7, #6]
  100:.\ServoMotor.c ****     // speed ranges from -1023 to 1023
  101:.\ServoMotor.c ****     
  102:.\ServoMotor.c ****     if (speed > 1023)
- 371              		.loc 1 102 0
- 372 0012 B7F90430 		ldrsh	r3, [r7, #4]
- 373 0016 B3F5806F 		cmp	r3, #1024
- 374 001a 02DB     		blt	.L10
+ 361              		.loc 1 102 0
+ 362 0012 B7F90430 		ldrsh	r3, [r7, #4]
+ 363 0016 B3F5806F 		cmp	r3, #1024
+ 364 001a 02DB     		blt	.L9
  103:.\ServoMotor.c ****         speed = 1023;
- 375              		.loc 1 103 0
- 376 001c 40F2FF33 		movw	r3, #1023
- 377 0020 BB80     		strh	r3, [r7, #4]	@ movhi
- 378              	.L10:
+ 365              		.loc 1 103 0
+ 366 001c 40F2FF33 		movw	r3, #1023
+ 367 0020 BB80     		strh	r3, [r7, #4]	@ movhi
+ 368              	.L9:
  104:.\ServoMotor.c ****     
  105:.\ServoMotor.c ****     if (speed < -1023)
- 379              		.loc 1 105 0
- 380 0022 B7F90430 		ldrsh	r3, [r7, #4]
- 381 0026 13F5806F 		cmn	r3, #1024
- 382 002a 02DC     		bgt	.L11
+ 369              		.loc 1 105 0
+ 370 0022 B7F90430 		ldrsh	r3, [r7, #4]
+ 371 0026 13F5806F 		cmn	r3, #1024
+ 372 002a 02DC     		bgt	.L10
  106:.\ServoMotor.c ****         speed = -1023;
- 383              		.loc 1 106 0
- 384 002c 4FF60143 		movw	r3, #64513
- 385 0030 BB80     		strh	r3, [r7, #4]	@ movhi
- 386              	.L11:
+ 373              		.loc 1 106 0
+ 374 002c 4FF60143 		movw	r3, #64513
+ 375 0030 BB80     		strh	r3, [r7, #4]	@ movhi
+ 376              	.L10:
  107:.\ServoMotor.c ****     
  108:.\ServoMotor.c ****     if (speed < 0)
- 387              		.loc 1 108 0
- 388 0032 B7F90430 		ldrsh	r3, [r7, #4]
- 389 0036 002B     		cmp	r3, #0
- 390 0038 07DA     		bge	.L12
+ 377              		.loc 1 108 0
+ 378 0032 B7F90430 		ldrsh	r3, [r7, #4]
+ 379 0036 002B     		cmp	r3, #0
+ 380 0038 07DA     		bge	.L11
  109:.\ServoMotor.c ****     {
  110:.\ServoMotor.c ****         speed = -speed;
- 391              		.loc 1 110 0
- 392 003a BB88     		ldrh	r3, [r7, #4]
- 393 003c 5B42     		negs	r3, r3
- 394 003e 9BB2     		uxth	r3, r3
- 395 0040 BB80     		strh	r3, [r7, #4]	@ movhi
+ 381              		.loc 1 110 0
+ 382 003a BB88     		ldrh	r3, [r7, #4]
+ 383 003c 5B42     		negs	r3, r3
+ 384 003e 9BB2     		uxth	r3, r3
+ 385 0040 BB80     		strh	r3, [r7, #4]	@ movhi
  111:.\ServoMotor.c ****         speed |= 0x0400;
- 396              		.loc 1 111 0
- 397 0042 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 398 0044 43F48063 		orr	r3, r3, #1024
- 399 0048 BB80     		strh	r3, [r7, #4]	@ movhi
- 400              	.L12:
+ 386              		.loc 1 111 0
+ 387 0042 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 388 0044 43F48063 		orr	r3, r3, #1024
+ 389 0048 BB80     		strh	r3, [r7, #4]	@ movhi
+ 390              	.L11:
  112:.\ServoMotor.c ****     }
  113:.\ServoMotor.c ****     
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 10
-
-
  114:.\ServoMotor.c ****     
  115:.\ServoMotor.c ****     uint8 checksum;
  116:.\ServoMotor.c ****     
- 117:.\ServoMotor.c ****     if (id == ID_LEFT)
- 401              		.loc 1 117 0
- 402 004a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 403 004c 012B     		cmp	r3, #1
- 404 004e 46D1     		bne	.L13
+ 117:.\ServoMotor.c ****     if (id == _LEFT)
+ 391              		.loc 1 117 0
+ 392 004a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 393 004c 012B     		cmp	r3, #1
+ 394 004e 3AD1     		bne	.L12
  118:.\ServoMotor.c ****     {
- 119:.\ServoMotor.c ****         checksum = id + 0x07 + 0x03 + 0x20 + (speed & 0xff) + (speed >> 8) + acceleration + acceler
- 405              		.loc 1 119 0
- 406 0050 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 407 0052 DAB2     		uxtb	r2, r3
- 408 0054 FB79     		ldrb	r3, [r7, #7]
- 409 0056 1344     		add	r3, r3, r2
- 410 0058 DAB2     		uxtb	r2, r3
- 411 005a B7F90430 		ldrsh	r3, [r7, #4]
- 412 005e 1B12     		asrs	r3, r3, #8
- 413 0060 9BB2     		uxth	r3, r3
- 414 0062 DBB2     		uxtb	r3, r3
- 415 0064 1344     		add	r3, r3, r2
- 416 0066 DAB2     		uxtb	r2, r3
- 417 0068 BB79     		ldrb	r3, [r7, #6]
- 418 006a 1344     		add	r3, r3, r2
- 419 006c DAB2     		uxtb	r2, r3
- 420 006e BB79     		ldrb	r3, [r7, #6]
- 421 0070 1344     		add	r3, r3, r2
- 422 0072 DBB2     		uxtb	r3, r3
- 423 0074 2A33     		adds	r3, r3, #42
- 424 0076 FB73     		strb	r3, [r7, #15]
+ 119:.\ServoMotor.c ****         checksum = ID + 0x06 + 0x03 + 0x20 + (speed & 0xff) + (speed >> 8) + acceleration;
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 10
+
+
+ 395              		.loc 1 119 0
+ 396 0050 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 397 0052 DAB2     		uxtb	r2, r3
+ 398 0054 B7F90430 		ldrsh	r3, [r7, #4]
+ 399 0058 1B12     		asrs	r3, r3, #8
+ 400 005a 9BB2     		uxth	r3, r3
+ 401 005c DBB2     		uxtb	r3, r3
+ 402 005e 1344     		add	r3, r3, r2
+ 403 0060 DAB2     		uxtb	r2, r3
+ 404 0062 BB79     		ldrb	r3, [r7, #6]
+ 405 0064 1344     		add	r3, r3, r2
+ 406 0066 DBB2     		uxtb	r3, r3
+ 407 0068 2733     		adds	r3, r3, #39
+ 408 006a FB73     		strb	r3, [r7, #15]
  120:.\ServoMotor.c ****         checksum ^= 0xff;
- 425              		.loc 1 120 0
- 426 0078 FB7B     		ldrb	r3, [r7, #15]
- 427 007a DB43     		mvns	r3, r3
- 428 007c FB73     		strb	r3, [r7, #15]
+ 409              		.loc 1 120 0
+ 410 006c FB7B     		ldrb	r3, [r7, #15]
+ 411 006e DB43     		mvns	r3, r3
+ 412 0070 FB73     		strb	r3, [r7, #15]
  121:.\ServoMotor.c ****         
  122:.\ServoMotor.c ****         UART_2_PutChar(0xff);
- 429              		.loc 1 122 0
- 430 007e FF20     		movs	r0, #255
- 431 0080 FFF7FEFF 		bl	UART_2_PutChar
+ 413              		.loc 1 122 0
+ 414 0072 FF20     		movs	r0, #255
+ 415 0074 FFF7FEFF 		bl	UART_2_PutChar
  123:.\ServoMotor.c ****         UART_2_PutChar(0xff);
- 432              		.loc 1 123 0
- 433 0084 FF20     		movs	r0, #255
- 434 0086 FFF7FEFF 		bl	UART_2_PutChar
- 124:.\ServoMotor.c ****         UART_2_PutChar(id);
- 435              		.loc 1 124 0
- 436 008a FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 437 008c 1846     		mov	r0, r3
- 438 008e FFF7FEFF 		bl	UART_2_PutChar
- 125:.\ServoMotor.c ****         UART_2_PutChar(0x07);
- 439              		.loc 1 125 0
- 440 0092 0720     		movs	r0, #7
- 441 0094 FFF7FEFF 		bl	UART_2_PutChar
+ 416              		.loc 1 123 0
+ 417 0078 FF20     		movs	r0, #255
+ 418 007a FFF7FEFF 		bl	UART_2_PutChar
+ 124:.\ServoMotor.c ****         UART_2_PutChar(ID);
+ 419              		.loc 1 124 0
+ 420 007e FE20     		movs	r0, #254
+ 421 0080 FFF7FEFF 		bl	UART_2_PutChar
+ 125:.\ServoMotor.c ****         UART_2_PutChar(0x06);
+ 422              		.loc 1 125 0
+ 423 0084 0620     		movs	r0, #6
+ 424 0086 FFF7FEFF 		bl	UART_2_PutChar
  126:.\ServoMotor.c ****         UART_2_PutChar(0x03);
- 442              		.loc 1 126 0
- 443 0098 0320     		movs	r0, #3
- 444 009a FFF7FEFF 		bl	UART_2_PutChar
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 11
-
-
+ 425              		.loc 1 126 0
+ 426 008a 0320     		movs	r0, #3
+ 427 008c FFF7FEFF 		bl	UART_2_PutChar
  127:.\ServoMotor.c ****         UART_2_PutChar(0x20);
- 445              		.loc 1 127 0
- 446 009e 2020     		movs	r0, #32
- 447 00a0 FFF7FEFF 		bl	UART_2_PutChar
+ 428              		.loc 1 127 0
+ 429 0090 2020     		movs	r0, #32
+ 430 0092 FFF7FEFF 		bl	UART_2_PutChar
  128:.\ServoMotor.c ****         UART_2_PutChar(speed & 0xff);
- 448              		.loc 1 128 0
- 449 00a4 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 450 00a6 DBB2     		uxtb	r3, r3
- 451 00a8 1846     		mov	r0, r3
- 452 00aa FFF7FEFF 		bl	UART_2_PutChar
+ 431              		.loc 1 128 0
+ 432 0096 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 433 0098 DBB2     		uxtb	r3, r3
+ 434 009a 1846     		mov	r0, r3
+ 435 009c FFF7FEFF 		bl	UART_2_PutChar
  129:.\ServoMotor.c ****         UART_2_PutChar(speed >> 8);
- 453              		.loc 1 129 0
- 454 00ae B7F90430 		ldrsh	r3, [r7, #4]
- 455 00b2 1B12     		asrs	r3, r3, #8
- 456 00b4 9BB2     		uxth	r3, r3
- 457 00b6 DBB2     		uxtb	r3, r3
- 458 00b8 1846     		mov	r0, r3
- 459 00ba FFF7FEFF 		bl	UART_2_PutChar
+ 436              		.loc 1 129 0
+ 437 00a0 B7F90430 		ldrsh	r3, [r7, #4]
+ 438 00a4 1B12     		asrs	r3, r3, #8
+ 439 00a6 9BB2     		uxth	r3, r3
+ 440 00a8 DBB2     		uxtb	r3, r3
+ 441 00aa 1846     		mov	r0, r3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 11
+
+
+ 442 00ac FFF7FEFF 		bl	UART_2_PutChar
  130:.\ServoMotor.c ****         UART_2_PutChar(acceleration);
- 460              		.loc 1 130 0
- 461 00be BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 462 00c0 1846     		mov	r0, r3
- 463 00c2 FFF7FEFF 		bl	UART_2_PutChar
- 131:.\ServoMotor.c ****         UART_2_PutChar(acceleration);
- 464              		.loc 1 131 0
- 465 00c6 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 466 00c8 1846     		mov	r0, r3
- 467 00ca FFF7FEFF 		bl	UART_2_PutChar
- 132:.\ServoMotor.c ****         UART_2_PutChar(checksum);
- 468              		.loc 1 132 0
- 469 00ce FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 470 00d0 1846     		mov	r0, r3
- 471 00d2 FFF7FEFF 		bl	UART_2_PutChar
- 133:.\ServoMotor.c ****         
- 134:.\ServoMotor.c ****         CyDelay(2);
- 472              		.loc 1 134 0
- 473 00d6 0220     		movs	r0, #2
- 474 00d8 FFF7FEFF 		bl	CyDelay
- 475 00dc 48E0     		b	.L9
- 476              	.L13:
- 135:.\ServoMotor.c ****     }
- 136:.\ServoMotor.c ****     else if (id == ID_RIGHT)
- 477              		.loc 1 136 0
- 478 00de FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 479 00e0 032B     		cmp	r3, #3
- 480 00e2 45D1     		bne	.L9
+ 443              		.loc 1 130 0
+ 444 00b0 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 445 00b2 1846     		mov	r0, r3
+ 446 00b4 FFF7FEFF 		bl	UART_2_PutChar
+ 131:.\ServoMotor.c ****         UART_2_PutChar(checksum);
+ 447              		.loc 1 131 0
+ 448 00b8 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 449 00ba 1846     		mov	r0, r3
+ 450 00bc FFF7FEFF 		bl	UART_2_PutChar
+ 132:.\ServoMotor.c ****         
+ 133:.\ServoMotor.c ****         CyDelay(2);
+ 451              		.loc 1 133 0
+ 452 00c0 0220     		movs	r0, #2
+ 453 00c2 FFF7FEFF 		bl	CyDelay
+ 454              	.L12:
+ 134:.\ServoMotor.c ****     }
+ 135:.\ServoMotor.c ****     
+ 136:.\ServoMotor.c ****     if (id == _RIGHT)
+ 455              		.loc 1 136 0
+ 456 00c6 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 457 00c8 022B     		cmp	r3, #2
+ 458 00ca 3AD1     		bne	.L8
  137:.\ServoMotor.c ****     {
- 138:.\ServoMotor.c ****         checksum = id + 0x07 + 0x03 + 0x20 + (speed & 0xff) + (speed >> 8) + acceleration + acceler
- 481              		.loc 1 138 0
- 482 00e4 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 483 00e6 DAB2     		uxtb	r2, r3
- 484 00e8 FB79     		ldrb	r3, [r7, #7]
- 485 00ea 1344     		add	r3, r3, r2
- 486 00ec DAB2     		uxtb	r2, r3
- 487 00ee B7F90430 		ldrsh	r3, [r7, #4]
- 488 00f2 1B12     		asrs	r3, r3, #8
- 489 00f4 9BB2     		uxth	r3, r3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 12
-
-
- 490 00f6 DBB2     		uxtb	r3, r3
- 491 00f8 1344     		add	r3, r3, r2
- 492 00fa DAB2     		uxtb	r2, r3
- 493 00fc BB79     		ldrb	r3, [r7, #6]
- 494 00fe 1344     		add	r3, r3, r2
- 495 0100 DAB2     		uxtb	r2, r3
- 496 0102 BB79     		ldrb	r3, [r7, #6]
- 497 0104 1344     		add	r3, r3, r2
- 498 0106 DBB2     		uxtb	r3, r3
- 499 0108 2A33     		adds	r3, r3, #42
- 500 010a FB73     		strb	r3, [r7, #15]
+ 138:.\ServoMotor.c ****         checksum = ID + 0x06 + 0x03 + 0x20 + (speed & 0xff) + (speed >> 8) + acceleration;
+ 459              		.loc 1 138 0
+ 460 00cc BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 461 00ce DAB2     		uxtb	r2, r3
+ 462 00d0 B7F90430 		ldrsh	r3, [r7, #4]
+ 463 00d4 1B12     		asrs	r3, r3, #8
+ 464 00d6 9BB2     		uxth	r3, r3
+ 465 00d8 DBB2     		uxtb	r3, r3
+ 466 00da 1344     		add	r3, r3, r2
+ 467 00dc DAB2     		uxtb	r2, r3
+ 468 00de BB79     		ldrb	r3, [r7, #6]
+ 469 00e0 1344     		add	r3, r3, r2
+ 470 00e2 DBB2     		uxtb	r3, r3
+ 471 00e4 2733     		adds	r3, r3, #39
+ 472 00e6 FB73     		strb	r3, [r7, #15]
  139:.\ServoMotor.c ****         checksum ^= 0xff;
- 501              		.loc 1 139 0
- 502 010c FB7B     		ldrb	r3, [r7, #15]
- 503 010e DB43     		mvns	r3, r3
- 504 0110 FB73     		strb	r3, [r7, #15]
+ 473              		.loc 1 139 0
+ 474 00e8 FB7B     		ldrb	r3, [r7, #15]
+ 475 00ea DB43     		mvns	r3, r3
+ 476 00ec FB73     		strb	r3, [r7, #15]
  140:.\ServoMotor.c ****         
  141:.\ServoMotor.c ****         UART_3_PutChar(0xff);
- 505              		.loc 1 141 0
- 506 0112 FF20     		movs	r0, #255
- 507 0114 FFF7FEFF 		bl	UART_3_PutChar
+ 477              		.loc 1 141 0
+ 478 00ee FF20     		movs	r0, #255
+ 479 00f0 FFF7FEFF 		bl	UART_3_PutChar
  142:.\ServoMotor.c ****         UART_3_PutChar(0xff);
- 508              		.loc 1 142 0
- 509 0118 FF20     		movs	r0, #255
- 510 011a FFF7FEFF 		bl	UART_3_PutChar
- 143:.\ServoMotor.c ****         UART_3_PutChar(id);
- 511              		.loc 1 143 0
- 512 011e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 513 0120 1846     		mov	r0, r3
- 514 0122 FFF7FEFF 		bl	UART_3_PutChar
- 144:.\ServoMotor.c ****         UART_3_PutChar(0x07);
- 515              		.loc 1 144 0
- 516 0126 0720     		movs	r0, #7
- 517 0128 FFF7FEFF 		bl	UART_3_PutChar
+ 480              		.loc 1 142 0
+ 481 00f4 FF20     		movs	r0, #255
+ 482 00f6 FFF7FEFF 		bl	UART_3_PutChar
+ 143:.\ServoMotor.c ****         UART_3_PutChar(ID);
+ 483              		.loc 1 143 0
+ 484 00fa FE20     		movs	r0, #254
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 12
+
+
+ 485 00fc FFF7FEFF 		bl	UART_3_PutChar
+ 144:.\ServoMotor.c ****         UART_3_PutChar(0x06);
+ 486              		.loc 1 144 0
+ 487 0100 0620     		movs	r0, #6
+ 488 0102 FFF7FEFF 		bl	UART_3_PutChar
  145:.\ServoMotor.c ****         UART_3_PutChar(0x03);
- 518              		.loc 1 145 0
- 519 012c 0320     		movs	r0, #3
- 520 012e FFF7FEFF 		bl	UART_3_PutChar
+ 489              		.loc 1 145 0
+ 490 0106 0320     		movs	r0, #3
+ 491 0108 FFF7FEFF 		bl	UART_3_PutChar
  146:.\ServoMotor.c ****         UART_3_PutChar(0x20);
- 521              		.loc 1 146 0
- 522 0132 2020     		movs	r0, #32
- 523 0134 FFF7FEFF 		bl	UART_3_PutChar
+ 492              		.loc 1 146 0
+ 493 010c 2020     		movs	r0, #32
+ 494 010e FFF7FEFF 		bl	UART_3_PutChar
  147:.\ServoMotor.c ****         UART_3_PutChar(speed & 0xff);
- 524              		.loc 1 147 0
- 525 0138 BB88     		ldrh	r3, [r7, #4]	@ movhi
- 526 013a DBB2     		uxtb	r3, r3
- 527 013c 1846     		mov	r0, r3
- 528 013e FFF7FEFF 		bl	UART_3_PutChar
+ 495              		.loc 1 147 0
+ 496 0112 BB88     		ldrh	r3, [r7, #4]	@ movhi
+ 497 0114 DBB2     		uxtb	r3, r3
+ 498 0116 1846     		mov	r0, r3
+ 499 0118 FFF7FEFF 		bl	UART_3_PutChar
  148:.\ServoMotor.c ****         UART_3_PutChar(speed >> 8);
- 529              		.loc 1 148 0
- 530 0142 B7F90430 		ldrsh	r3, [r7, #4]
- 531 0146 1B12     		asrs	r3, r3, #8
- 532 0148 9BB2     		uxth	r3, r3
- 533 014a DBB2     		uxtb	r3, r3
- 534 014c 1846     		mov	r0, r3
- 535 014e FFF7FEFF 		bl	UART_3_PutChar
+ 500              		.loc 1 148 0
+ 501 011c B7F90430 		ldrsh	r3, [r7, #4]
+ 502 0120 1B12     		asrs	r3, r3, #8
+ 503 0122 9BB2     		uxth	r3, r3
+ 504 0124 DBB2     		uxtb	r3, r3
+ 505 0126 1846     		mov	r0, r3
+ 506 0128 FFF7FEFF 		bl	UART_3_PutChar
  149:.\ServoMotor.c ****         UART_3_PutChar(acceleration);
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 13
+ 507              		.loc 1 149 0
+ 508 012c BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
+ 509 012e 1846     		mov	r0, r3
+ 510 0130 FFF7FEFF 		bl	UART_3_PutChar
+ 150:.\ServoMotor.c ****         UART_3_PutChar(checksum);
+ 511              		.loc 1 150 0
+ 512 0134 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
+ 513 0136 1846     		mov	r0, r3
+ 514 0138 FFF7FEFF 		bl	UART_3_PutChar
+ 151:.\ServoMotor.c ****         
+ 152:.\ServoMotor.c ****         CyDelay(2);
+ 515              		.loc 1 152 0
+ 516 013c 0220     		movs	r0, #2
+ 517 013e FFF7FEFF 		bl	CyDelay
+ 518              	.L8:
+ 153:.\ServoMotor.c ****     }
+ 154:.\ServoMotor.c **** }...
+ 519              		.loc 1 154 0
+ 520 0142 1037     		adds	r7, r7, #16
+ 521              		.cfi_def_cfa_offset 8
+ 522 0144 BD46     		mov	sp, r7
+ 523              		.cfi_def_cfa_register 13
+ 524              		@ sp needed
+ 525 0146 80BD     		pop	{r7, pc}
+ 526              		.cfi_endproc
+ 527              	.LFE66:
+ 528              		.size	SetMotorSpeed, .-SetMotorSpeed
+ 529              		.text
+ 530              	.Letext0:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 13
 
 
- 536              		.loc 1 149 0
- 537 0152 BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 538 0154 1846     		mov	r0, r3
- 539 0156 FFF7FEFF 		bl	UART_3_PutChar
- 150:.\ServoMotor.c ****         UART_3_PutChar(acceleration);
- 540              		.loc 1 150 0
- 541 015a BB79     		ldrb	r3, [r7, #6]	@ zero_extendqisi2
- 542 015c 1846     		mov	r0, r3
- 543 015e FFF7FEFF 		bl	UART_3_PutChar
- 151:.\ServoMotor.c ****         UART_3_PutChar(checksum);
- 544              		.loc 1 151 0
- 545 0162 FB7B     		ldrb	r3, [r7, #15]	@ zero_extendqisi2
- 546 0164 1846     		mov	r0, r3
- 547 0166 FFF7FEFF 		bl	UART_3_PutChar
- 152:.\ServoMotor.c ****         
- 153:.\ServoMotor.c ****         CyDelay(2);
- 548              		.loc 1 153 0
- 549 016a 0220     		movs	r0, #2
- 550 016c FFF7FEFF 		bl	CyDelay
- 551              	.L9:
- 154:.\ServoMotor.c ****     }
- 155:.\ServoMotor.c **** }...
- 552              		.loc 1 155 0
- 553 0170 1037     		adds	r7, r7, #16
- 554              		.cfi_def_cfa_offset 8
- 555 0172 BD46     		mov	sp, r7
- 556              		.cfi_def_cfa_register 13
- 557              		@ sp needed
- 558 0174 80BD     		pop	{r7, pc}
- 559              		.cfi_endproc
- 560              	.LFE66:
- 561              		.size	SetMotorSpeed, .-SetMotorSpeed
- 562 0176 00BF     		.text
- 563              	.Letext0:
- 564              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 565              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
- 566              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
- 567              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
- 568              		.section	.debug_info,"",%progbits
- 569              	.Ldebug_info0:
- 570 0000 CB010000 		.4byte	0x1cb
- 571 0004 0400     		.2byte	0x4
- 572 0006 00000000 		.4byte	.Ldebug_abbrev0
- 573 000a 04       		.byte	0x4
- 574 000b 01       		.uleb128 0x1
- 575 000c 18000000 		.4byte	.LASF26
- 576 0010 01       		.byte	0x1
- 577 0011 95010000 		.4byte	.LASF27
- 578 0015 A4010000 		.4byte	.LASF28
- 579 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 580 001d 00000000 		.4byte	0
- 581 0021 00000000 		.4byte	.Ldebug_line0
- 582 0025 02       		.uleb128 0x2
- 583 0026 01       		.byte	0x1
- 584 0027 06       		.byte	0x6
- 585 0028 DF010000 		.4byte	.LASF0
- 586 002c 02       		.uleb128 0x2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 14
+ 531              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 532              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 533              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 534              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 535              		.section	.debug_info,"",%progbits
+ 536              	.Ldebug_info0:
+ 537 0000 CB010000 		.4byte	0x1cb
+ 538 0004 0400     		.2byte	0x4
+ 539 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 540 000a 04       		.byte	0x4
+ 541 000b 01       		.uleb128 0x1
+ 542 000c 18000000 		.4byte	.LASF26
+ 543 0010 01       		.byte	0x1
+ 544 0011 CA010000 		.4byte	.LASF27
+ 545 0015 3E010000 		.4byte	.LASF28
+ 546 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 547 001d 00000000 		.4byte	0
+ 548 0021 00000000 		.4byte	.Ldebug_line0
+ 549 0025 02       		.uleb128 0x2
+ 550 0026 01       		.byte	0x1
+ 551 0027 06       		.byte	0x6
+ 552 0028 E8010000 		.4byte	.LASF0
+ 553 002c 02       		.uleb128 0x2
+ 554 002d 01       		.byte	0x1
+ 555 002e 08       		.byte	0x8
+ 556 002f BD000000 		.4byte	.LASF1
+ 557 0033 02       		.uleb128 0x2
+ 558 0034 02       		.byte	0x2
+ 559 0035 05       		.byte	0x5
+ 560 0036 0A010000 		.4byte	.LASF2
+ 561 003a 02       		.uleb128 0x2
+ 562 003b 02       		.byte	0x2
+ 563 003c 07       		.byte	0x7
+ 564 003d E3000000 		.4byte	.LASF3
+ 565 0041 03       		.uleb128 0x3
+ 566 0042 0E000000 		.4byte	.LASF9
+ 567 0046 02       		.byte	0x2
+ 568 0047 3F       		.byte	0x3f
+ 569 0048 4C000000 		.4byte	0x4c
+ 570 004c 02       		.uleb128 0x2
+ 571 004d 04       		.byte	0x4
+ 572 004e 05       		.byte	0x5
+ 573 004f DF010000 		.4byte	.LASF4
+ 574 0053 02       		.uleb128 0x2
+ 575 0054 04       		.byte	0x4
+ 576 0055 07       		.byte	0x7
+ 577 0056 D1000000 		.4byte	.LASF5
+ 578 005a 02       		.uleb128 0x2
+ 579 005b 08       		.byte	0x8
+ 580 005c 05       		.byte	0x5
+ 581 005d B7010000 		.4byte	.LASF6
+ 582 0061 02       		.uleb128 0x2
+ 583 0062 08       		.byte	0x8
+ 584 0063 07       		.byte	0x7
+ 585 0064 73010000 		.4byte	.LASF7
+ 586 0068 04       		.uleb128 0x4
+ 587 0069 04       		.byte	0x4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 14
 
 
- 587 002d 01       		.byte	0x1
- 588 002e 08       		.byte	0x8
- 589 002f BD000000 		.4byte	.LASF1
- 590 0033 02       		.uleb128 0x2
- 591 0034 02       		.byte	0x2
- 592 0035 05       		.byte	0x5
- 593 0036 0A010000 		.4byte	.LASF2
- 594 003a 02       		.uleb128 0x2
- 595 003b 02       		.byte	0x2
- 596 003c 07       		.byte	0x7
- 597 003d E3000000 		.4byte	.LASF3
- 598 0041 03       		.uleb128 0x3
- 599 0042 0E000000 		.4byte	.LASF9
- 600 0046 02       		.byte	0x2
- 601 0047 3F       		.byte	0x3f
- 602 0048 4C000000 		.4byte	0x4c
- 603 004c 02       		.uleb128 0x2
- 604 004d 04       		.byte	0x4
- 605 004e 05       		.byte	0x5
- 606 004f D6010000 		.4byte	.LASF4
- 607 0053 02       		.uleb128 0x2
- 608 0054 04       		.byte	0x4
- 609 0055 07       		.byte	0x7
- 610 0056 D1000000 		.4byte	.LASF5
- 611 005a 02       		.uleb128 0x2
- 612 005b 08       		.byte	0x8
- 613 005c 05       		.byte	0x5
- 614 005d 82010000 		.4byte	.LASF6
- 615 0061 02       		.uleb128 0x2
- 616 0062 08       		.byte	0x8
- 617 0063 07       		.byte	0x7
- 618 0064 3E010000 		.4byte	.LASF7
- 619 0068 04       		.uleb128 0x4
- 620 0069 04       		.byte	0x4
- 621 006a 05       		.byte	0x5
- 622 006b 696E7400 		.ascii	"int\000"
- 623 006f 02       		.uleb128 0x2
- 624 0070 04       		.byte	0x4
- 625 0071 07       		.byte	0x7
- 626 0072 24010000 		.4byte	.LASF8
- 627 0076 03       		.uleb128 0x3
- 628 0077 A6000000 		.4byte	.LASF10
- 629 007b 03       		.byte	0x3
- 630 007c 2C       		.byte	0x2c
- 631 007d 41000000 		.4byte	0x41
- 632 0081 05       		.uleb128 0x5
- 633 0082 D0010000 		.4byte	.LASF11
- 634 0086 04       		.byte	0x4
- 635 0087 3801     		.2byte	0x138
- 636 0089 2C000000 		.4byte	0x2c
- 637 008d 05       		.uleb128 0x5
- 638 008e 14010000 		.4byte	.LASF12
- 639 0092 04       		.byte	0x4
- 640 0093 3901     		.2byte	0x139
- 641 0095 3A000000 		.4byte	0x3a
- 642 0099 05       		.uleb128 0x5
- 643 009a CB000000 		.4byte	.LASF13
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 15
+ 588 006a 05       		.byte	0x5
+ 589 006b 696E7400 		.ascii	"int\000"
+ 590 006f 02       		.uleb128 0x2
+ 591 0070 04       		.byte	0x4
+ 592 0071 07       		.byte	0x7
+ 593 0072 24010000 		.4byte	.LASF8
+ 594 0076 03       		.uleb128 0x3
+ 595 0077 A6000000 		.4byte	.LASF10
+ 596 007b 03       		.byte	0x3
+ 597 007c 2C       		.byte	0x2c
+ 598 007d 41000000 		.4byte	0x41
+ 599 0081 05       		.uleb128 0x5
+ 600 0082 D9010000 		.4byte	.LASF11
+ 601 0086 04       		.byte	0x4
+ 602 0087 3801     		.2byte	0x138
+ 603 0089 2C000000 		.4byte	0x2c
+ 604 008d 05       		.uleb128 0x5
+ 605 008e 14010000 		.4byte	.LASF12
+ 606 0092 04       		.byte	0x4
+ 607 0093 3901     		.2byte	0x139
+ 608 0095 3A000000 		.4byte	0x3a
+ 609 0099 05       		.uleb128 0x5
+ 610 009a CB000000 		.4byte	.LASF13
+ 611 009e 04       		.byte	0x4
+ 612 009f 3C01     		.2byte	0x13c
+ 613 00a1 33000000 		.4byte	0x33
+ 614 00a5 02       		.uleb128 0x2
+ 615 00a6 04       		.byte	0x4
+ 616 00a7 04       		.byte	0x4
+ 617 00a8 AE000000 		.4byte	.LASF14
+ 618 00ac 02       		.uleb128 0x2
+ 619 00ad 08       		.byte	0x8
+ 620 00ae 04       		.byte	0x4
+ 621 00af 03010000 		.4byte	.LASF15
+ 622 00b3 02       		.uleb128 0x2
+ 623 00b4 01       		.byte	0x1
+ 624 00b5 08       		.byte	0x8
+ 625 00b6 C5010000 		.4byte	.LASF16
+ 626 00ba 02       		.uleb128 0x2
+ 627 00bb 04       		.byte	0x4
+ 628 00bc 07       		.byte	0x7
+ 629 00bd 9D010000 		.4byte	.LASF17
+ 630 00c1 06       		.uleb128 0x6
+ 631 00c2 A6010000 		.4byte	.LASF20
+ 632 00c6 01       		.byte	0x1
+ 633 00c7 06       		.byte	0x6
+ 634 00c8 00000000 		.4byte	.LFB63
+ 635 00cc AE000000 		.4byte	.LFE63-.LFB63
+ 636 00d0 01       		.uleb128 0x1
+ 637 00d1 9C       		.byte	0x9c
+ 638 00d2 0E010000 		.4byte	0x10e
+ 639 00d6 07       		.uleb128 0x7
+ 640 00d7 696400   		.ascii	"id\000"
+ 641 00da 01       		.byte	0x1
+ 642 00db 06       		.byte	0x6
+ 643 00dc 81000000 		.4byte	0x81
+ 644 00e0 02       		.uleb128 0x2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 15
 
 
- 644 009e 04       		.byte	0x4
- 645 009f 3C01     		.2byte	0x13c
- 646 00a1 33000000 		.4byte	0x33
- 647 00a5 02       		.uleb128 0x2
- 648 00a6 04       		.byte	0x4
- 649 00a7 04       		.byte	0x4
- 650 00a8 AE000000 		.4byte	.LASF14
- 651 00ac 02       		.uleb128 0x2
- 652 00ad 08       		.byte	0x8
- 653 00ae 04       		.byte	0x4
- 654 00af 03010000 		.4byte	.LASF15
- 655 00b3 02       		.uleb128 0x2
- 656 00b4 01       		.byte	0x1
- 657 00b5 08       		.byte	0x8
- 658 00b6 90010000 		.4byte	.LASF16
- 659 00ba 02       		.uleb128 0x2
- 660 00bb 04       		.byte	0x4
- 661 00bc 07       		.byte	0x7
- 662 00bd 68010000 		.4byte	.LASF17
- 663 00c1 06       		.uleb128 0x6
- 664 00c2 71010000 		.4byte	.LASF20
- 665 00c6 01       		.byte	0x1
- 666 00c7 04       		.byte	0x4
- 667 00c8 00000000 		.4byte	.LFB63
- 668 00cc B0000000 		.4byte	.LFE63-.LFB63
- 669 00d0 01       		.uleb128 0x1
- 670 00d1 9C       		.byte	0x9c
- 671 00d2 0E010000 		.4byte	0x10e
- 672 00d6 07       		.uleb128 0x7
- 673 00d7 696400   		.ascii	"id\000"
- 674 00da 01       		.byte	0x1
- 675 00db 04       		.byte	0x4
- 676 00dc 81000000 		.4byte	0x81
- 677 00e0 02       		.uleb128 0x2
- 678 00e1 91       		.byte	0x91
- 679 00e2 6F       		.sleb128 -17
- 680 00e3 08       		.uleb128 0x8
- 681 00e4 1B010000 		.4byte	.LASF18
- 682 00e8 01       		.byte	0x1
- 683 00e9 04       		.byte	0x4
- 684 00ea 8D000000 		.4byte	0x8d
- 685 00ee 02       		.uleb128 0x2
- 686 00ef 91       		.byte	0x91
- 687 00f0 6C       		.sleb128 -20
- 688 00f1 08       		.uleb128 0x8
- 689 00f2 62010000 		.4byte	.LASF19
- 690 00f6 01       		.byte	0x1
- 691 00f7 04       		.byte	0x4
- 692 00f8 8D000000 		.4byte	0x8d
- 693 00fc 02       		.uleb128 0x2
- 694 00fd 91       		.byte	0x91
- 695 00fe 6A       		.sleb128 -22
- 696 00ff 09       		.uleb128 0x9
- 697 0100 B4000000 		.4byte	.LASF22
- 698 0104 01       		.byte	0x1
- 699 0105 08       		.byte	0x8
- 700 0106 81000000 		.4byte	0x81
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 16
+ 645 00e1 91       		.byte	0x91
+ 646 00e2 6F       		.sleb128 -17
+ 647 00e3 08       		.uleb128 0x8
+ 648 00e4 1B010000 		.4byte	.LASF18
+ 649 00e8 01       		.byte	0x1
+ 650 00e9 06       		.byte	0x6
+ 651 00ea 8D000000 		.4byte	0x8d
+ 652 00ee 02       		.uleb128 0x2
+ 653 00ef 91       		.byte	0x91
+ 654 00f0 6C       		.sleb128 -20
+ 655 00f1 08       		.uleb128 0x8
+ 656 00f2 97010000 		.4byte	.LASF19
+ 657 00f6 01       		.byte	0x1
+ 658 00f7 06       		.byte	0x6
+ 659 00f8 8D000000 		.4byte	0x8d
+ 660 00fc 02       		.uleb128 0x2
+ 661 00fd 91       		.byte	0x91
+ 662 00fe 6A       		.sleb128 -22
+ 663 00ff 09       		.uleb128 0x9
+ 664 0100 B4000000 		.4byte	.LASF22
+ 665 0104 01       		.byte	0x1
+ 666 0105 0A       		.byte	0xa
+ 667 0106 81000000 		.4byte	0x81
+ 668 010a 02       		.uleb128 0x2
+ 669 010b 91       		.byte	0x91
+ 670 010c 77       		.sleb128 -9
+ 671 010d 00       		.byte	0
+ 672 010e 06       		.uleb128 0x6
+ 673 010f 31010000 		.4byte	.LASF21
+ 674 0113 01       		.byte	0x1
+ 675 0114 1F       		.byte	0x1f
+ 676 0115 00000000 		.4byte	.LFB64
+ 677 0119 6A000000 		.4byte	.LFE64-.LFB64
+ 678 011d 01       		.uleb128 0x1
+ 679 011e 9C       		.byte	0x9c
+ 680 011f 3F010000 		.4byte	0x13f
+ 681 0123 07       		.uleb128 0x7
+ 682 0124 696400   		.ascii	"id\000"
+ 683 0127 01       		.byte	0x1
+ 684 0128 1F       		.byte	0x1f
+ 685 0129 81000000 		.4byte	0x81
+ 686 012d 02       		.uleb128 0x2
+ 687 012e 91       		.byte	0x91
+ 688 012f 6F       		.sleb128 -17
+ 689 0130 09       		.uleb128 0x9
+ 690 0131 B4000000 		.4byte	.LASF22
+ 691 0135 01       		.byte	0x1
+ 692 0136 21       		.byte	0x21
+ 693 0137 81000000 		.4byte	0x81
+ 694 013b 02       		.uleb128 0x2
+ 695 013c 91       		.byte	0x91
+ 696 013d 77       		.sleb128 -9
+ 697 013e 00       		.byte	0
+ 698 013f 06       		.uleb128 0x6
+ 699 0140 F4010000 		.4byte	.LASF23
+ 700 0144 01       		.byte	0x1
+ 701 0145 39       		.byte	0x39
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 16
 
 
- 701 010a 02       		.uleb128 0x2
- 702 010b 91       		.byte	0x91
- 703 010c 77       		.sleb128 -9
- 704 010d 00       		.byte	0
- 705 010e 06       		.uleb128 0x6
- 706 010f 31010000 		.4byte	.LASF21
- 707 0113 01       		.byte	0x1
- 708 0114 1A       		.byte	0x1a
- 709 0115 00000000 		.4byte	.LFB64
- 710 0119 70000000 		.4byte	.LFE64-.LFB64
- 711 011d 01       		.uleb128 0x1
- 712 011e 9C       		.byte	0x9c
- 713 011f 3F010000 		.4byte	0x13f
- 714 0123 07       		.uleb128 0x7
- 715 0124 696400   		.ascii	"id\000"
- 716 0127 01       		.byte	0x1
- 717 0128 1A       		.byte	0x1a
- 718 0129 81000000 		.4byte	0x81
- 719 012d 02       		.uleb128 0x2
- 720 012e 91       		.byte	0x91
- 721 012f 6F       		.sleb128 -17
- 722 0130 09       		.uleb128 0x9
- 723 0131 B4000000 		.4byte	.LASF22
- 724 0135 01       		.byte	0x1
- 725 0136 1C       		.byte	0x1c
- 726 0137 81000000 		.4byte	0x81
- 727 013b 02       		.uleb128 0x2
- 728 013c 91       		.byte	0x91
- 729 013d 77       		.sleb128 -9
- 730 013e 00       		.byte	0
- 731 013f 06       		.uleb128 0x6
- 732 0140 EB010000 		.4byte	.LASF23
- 733 0144 01       		.byte	0x1
- 734 0145 36       		.byte	0x36
- 735 0146 00000000 		.4byte	.LFB65
- 736 014a BE000000 		.4byte	.LFE65-.LFB65
- 737 014e 01       		.uleb128 0x1
- 738 014f 9C       		.byte	0x9c
- 739 0150 70010000 		.4byte	0x170
- 740 0154 07       		.uleb128 0x7
- 741 0155 696400   		.ascii	"id\000"
- 742 0158 01       		.byte	0x1
- 743 0159 36       		.byte	0x36
- 744 015a 81000000 		.4byte	0x81
- 745 015e 02       		.uleb128 0x2
- 746 015f 91       		.byte	0x91
- 747 0160 6F       		.sleb128 -17
- 748 0161 09       		.uleb128 0x9
- 749 0162 B4000000 		.4byte	.LASF22
- 750 0166 01       		.byte	0x1
- 751 0167 38       		.byte	0x38
- 752 0168 81000000 		.4byte	0x81
- 753 016c 02       		.uleb128 0x2
- 754 016d 91       		.byte	0x91
- 755 016e 77       		.sleb128 -9
- 756 016f 00       		.byte	0
- 757 0170 06       		.uleb128 0x6
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 17
+ 702 0146 00000000 		.4byte	.LFB65
+ 703 014a B4000000 		.4byte	.LFE65-.LFB65
+ 704 014e 01       		.uleb128 0x1
+ 705 014f 9C       		.byte	0x9c
+ 706 0150 70010000 		.4byte	0x170
+ 707 0154 07       		.uleb128 0x7
+ 708 0155 696400   		.ascii	"id\000"
+ 709 0158 01       		.byte	0x1
+ 710 0159 39       		.byte	0x39
+ 711 015a 81000000 		.4byte	0x81
+ 712 015e 02       		.uleb128 0x2
+ 713 015f 91       		.byte	0x91
+ 714 0160 6F       		.sleb128 -17
+ 715 0161 09       		.uleb128 0x9
+ 716 0162 B4000000 		.4byte	.LASF22
+ 717 0166 01       		.byte	0x1
+ 718 0167 3B       		.byte	0x3b
+ 719 0168 81000000 		.4byte	0x81
+ 720 016c 02       		.uleb128 0x2
+ 721 016d 91       		.byte	0x91
+ 722 016e 77       		.sleb128 -9
+ 723 016f 00       		.byte	0
+ 724 0170 06       		.uleb128 0x6
+ 725 0171 00000000 		.4byte	.LASF24
+ 726 0175 01       		.byte	0x1
+ 727 0176 62       		.byte	0x62
+ 728 0177 00000000 		.4byte	.LFB66
+ 729 017b 48010000 		.4byte	.LFE66-.LFB66
+ 730 017f 01       		.uleb128 0x1
+ 731 0180 9C       		.byte	0x9c
+ 732 0181 BD010000 		.4byte	0x1bd
+ 733 0185 07       		.uleb128 0x7
+ 734 0186 696400   		.ascii	"id\000"
+ 735 0189 01       		.byte	0x1
+ 736 018a 62       		.byte	0x62
+ 737 018b 81000000 		.4byte	0x81
+ 738 018f 02       		.uleb128 0x2
+ 739 0190 91       		.byte	0x91
+ 740 0191 6F       		.sleb128 -17
+ 741 0192 08       		.uleb128 0x8
+ 742 0193 97010000 		.4byte	.LASF19
+ 743 0197 01       		.byte	0x1
+ 744 0198 62       		.byte	0x62
+ 745 0199 99000000 		.4byte	0x99
+ 746 019d 02       		.uleb128 0x2
+ 747 019e 91       		.byte	0x91
+ 748 019f 6C       		.sleb128 -20
+ 749 01a0 08       		.uleb128 0x8
+ 750 01a1 8A010000 		.4byte	.LASF25
+ 751 01a5 01       		.byte	0x1
+ 752 01a6 62       		.byte	0x62
+ 753 01a7 81000000 		.4byte	0x81
+ 754 01ab 02       		.uleb128 0x2
+ 755 01ac 91       		.byte	0x91
+ 756 01ad 6E       		.sleb128 -18
+ 757 01ae 09       		.uleb128 0x9
+ 758 01af B4000000 		.4byte	.LASF22
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 17
 
 
- 758 0171 00000000 		.4byte	.LASF24
- 759 0175 01       		.byte	0x1
- 760 0176 62       		.byte	0x62
- 761 0177 00000000 		.4byte	.LFB66
- 762 017b 76010000 		.4byte	.LFE66-.LFB66
- 763 017f 01       		.uleb128 0x1
- 764 0180 9C       		.byte	0x9c
- 765 0181 BD010000 		.4byte	0x1bd
- 766 0185 07       		.uleb128 0x7
- 767 0186 696400   		.ascii	"id\000"
- 768 0189 01       		.byte	0x1
- 769 018a 62       		.byte	0x62
- 770 018b 81000000 		.4byte	0x81
- 771 018f 02       		.uleb128 0x2
- 772 0190 91       		.byte	0x91
- 773 0191 6F       		.sleb128 -17
- 774 0192 08       		.uleb128 0x8
- 775 0193 62010000 		.4byte	.LASF19
- 776 0197 01       		.byte	0x1
- 777 0198 62       		.byte	0x62
- 778 0199 99000000 		.4byte	0x99
- 779 019d 02       		.uleb128 0x2
- 780 019e 91       		.byte	0x91
- 781 019f 6C       		.sleb128 -20
- 782 01a0 08       		.uleb128 0x8
- 783 01a1 55010000 		.4byte	.LASF25
- 784 01a5 01       		.byte	0x1
- 785 01a6 62       		.byte	0x62
- 786 01a7 81000000 		.4byte	0x81
- 787 01ab 02       		.uleb128 0x2
- 788 01ac 91       		.byte	0x91
- 789 01ad 6E       		.sleb128 -18
- 790 01ae 09       		.uleb128 0x9
- 791 01af B4000000 		.4byte	.LASF22
- 792 01b3 01       		.byte	0x1
- 793 01b4 73       		.byte	0x73
- 794 01b5 81000000 		.4byte	0x81
- 795 01b9 02       		.uleb128 0x2
- 796 01ba 91       		.byte	0x91
- 797 01bb 77       		.sleb128 -9
- 798 01bc 00       		.byte	0
- 799 01bd 0A       		.uleb128 0xa
- 800 01be F6000000 		.4byte	.LASF29
- 801 01c2 05       		.byte	0x5
- 802 01c3 5506     		.2byte	0x655
- 803 01c5 C9010000 		.4byte	0x1c9
- 804 01c9 0B       		.uleb128 0xb
- 805 01ca 76000000 		.4byte	0x76
- 806 01ce 00       		.byte	0
- 807              		.section	.debug_abbrev,"",%progbits
- 808              	.Ldebug_abbrev0:
- 809 0000 01       		.uleb128 0x1
- 810 0001 11       		.uleb128 0x11
- 811 0002 01       		.byte	0x1
- 812 0003 25       		.uleb128 0x25
- 813 0004 0E       		.uleb128 0xe
- 814 0005 13       		.uleb128 0x13
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 18
+ 759 01b3 01       		.byte	0x1
+ 760 01b4 73       		.byte	0x73
+ 761 01b5 81000000 		.4byte	0x81
+ 762 01b9 02       		.uleb128 0x2
+ 763 01ba 91       		.byte	0x91
+ 764 01bb 77       		.sleb128 -9
+ 765 01bc 00       		.byte	0
+ 766 01bd 0A       		.uleb128 0xa
+ 767 01be F6000000 		.4byte	.LASF29
+ 768 01c2 05       		.byte	0x5
+ 769 01c3 5506     		.2byte	0x655
+ 770 01c5 C9010000 		.4byte	0x1c9
+ 771 01c9 0B       		.uleb128 0xb
+ 772 01ca 76000000 		.4byte	0x76
+ 773 01ce 00       		.byte	0
+ 774              		.section	.debug_abbrev,"",%progbits
+ 775              	.Ldebug_abbrev0:
+ 776 0000 01       		.uleb128 0x1
+ 777 0001 11       		.uleb128 0x11
+ 778 0002 01       		.byte	0x1
+ 779 0003 25       		.uleb128 0x25
+ 780 0004 0E       		.uleb128 0xe
+ 781 0005 13       		.uleb128 0x13
+ 782 0006 0B       		.uleb128 0xb
+ 783 0007 03       		.uleb128 0x3
+ 784 0008 0E       		.uleb128 0xe
+ 785 0009 1B       		.uleb128 0x1b
+ 786 000a 0E       		.uleb128 0xe
+ 787 000b 55       		.uleb128 0x55
+ 788 000c 17       		.uleb128 0x17
+ 789 000d 11       		.uleb128 0x11
+ 790 000e 01       		.uleb128 0x1
+ 791 000f 10       		.uleb128 0x10
+ 792 0010 17       		.uleb128 0x17
+ 793 0011 00       		.byte	0
+ 794 0012 00       		.byte	0
+ 795 0013 02       		.uleb128 0x2
+ 796 0014 24       		.uleb128 0x24
+ 797 0015 00       		.byte	0
+ 798 0016 0B       		.uleb128 0xb
+ 799 0017 0B       		.uleb128 0xb
+ 800 0018 3E       		.uleb128 0x3e
+ 801 0019 0B       		.uleb128 0xb
+ 802 001a 03       		.uleb128 0x3
+ 803 001b 0E       		.uleb128 0xe
+ 804 001c 00       		.byte	0
+ 805 001d 00       		.byte	0
+ 806 001e 03       		.uleb128 0x3
+ 807 001f 16       		.uleb128 0x16
+ 808 0020 00       		.byte	0
+ 809 0021 03       		.uleb128 0x3
+ 810 0022 0E       		.uleb128 0xe
+ 811 0023 3A       		.uleb128 0x3a
+ 812 0024 0B       		.uleb128 0xb
+ 813 0025 3B       		.uleb128 0x3b
+ 814 0026 0B       		.uleb128 0xb
+ 815 0027 49       		.uleb128 0x49
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 18
 
 
- 815 0006 0B       		.uleb128 0xb
- 816 0007 03       		.uleb128 0x3
- 817 0008 0E       		.uleb128 0xe
- 818 0009 1B       		.uleb128 0x1b
- 819 000a 0E       		.uleb128 0xe
- 820 000b 55       		.uleb128 0x55
- 821 000c 17       		.uleb128 0x17
- 822 000d 11       		.uleb128 0x11
- 823 000e 01       		.uleb128 0x1
- 824 000f 10       		.uleb128 0x10
- 825 0010 17       		.uleb128 0x17
- 826 0011 00       		.byte	0
- 827 0012 00       		.byte	0
- 828 0013 02       		.uleb128 0x2
- 829 0014 24       		.uleb128 0x24
- 830 0015 00       		.byte	0
- 831 0016 0B       		.uleb128 0xb
- 832 0017 0B       		.uleb128 0xb
- 833 0018 3E       		.uleb128 0x3e
- 834 0019 0B       		.uleb128 0xb
- 835 001a 03       		.uleb128 0x3
- 836 001b 0E       		.uleb128 0xe
- 837 001c 00       		.byte	0
- 838 001d 00       		.byte	0
- 839 001e 03       		.uleb128 0x3
- 840 001f 16       		.uleb128 0x16
- 841 0020 00       		.byte	0
- 842 0021 03       		.uleb128 0x3
- 843 0022 0E       		.uleb128 0xe
- 844 0023 3A       		.uleb128 0x3a
- 845 0024 0B       		.uleb128 0xb
- 846 0025 3B       		.uleb128 0x3b
- 847 0026 0B       		.uleb128 0xb
- 848 0027 49       		.uleb128 0x49
- 849 0028 13       		.uleb128 0x13
- 850 0029 00       		.byte	0
- 851 002a 00       		.byte	0
- 852 002b 04       		.uleb128 0x4
- 853 002c 24       		.uleb128 0x24
- 854 002d 00       		.byte	0
- 855 002e 0B       		.uleb128 0xb
- 856 002f 0B       		.uleb128 0xb
- 857 0030 3E       		.uleb128 0x3e
- 858 0031 0B       		.uleb128 0xb
- 859 0032 03       		.uleb128 0x3
- 860 0033 08       		.uleb128 0x8
- 861 0034 00       		.byte	0
- 862 0035 00       		.byte	0
- 863 0036 05       		.uleb128 0x5
- 864 0037 16       		.uleb128 0x16
- 865 0038 00       		.byte	0
- 866 0039 03       		.uleb128 0x3
- 867 003a 0E       		.uleb128 0xe
- 868 003b 3A       		.uleb128 0x3a
- 869 003c 0B       		.uleb128 0xb
- 870 003d 3B       		.uleb128 0x3b
- 871 003e 05       		.uleb128 0x5
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 19
+ 816 0028 13       		.uleb128 0x13
+ 817 0029 00       		.byte	0
+ 818 002a 00       		.byte	0
+ 819 002b 04       		.uleb128 0x4
+ 820 002c 24       		.uleb128 0x24
+ 821 002d 00       		.byte	0
+ 822 002e 0B       		.uleb128 0xb
+ 823 002f 0B       		.uleb128 0xb
+ 824 0030 3E       		.uleb128 0x3e
+ 825 0031 0B       		.uleb128 0xb
+ 826 0032 03       		.uleb128 0x3
+ 827 0033 08       		.uleb128 0x8
+ 828 0034 00       		.byte	0
+ 829 0035 00       		.byte	0
+ 830 0036 05       		.uleb128 0x5
+ 831 0037 16       		.uleb128 0x16
+ 832 0038 00       		.byte	0
+ 833 0039 03       		.uleb128 0x3
+ 834 003a 0E       		.uleb128 0xe
+ 835 003b 3A       		.uleb128 0x3a
+ 836 003c 0B       		.uleb128 0xb
+ 837 003d 3B       		.uleb128 0x3b
+ 838 003e 05       		.uleb128 0x5
+ 839 003f 49       		.uleb128 0x49
+ 840 0040 13       		.uleb128 0x13
+ 841 0041 00       		.byte	0
+ 842 0042 00       		.byte	0
+ 843 0043 06       		.uleb128 0x6
+ 844 0044 2E       		.uleb128 0x2e
+ 845 0045 01       		.byte	0x1
+ 846 0046 3F       		.uleb128 0x3f
+ 847 0047 19       		.uleb128 0x19
+ 848 0048 03       		.uleb128 0x3
+ 849 0049 0E       		.uleb128 0xe
+ 850 004a 3A       		.uleb128 0x3a
+ 851 004b 0B       		.uleb128 0xb
+ 852 004c 3B       		.uleb128 0x3b
+ 853 004d 0B       		.uleb128 0xb
+ 854 004e 27       		.uleb128 0x27
+ 855 004f 19       		.uleb128 0x19
+ 856 0050 11       		.uleb128 0x11
+ 857 0051 01       		.uleb128 0x1
+ 858 0052 12       		.uleb128 0x12
+ 859 0053 06       		.uleb128 0x6
+ 860 0054 40       		.uleb128 0x40
+ 861 0055 18       		.uleb128 0x18
+ 862 0056 9642     		.uleb128 0x2116
+ 863 0058 19       		.uleb128 0x19
+ 864 0059 01       		.uleb128 0x1
+ 865 005a 13       		.uleb128 0x13
+ 866 005b 00       		.byte	0
+ 867 005c 00       		.byte	0
+ 868 005d 07       		.uleb128 0x7
+ 869 005e 05       		.uleb128 0x5
+ 870 005f 00       		.byte	0
+ 871 0060 03       		.uleb128 0x3
+ 872 0061 08       		.uleb128 0x8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 19
 
 
- 872 003f 49       		.uleb128 0x49
- 873 0040 13       		.uleb128 0x13
- 874 0041 00       		.byte	0
- 875 0042 00       		.byte	0
- 876 0043 06       		.uleb128 0x6
- 877 0044 2E       		.uleb128 0x2e
- 878 0045 01       		.byte	0x1
- 879 0046 3F       		.uleb128 0x3f
- 880 0047 19       		.uleb128 0x19
- 881 0048 03       		.uleb128 0x3
- 882 0049 0E       		.uleb128 0xe
- 883 004a 3A       		.uleb128 0x3a
- 884 004b 0B       		.uleb128 0xb
- 885 004c 3B       		.uleb128 0x3b
- 886 004d 0B       		.uleb128 0xb
- 887 004e 27       		.uleb128 0x27
- 888 004f 19       		.uleb128 0x19
- 889 0050 11       		.uleb128 0x11
- 890 0051 01       		.uleb128 0x1
- 891 0052 12       		.uleb128 0x12
- 892 0053 06       		.uleb128 0x6
- 893 0054 40       		.uleb128 0x40
- 894 0055 18       		.uleb128 0x18
- 895 0056 9642     		.uleb128 0x2116
- 896 0058 19       		.uleb128 0x19
- 897 0059 01       		.uleb128 0x1
- 898 005a 13       		.uleb128 0x13
- 899 005b 00       		.byte	0
- 900 005c 00       		.byte	0
- 901 005d 07       		.uleb128 0x7
- 902 005e 05       		.uleb128 0x5
- 903 005f 00       		.byte	0
- 904 0060 03       		.uleb128 0x3
- 905 0061 08       		.uleb128 0x8
- 906 0062 3A       		.uleb128 0x3a
- 907 0063 0B       		.uleb128 0xb
- 908 0064 3B       		.uleb128 0x3b
- 909 0065 0B       		.uleb128 0xb
- 910 0066 49       		.uleb128 0x49
- 911 0067 13       		.uleb128 0x13
- 912 0068 02       		.uleb128 0x2
- 913 0069 18       		.uleb128 0x18
- 914 006a 00       		.byte	0
- 915 006b 00       		.byte	0
- 916 006c 08       		.uleb128 0x8
- 917 006d 05       		.uleb128 0x5
- 918 006e 00       		.byte	0
- 919 006f 03       		.uleb128 0x3
- 920 0070 0E       		.uleb128 0xe
- 921 0071 3A       		.uleb128 0x3a
- 922 0072 0B       		.uleb128 0xb
- 923 0073 3B       		.uleb128 0x3b
- 924 0074 0B       		.uleb128 0xb
- 925 0075 49       		.uleb128 0x49
- 926 0076 13       		.uleb128 0x13
- 927 0077 02       		.uleb128 0x2
- 928 0078 18       		.uleb128 0x18
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 20
+ 873 0062 3A       		.uleb128 0x3a
+ 874 0063 0B       		.uleb128 0xb
+ 875 0064 3B       		.uleb128 0x3b
+ 876 0065 0B       		.uleb128 0xb
+ 877 0066 49       		.uleb128 0x49
+ 878 0067 13       		.uleb128 0x13
+ 879 0068 02       		.uleb128 0x2
+ 880 0069 18       		.uleb128 0x18
+ 881 006a 00       		.byte	0
+ 882 006b 00       		.byte	0
+ 883 006c 08       		.uleb128 0x8
+ 884 006d 05       		.uleb128 0x5
+ 885 006e 00       		.byte	0
+ 886 006f 03       		.uleb128 0x3
+ 887 0070 0E       		.uleb128 0xe
+ 888 0071 3A       		.uleb128 0x3a
+ 889 0072 0B       		.uleb128 0xb
+ 890 0073 3B       		.uleb128 0x3b
+ 891 0074 0B       		.uleb128 0xb
+ 892 0075 49       		.uleb128 0x49
+ 893 0076 13       		.uleb128 0x13
+ 894 0077 02       		.uleb128 0x2
+ 895 0078 18       		.uleb128 0x18
+ 896 0079 00       		.byte	0
+ 897 007a 00       		.byte	0
+ 898 007b 09       		.uleb128 0x9
+ 899 007c 34       		.uleb128 0x34
+ 900 007d 00       		.byte	0
+ 901 007e 03       		.uleb128 0x3
+ 902 007f 0E       		.uleb128 0xe
+ 903 0080 3A       		.uleb128 0x3a
+ 904 0081 0B       		.uleb128 0xb
+ 905 0082 3B       		.uleb128 0x3b
+ 906 0083 0B       		.uleb128 0xb
+ 907 0084 49       		.uleb128 0x49
+ 908 0085 13       		.uleb128 0x13
+ 909 0086 02       		.uleb128 0x2
+ 910 0087 18       		.uleb128 0x18
+ 911 0088 00       		.byte	0
+ 912 0089 00       		.byte	0
+ 913 008a 0A       		.uleb128 0xa
+ 914 008b 34       		.uleb128 0x34
+ 915 008c 00       		.byte	0
+ 916 008d 03       		.uleb128 0x3
+ 917 008e 0E       		.uleb128 0xe
+ 918 008f 3A       		.uleb128 0x3a
+ 919 0090 0B       		.uleb128 0xb
+ 920 0091 3B       		.uleb128 0x3b
+ 921 0092 05       		.uleb128 0x5
+ 922 0093 49       		.uleb128 0x49
+ 923 0094 13       		.uleb128 0x13
+ 924 0095 3F       		.uleb128 0x3f
+ 925 0096 19       		.uleb128 0x19
+ 926 0097 3C       		.uleb128 0x3c
+ 927 0098 19       		.uleb128 0x19
+ 928 0099 00       		.byte	0
+ 929 009a 00       		.byte	0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 20
 
 
- 929 0079 00       		.byte	0
- 930 007a 00       		.byte	0
- 931 007b 09       		.uleb128 0x9
- 932 007c 34       		.uleb128 0x34
- 933 007d 00       		.byte	0
- 934 007e 03       		.uleb128 0x3
- 935 007f 0E       		.uleb128 0xe
- 936 0080 3A       		.uleb128 0x3a
- 937 0081 0B       		.uleb128 0xb
- 938 0082 3B       		.uleb128 0x3b
- 939 0083 0B       		.uleb128 0xb
- 940 0084 49       		.uleb128 0x49
- 941 0085 13       		.uleb128 0x13
- 942 0086 02       		.uleb128 0x2
- 943 0087 18       		.uleb128 0x18
- 944 0088 00       		.byte	0
- 945 0089 00       		.byte	0
- 946 008a 0A       		.uleb128 0xa
- 947 008b 34       		.uleb128 0x34
- 948 008c 00       		.byte	0
- 949 008d 03       		.uleb128 0x3
- 950 008e 0E       		.uleb128 0xe
- 951 008f 3A       		.uleb128 0x3a
- 952 0090 0B       		.uleb128 0xb
- 953 0091 3B       		.uleb128 0x3b
- 954 0092 05       		.uleb128 0x5
- 955 0093 49       		.uleb128 0x49
- 956 0094 13       		.uleb128 0x13
- 957 0095 3F       		.uleb128 0x3f
- 958 0096 19       		.uleb128 0x19
- 959 0097 3C       		.uleb128 0x3c
- 960 0098 19       		.uleb128 0x19
- 961 0099 00       		.byte	0
- 962 009a 00       		.byte	0
- 963 009b 0B       		.uleb128 0xb
- 964 009c 35       		.uleb128 0x35
- 965 009d 00       		.byte	0
- 966 009e 49       		.uleb128 0x49
- 967 009f 13       		.uleb128 0x13
- 968 00a0 00       		.byte	0
- 969 00a1 00       		.byte	0
- 970 00a2 00       		.byte	0
- 971              		.section	.debug_aranges,"",%progbits
- 972 0000 34000000 		.4byte	0x34
- 973 0004 0200     		.2byte	0x2
- 974 0006 00000000 		.4byte	.Ldebug_info0
- 975 000a 04       		.byte	0x4
- 976 000b 00       		.byte	0
- 977 000c 0000     		.2byte	0
- 978 000e 0000     		.2byte	0
- 979 0010 00000000 		.4byte	.LFB63
- 980 0014 B0000000 		.4byte	.LFE63-.LFB63
- 981 0018 00000000 		.4byte	.LFB64
- 982 001c 70000000 		.4byte	.LFE64-.LFB64
- 983 0020 00000000 		.4byte	.LFB65
- 984 0024 BE000000 		.4byte	.LFE65-.LFB65
- 985 0028 00000000 		.4byte	.LFB66
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 21
+ 930 009b 0B       		.uleb128 0xb
+ 931 009c 35       		.uleb128 0x35
+ 932 009d 00       		.byte	0
+ 933 009e 49       		.uleb128 0x49
+ 934 009f 13       		.uleb128 0x13
+ 935 00a0 00       		.byte	0
+ 936 00a1 00       		.byte	0
+ 937 00a2 00       		.byte	0
+ 938              		.section	.debug_aranges,"",%progbits
+ 939 0000 34000000 		.4byte	0x34
+ 940 0004 0200     		.2byte	0x2
+ 941 0006 00000000 		.4byte	.Ldebug_info0
+ 942 000a 04       		.byte	0x4
+ 943 000b 00       		.byte	0
+ 944 000c 0000     		.2byte	0
+ 945 000e 0000     		.2byte	0
+ 946 0010 00000000 		.4byte	.LFB63
+ 947 0014 AE000000 		.4byte	.LFE63-.LFB63
+ 948 0018 00000000 		.4byte	.LFB64
+ 949 001c 6A000000 		.4byte	.LFE64-.LFB64
+ 950 0020 00000000 		.4byte	.LFB65
+ 951 0024 B4000000 		.4byte	.LFE65-.LFB65
+ 952 0028 00000000 		.4byte	.LFB66
+ 953 002c 48010000 		.4byte	.LFE66-.LFB66
+ 954 0030 00000000 		.4byte	0
+ 955 0034 00000000 		.4byte	0
+ 956              		.section	.debug_ranges,"",%progbits
+ 957              	.Ldebug_ranges0:
+ 958 0000 00000000 		.4byte	.LFB63
+ 959 0004 AE000000 		.4byte	.LFE63
+ 960 0008 00000000 		.4byte	.LFB64
+ 961 000c 6A000000 		.4byte	.LFE64
+ 962 0010 00000000 		.4byte	.LFB65
+ 963 0014 B4000000 		.4byte	.LFE65
+ 964 0018 00000000 		.4byte	.LFB66
+ 965 001c 48010000 		.4byte	.LFE66
+ 966 0020 00000000 		.4byte	0
+ 967 0024 00000000 		.4byte	0
+ 968              		.section	.debug_line,"",%progbits
+ 969              	.Ldebug_line0:
+ 970 0000 F1010000 		.section	.debug_str,"MS",%progbits,1
+ 970      02004F01 
+ 970      00000201 
+ 970      FB0E0D00 
+ 970      01010101 
+ 971              	.LASF24:
+ 972 0000 5365744D 		.ascii	"SetMotorSpeed\000"
+ 972      6F746F72 
+ 972      53706565 
+ 972      6400
+ 973              	.LASF9:
+ 974 000e 5F5F696E 		.ascii	"__int32_t\000"
+ 974      7433325F 
+ 974      7400
+ 975              	.LASF26:
+ 976 0018 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 976      4320342E 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 21
 
 
- 986 002c 76010000 		.4byte	.LFE66-.LFB66
- 987 0030 00000000 		.4byte	0
- 988 0034 00000000 		.4byte	0
- 989              		.section	.debug_ranges,"",%progbits
- 990              	.Ldebug_ranges0:
- 991 0000 00000000 		.4byte	.LFB63
- 992 0004 B0000000 		.4byte	.LFE63
- 993 0008 00000000 		.4byte	.LFB64
- 994 000c 70000000 		.4byte	.LFE64
- 995 0010 00000000 		.4byte	.LFB65
- 996 0014 BE000000 		.4byte	.LFE65
- 997 0018 00000000 		.4byte	.LFB66
- 998 001c 76010000 		.4byte	.LFE66
- 999 0020 00000000 		.4byte	0
- 1000 0024 00000000 		.4byte	0
- 1001              		.section	.debug_line,"",%progbits
- 1002              	.Ldebug_line0:
- 1003 0000 F6010000 		.section	.debug_str,"MS",%progbits,1
- 1003      02004F01 
- 1003      00000201 
- 1003      FB0E0D00 
- 1003      01010101 
- 1004              	.LASF24:
- 1005 0000 5365744D 		.ascii	"SetMotorSpeed\000"
- 1005      6F746F72 
- 1005      53706565 
- 1005      6400
- 1006              	.LASF9:
- 1007 000e 5F5F696E 		.ascii	"__int32_t\000"
- 1007      7433325F 
- 1007      7400
- 1008              	.LASF26:
- 1009 0018 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1009      4320342E 
- 1009      392E3320 
- 1009      32303135 
- 1009      30333033 
- 1010 004b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1010      20726576 
- 1010      6973696F 
- 1010      6E203232 
- 1010      31323230 
- 1011 007e 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1011      66756E63 
- 1011      74696F6E 
- 1011      2D736563 
- 1011      74696F6E 
- 1012              	.LASF10:
- 1013 00a6 696E7433 		.ascii	"int32_t\000"
- 1013      325F7400 
- 1014              	.LASF14:
- 1015 00ae 666C6F61 		.ascii	"float\000"
- 1015      7400
- 1016              	.LASF22:
- 1017 00b4 63686563 		.ascii	"checksum\000"
- 1017      6B73756D 
+ 976      392E3320 
+ 976      32303135 
+ 976      30333033 
+ 977 004b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 977      20726576 
+ 977      6973696F 
+ 977      6E203232 
+ 977      31323230 
+ 978 007e 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 978      66756E63 
+ 978      74696F6E 
+ 978      2D736563 
+ 978      74696F6E 
+ 979              	.LASF10:
+ 980 00a6 696E7433 		.ascii	"int32_t\000"
+ 980      325F7400 
+ 981              	.LASF14:
+ 982 00ae 666C6F61 		.ascii	"float\000"
+ 982      7400
+ 983              	.LASF22:
+ 984 00b4 63686563 		.ascii	"checksum\000"
+ 984      6B73756D 
+ 984      00
+ 985              	.LASF1:
+ 986 00bd 756E7369 		.ascii	"unsigned char\000"
+ 986      676E6564 
+ 986      20636861 
+ 986      7200
+ 987              	.LASF13:
+ 988 00cb 696E7431 		.ascii	"int16\000"
+ 988      3600
+ 989              	.LASF5:
+ 990 00d1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 990      20756E73 
+ 990      69676E65 
+ 990      6420696E 
+ 990      7400
+ 991              	.LASF3:
+ 992 00e3 73686F72 		.ascii	"short unsigned int\000"
+ 992      7420756E 
+ 992      7369676E 
+ 992      65642069 
+ 992      6E7400
+ 993              	.LASF29:
+ 994 00f6 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 994      52784275 
+ 994      66666572 
+ 994      00
+ 995              	.LASF15:
+ 996 0103 646F7562 		.ascii	"double\000"
+ 996      6C6500
+ 997              	.LASF2:
+ 998 010a 73686F72 		.ascii	"short int\000"
+ 998      7420696E 
+ 998      7400
+ 999              	.LASF12:
+ 1000 0114 75696E74 		.ascii	"uint16\000"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 22
+
+
+ 1000      313600
+ 1001              	.LASF18:
+ 1002 011b 706F7369 		.ascii	"position\000"
+ 1002      74696F6E 
+ 1002      00
+ 1003              	.LASF8:
+ 1004 0124 756E7369 		.ascii	"unsigned int\000"
+ 1004      676E6564 
+ 1004      20696E74 
+ 1004      00
+ 1005              	.LASF21:
+ 1006 0131 53657453 		.ascii	"SetServoMode\000"
+ 1006      6572766F 
+ 1006      4D6F6465 
+ 1006      00
+ 1007              	.LASF28:
+ 1008 013e 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\Servo\\Workspace\\Serv"
+ 1008      726F6A65 
+ 1008      6374735C 
+ 1008      4553445C 
+ 1008      4553445F 
+ 1009 016b 6F2E6379 		.ascii	"o.cydsn\000"
+ 1009      64736E00 
+ 1010              	.LASF7:
+ 1011 0173 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1011      206C6F6E 
+ 1011      6720756E 
+ 1011      7369676E 
+ 1011      65642069 
+ 1012              	.LASF25:
+ 1013 018a 61636365 		.ascii	"acceleration\000"
+ 1013      6C657261 
+ 1013      74696F6E 
+ 1013      00
+ 1014              	.LASF19:
+ 1015 0197 73706565 		.ascii	"speed\000"
+ 1015      6400
+ 1016              	.LASF17:
+ 1017 019d 73697A65 		.ascii	"sizetype\000"
+ 1017      74797065 
  1017      00
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 22
+ 1018              	.LASF20:
+ 1019 01a6 53657453 		.ascii	"SetServoPosition\000"
+ 1019      6572766F 
+ 1019      506F7369 
+ 1019      74696F6E 
+ 1019      00
+ 1020              	.LASF6:
+ 1021 01b7 6C6F6E67 		.ascii	"long long int\000"
+ 1021      206C6F6E 
+ 1021      6720696E 
+ 1021      7400
+ 1022              	.LASF16:
+ 1023 01c5 63686172 		.ascii	"char\000"
+ 1023      00
+ 1024              	.LASF27:
+ 1025 01ca 2E5C5365 		.ascii	".\\ServoMotor.c\000"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccANxde9.s 			page 23
 
 
- 1018              	.LASF1:
- 1019 00bd 756E7369 		.ascii	"unsigned char\000"
- 1019      676E6564 
- 1019      20636861 
- 1019      7200
- 1020              	.LASF13:
- 1021 00cb 696E7431 		.ascii	"int16\000"
- 1021      3600
- 1022              	.LASF5:
- 1023 00d1 6C6F6E67 		.ascii	"long unsigned int\000"
- 1023      20756E73 
- 1023      69676E65 
- 1023      6420696E 
- 1023      7400
- 1024              	.LASF3:
- 1025 00e3 73686F72 		.ascii	"short unsigned int\000"
- 1025      7420756E 
- 1025      7369676E 
- 1025      65642069 
- 1025      6E7400
- 1026              	.LASF29:
- 1027 00f6 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 1027      52784275 
- 1027      66666572 
- 1027      00
- 1028              	.LASF15:
- 1029 0103 646F7562 		.ascii	"double\000"
- 1029      6C6500
- 1030              	.LASF2:
- 1031 010a 73686F72 		.ascii	"short int\000"
- 1031      7420696E 
- 1031      7400
- 1032              	.LASF12:
- 1033 0114 75696E74 		.ascii	"uint16\000"
- 1033      313600
- 1034              	.LASF18:
- 1035 011b 706F7369 		.ascii	"position\000"
- 1035      74696F6E 
- 1035      00
- 1036              	.LASF8:
- 1037 0124 756E7369 		.ascii	"unsigned int\000"
- 1037      676E6564 
- 1037      20696E74 
- 1037      00
- 1038              	.LASF21:
- 1039 0131 53657453 		.ascii	"SetServoMode\000"
- 1039      6572766F 
- 1039      4D6F6465 
- 1039      00
- 1040              	.LASF7:
- 1041 013e 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1041      206C6F6E 
- 1041      6720756E 
- 1041      7369676E 
- 1041      65642069 
- 1042              	.LASF25:
- 1043 0155 61636365 		.ascii	"acceleration\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccFOB2xM.s 			page 23
-
-
- 1043      6C657261 
- 1043      74696F6E 
- 1043      00
- 1044              	.LASF19:
- 1045 0162 73706565 		.ascii	"speed\000"
- 1045      6400
- 1046              	.LASF17:
- 1047 0168 73697A65 		.ascii	"sizetype\000"
- 1047      74797065 
- 1047      00
- 1048              	.LASF20:
- 1049 0171 53657453 		.ascii	"SetServoPosition\000"
- 1049      6572766F 
- 1049      506F7369 
- 1049      74696F6E 
- 1049      00
- 1050              	.LASF6:
- 1051 0182 6C6F6E67 		.ascii	"long long int\000"
- 1051      206C6F6E 
- 1051      6720696E 
- 1051      7400
- 1052              	.LASF16:
- 1053 0190 63686172 		.ascii	"char\000"
- 1053      00
- 1054              	.LASF27:
- 1055 0195 2E5C5365 		.ascii	".\\ServoMotor.c\000"
- 1055      72766F4D 
- 1055      6F746F72 
- 1055      2E6300
- 1056              	.LASF28:
- 1057 01a4 443A5C50 		.ascii	"D:\\Projects\\ESD\\Servo\\Workspace\\Servo.cydsn\000"
- 1057      726F6A65 
- 1057      6374735C 
- 1057      4553445C 
- 1057      53657276 
- 1058              	.LASF11:
- 1059 01d0 75696E74 		.ascii	"uint8\000"
- 1059      3800
- 1060              	.LASF4:
- 1061 01d6 6C6F6E67 		.ascii	"long int\000"
- 1061      20696E74 
- 1061      00
- 1062              	.LASF0:
- 1063 01df 7369676E 		.ascii	"signed char\000"
- 1063      65642063 
- 1063      68617200 
- 1064              	.LASF23:
- 1065 01eb 5365744D 		.ascii	"SetMotorMode\000"
- 1065      6F746F72 
- 1065      4D6F6465 
- 1065      00
- 1066              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 1025      72766F4D 
+ 1025      6F746F72 
+ 1025      2E6300
+ 1026              	.LASF11:
+ 1027 01d9 75696E74 		.ascii	"uint8\000"
+ 1027      3800
+ 1028              	.LASF4:
+ 1029 01df 6C6F6E67 		.ascii	"long int\000"
+ 1029      20696E74 
+ 1029      00
+ 1030              	.LASF0:
+ 1031 01e8 7369676E 		.ascii	"signed char\000"
+ 1031      65642063 
+ 1031      68617200 
+ 1032              	.LASF23:
+ 1033 01f4 5365744D 		.ascii	"SetMotorMode\000"
+ 1033      6F746F72 
+ 1033      4D6F6465 
+ 1033      00
+ 1034              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

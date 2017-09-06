@@ -1,0 +1,1534 @@
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global _printf_float
+  19              		.thumb
+  20              		.global	dataReady_L
+  21              		.bss
+  22              		.type	dataReady_L, %object
+  23              		.size	dataReady_L, 1
+  24              	dataReady_L:
+  25 0000 00       		.space	1
+  26              		.global	result_L
+  27 0001 000000   		.align	2
+  28              		.type	result_L, %object
+  29              		.size	result_L, 40
+  30              	result_L:
+  31 0004 00000000 		.space	40
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  32              		.global	dataReady_R
+  33              		.type	dataReady_R, %object
+  34              		.size	dataReady_R, 1
+  35              	dataReady_R:
+  36 002c 00       		.space	1
+  37              		.global	result_R
+  38 002d 000000   		.align	2
+  39              		.type	result_R, %object
+  40              		.size	result_R, 40
+  41              	result_R:
+  42 0030 00000000 		.space	40
+  42      00000000 
+  42      00000000 
+  42      00000000 
+  42      00000000 
+  43              		.section	.text.InterruptHandler,"ax",%progbits
+  44              		.align	2
+  45              		.global	InterruptHandler
+  46              		.thumb
+  47              		.thumb_func
+  48              		.type	InterruptHandler, %function
+  49              	InterruptHandler:
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 2
+
+
+  50              	.LFB63:
+  51              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 2.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  The SAR ADC and PrISM datasheet example project.
+   8:.\main.c      **** *  This example project demonstrates SAR ADC measurements and transferring
+   9:.\main.c      **** *  results using ISR and DMA to the LCD and PrISM.
+  10:.\main.c      **** *
+  11:.\main.c      **** * Note:
+  12:.\main.c      **** *  Pin_Vin pin (P1[4]) should be connected to the VR.
+  13:.\main.c      **** *  Pin_LED pin (P1[6]) should be connected to the LED.
+  14:.\main.c      **** *  Verify that VR_PWR(J11) is jumpered to ON.
+  15:.\main.c      **** *
+  16:.\main.c      **** * Hardware Dependency:
+  17:.\main.c      **** *  CY8C55 Family Processor
+  18:.\main.c      **** *
+  19:.\main.c      **** ********************************************************************************
+  20:.\main.c      **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  21:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  22:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  23:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  24:.\main.c      **** * accompanying the software package from which you obtained this software.
+  25:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  26:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  27:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  28:.\main.c      **** *******************************************************************************/
+  29:.\main.c      **** 
+  30:.\main.c      **** #include <device.h>
+  31:.\main.c      **** #include <stdio.h>
+  32:.\main.c      **** #include "ServoMotor.h"
+  33:.\main.c      **** #include "pid.h"
+  34:.\main.c      **** 
+  35:.\main.c      **** #if defined (__GNUC__)
+  36:.\main.c      ****     /* Add an explicit reference to the floating point printf library */
+  37:.\main.c      ****     /* to allow the usage of floating point conversion specifiers. */
+  38:.\main.c      ****     /* This is not linked in by default with the newlib-nano library. */
+  39:.\main.c      ****     asm (".global _printf_float");
+  40:.\main.c      **** #endif
+  41:.\main.c      **** 
+  42:.\main.c      **** #define size 20
+  43:.\main.c      **** 
+  44:.\main.c      **** uint8 dataReady_L = 0u;
+  45:.\main.c      **** uint16 result_L[size] = {0};
+  46:.\main.c      **** uint8 dataReady_R = 0u;
+  47:.\main.c      **** uint16 result_R[size] = {0};
+  48:.\main.c      **** 
+  49:.\main.c      **** //extern uint16 ADC_L;
+  50:.\main.c      **** //extern uint16 ADC_R;
+  51:.\main.c      **** 
+  52:.\main.c      **** CY_ISR(InterruptHandler)
+  53:.\main.c      **** {
+  52              		.loc 1 53 0
+  53              		.cfi_startproc
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 3
+
+
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 1, uses_anonymous_args = 0
+  56              		@ link register save eliminated.
+  57 0000 80B4     		push	{r7}
+  58              		.cfi_def_cfa_offset 4
+  59              		.cfi_offset 7, -4
+  60 0002 00AF     		add	r7, sp, #0
+  61              		.cfi_def_cfa_register 7
+  54:.\main.c      **** 	/* Read Status register in order to clear the sticky Terminal Count (TC) bit 
+  55:.\main.c      **** 	 * in the status register. Note that the function is not called, but rather 
+  56:.\main.c      **** 	 * the status is read directly.
+  57:.\main.c      **** 	 */
+  58:.\main.c      ****    	Timer_1_STATUS;
+  62              		.loc 1 58 0
+  63 0004 024B     		ldr	r3, .L2
+  64 0006 1B78     		ldrb	r3, [r3]
+  59:.\main.c      ****     
+  60:.\main.c      **** 	/* Increment the Counter to indicate the keep track of the number of 
+  61:.\main.c      ****      * interrupts received */
+  62:.\main.c      ****     //PID();   
+  63:.\main.c      **** }
+  65              		.loc 1 63 0
+  66 0008 BD46     		mov	sp, r7
+  67              		.cfi_def_cfa_register 13
+  68              		@ sp needed
+  69 000a 5DF8047B 		ldr	r7, [sp], #4
+  70              		.cfi_restore 7
+  71              		.cfi_def_cfa_offset 0
+  72 000e 7047     		bx	lr
+  73              	.L3:
+  74              		.align	2
+  75              	.L2:
+  76 0010 65650040 		.word	1073767781
+  77              		.cfi_endproc
+  78              	.LFE63:
+  79              		.size	InterruptHandler, .-InterruptHandler
+  80              		.section	.text.ADC_SAR_R_ISR_LOC,"ax",%progbits
+  81              		.align	2
+  82              		.global	ADC_SAR_R_ISR_LOC
+  83              		.thumb
+  84              		.thumb_func
+  85              		.type	ADC_SAR_R_ISR_LOC, %function
+  86              	ADC_SAR_R_ISR_LOC:
+  87              	.LFB64:
+  64:.\main.c      **** 
+  65:.\main.c      **** CY_ISR(ADC_SAR_R_ISR_LOC)
+  66:.\main.c      **** {
+  88              		.loc 1 66 0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 1, uses_anonymous_args = 0
+  92              		@ link register save eliminated.
+  93 0000 80B4     		push	{r7}
+  94              		.cfi_def_cfa_offset 4
+  95              		.cfi_offset 7, -4
+  96 0002 00AF     		add	r7, sp, #0
+  97              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 4
+
+
+  67:.\main.c      ****         ADC_R = CY_GET_REG16(ADC_SAR_R_SAR_WRK_PTR);
+  98              		.loc 1 67 0
+  99 0004 064B     		ldr	r3, .L5
+ 100 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ 101 0008 9BB2     		uxth	r3, r3
+ 102 000a 9AB2     		uxth	r2, r3
+ 103 000c 054B     		ldr	r3, .L5+4
+ 104 000e 1A80     		strh	r2, [r3]	@ movhi
+  68:.\main.c      ****         dataReady_R = 1u;
+ 105              		.loc 1 68 0
+ 106 0010 054B     		ldr	r3, .L5+8
+ 107 0012 0122     		movs	r2, #1
+ 108 0014 1A70     		strb	r2, [r3]
+  69:.\main.c      **** }
+ 109              		.loc 1 69 0
+ 110 0016 BD46     		mov	sp, r7
+ 111              		.cfi_def_cfa_register 13
+ 112              		@ sp needed
+ 113 0018 5DF8047B 		ldr	r7, [sp], #4
+ 114              		.cfi_restore 7
+ 115              		.cfi_def_cfa_offset 0
+ 116 001c 7047     		bx	lr
+ 117              	.L6:
+ 118 001e 00BF     		.align	2
+ 119              	.L5:
+ 120 0020 A25B0040 		.word	1073765282
+ 121 0024 00000000 		.word	ADC_R
+ 122 0028 00000000 		.word	dataReady_R
+ 123              		.cfi_endproc
+ 124              	.LFE64:
+ 125              		.size	ADC_SAR_R_ISR_LOC, .-ADC_SAR_R_ISR_LOC
+ 126              		.section	.text.ADC_SAR_L_ISR_LOC,"ax",%progbits
+ 127              		.align	2
+ 128              		.global	ADC_SAR_L_ISR_LOC
+ 129              		.thumb
+ 130              		.thumb_func
+ 131              		.type	ADC_SAR_L_ISR_LOC, %function
+ 132              	ADC_SAR_L_ISR_LOC:
+ 133              	.LFB65:
+  70:.\main.c      **** CY_ISR(ADC_SAR_L_ISR_LOC)
+  71:.\main.c      **** {
+ 134              		.loc 1 71 0
+ 135              		.cfi_startproc
+ 136              		@ args = 0, pretend = 0, frame = 0
+ 137              		@ frame_needed = 1, uses_anonymous_args = 0
+ 138              		@ link register save eliminated.
+ 139 0000 80B4     		push	{r7}
+ 140              		.cfi_def_cfa_offset 4
+ 141              		.cfi_offset 7, -4
+ 142 0002 00AF     		add	r7, sp, #0
+ 143              		.cfi_def_cfa_register 7
+  72:.\main.c      ****         ADC_L = CY_GET_REG16(ADC_SAR_L_SAR_WRK_PTR);
+ 144              		.loc 1 72 0
+ 145 0004 064B     		ldr	r3, .L8
+ 146 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ 147 0008 9BB2     		uxth	r3, r3
+ 148 000a 9AB2     		uxth	r2, r3
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 5
+
+
+ 149 000c 054B     		ldr	r3, .L8+4
+ 150 000e 1A80     		strh	r2, [r3]	@ movhi
+  73:.\main.c      ****         dataReady_L = 1u;
+ 151              		.loc 1 73 0
+ 152 0010 054B     		ldr	r3, .L8+8
+ 153 0012 0122     		movs	r2, #1
+ 154 0014 1A70     		strb	r2, [r3]
+  74:.\main.c      **** }
+ 155              		.loc 1 74 0
+ 156 0016 BD46     		mov	sp, r7
+ 157              		.cfi_def_cfa_register 13
+ 158              		@ sp needed
+ 159 0018 5DF8047B 		ldr	r7, [sp], #4
+ 160              		.cfi_restore 7
+ 161              		.cfi_def_cfa_offset 0
+ 162 001c 7047     		bx	lr
+ 163              	.L9:
+ 164 001e 00BF     		.align	2
+ 165              	.L8:
+ 166 0020 A05B0040 		.word	1073765280
+ 167 0024 00000000 		.word	ADC_L
+ 168 0028 00000000 		.word	dataReady_L
+ 169              		.cfi_endproc
+ 170              	.LFE65:
+ 171              		.size	ADC_SAR_L_ISR_LOC, .-ADC_SAR_L_ISR_LOC
+ 172              		.section	.rodata
+ 173              		.align	2
+ 174              	.LC0:
+ 175 0000 41444331 		.ascii	"ADC1=      V\000"
+ 175      3D202020 
+ 175      20202056 
+ 175      00
+ 176 000d 000000   		.align	2
+ 177              	.LC1:
+ 178 0010 41444332 		.ascii	"ADC2=      V\000"
+ 178      3D202020 
+ 178      20202056 
+ 178      00
+ 179              		.global	__aeabi_f2d
+ 180 001d 000000   		.align	2
+ 181              	.LC2:
+ 182 0020 252B312E 		.ascii	"%+1.2f\000"
+ 182      326600
+ 183              		.global	__aeabi_i2f
+ 184              		.global	__aeabi_fadd
+ 185              		.global	__aeabi_fdiv
+ 186              		.global	__aeabi_f2uiz
+ 187 0027 00       		.align	2
+ 188              	.LC3:
+ 189 0028 20202020 		.ascii	"     \000"
+ 189      2000
+ 190 002e 0000     		.section	.text.main,"ax",%progbits
+ 191              		.align	2
+ 192              		.global	main
+ 193              		.thumb
+ 194              		.thumb_func
+ 195              		.type	main, %function
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 6
+
+
+ 196              	main:
+ 197              	.LFB66:
+  75:.\main.c      **** 
+  76:.\main.c      **** /*******************************************************************************
+  77:.\main.c      **** * Function Name: main
+  78:.\main.c      **** ********************************************************************************
+  79:.\main.c      **** *
+  80:.\main.c      **** * Summary:
+  81:.\main.c      **** *  Main function performs following functions:
+  82:.\main.c      **** *   1. Initialises the DMA to move data from ADC_SAR_1 work registers to the
+  83:.\main.c      **** *      PrISM pulse density registers.
+  84:.\main.c      **** *   2. Initialises the ISR connected to the DMA nrq terminal(DMA done).
+  85:.\main.c      **** *   3. Initialises the LCD.
+  86:.\main.c      **** *   4. Initialises the PrISM with 1Mhz clock.
+  87:.\main.c      **** *   5. Initialises the two SAR ADCs.
+  88:.\main.c      **** *   6. Displays the results of ADC_SAR_1 when DmaDone ISR rises.
+  89:.\main.c      **** *      The results are read from PrISM pulse density register.
+  90:.\main.c      **** *   7. Displays the results of ADC_SAR_2 when internal EOC ISR rises.
+  91:.\main.c      **** *
+  92:.\main.c      **** * Parameters:
+  93:.\main.c      **** *  None.
+  94:.\main.c      **** *
+  95:.\main.c      **** * Return:
+  96:.\main.c      **** *  None.
+  97:.\main.c      **** *
+  98:.\main.c      **** *******************************************************************************/
+  99:.\main.c      **** int main()
+ 100:.\main.c      **** {
+ 198              		.loc 1 100 0
+ 199              		.cfi_startproc
+ 200              		@ args = 0, pretend = 0, frame = 32
+ 201              		@ frame_needed = 1, uses_anonymous_args = 0
+ 202 0000 B0B5     		push	{r4, r5, r7, lr}
+ 203              		.cfi_def_cfa_offset 16
+ 204              		.cfi_offset 4, -16
+ 205              		.cfi_offset 5, -12
+ 206              		.cfi_offset 7, -8
+ 207              		.cfi_offset 14, -4
+ 208 0002 88B0     		sub	sp, sp, #32
+ 209              		.cfi_def_cfa_offset 48
+ 210 0004 00AF     		add	r7, sp, #0
+ 211              		.cfi_def_cfa_register 7
+ 101:.\main.c      ****     char8 resultStr[16u];
+ 102:.\main.c      ****     float res;
+ 103:.\main.c      ****     float sum;
+ 104:.\main.c      ****     uint16 L,R;
+ 105:.\main.c      ****     /* Initializes the LCD. */
+ 106:.\main.c      ****     LCD_Start();
+ 212              		.loc 1 106 0
+ 213 0006 FFF7FEFF 		bl	LCD_Start
+ 107:.\main.c      ****     LCD_Position(0u,0u);
+ 214              		.loc 1 107 0
+ 215 000a 0020     		movs	r0, #0
+ 216 000c 0021     		movs	r1, #0
+ 217 000e FFF7FEFF 		bl	LCD_Position
+ 108:.\main.c      ****     LCD_PrintString("ADC1=      V");
+ 218              		.loc 1 108 0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 7
+
+
+ 219 0012 8748     		ldr	r0, .L18
+ 220 0014 FFF7FEFF 		bl	LCD_PrintString
+ 109:.\main.c      ****     LCD_Position(1u,0u);
+ 221              		.loc 1 109 0
+ 222 0018 0120     		movs	r0, #1
+ 223 001a 0021     		movs	r1, #0
+ 224 001c FFF7FEFF 		bl	LCD_Position
+ 110:.\main.c      ****     LCD_PrintString("ADC2=      V");
+ 225              		.loc 1 110 0
+ 226 0020 8448     		ldr	r0, .L18+4
+ 227 0022 FFF7FEFF 		bl	LCD_PrintString
+ 111:.\main.c      **** 
+ 112:.\main.c      **** 
+ 113:.\main.c      **** 
+ 114:.\main.c      ****     ADC_SAR_L_Start();
+ 228              		.loc 1 114 0
+ 229 0026 FFF7FEFF 		bl	ADC_SAR_L_Start
+ 115:.\main.c      ****     ADC_SAR_L_IRQ_StartEx(ADC_SAR_L_ISR_LOC);
+ 230              		.loc 1 115 0
+ 231 002a 8348     		ldr	r0, .L18+8
+ 232 002c FFF7FEFF 		bl	ADC_SAR_L_IRQ_StartEx
+ 116:.\main.c      ****     ADC_SAR_L_StartConvert();
+ 233              		.loc 1 116 0
+ 234 0030 FFF7FEFF 		bl	ADC_SAR_L_StartConvert
+ 117:.\main.c      ****     ADC_SAR_R_Start();
+ 235              		.loc 1 117 0
+ 236 0034 FFF7FEFF 		bl	ADC_SAR_R_Start
+ 118:.\main.c      ****     ADC_SAR_R_IRQ_StartEx(ADC_SAR_R_ISR_LOC);
+ 237              		.loc 1 118 0
+ 238 0038 8048     		ldr	r0, .L18+12
+ 239 003a FFF7FEFF 		bl	ADC_SAR_R_IRQ_StartEx
+ 119:.\main.c      ****     ADC_SAR_R_StartConvert();
+ 240              		.loc 1 119 0
+ 241 003e FFF7FEFF 		bl	ADC_SAR_R_StartConvert
+ 120:.\main.c      ****     TimerISR_StartEx(InterruptHandler);
+ 242              		.loc 1 120 0
+ 243 0042 7F48     		ldr	r0, .L18+16
+ 244 0044 FFF7FEFF 		bl	TimerISR_StartEx
+ 121:.\main.c      ****     Timer_1_Start();
+ 245              		.loc 1 121 0
+ 246 0048 FFF7FEFF 		bl	Timer_1_Start
+ 122:.\main.c      ****     CyGlobalIntEnable;
+ 247              		.loc 1 122 0
+ 248              	@ 122 ".\main.c" 1
+ 249 004c 62B6     		CPSIE   i
+ 250              	@ 0 "" 2
+ 123:.\main.c      ****     
+ 124:.\main.c      ****     UART_1_Start();
+ 251              		.loc 1 124 0
+ 252              		.thumb
+ 253 004e FFF7FEFF 		bl	UART_1_Start
+ 125:.\main.c      ****     UART_2_Start();
+ 254              		.loc 1 125 0
+ 255 0052 FFF7FEFF 		bl	UART_2_Start
+ 126:.\main.c      ****     UART_3_Start();
+ 256              		.loc 1 126 0
+ 257 0056 FFF7FEFF 		bl	UART_3_Start
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 8
+
+
+ 127:.\main.c      ****     
+ 128:.\main.c      ****     SetServoMode(_TOP);
+ 258              		.loc 1 128 0
+ 259 005a 0020     		movs	r0, #0
+ 260 005c FFF7FEFF 		bl	SetServoMode
+ 129:.\main.c      ****     SetMotorMode(_LEFT);
+ 261              		.loc 1 129 0
+ 262 0060 0120     		movs	r0, #1
+ 263 0062 FFF7FEFF 		bl	SetMotorMode
+ 130:.\main.c      ****     SetMotorMode(_RIGHT);
+ 264              		.loc 1 130 0
+ 265 0066 0220     		movs	r0, #2
+ 266 0068 FFF7FEFF 		bl	SetMotorMode
+ 131:.\main.c      ****     CyDelay(100);
+ 267              		.loc 1 131 0
+ 268 006c 6420     		movs	r0, #100
+ 269 006e FFF7FEFF 		bl	CyDelay
+ 270              	.L17:
+ 271              	.LBB2:
+ 132:.\main.c      **** //    
+ 133:.\main.c      **** //    SetMotorSpeed(_LEFT, 256, 0x20);
+ 134:.\main.c      **** //    SetMotorSpeed(_RIGHT, -256, 0x20);
+ 135:.\main.c      **** 
+ 136:.\main.c      ****     for(;;)
+ 137:.\main.c      ****     {
+ 138:.\main.c      ****         uint8 i,j;
+ 139:.\main.c      **** //        for (i = 0; i < 0xF; i++)
+ 140:.\main.c      **** //        {
+ 141:.\main.c      **** //            SetServoPosition(_TOP, 0x20 * i, 0x03ff);
+ 142:.\main.c      **** //            CyDelay(500);
+ 143:.\main.c      **** //        }
+ 144:.\main.c      ****         if(dataReady_L != 0u)
+ 272              		.loc 1 144 0
+ 273 0072 744B     		ldr	r3, .L18+20
+ 274 0074 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 275 0076 002B     		cmp	r3, #0
+ 276 0078 67D0     		beq	.L11
+ 145:.\main.c      ****         {
+ 146:.\main.c      ****             sum = 0;
+ 277              		.loc 1 146 0
+ 278 007a 4FF00003 		mov	r3, #0
+ 279 007e FB61     		str	r3, [r7, #28]	@ float
+ 147:.\main.c      ****             res = ADC_SAR_L_CountsTo_Volts(ADC_L);
+ 280              		.loc 1 147 0
+ 281 0080 714B     		ldr	r3, .L18+24
+ 282 0082 1B88     		ldrh	r3, [r3]
+ 283 0084 1BB2     		sxth	r3, r3
+ 284 0086 1846     		mov	r0, r3
+ 285 0088 FFF7FEFF 		bl	ADC_SAR_L_CountsTo_Volts
+ 286 008c 7861     		str	r0, [r7, #20]	@ float
+ 148:.\main.c      ****             sprintf((char *)resultStr,"%+1.2f",res);
+ 287              		.loc 1 148 0
+ 288 008e 7869     		ldr	r0, [r7, #20]	@ float
+ 289 0090 FFF7FEFF 		bl	__aeabi_f2d
+ 290 0094 0446     		mov	r4, r0
+ 291 0096 0D46     		mov	r5, r1
+ 292 0098 3B46     		mov	r3, r7
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 9
+
+
+ 293 009a 1846     		mov	r0, r3
+ 294 009c 6B49     		ldr	r1, .L18+28
+ 295 009e 2246     		mov	r2, r4
+ 296 00a0 2B46     		mov	r3, r5
+ 297 00a2 FFF7FEFF 		bl	sprintf
+ 149:.\main.c      ****             for(j=0;j<size-1;j++)
+ 298              		.loc 1 149 0
+ 299 00a6 0023     		movs	r3, #0
+ 300 00a8 FB76     		strb	r3, [r7, #27]
+ 301 00aa 1AE0     		b	.L12
+ 302              	.L13:
+ 150:.\main.c      ****             {
+ 151:.\main.c      ****                 result_L[j] = result_L[j+1];
+ 303              		.loc 1 151 0 discriminator 3
+ 304 00ac FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 305 00ae FA7E     		ldrb	r2, [r7, #27]	@ zero_extendqisi2
+ 306 00b0 0132     		adds	r2, r2, #1
+ 307 00b2 6749     		ldr	r1, .L18+32
+ 308 00b4 31F81210 		ldrh	r1, [r1, r2, lsl #1]
+ 309 00b8 654A     		ldr	r2, .L18+32
+ 310 00ba 22F81310 		strh	r1, [r2, r3, lsl #1]	@ movhi
+ 152:.\main.c      ****                 sum += result_L[j+1];
+ 311              		.loc 1 152 0 discriminator 3
+ 312 00be FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 313 00c0 0133     		adds	r3, r3, #1
+ 314 00c2 634A     		ldr	r2, .L18+32
+ 315 00c4 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 316 00c8 1846     		mov	r0, r3
+ 317 00ca FFF7FEFF 		bl	__aeabi_i2f
+ 318 00ce 0346     		mov	r3, r0
+ 319 00d0 F869     		ldr	r0, [r7, #28]	@ float
+ 320 00d2 1946     		mov	r1, r3
+ 321 00d4 FFF7FEFF 		bl	__aeabi_fadd
+ 322 00d8 0346     		mov	r3, r0
+ 323 00da FB61     		str	r3, [r7, #28]	@ float
+ 149:.\main.c      ****             for(j=0;j<size-1;j++)
+ 324              		.loc 1 149 0 discriminator 3
+ 325 00dc FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 326 00de 0133     		adds	r3, r3, #1
+ 327 00e0 FB76     		strb	r3, [r7, #27]
+ 328              	.L12:
+ 149:.\main.c      ****             for(j=0;j<size-1;j++)
+ 329              		.loc 1 149 0 is_stmt 0 discriminator 1
+ 330 00e2 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 331 00e4 122B     		cmp	r3, #18
+ 332 00e6 E1D9     		bls	.L13
+ 153:.\main.c      ****             }
+ 154:.\main.c      ****             result_L[size - 1] = ADC_L;
+ 333              		.loc 1 154 0 is_stmt 1
+ 334 00e8 574B     		ldr	r3, .L18+24
+ 335 00ea 1B88     		ldrh	r3, [r3]
+ 336 00ec 9AB2     		uxth	r2, r3
+ 337 00ee 584B     		ldr	r3, .L18+32
+ 338 00f0 DA84     		strh	r2, [r3, #38]	@ movhi
+ 155:.\main.c      ****             sum = (sum+ADC_L)/size;
+ 339              		.loc 1 155 0
+ 340 00f2 554B     		ldr	r3, .L18+24
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 10
+
+
+ 341 00f4 1B88     		ldrh	r3, [r3]
+ 342 00f6 1BB2     		sxth	r3, r3
+ 343 00f8 1846     		mov	r0, r3
+ 344 00fa FFF7FEFF 		bl	__aeabi_i2f
+ 345 00fe 0346     		mov	r3, r0
+ 346 0100 1846     		mov	r0, r3
+ 347 0102 F969     		ldr	r1, [r7, #28]	@ float
+ 348 0104 FFF7FEFF 		bl	__aeabi_fadd
+ 349 0108 0346     		mov	r3, r0
+ 350 010a 1846     		mov	r0, r3
+ 351 010c 5149     		ldr	r1, .L18+36
+ 352 010e FFF7FEFF 		bl	__aeabi_fdiv
+ 353 0112 0346     		mov	r3, r0
+ 354 0114 FB61     		str	r3, [r7, #28]	@ float
+ 156:.\main.c      ****             L = sum;
+ 355              		.loc 1 156 0
+ 356 0116 F869     		ldr	r0, [r7, #28]	@ float
+ 357 0118 FFF7FEFF 		bl	__aeabi_f2uiz
+ 358 011c 0346     		mov	r3, r0
+ 359 011e 3B82     		strh	r3, [r7, #16]	@ movhi
+ 157:.\main.c      ****             LCD_Position(0u,5u);
+ 360              		.loc 1 157 0
+ 361 0120 0020     		movs	r0, #0
+ 362 0122 0521     		movs	r1, #5
+ 363 0124 FFF7FEFF 		bl	LCD_Position
+ 158:.\main.c      ****             LCD_PrintString("     ");
+ 364              		.loc 1 158 0
+ 365 0128 4B48     		ldr	r0, .L18+40
+ 366 012a FFF7FEFF 		bl	LCD_PrintString
+ 159:.\main.c      ****             //LCD_PrintString(resultStr);
+ 160:.\main.c      ****             LCD_Position(0u,5u);
+ 367              		.loc 1 160 0
+ 368 012e 0020     		movs	r0, #0
+ 369 0130 0521     		movs	r1, #5
+ 370 0132 FFF7FEFF 		bl	LCD_Position
+ 161:.\main.c      ****             LCD_PrintNumber(L);
+ 371              		.loc 1 161 0
+ 372 0136 3B8A     		ldrh	r3, [r7, #16]
+ 373 0138 1846     		mov	r0, r3
+ 374 013a FFF7FEFF 		bl	LCD_PrintU32Number
+ 162:.\main.c      ****             dataReady_L = 0u;
+ 375              		.loc 1 162 0
+ 376 013e 414B     		ldr	r3, .L18+20
+ 377 0140 0022     		movs	r2, #0
+ 378 0142 1A70     		strb	r2, [r3]
+ 163:.\main.c      ****             CyDelay(1);
+ 379              		.loc 1 163 0
+ 380 0144 0120     		movs	r0, #1
+ 381 0146 FFF7FEFF 		bl	CyDelay
+ 382              	.L11:
+ 164:.\main.c      ****         }
+ 165:.\main.c      ****         if(dataReady_R != 0u)
+ 383              		.loc 1 165 0
+ 384 014a 444B     		ldr	r3, .L18+44
+ 385 014c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 386 014e 002B     		cmp	r3, #0
+ 387 0150 67D0     		beq	.L14
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 11
+
+
+ 166:.\main.c      ****         {
+ 167:.\main.c      ****             sum = 0;
+ 388              		.loc 1 167 0
+ 389 0152 4FF00003 		mov	r3, #0
+ 390 0156 FB61     		str	r3, [r7, #28]	@ float
+ 168:.\main.c      ****             res = ADC_SAR_R_CountsTo_Volts(ADC_R);
+ 391              		.loc 1 168 0
+ 392 0158 414B     		ldr	r3, .L18+48
+ 393 015a 1B88     		ldrh	r3, [r3]
+ 394 015c 1BB2     		sxth	r3, r3
+ 395 015e 1846     		mov	r0, r3
+ 396 0160 FFF7FEFF 		bl	ADC_SAR_R_CountsTo_Volts
+ 397 0164 7861     		str	r0, [r7, #20]	@ float
+ 169:.\main.c      ****             sprintf((char *)resultStr,"%+1.2f",res);
+ 398              		.loc 1 169 0
+ 399 0166 7869     		ldr	r0, [r7, #20]	@ float
+ 400 0168 FFF7FEFF 		bl	__aeabi_f2d
+ 401 016c 0446     		mov	r4, r0
+ 402 016e 0D46     		mov	r5, r1
+ 403 0170 3B46     		mov	r3, r7
+ 404 0172 1846     		mov	r0, r3
+ 405 0174 3549     		ldr	r1, .L18+28
+ 406 0176 2246     		mov	r2, r4
+ 407 0178 2B46     		mov	r3, r5
+ 408 017a FFF7FEFF 		bl	sprintf
+ 170:.\main.c      ****             for(j=0;j<size-1;j++)
+ 409              		.loc 1 170 0
+ 410 017e 0023     		movs	r3, #0
+ 411 0180 FB76     		strb	r3, [r7, #27]
+ 412 0182 1AE0     		b	.L15
+ 413              	.L16:
+ 171:.\main.c      ****             {
+ 172:.\main.c      ****                 result_R[j] = result_R[j+1];
+ 414              		.loc 1 172 0 discriminator 3
+ 415 0184 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 416 0186 FA7E     		ldrb	r2, [r7, #27]	@ zero_extendqisi2
+ 417 0188 0132     		adds	r2, r2, #1
+ 418 018a 3649     		ldr	r1, .L18+52
+ 419 018c 31F81210 		ldrh	r1, [r1, r2, lsl #1]
+ 420 0190 344A     		ldr	r2, .L18+52
+ 421 0192 22F81310 		strh	r1, [r2, r3, lsl #1]	@ movhi
+ 173:.\main.c      ****                 sum += result_R[j+1];
+ 422              		.loc 1 173 0 discriminator 3
+ 423 0196 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 424 0198 0133     		adds	r3, r3, #1
+ 425 019a 324A     		ldr	r2, .L18+52
+ 426 019c 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 427 01a0 1846     		mov	r0, r3
+ 428 01a2 FFF7FEFF 		bl	__aeabi_i2f
+ 429 01a6 0346     		mov	r3, r0
+ 430 01a8 F869     		ldr	r0, [r7, #28]	@ float
+ 431 01aa 1946     		mov	r1, r3
+ 432 01ac FFF7FEFF 		bl	__aeabi_fadd
+ 433 01b0 0346     		mov	r3, r0
+ 434 01b2 FB61     		str	r3, [r7, #28]	@ float
+ 170:.\main.c      ****             for(j=0;j<size-1;j++)
+ 435              		.loc 1 170 0 discriminator 3
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 12
+
+
+ 436 01b4 FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 437 01b6 0133     		adds	r3, r3, #1
+ 438 01b8 FB76     		strb	r3, [r7, #27]
+ 439              	.L15:
+ 170:.\main.c      ****             for(j=0;j<size-1;j++)
+ 440              		.loc 1 170 0 is_stmt 0 discriminator 1
+ 441 01ba FB7E     		ldrb	r3, [r7, #27]	@ zero_extendqisi2
+ 442 01bc 122B     		cmp	r3, #18
+ 443 01be E1D9     		bls	.L16
+ 174:.\main.c      ****             }
+ 175:.\main.c      ****             result_R[size - 1] = ADC_R;
+ 444              		.loc 1 175 0 is_stmt 1
+ 445 01c0 274B     		ldr	r3, .L18+48
+ 446 01c2 1B88     		ldrh	r3, [r3]
+ 447 01c4 9AB2     		uxth	r2, r3
+ 448 01c6 274B     		ldr	r3, .L18+52
+ 449 01c8 DA84     		strh	r2, [r3, #38]	@ movhi
+ 176:.\main.c      ****             sum = (sum+ADC_R)/size;
+ 450              		.loc 1 176 0
+ 451 01ca 254B     		ldr	r3, .L18+48
+ 452 01cc 1B88     		ldrh	r3, [r3]
+ 453 01ce 1BB2     		sxth	r3, r3
+ 454 01d0 1846     		mov	r0, r3
+ 455 01d2 FFF7FEFF 		bl	__aeabi_i2f
+ 456 01d6 0346     		mov	r3, r0
+ 457 01d8 1846     		mov	r0, r3
+ 458 01da F969     		ldr	r1, [r7, #28]	@ float
+ 459 01dc FFF7FEFF 		bl	__aeabi_fadd
+ 460 01e0 0346     		mov	r3, r0
+ 461 01e2 1846     		mov	r0, r3
+ 462 01e4 1B49     		ldr	r1, .L18+36
+ 463 01e6 FFF7FEFF 		bl	__aeabi_fdiv
+ 464 01ea 0346     		mov	r3, r0
+ 465 01ec FB61     		str	r3, [r7, #28]	@ float
+ 177:.\main.c      ****             R = sum;
+ 466              		.loc 1 177 0
+ 467 01ee F869     		ldr	r0, [r7, #28]	@ float
+ 468 01f0 FFF7FEFF 		bl	__aeabi_f2uiz
+ 469 01f4 0346     		mov	r3, r0
+ 470 01f6 7B82     		strh	r3, [r7, #18]	@ movhi
+ 178:.\main.c      ****             LCD_Position(1u,5u);
+ 471              		.loc 1 178 0
+ 472 01f8 0120     		movs	r0, #1
+ 473 01fa 0521     		movs	r1, #5
+ 474 01fc FFF7FEFF 		bl	LCD_Position
+ 179:.\main.c      ****             LCD_PrintString("     ");
+ 475              		.loc 1 179 0
+ 476 0200 1548     		ldr	r0, .L18+40
+ 477 0202 FFF7FEFF 		bl	LCD_PrintString
+ 180:.\main.c      ****             LCD_Position(1u,5u);
+ 478              		.loc 1 180 0
+ 479 0206 0120     		movs	r0, #1
+ 480 0208 0521     		movs	r1, #5
+ 481 020a FFF7FEFF 		bl	LCD_Position
+ 181:.\main.c      ****             //LCD_PrintString(resultStr);
+ 182:.\main.c      ****             LCD_PrintNumber(R);
+ 482              		.loc 1 182 0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 13
+
+
+ 483 020e 7B8A     		ldrh	r3, [r7, #18]
+ 484 0210 1846     		mov	r0, r3
+ 485 0212 FFF7FEFF 		bl	LCD_PrintU32Number
+ 183:.\main.c      ****             dataReady_R = 0u;
+ 486              		.loc 1 183 0
+ 487 0216 114B     		ldr	r3, .L18+44
+ 488 0218 0022     		movs	r2, #0
+ 489 021a 1A70     		strb	r2, [r3]
+ 184:.\main.c      ****             CyDelay(1);
+ 490              		.loc 1 184 0
+ 491 021c 0120     		movs	r0, #1
+ 492 021e FFF7FEFF 		bl	CyDelay
+ 493              	.L14:
+ 185:.\main.c      ****         }
+ 186:.\main.c      ****         PID();
+ 494              		.loc 1 186 0
+ 495 0222 FFF7FEFF 		bl	PID
+ 187:.\main.c      ****         CyDelay(5);
+ 496              		.loc 1 187 0
+ 497 0226 0520     		movs	r0, #5
+ 498 0228 FFF7FEFF 		bl	CyDelay
+ 499              	.LBE2:
+ 188:.\main.c      ****     }
+ 500              		.loc 1 188 0
+ 501 022c 21E7     		b	.L17
+ 502              	.L19:
+ 503 022e 00BF     		.align	2
+ 504              	.L18:
+ 505 0230 00000000 		.word	.LC0
+ 506 0234 10000000 		.word	.LC1
+ 507 0238 00000000 		.word	ADC_SAR_L_ISR_LOC
+ 508 023c 00000000 		.word	ADC_SAR_R_ISR_LOC
+ 509 0240 00000000 		.word	InterruptHandler
+ 510 0244 00000000 		.word	dataReady_L
+ 511 0248 00000000 		.word	ADC_L
+ 512 024c 20000000 		.word	.LC2
+ 513 0250 00000000 		.word	result_L
+ 514 0254 0000A041 		.word	1101004800
+ 515 0258 28000000 		.word	.LC3
+ 516 025c 00000000 		.word	dataReady_R
+ 517 0260 00000000 		.word	ADC_R
+ 518 0264 00000000 		.word	result_R
+ 519              		.cfi_endproc
+ 520              	.LFE66:
+ 521              		.size	main, .-main
+ 522              		.text
+ 523              	.Letext0:
+ 524              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 525              		.file 3 "d:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 526              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 527              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 528              		.file 6 ".\\pid.h"
+ 529              		.section	.debug_info,"",%progbits
+ 530              	.Ldebug_info0:
+ 531 0000 25020000 		.4byte	0x225
+ 532 0004 0400     		.2byte	0x4
+ 533 0006 00000000 		.4byte	.Ldebug_abbrev0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 14
+
+
+ 534 000a 04       		.byte	0x4
+ 535 000b 01       		.uleb128 0x1
+ 536 000c 16000000 		.4byte	.LASF32
+ 537 0010 01       		.byte	0x1
+ 538 0011 AA000000 		.4byte	.LASF33
+ 539 0015 B9010000 		.4byte	.LASF34
+ 540 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 541 001d 00000000 		.4byte	0
+ 542 0021 00000000 		.4byte	.Ldebug_line0
+ 543 0025 02       		.uleb128 0x2
+ 544 0026 01       		.byte	0x1
+ 545 0027 06       		.byte	0x6
+ 546 0028 F8010000 		.4byte	.LASF0
+ 547 002c 02       		.uleb128 0x2
+ 548 002d 01       		.byte	0x1
+ 549 002e 08       		.byte	0x8
+ 550 002f CB000000 		.4byte	.LASF1
+ 551 0033 02       		.uleb128 0x2
+ 552 0034 02       		.byte	0x2
+ 553 0035 05       		.byte	0x5
+ 554 0036 96010000 		.4byte	.LASF2
+ 555 003a 02       		.uleb128 0x2
+ 556 003b 02       		.byte	0x2
+ 557 003c 07       		.byte	0x7
+ 558 003d 04020000 		.4byte	.LASF3
+ 559 0041 03       		.uleb128 0x3
+ 560 0042 06000000 		.4byte	.LASF9
+ 561 0046 02       		.byte	0x2
+ 562 0047 3F       		.byte	0x3f
+ 563 0048 4C000000 		.4byte	0x4c
+ 564 004c 02       		.uleb128 0x2
+ 565 004d 04       		.byte	0x4
+ 566 004e 05       		.byte	0x5
+ 567 004f B0010000 		.4byte	.LASF4
+ 568 0053 02       		.uleb128 0x2
+ 569 0054 04       		.byte	0x4
+ 570 0055 07       		.byte	0x7
+ 571 0056 F0000000 		.4byte	.LASF5
+ 572 005a 02       		.uleb128 0x2
+ 573 005b 08       		.byte	0x8
+ 574 005c 05       		.byte	0x5
+ 575 005d 83010000 		.4byte	.LASF6
+ 576 0061 02       		.uleb128 0x2
+ 577 0062 08       		.byte	0x8
+ 578 0063 07       		.byte	0x7
+ 579 0064 3B010000 		.4byte	.LASF7
+ 580 0068 04       		.uleb128 0x4
+ 581 0069 04       		.byte	0x4
+ 582 006a 05       		.byte	0x5
+ 583 006b 696E7400 		.ascii	"int\000"
+ 584 006f 02       		.uleb128 0x2
+ 585 0070 04       		.byte	0x4
+ 586 0071 07       		.byte	0x7
+ 587 0072 2E010000 		.4byte	.LASF8
+ 588 0076 03       		.uleb128 0x3
+ 589 0077 6C010000 		.4byte	.LASF10
+ 590 007b 03       		.byte	0x3
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 15
+
+
+ 591 007c 2C       		.byte	0x2c
+ 592 007d 41000000 		.4byte	0x41
+ 593 0081 05       		.uleb128 0x5
+ 594 0082 AA010000 		.4byte	.LASF11
+ 595 0086 04       		.byte	0x4
+ 596 0087 3801     		.2byte	0x138
+ 597 0089 2C000000 		.4byte	0x2c
+ 598 008d 05       		.uleb128 0x5
+ 599 008e 27010000 		.4byte	.LASF12
+ 600 0092 04       		.byte	0x4
+ 601 0093 3901     		.2byte	0x139
+ 602 0095 3A000000 		.4byte	0x3a
+ 603 0099 05       		.uleb128 0x5
+ 604 009a EA000000 		.4byte	.LASF13
+ 605 009e 04       		.byte	0x4
+ 606 009f 3C01     		.2byte	0x13c
+ 607 00a1 33000000 		.4byte	0x33
+ 608 00a5 02       		.uleb128 0x2
+ 609 00a6 04       		.byte	0x4
+ 610 00a7 04       		.byte	0x4
+ 611 00a8 B3000000 		.4byte	.LASF14
+ 612 00ac 02       		.uleb128 0x2
+ 613 00ad 08       		.byte	0x8
+ 614 00ae 04       		.byte	0x4
+ 615 00af 1B010000 		.4byte	.LASF15
+ 616 00b3 05       		.uleb128 0x5
+ 617 00b4 7D010000 		.4byte	.LASF16
+ 618 00b8 04       		.byte	0x4
+ 619 00b9 4901     		.2byte	0x149
+ 620 00bb BF000000 		.4byte	0xbf
+ 621 00bf 02       		.uleb128 0x2
+ 622 00c0 01       		.byte	0x1
+ 623 00c1 08       		.byte	0x8
+ 624 00c2 91010000 		.4byte	.LASF17
+ 625 00c6 05       		.uleb128 0x5
+ 626 00c7 E5000000 		.4byte	.LASF18
+ 627 00cb 04       		.byte	0x4
+ 628 00cc E201     		.2byte	0x1e2
+ 629 00ce D2000000 		.4byte	0xd2
+ 630 00d2 06       		.uleb128 0x6
+ 631 00d3 81000000 		.4byte	0x81
+ 632 00d7 05       		.uleb128 0x5
+ 633 00d8 00000000 		.4byte	.LASF19
+ 634 00dc 04       		.byte	0x4
+ 635 00dd E301     		.2byte	0x1e3
+ 636 00df E3000000 		.4byte	0xe3
+ 637 00e3 06       		.uleb128 0x6
+ 638 00e4 8D000000 		.4byte	0x8d
+ 639 00e8 02       		.uleb128 0x2
+ 640 00e9 04       		.byte	0x4
+ 641 00ea 07       		.byte	0x7
+ 642 00eb 74010000 		.4byte	.LASF20
+ 643 00ef 07       		.uleb128 0x7
+ 644 00f0 52010000 		.4byte	.LASF21
+ 645 00f4 01       		.byte	0x1
+ 646 00f5 34       		.byte	0x34
+ 647 00f6 00000000 		.4byte	.LFB63
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 16
+
+
+ 648 00fa 14000000 		.4byte	.LFE63-.LFB63
+ 649 00fe 01       		.uleb128 0x1
+ 650 00ff 9C       		.byte	0x9c
+ 651 0100 07       		.uleb128 0x7
+ 652 0101 B9000000 		.4byte	.LASF22
+ 653 0105 01       		.byte	0x1
+ 654 0106 41       		.byte	0x41
+ 655 0107 00000000 		.4byte	.LFB64
+ 656 010b 2C000000 		.4byte	.LFE64-.LFB64
+ 657 010f 01       		.uleb128 0x1
+ 658 0110 9C       		.byte	0x9c
+ 659 0111 07       		.uleb128 0x7
+ 660 0112 20020000 		.4byte	.LASF23
+ 661 0116 01       		.byte	0x1
+ 662 0117 46       		.byte	0x46
+ 663 0118 00000000 		.4byte	.LFB65
+ 664 011c 2C000000 		.4byte	.LFE65-.LFB65
+ 665 0120 01       		.uleb128 0x1
+ 666 0121 9C       		.byte	0x9c
+ 667 0122 08       		.uleb128 0x8
+ 668 0123 22010000 		.4byte	.LASF35
+ 669 0127 01       		.byte	0x1
+ 670 0128 63       		.byte	0x63
+ 671 0129 68000000 		.4byte	0x68
+ 672 012d 00000000 		.4byte	.LFB66
+ 673 0131 68020000 		.4byte	.LFE66-.LFB66
+ 674 0135 01       		.uleb128 0x1
+ 675 0136 9C       		.byte	0x9c
+ 676 0137 9D010000 		.4byte	0x19d
+ 677 013b 09       		.uleb128 0x9
+ 678 013c A0010000 		.4byte	.LASF24
+ 679 0140 01       		.byte	0x1
+ 680 0141 65       		.byte	0x65
+ 681 0142 9D010000 		.4byte	0x19d
+ 682 0146 02       		.uleb128 0x2
+ 683 0147 91       		.byte	0x91
+ 684 0148 50       		.sleb128 -48
+ 685 0149 0A       		.uleb128 0xa
+ 686 014a 72657300 		.ascii	"res\000"
+ 687 014e 01       		.byte	0x1
+ 688 014f 66       		.byte	0x66
+ 689 0150 A5000000 		.4byte	0xa5
+ 690 0154 02       		.uleb128 0x2
+ 691 0155 91       		.byte	0x91
+ 692 0156 64       		.sleb128 -28
+ 693 0157 0A       		.uleb128 0xa
+ 694 0158 73756D00 		.ascii	"sum\000"
+ 695 015c 01       		.byte	0x1
+ 696 015d 67       		.byte	0x67
+ 697 015e A5000000 		.4byte	0xa5
+ 698 0162 02       		.uleb128 0x2
+ 699 0163 91       		.byte	0x91
+ 700 0164 6C       		.sleb128 -20
+ 701 0165 0A       		.uleb128 0xa
+ 702 0166 4C00     		.ascii	"L\000"
+ 703 0168 01       		.byte	0x1
+ 704 0169 68       		.byte	0x68
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 17
+
+
+ 705 016a 8D000000 		.4byte	0x8d
+ 706 016e 02       		.uleb128 0x2
+ 707 016f 91       		.byte	0x91
+ 708 0170 60       		.sleb128 -32
+ 709 0171 0A       		.uleb128 0xa
+ 710 0172 5200     		.ascii	"R\000"
+ 711 0174 01       		.byte	0x1
+ 712 0175 68       		.byte	0x68
+ 713 0176 8D000000 		.4byte	0x8d
+ 714 017a 02       		.uleb128 0x2
+ 715 017b 91       		.byte	0x91
+ 716 017c 62       		.sleb128 -30
+ 717 017d 0B       		.uleb128 0xb
+ 718 017e 72000000 		.4byte	.LBB2
+ 719 0182 BA010000 		.4byte	.LBE2-.LBB2
+ 720 0186 0C       		.uleb128 0xc
+ 721 0187 6900     		.ascii	"i\000"
+ 722 0189 01       		.byte	0x1
+ 723 018a 8A       		.byte	0x8a
+ 724 018b 81000000 		.4byte	0x81
+ 725 018f 0A       		.uleb128 0xa
+ 726 0190 6A00     		.ascii	"j\000"
+ 727 0192 01       		.byte	0x1
+ 728 0193 8A       		.byte	0x8a
+ 729 0194 81000000 		.4byte	0x81
+ 730 0198 02       		.uleb128 0x2
+ 731 0199 91       		.byte	0x91
+ 732 019a 6B       		.sleb128 -21
+ 733 019b 00       		.byte	0
+ 734 019c 00       		.byte	0
+ 735 019d 0D       		.uleb128 0xd
+ 736 019e B3000000 		.4byte	0xb3
+ 737 01a2 AD010000 		.4byte	0x1ad
+ 738 01a6 0E       		.uleb128 0xe
+ 739 01a7 E8000000 		.4byte	0xe8
+ 740 01ab 0F       		.byte	0xf
+ 741 01ac 00       		.byte	0
+ 742 01ad 0F       		.uleb128 0xf
+ 743 01ae 0E010000 		.4byte	.LASF25
+ 744 01b2 05       		.byte	0x5
+ 745 01b3 5506     		.2byte	0x655
+ 746 01b5 B9010000 		.4byte	0x1b9
+ 747 01b9 06       		.uleb128 0x6
+ 748 01ba 76000000 		.4byte	0x76
+ 749 01be 10       		.uleb128 0x10
+ 750 01bf 10000000 		.4byte	.LASF26
+ 751 01c3 06       		.byte	0x6
+ 752 01c4 1B       		.byte	0x1b
+ 753 01c5 99000000 		.4byte	0x99
+ 754 01c9 10       		.uleb128 0x10
+ 755 01ca A4000000 		.4byte	.LASF27
+ 756 01ce 06       		.byte	0x6
+ 757 01cf 1C       		.byte	0x1c
+ 758 01d0 99000000 		.4byte	0x99
+ 759 01d4 11       		.uleb128 0x11
+ 760 01d5 D9000000 		.4byte	.LASF28
+ 761 01d9 01       		.byte	0x1
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 18
+
+
+ 762 01da 2C       		.byte	0x2c
+ 763 01db 81000000 		.4byte	0x81
+ 764 01df 05       		.uleb128 0x5
+ 765 01e0 03       		.byte	0x3
+ 766 01e1 00000000 		.4byte	dataReady_L
+ 767 01e5 0D       		.uleb128 0xd
+ 768 01e6 8D000000 		.4byte	0x8d
+ 769 01ea F5010000 		.4byte	0x1f5
+ 770 01ee 0E       		.uleb128 0xe
+ 771 01ef E8000000 		.4byte	0xe8
+ 772 01f3 13       		.byte	0x13
+ 773 01f4 00       		.byte	0
+ 774 01f5 11       		.uleb128 0x11
+ 775 01f6 17020000 		.4byte	.LASF29
+ 776 01fa 01       		.byte	0x1
+ 777 01fb 2D       		.byte	0x2d
+ 778 01fc E5010000 		.4byte	0x1e5
+ 779 0200 05       		.uleb128 0x5
+ 780 0201 03       		.byte	0x3
+ 781 0202 00000000 		.4byte	result_L
+ 782 0206 11       		.uleb128 0x11
+ 783 0207 02010000 		.4byte	.LASF30
+ 784 020b 01       		.byte	0x1
+ 785 020c 2E       		.byte	0x2e
+ 786 020d 81000000 		.4byte	0x81
+ 787 0211 05       		.uleb128 0x5
+ 788 0212 03       		.byte	0x3
+ 789 0213 00000000 		.4byte	dataReady_R
+ 790 0217 11       		.uleb128 0x11
+ 791 0218 63010000 		.4byte	.LASF31
+ 792 021c 01       		.byte	0x1
+ 793 021d 2F       		.byte	0x2f
+ 794 021e E5010000 		.4byte	0x1e5
+ 795 0222 05       		.uleb128 0x5
+ 796 0223 03       		.byte	0x3
+ 797 0224 00000000 		.4byte	result_R
+ 798 0228 00       		.byte	0
+ 799              		.section	.debug_abbrev,"",%progbits
+ 800              	.Ldebug_abbrev0:
+ 801 0000 01       		.uleb128 0x1
+ 802 0001 11       		.uleb128 0x11
+ 803 0002 01       		.byte	0x1
+ 804 0003 25       		.uleb128 0x25
+ 805 0004 0E       		.uleb128 0xe
+ 806 0005 13       		.uleb128 0x13
+ 807 0006 0B       		.uleb128 0xb
+ 808 0007 03       		.uleb128 0x3
+ 809 0008 0E       		.uleb128 0xe
+ 810 0009 1B       		.uleb128 0x1b
+ 811 000a 0E       		.uleb128 0xe
+ 812 000b 55       		.uleb128 0x55
+ 813 000c 17       		.uleb128 0x17
+ 814 000d 11       		.uleb128 0x11
+ 815 000e 01       		.uleb128 0x1
+ 816 000f 10       		.uleb128 0x10
+ 817 0010 17       		.uleb128 0x17
+ 818 0011 00       		.byte	0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 19
+
+
+ 819 0012 00       		.byte	0
+ 820 0013 02       		.uleb128 0x2
+ 821 0014 24       		.uleb128 0x24
+ 822 0015 00       		.byte	0
+ 823 0016 0B       		.uleb128 0xb
+ 824 0017 0B       		.uleb128 0xb
+ 825 0018 3E       		.uleb128 0x3e
+ 826 0019 0B       		.uleb128 0xb
+ 827 001a 03       		.uleb128 0x3
+ 828 001b 0E       		.uleb128 0xe
+ 829 001c 00       		.byte	0
+ 830 001d 00       		.byte	0
+ 831 001e 03       		.uleb128 0x3
+ 832 001f 16       		.uleb128 0x16
+ 833 0020 00       		.byte	0
+ 834 0021 03       		.uleb128 0x3
+ 835 0022 0E       		.uleb128 0xe
+ 836 0023 3A       		.uleb128 0x3a
+ 837 0024 0B       		.uleb128 0xb
+ 838 0025 3B       		.uleb128 0x3b
+ 839 0026 0B       		.uleb128 0xb
+ 840 0027 49       		.uleb128 0x49
+ 841 0028 13       		.uleb128 0x13
+ 842 0029 00       		.byte	0
+ 843 002a 00       		.byte	0
+ 844 002b 04       		.uleb128 0x4
+ 845 002c 24       		.uleb128 0x24
+ 846 002d 00       		.byte	0
+ 847 002e 0B       		.uleb128 0xb
+ 848 002f 0B       		.uleb128 0xb
+ 849 0030 3E       		.uleb128 0x3e
+ 850 0031 0B       		.uleb128 0xb
+ 851 0032 03       		.uleb128 0x3
+ 852 0033 08       		.uleb128 0x8
+ 853 0034 00       		.byte	0
+ 854 0035 00       		.byte	0
+ 855 0036 05       		.uleb128 0x5
+ 856 0037 16       		.uleb128 0x16
+ 857 0038 00       		.byte	0
+ 858 0039 03       		.uleb128 0x3
+ 859 003a 0E       		.uleb128 0xe
+ 860 003b 3A       		.uleb128 0x3a
+ 861 003c 0B       		.uleb128 0xb
+ 862 003d 3B       		.uleb128 0x3b
+ 863 003e 05       		.uleb128 0x5
+ 864 003f 49       		.uleb128 0x49
+ 865 0040 13       		.uleb128 0x13
+ 866 0041 00       		.byte	0
+ 867 0042 00       		.byte	0
+ 868 0043 06       		.uleb128 0x6
+ 869 0044 35       		.uleb128 0x35
+ 870 0045 00       		.byte	0
+ 871 0046 49       		.uleb128 0x49
+ 872 0047 13       		.uleb128 0x13
+ 873 0048 00       		.byte	0
+ 874 0049 00       		.byte	0
+ 875 004a 07       		.uleb128 0x7
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 20
+
+
+ 876 004b 2E       		.uleb128 0x2e
+ 877 004c 00       		.byte	0
+ 878 004d 3F       		.uleb128 0x3f
+ 879 004e 19       		.uleb128 0x19
+ 880 004f 03       		.uleb128 0x3
+ 881 0050 0E       		.uleb128 0xe
+ 882 0051 3A       		.uleb128 0x3a
+ 883 0052 0B       		.uleb128 0xb
+ 884 0053 3B       		.uleb128 0x3b
+ 885 0054 0B       		.uleb128 0xb
+ 886 0055 27       		.uleb128 0x27
+ 887 0056 19       		.uleb128 0x19
+ 888 0057 11       		.uleb128 0x11
+ 889 0058 01       		.uleb128 0x1
+ 890 0059 12       		.uleb128 0x12
+ 891 005a 06       		.uleb128 0x6
+ 892 005b 40       		.uleb128 0x40
+ 893 005c 18       		.uleb128 0x18
+ 894 005d 9742     		.uleb128 0x2117
+ 895 005f 19       		.uleb128 0x19
+ 896 0060 00       		.byte	0
+ 897 0061 00       		.byte	0
+ 898 0062 08       		.uleb128 0x8
+ 899 0063 2E       		.uleb128 0x2e
+ 900 0064 01       		.byte	0x1
+ 901 0065 3F       		.uleb128 0x3f
+ 902 0066 19       		.uleb128 0x19
+ 903 0067 03       		.uleb128 0x3
+ 904 0068 0E       		.uleb128 0xe
+ 905 0069 3A       		.uleb128 0x3a
+ 906 006a 0B       		.uleb128 0xb
+ 907 006b 3B       		.uleb128 0x3b
+ 908 006c 0B       		.uleb128 0xb
+ 909 006d 49       		.uleb128 0x49
+ 910 006e 13       		.uleb128 0x13
+ 911 006f 11       		.uleb128 0x11
+ 912 0070 01       		.uleb128 0x1
+ 913 0071 12       		.uleb128 0x12
+ 914 0072 06       		.uleb128 0x6
+ 915 0073 40       		.uleb128 0x40
+ 916 0074 18       		.uleb128 0x18
+ 917 0075 9642     		.uleb128 0x2116
+ 918 0077 19       		.uleb128 0x19
+ 919 0078 01       		.uleb128 0x1
+ 920 0079 13       		.uleb128 0x13
+ 921 007a 00       		.byte	0
+ 922 007b 00       		.byte	0
+ 923 007c 09       		.uleb128 0x9
+ 924 007d 34       		.uleb128 0x34
+ 925 007e 00       		.byte	0
+ 926 007f 03       		.uleb128 0x3
+ 927 0080 0E       		.uleb128 0xe
+ 928 0081 3A       		.uleb128 0x3a
+ 929 0082 0B       		.uleb128 0xb
+ 930 0083 3B       		.uleb128 0x3b
+ 931 0084 0B       		.uleb128 0xb
+ 932 0085 49       		.uleb128 0x49
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 21
+
+
+ 933 0086 13       		.uleb128 0x13
+ 934 0087 02       		.uleb128 0x2
+ 935 0088 18       		.uleb128 0x18
+ 936 0089 00       		.byte	0
+ 937 008a 00       		.byte	0
+ 938 008b 0A       		.uleb128 0xa
+ 939 008c 34       		.uleb128 0x34
+ 940 008d 00       		.byte	0
+ 941 008e 03       		.uleb128 0x3
+ 942 008f 08       		.uleb128 0x8
+ 943 0090 3A       		.uleb128 0x3a
+ 944 0091 0B       		.uleb128 0xb
+ 945 0092 3B       		.uleb128 0x3b
+ 946 0093 0B       		.uleb128 0xb
+ 947 0094 49       		.uleb128 0x49
+ 948 0095 13       		.uleb128 0x13
+ 949 0096 02       		.uleb128 0x2
+ 950 0097 18       		.uleb128 0x18
+ 951 0098 00       		.byte	0
+ 952 0099 00       		.byte	0
+ 953 009a 0B       		.uleb128 0xb
+ 954 009b 0B       		.uleb128 0xb
+ 955 009c 01       		.byte	0x1
+ 956 009d 11       		.uleb128 0x11
+ 957 009e 01       		.uleb128 0x1
+ 958 009f 12       		.uleb128 0x12
+ 959 00a0 06       		.uleb128 0x6
+ 960 00a1 00       		.byte	0
+ 961 00a2 00       		.byte	0
+ 962 00a3 0C       		.uleb128 0xc
+ 963 00a4 34       		.uleb128 0x34
+ 964 00a5 00       		.byte	0
+ 965 00a6 03       		.uleb128 0x3
+ 966 00a7 08       		.uleb128 0x8
+ 967 00a8 3A       		.uleb128 0x3a
+ 968 00a9 0B       		.uleb128 0xb
+ 969 00aa 3B       		.uleb128 0x3b
+ 970 00ab 0B       		.uleb128 0xb
+ 971 00ac 49       		.uleb128 0x49
+ 972 00ad 13       		.uleb128 0x13
+ 973 00ae 00       		.byte	0
+ 974 00af 00       		.byte	0
+ 975 00b0 0D       		.uleb128 0xd
+ 976 00b1 01       		.uleb128 0x1
+ 977 00b2 01       		.byte	0x1
+ 978 00b3 49       		.uleb128 0x49
+ 979 00b4 13       		.uleb128 0x13
+ 980 00b5 01       		.uleb128 0x1
+ 981 00b6 13       		.uleb128 0x13
+ 982 00b7 00       		.byte	0
+ 983 00b8 00       		.byte	0
+ 984 00b9 0E       		.uleb128 0xe
+ 985 00ba 21       		.uleb128 0x21
+ 986 00bb 00       		.byte	0
+ 987 00bc 49       		.uleb128 0x49
+ 988 00bd 13       		.uleb128 0x13
+ 989 00be 2F       		.uleb128 0x2f
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 22
+
+
+ 990 00bf 0B       		.uleb128 0xb
+ 991 00c0 00       		.byte	0
+ 992 00c1 00       		.byte	0
+ 993 00c2 0F       		.uleb128 0xf
+ 994 00c3 34       		.uleb128 0x34
+ 995 00c4 00       		.byte	0
+ 996 00c5 03       		.uleb128 0x3
+ 997 00c6 0E       		.uleb128 0xe
+ 998 00c7 3A       		.uleb128 0x3a
+ 999 00c8 0B       		.uleb128 0xb
+ 1000 00c9 3B       		.uleb128 0x3b
+ 1001 00ca 05       		.uleb128 0x5
+ 1002 00cb 49       		.uleb128 0x49
+ 1003 00cc 13       		.uleb128 0x13
+ 1004 00cd 3F       		.uleb128 0x3f
+ 1005 00ce 19       		.uleb128 0x19
+ 1006 00cf 3C       		.uleb128 0x3c
+ 1007 00d0 19       		.uleb128 0x19
+ 1008 00d1 00       		.byte	0
+ 1009 00d2 00       		.byte	0
+ 1010 00d3 10       		.uleb128 0x10
+ 1011 00d4 34       		.uleb128 0x34
+ 1012 00d5 00       		.byte	0
+ 1013 00d6 03       		.uleb128 0x3
+ 1014 00d7 0E       		.uleb128 0xe
+ 1015 00d8 3A       		.uleb128 0x3a
+ 1016 00d9 0B       		.uleb128 0xb
+ 1017 00da 3B       		.uleb128 0x3b
+ 1018 00db 0B       		.uleb128 0xb
+ 1019 00dc 49       		.uleb128 0x49
+ 1020 00dd 13       		.uleb128 0x13
+ 1021 00de 3F       		.uleb128 0x3f
+ 1022 00df 19       		.uleb128 0x19
+ 1023 00e0 3C       		.uleb128 0x3c
+ 1024 00e1 19       		.uleb128 0x19
+ 1025 00e2 00       		.byte	0
+ 1026 00e3 00       		.byte	0
+ 1027 00e4 11       		.uleb128 0x11
+ 1028 00e5 34       		.uleb128 0x34
+ 1029 00e6 00       		.byte	0
+ 1030 00e7 03       		.uleb128 0x3
+ 1031 00e8 0E       		.uleb128 0xe
+ 1032 00e9 3A       		.uleb128 0x3a
+ 1033 00ea 0B       		.uleb128 0xb
+ 1034 00eb 3B       		.uleb128 0x3b
+ 1035 00ec 0B       		.uleb128 0xb
+ 1036 00ed 49       		.uleb128 0x49
+ 1037 00ee 13       		.uleb128 0x13
+ 1038 00ef 3F       		.uleb128 0x3f
+ 1039 00f0 19       		.uleb128 0x19
+ 1040 00f1 02       		.uleb128 0x2
+ 1041 00f2 18       		.uleb128 0x18
+ 1042 00f3 00       		.byte	0
+ 1043 00f4 00       		.byte	0
+ 1044 00f5 00       		.byte	0
+ 1045              		.section	.debug_aranges,"",%progbits
+ 1046 0000 34000000 		.4byte	0x34
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 23
+
+
+ 1047 0004 0200     		.2byte	0x2
+ 1048 0006 00000000 		.4byte	.Ldebug_info0
+ 1049 000a 04       		.byte	0x4
+ 1050 000b 00       		.byte	0
+ 1051 000c 0000     		.2byte	0
+ 1052 000e 0000     		.2byte	0
+ 1053 0010 00000000 		.4byte	.LFB63
+ 1054 0014 14000000 		.4byte	.LFE63-.LFB63
+ 1055 0018 00000000 		.4byte	.LFB64
+ 1056 001c 2C000000 		.4byte	.LFE64-.LFB64
+ 1057 0020 00000000 		.4byte	.LFB65
+ 1058 0024 2C000000 		.4byte	.LFE65-.LFB65
+ 1059 0028 00000000 		.4byte	.LFB66
+ 1060 002c 68020000 		.4byte	.LFE66-.LFB66
+ 1061 0030 00000000 		.4byte	0
+ 1062 0034 00000000 		.4byte	0
+ 1063              		.section	.debug_ranges,"",%progbits
+ 1064              	.Ldebug_ranges0:
+ 1065 0000 00000000 		.4byte	.LFB63
+ 1066 0004 14000000 		.4byte	.LFE63
+ 1067 0008 00000000 		.4byte	.LFB64
+ 1068 000c 2C000000 		.4byte	.LFE64
+ 1069 0010 00000000 		.4byte	.LFB65
+ 1070 0014 2C000000 		.4byte	.LFE65
+ 1071 0018 00000000 		.4byte	.LFB66
+ 1072 001c 68020000 		.4byte	.LFE66
+ 1073 0020 00000000 		.4byte	0
+ 1074 0024 00000000 		.4byte	0
+ 1075              		.section	.debug_line,"",%progbits
+ 1076              	.Ldebug_line0:
+ 1077 0000 05020000 		.section	.debug_str,"MS",%progbits,1
+ 1077      02005401 
+ 1077      00000201 
+ 1077      FB0E0D00 
+ 1077      01010101 
+ 1078              	.LASF19:
+ 1079 0000 72656731 		.ascii	"reg16\000"
+ 1079      3600
+ 1080              	.LASF9:
+ 1081 0006 5F5F696E 		.ascii	"__int32_t\000"
+ 1081      7433325F 
+ 1081      7400
+ 1082              	.LASF26:
+ 1083 0010 4144435F 		.ascii	"ADC_L\000"
+ 1083      4C00
+ 1084              	.LASF32:
+ 1085 0016 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1085      4320342E 
+ 1085      392E3320 
+ 1085      32303135 
+ 1085      30333033 
+ 1086 0049 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1086      20726576 
+ 1086      6973696F 
+ 1086      6E203232 
+ 1086      31323230 
+ 1087 007c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 24
+
+
+ 1087      66756E63 
+ 1087      74696F6E 
+ 1087      2D736563 
+ 1087      74696F6E 
+ 1088              	.LASF27:
+ 1089 00a4 4144435F 		.ascii	"ADC_R\000"
+ 1089      5200
+ 1090              	.LASF33:
+ 1091 00aa 2E5C6D61 		.ascii	".\\main.c\000"
+ 1091      696E2E63 
+ 1091      00
+ 1092              	.LASF14:
+ 1093 00b3 666C6F61 		.ascii	"float\000"
+ 1093      7400
+ 1094              	.LASF22:
+ 1095 00b9 4144435F 		.ascii	"ADC_SAR_R_ISR_LOC\000"
+ 1095      5341525F 
+ 1095      525F4953 
+ 1095      525F4C4F 
+ 1095      4300
+ 1096              	.LASF1:
+ 1097 00cb 756E7369 		.ascii	"unsigned char\000"
+ 1097      676E6564 
+ 1097      20636861 
+ 1097      7200
+ 1098              	.LASF28:
+ 1099 00d9 64617461 		.ascii	"dataReady_L\000"
+ 1099      52656164 
+ 1099      795F4C00 
+ 1100              	.LASF18:
+ 1101 00e5 72656738 		.ascii	"reg8\000"
+ 1101      00
+ 1102              	.LASF13:
+ 1103 00ea 696E7431 		.ascii	"int16\000"
+ 1103      3600
+ 1104              	.LASF5:
+ 1105 00f0 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1105      20756E73 
+ 1105      69676E65 
+ 1105      6420696E 
+ 1105      7400
+ 1106              	.LASF30:
+ 1107 0102 64617461 		.ascii	"dataReady_R\000"
+ 1107      52656164 
+ 1107      795F5200 
+ 1108              	.LASF25:
+ 1109 010e 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1109      52784275 
+ 1109      66666572 
+ 1109      00
+ 1110              	.LASF15:
+ 1111 011b 646F7562 		.ascii	"double\000"
+ 1111      6C6500
+ 1112              	.LASF35:
+ 1113 0122 6D61696E 		.ascii	"main\000"
+ 1113      00
+ 1114              	.LASF12:
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 25
+
+
+ 1115 0127 75696E74 		.ascii	"uint16\000"
+ 1115      313600
+ 1116              	.LASF8:
+ 1117 012e 756E7369 		.ascii	"unsigned int\000"
+ 1117      676E6564 
+ 1117      20696E74 
+ 1117      00
+ 1118              	.LASF7:
+ 1119 013b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1119      206C6F6E 
+ 1119      6720756E 
+ 1119      7369676E 
+ 1119      65642069 
+ 1120              	.LASF21:
+ 1121 0152 496E7465 		.ascii	"InterruptHandler\000"
+ 1121      72727570 
+ 1121      7448616E 
+ 1121      646C6572 
+ 1121      00
+ 1122              	.LASF31:
+ 1123 0163 72657375 		.ascii	"result_R\000"
+ 1123      6C745F52 
+ 1123      00
+ 1124              	.LASF10:
+ 1125 016c 696E7433 		.ascii	"int32_t\000"
+ 1125      325F7400 
+ 1126              	.LASF20:
+ 1127 0174 73697A65 		.ascii	"sizetype\000"
+ 1127      74797065 
+ 1127      00
+ 1128              	.LASF16:
+ 1129 017d 63686172 		.ascii	"char8\000"
+ 1129      3800
+ 1130              	.LASF6:
+ 1131 0183 6C6F6E67 		.ascii	"long long int\000"
+ 1131      206C6F6E 
+ 1131      6720696E 
+ 1131      7400
+ 1132              	.LASF17:
+ 1133 0191 63686172 		.ascii	"char\000"
+ 1133      00
+ 1134              	.LASF2:
+ 1135 0196 73686F72 		.ascii	"short int\000"
+ 1135      7420696E 
+ 1135      7400
+ 1136              	.LASF24:
+ 1137 01a0 72657375 		.ascii	"resultStr\000"
+ 1137      6C745374 
+ 1137      7200
+ 1138              	.LASF11:
+ 1139 01aa 75696E74 		.ascii	"uint8\000"
+ 1139      3800
+ 1140              	.LASF4:
+ 1141 01b0 6C6F6E67 		.ascii	"long int\000"
+ 1141      20696E74 
+ 1141      00
+ 1142              	.LASF34:
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccS6Oioq.s 			page 26
+
+
+ 1143 01b9 433A5C55 		.ascii	"C:\\Users\\Jiang Liu\\Desktop\\ee\\innovation\\ADC_"
+ 1143      73657273 
+ 1143      5C4A6961 
+ 1143      6E67204C 
+ 1143      69755C44 
+ 1144 01e6 5341525F 		.ascii	"SAR_PrISM01.cydsn\000"
+ 1144      50724953 
+ 1144      4D30312E 
+ 1144      63796473 
+ 1144      6E00
+ 1145              	.LASF0:
+ 1146 01f8 7369676E 		.ascii	"signed char\000"
+ 1146      65642063 
+ 1146      68617200 
+ 1147              	.LASF3:
+ 1148 0204 73686F72 		.ascii	"short unsigned int\000"
+ 1148      7420756E 
+ 1148      7369676E 
+ 1148      65642069 
+ 1148      6E7400
+ 1149              	.LASF29:
+ 1150 0217 72657375 		.ascii	"result_L\000"
+ 1150      6C745F4C 
+ 1150      00
+ 1151              	.LASF23:
+ 1152 0220 4144435F 		.ascii	"ADC_SAR_L_ISR_LOC\000"
+ 1152      5341525F 
+ 1152      4C5F4953 
+ 1152      525F4C4F 
+ 1152      4300
+ 1153              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

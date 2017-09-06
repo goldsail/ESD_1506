@@ -1,0 +1,6 @@
+C:\Users\Jiang Liu\Desktop\ee\innovation\ADC_SAR_PrISM01.cydsn\ADC_SAR_PrISM01.cyprj|45c4c4e1-842e-4fde-9c28-5ecf9ab3f649
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|74a93409-f60b-4dd9-b71d-e7e4329ecefa
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|e94f2434-860d-41b6-ac94-75a7de541130
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|26f2c616-01d6-48b7-b2b6-7a628001897f
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|da849ae9-1a92-4a20-929c-ceae2ef12751
+D:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|381701ac-048c-47b3-87eb-8d35c4dd9975

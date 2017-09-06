@@ -1,0 +1,1117 @@
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"pid.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global	Ek
+  19              		.bss
+  20              		.align	2
+  21              		.type	Ek, %object
+  22              		.size	Ek, 4
+  23              	Ek:
+  24 0000 00000000 		.space	4
+  25              		.global	Ek_1
+  26              		.align	2
+  27              		.type	Ek_1, %object
+  28              		.size	Ek_1, 4
+  29              	Ek_1:
+  30 0004 00000000 		.space	4
+  31              		.global	Ek_2
+  32              		.align	2
+  33              		.type	Ek_2, %object
+  34              		.size	Ek_2, 4
+  35              	Ek_2:
+  36 0008 00000000 		.space	4
+  37              		.global	Uk
+  38              		.align	2
+  39              		.type	Uk, %object
+  40              		.size	Uk, 4
+  41              	Uk:
+  42 000c 00000000 		.space	4
+  43              		.global	Ukk
+  44              		.align	2
+  45              		.type	Ukk, %object
+  46              		.size	Ukk, 4
+  47              	Ukk:
+  48 0010 00000000 		.space	4
+  49              		.global	Kp
+  50              		.data
+  51              		.align	2
+  52              		.type	Kp, %object
+  53              		.size	Kp, 4
+  54              	Kp:
+  55 0000 00000041 		.word	1090519040
+  56              		.global	Ki
+  57              		.align	2
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 2
+
+
+  58              		.type	Ki, %object
+  59              		.size	Ki, 4
+  60              	Ki:
+  61 0004 EC51B83D 		.word	1035489772
+  62              		.global	Kd
+  63              		.align	2
+  64              		.type	Kd, %object
+  65              		.size	Kd, 4
+  66              	Kd:
+  67 0008 8FC2F53E 		.word	1056293519
+  68              		.global	TopMotorAngleCoeff
+  69              		.align	2
+  70              		.type	TopMotorAngleCoeff, %object
+  71              		.size	TopMotorAngleCoeff, 4
+  72              	TopMotorAngleCoeff:
+  73 000c 00008040 		.word	1082130432
+  74              		.global	ADC_L_balance
+  75              		.align	1
+  76              		.type	ADC_L_balance, %object
+  77              		.size	ADC_L_balance, 2
+  78              	ADC_L_balance:
+  79 0010 B202     		.short	690
+  80              		.global	ADC_R_balance
+  81              		.align	1
+  82              		.type	ADC_R_balance, %object
+  83              		.size	ADC_R_balance, 2
+  84              	ADC_R_balance:
+  85 0012 D002     		.short	720
+  86              		.global	bias
+  87              		.align	1
+  88              		.type	bias, %object
+  89              		.size	bias, 2
+  90              	bias:
+  91 0014 F6FF     		.short	-10
+  92              		.comm	ADC_L,2,2
+  93              		.comm	ADC_R,2,2
+  94              		.global	range
+  95 0016 0000     		.align	2
+  96              		.type	range, %object
+  97              		.size	range, 4
+  98              	range:
+  99 0018 00002041 		.word	1092616192
+ 100              		.global	speed1
+ 101              		.bss
+ 102              		.align	1
+ 103              		.type	speed1, %object
+ 104              		.size	speed1, 2
+ 105              	speed1:
+ 106 0014 0000     		.space	2
+ 107              		.global	speed2
+ 108              		.align	1
+ 109              		.type	speed2, %object
+ 110              		.size	speed2, 2
+ 111              	speed2:
+ 112 0016 0000     		.space	2
+ 113              		.global	angle3
+ 114              		.align	1
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 3
+
+
+ 115              		.type	angle3, %object
+ 116              		.size	angle3, 2
+ 117              	angle3:
+ 118 0018 0000     		.space	2
+ 119              		.global	__aeabi_i2f
+ 120              		.global	__aeabi_fsub
+ 121              		.global	__aeabi_fmul
+ 122              		.global	__aeabi_fadd
+ 123              		.global	__aeabi_f2d
+ 124              		.global	__aeabi_dmul
+ 125              		.global	__aeabi_dadd
+ 126              		.global	__aeabi_d2f
+ 127              		.global	__aeabi_fcmple
+ 128              		.global	__aeabi_fcmpgt
+ 129              		.global	__aeabi_fcmplt
+ 130              		.global	__aeabi_f2iz
+ 131              		.global	__aeabi_fdiv
+ 132              		.global	__aeabi_f2uiz
+ 133 001a 0000     		.section	.text.PID,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	PID
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.type	PID, %function
+ 139              	PID:
+ 140              	.LFB63:
+ 141              		.file 1 ".\\pid.c"
+   1:.\pid.c       **** // author: Jiang LIU
+   2:.\pid.c       **** 
+   3:.\pid.c       **** #include "pid.h"
+   4:.\pid.c       **** 
+   5:.\pid.c       **** float32 Ek = 0;
+   6:.\pid.c       **** float32 Ek_1 = 0;
+   7:.\pid.c       **** float32 Ek_2 = 0;
+   8:.\pid.c       **** float32 Uk = 0;
+   9:.\pid.c       **** float32 Ukk = 0;
+  10:.\pid.c       **** float32 Kp = 8;
+  11:.\pid.c       **** float32 Ki = 0.09;
+  12:.\pid.c       **** float32 Kd = 0.48;//0,2
+  13:.\pid.c       **** float32 TopMotorAngleCoeff = 4;
+  14:.\pid.c       **** int16 ADC_L_balance = 690; 
+  15:.\pid.c       **** int16 ADC_R_balance = 720; 
+  16:.\pid.c       **** //int16 bias = ADC_L_balance - ADC_R_balance;
+  17:.\pid.c       **** int16 bias = -10;
+  18:.\pid.c       **** 
+  19:.\pid.c       **** int16 ADC_L;
+  20:.\pid.c       **** int16 ADC_R;
+  21:.\pid.c       **** float32 range = 10;
+  22:.\pid.c       **** int16 speed1 = 0; // -0x03ff ~ 0x03ff
+  23:.\pid.c       **** int16 speed2 = 0;
+  24:.\pid.c       **** uint16 angle3 = 0; // 0 - 300 degrees
+  25:.\pid.c       **** 
+  26:.\pid.c       **** void PID()
+  27:.\pid.c       **** {
+ 142              		.loc 1 27 0
+ 143              		.cfi_startproc
+ 144              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 4
+
+
+ 145              		@ frame_needed = 1, uses_anonymous_args = 0
+ 146 0000 B0B5     		push	{r4, r5, r7, lr}
+ 147              		.cfi_def_cfa_offset 16
+ 148              		.cfi_offset 4, -16
+ 149              		.cfi_offset 5, -12
+ 150              		.cfi_offset 7, -8
+ 151              		.cfi_offset 14, -4
+ 152 0002 00AF     		add	r7, sp, #0
+ 153              		.cfi_def_cfa_register 7
+  28:.\pid.c       ****     Ek = (ADC_L - ADC_R) - bias;
+ 154              		.loc 1 28 0
+ 155 0004 824B     		ldr	r3, .L14+8
+ 156 0006 1B88     		ldrh	r3, [r3]
+ 157 0008 1AB2     		sxth	r2, r3
+ 158 000a 824B     		ldr	r3, .L14+12
+ 159 000c 1B88     		ldrh	r3, [r3]
+ 160 000e 1BB2     		sxth	r3, r3
+ 161 0010 D21A     		subs	r2, r2, r3
+ 162 0012 814B     		ldr	r3, .L14+16
+ 163 0014 1B88     		ldrh	r3, [r3]
+ 164 0016 1BB2     		sxth	r3, r3
+ 165 0018 D31A     		subs	r3, r2, r3
+ 166 001a 1846     		mov	r0, r3
+ 167 001c FFF7FEFF 		bl	__aeabi_i2f
+ 168 0020 0246     		mov	r2, r0
+ 169 0022 7E4B     		ldr	r3, .L14+20
+ 170 0024 1A60     		str	r2, [r3]	@ float
+  29:.\pid.c       ****     Uk = Kp * (Ek - Ek_1 + Ki*Ek + Kd*(Ek - 2*Ek_1 + Ek_2)) + 0.95 * Ukk;
+ 171              		.loc 1 29 0
+ 172 0026 7D4B     		ldr	r3, .L14+20
+ 173 0028 1A68     		ldr	r2, [r3]	@ float
+ 174 002a 7D4B     		ldr	r3, .L14+24
+ 175 002c 1B68     		ldr	r3, [r3]	@ float
+ 176 002e 1046     		mov	r0, r2
+ 177 0030 1946     		mov	r1, r3
+ 178 0032 FFF7FEFF 		bl	__aeabi_fsub
+ 179 0036 0346     		mov	r3, r0
+ 180 0038 1C46     		mov	r4, r3
+ 181 003a 7A4B     		ldr	r3, .L14+28
+ 182 003c 1A68     		ldr	r2, [r3]	@ float
+ 183 003e 774B     		ldr	r3, .L14+20
+ 184 0040 1B68     		ldr	r3, [r3]	@ float
+ 185 0042 1046     		mov	r0, r2
+ 186 0044 1946     		mov	r1, r3
+ 187 0046 FFF7FEFF 		bl	__aeabi_fmul
+ 188 004a 0346     		mov	r3, r0
+ 189 004c 2046     		mov	r0, r4
+ 190 004e 1946     		mov	r1, r3
+ 191 0050 FFF7FEFF 		bl	__aeabi_fadd
+ 192 0054 0346     		mov	r3, r0
+ 193 0056 1D46     		mov	r5, r3
+ 194 0058 704B     		ldr	r3, .L14+20
+ 195 005a 1C68     		ldr	r4, [r3]	@ float
+ 196 005c 704B     		ldr	r3, .L14+24
+ 197 005e 1B68     		ldr	r3, [r3]	@ float
+ 198 0060 1846     		mov	r0, r3
+ 199 0062 1946     		mov	r1, r3
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 5
+
+
+ 200 0064 FFF7FEFF 		bl	__aeabi_fadd
+ 201 0068 0346     		mov	r3, r0
+ 202 006a 2046     		mov	r0, r4
+ 203 006c 1946     		mov	r1, r3
+ 204 006e FFF7FEFF 		bl	__aeabi_fsub
+ 205 0072 0346     		mov	r3, r0
+ 206 0074 1A46     		mov	r2, r3
+ 207 0076 6C4B     		ldr	r3, .L14+32
+ 208 0078 1B68     		ldr	r3, [r3]	@ float
+ 209 007a 1046     		mov	r0, r2
+ 210 007c 1946     		mov	r1, r3
+ 211 007e FFF7FEFF 		bl	__aeabi_fadd
+ 212 0082 0346     		mov	r3, r0
+ 213 0084 1A46     		mov	r2, r3
+ 214 0086 694B     		ldr	r3, .L14+36
+ 215 0088 1B68     		ldr	r3, [r3]	@ float
+ 216 008a 1046     		mov	r0, r2
+ 217 008c 1946     		mov	r1, r3
+ 218 008e FFF7FEFF 		bl	__aeabi_fmul
+ 219 0092 0346     		mov	r3, r0
+ 220 0094 2846     		mov	r0, r5
+ 221 0096 1946     		mov	r1, r3
+ 222 0098 FFF7FEFF 		bl	__aeabi_fadd
+ 223 009c 0346     		mov	r3, r0
+ 224 009e 1A46     		mov	r2, r3
+ 225 00a0 634B     		ldr	r3, .L14+40
+ 226 00a2 1B68     		ldr	r3, [r3]	@ float
+ 227 00a4 1046     		mov	r0, r2
+ 228 00a6 1946     		mov	r1, r3
+ 229 00a8 FFF7FEFF 		bl	__aeabi_fmul
+ 230 00ac 0346     		mov	r3, r0
+ 231 00ae 1846     		mov	r0, r3
+ 232 00b0 FFF7FEFF 		bl	__aeabi_f2d
+ 233 00b4 0446     		mov	r4, r0
+ 234 00b6 0D46     		mov	r5, r1
+ 235 00b8 5E4B     		ldr	r3, .L14+44
+ 236 00ba 1B68     		ldr	r3, [r3]	@ float
+ 237 00bc 1846     		mov	r0, r3
+ 238 00be FFF7FEFF 		bl	__aeabi_f2d
+ 239 00c2 0246     		mov	r2, r0
+ 240 00c4 0B46     		mov	r3, r1
+ 241 00c6 1046     		mov	r0, r2
+ 242 00c8 1946     		mov	r1, r3
+ 243 00ca 4FA3     		adr	r3, .L14
+ 244 00cc D3E90023 		ldrd	r2, [r3]
+ 245 00d0 FFF7FEFF 		bl	__aeabi_dmul
+ 246 00d4 0246     		mov	r2, r0
+ 247 00d6 0B46     		mov	r3, r1
+ 248 00d8 2046     		mov	r0, r4
+ 249 00da 2946     		mov	r1, r5
+ 250 00dc FFF7FEFF 		bl	__aeabi_dadd
+ 251 00e0 0246     		mov	r2, r0
+ 252 00e2 0B46     		mov	r3, r1
+ 253 00e4 1046     		mov	r0, r2
+ 254 00e6 1946     		mov	r1, r3
+ 255 00e8 FFF7FEFF 		bl	__aeabi_d2f
+ 256 00ec 0246     		mov	r2, r0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 6
+
+
+ 257 00ee 524B     		ldr	r3, .L14+48
+ 258 00f0 1A60     		str	r2, [r3]	@ float
+  30:.\pid.c       ****     Ukk = Uk;
+ 259              		.loc 1 30 0
+ 260 00f2 514B     		ldr	r3, .L14+48
+ 261 00f4 1B68     		ldr	r3, [r3]	@ float
+ 262 00f6 4F4A     		ldr	r2, .L14+44
+ 263 00f8 1360     		str	r3, [r2]	@ float
+  31:.\pid.c       ****     Ek_2 = Ek_1;
+ 264              		.loc 1 31 0
+ 265 00fa 494B     		ldr	r3, .L14+24
+ 266 00fc 1B68     		ldr	r3, [r3]	@ float
+ 267 00fe 4A4A     		ldr	r2, .L14+32
+ 268 0100 1360     		str	r3, [r2]	@ float
+  32:.\pid.c       ****     Ek_1 = Ek;
+ 269              		.loc 1 32 0
+ 270 0102 464B     		ldr	r3, .L14+20
+ 271 0104 1B68     		ldr	r3, [r3]	@ float
+ 272 0106 464A     		ldr	r2, .L14+24
+ 273 0108 1360     		str	r3, [r2]	@ float
+  33:.\pid.c       ****     if(Uk>=-range && Ukk <=range)
+ 274              		.loc 1 33 0
+ 275 010a 4C4B     		ldr	r3, .L14+52
+ 276 010c 1B68     		ldr	r3, [r3]	@ float
+ 277 010e 83F00042 		eor	r2, r3, #-2147483648
+ 278 0112 494B     		ldr	r3, .L14+48
+ 279 0114 1B68     		ldr	r3, [r3]	@ float
+ 280 0116 1046     		mov	r0, r2
+ 281 0118 1946     		mov	r1, r3
+ 282 011a FFF7FEFF 		bl	__aeabi_fcmple
+ 283 011e 0346     		mov	r3, r0
+ 284 0120 002B     		cmp	r3, #0
+ 285 0122 16D0     		beq	.L2
+ 286              		.loc 1 33 0 is_stmt 0 discriminator 1
+ 287 0124 434B     		ldr	r3, .L14+44
+ 288 0126 1A68     		ldr	r2, [r3]	@ float
+ 289 0128 444B     		ldr	r3, .L14+52
+ 290 012a 1B68     		ldr	r3, [r3]	@ float
+ 291 012c 1046     		mov	r0, r2
+ 292 012e 1946     		mov	r1, r3
+ 293 0130 FFF7FEFF 		bl	__aeabi_fcmple
+ 294 0134 0346     		mov	r3, r0
+ 295 0136 002B     		cmp	r3, #0
+ 296 0138 0BD0     		beq	.L2
+  34:.\pid.c       ****     {
+  35:.\pid.c       ****         speed1 = speed2 = 0;
+ 297              		.loc 1 35 0 is_stmt 1
+ 298 013a 414B     		ldr	r3, .L14+56
+ 299 013c 0022     		movs	r2, #0
+ 300 013e 1A80     		strh	r2, [r3]	@ movhi
+ 301 0140 3F4B     		ldr	r3, .L14+56
+ 302 0142 1A88     		ldrh	r2, [r3]
+ 303 0144 3F4B     		ldr	r3, .L14+60
+ 304 0146 1A80     		strh	r2, [r3]	@ movhi
+  36:.\pid.c       ****         angle3 = 512;
+ 305              		.loc 1 36 0
+ 306 0148 3F4B     		ldr	r3, .L14+64
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 7
+
+
+ 307 014a 4FF40072 		mov	r2, #512
+ 308 014e 1A80     		strh	r2, [r3]	@ movhi
+ 309 0150 41E0     		b	.L5
+ 310              	.L2:
+  37:.\pid.c       ****     }
+  38:.\pid.c       ****     else
+  39:.\pid.c       ****     {
+  40:.\pid.c       ****         if(Uk > 1023) Uk = 1023;
+ 311              		.loc 1 40 0
+ 312 0152 394B     		ldr	r3, .L14+48
+ 313 0154 1B68     		ldr	r3, [r3]	@ float
+ 314 0156 1846     		mov	r0, r3
+ 315 0158 3C49     		ldr	r1, .L14+68
+ 316 015a FFF7FEFF 		bl	__aeabi_fcmpgt
+ 317 015e 0346     		mov	r3, r0
+ 318 0160 002B     		cmp	r3, #0
+ 319 0162 02D0     		beq	.L6
+ 320              		.loc 1 40 0 is_stmt 0 discriminator 1
+ 321 0164 344B     		ldr	r3, .L14+48
+ 322 0166 394A     		ldr	r2, .L14+68
+ 323 0168 1A60     		str	r2, [r3]	@ float
+ 324              	.L6:
+  41:.\pid.c       ****         if(Uk < -1023) Uk = -1023;
+ 325              		.loc 1 41 0 is_stmt 1
+ 326 016a 334B     		ldr	r3, .L14+48
+ 327 016c 1B68     		ldr	r3, [r3]	@ float
+ 328 016e 1846     		mov	r0, r3
+ 329 0170 3749     		ldr	r1, .L14+72
+ 330 0172 FFF7FEFF 		bl	__aeabi_fcmplt
+ 331 0176 0346     		mov	r3, r0
+ 332 0178 002B     		cmp	r3, #0
+ 333 017a 02D0     		beq	.L8
+ 334              		.loc 1 41 0 is_stmt 0 discriminator 1
+ 335 017c 2E4B     		ldr	r3, .L14+48
+ 336 017e 344A     		ldr	r2, .L14+72
+ 337 0180 1A60     		str	r2, [r3]	@ float
+ 338              	.L8:
+  42:.\pid.c       ****         speed1 = Uk;
+ 339              		.loc 1 42 0 is_stmt 1
+ 340 0182 2D4B     		ldr	r3, .L14+48
+ 341 0184 1B68     		ldr	r3, [r3]	@ float
+ 342 0186 1846     		mov	r0, r3
+ 343 0188 FFF7FEFF 		bl	__aeabi_f2iz
+ 344 018c 0346     		mov	r3, r0
+ 345 018e 9AB2     		uxth	r2, r3
+ 346 0190 2C4B     		ldr	r3, .L14+60
+ 347 0192 1A80     		strh	r2, [r3]	@ movhi
+  43:.\pid.c       ****         speed2 = -Uk;
+ 348              		.loc 1 43 0
+ 349 0194 284B     		ldr	r3, .L14+48
+ 350 0196 1B68     		ldr	r3, [r3]	@ float
+ 351 0198 83F00043 		eor	r3, r3, #-2147483648
+ 352 019c 1846     		mov	r0, r3
+ 353 019e FFF7FEFF 		bl	__aeabi_f2iz
+ 354 01a2 0346     		mov	r3, r0
+ 355 01a4 9AB2     		uxth	r2, r3
+ 356 01a6 264B     		ldr	r3, .L14+56
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 8
+
+
+ 357 01a8 1A80     		strh	r2, [r3]	@ movhi
+  44:.\pid.c       ****         angle3 = 512 + (Uk / TopMotorAngleCoeff);
+ 358              		.loc 1 44 0
+ 359 01aa 234B     		ldr	r3, .L14+48
+ 360 01ac 1A68     		ldr	r2, [r3]	@ float
+ 361 01ae 294B     		ldr	r3, .L14+76
+ 362 01b0 1B68     		ldr	r3, [r3]	@ float
+ 363 01b2 1046     		mov	r0, r2
+ 364 01b4 1946     		mov	r1, r3
+ 365 01b6 FFF7FEFF 		bl	__aeabi_fdiv
+ 366 01ba 0346     		mov	r3, r0
+ 367 01bc 1846     		mov	r0, r3
+ 368 01be 4FF08841 		mov	r1, #1140850688
+ 369 01c2 FFF7FEFF 		bl	__aeabi_fadd
+ 370 01c6 0346     		mov	r3, r0
+ 371 01c8 1846     		mov	r0, r3
+ 372 01ca FFF7FEFF 		bl	__aeabi_f2uiz
+ 373 01ce 0346     		mov	r3, r0
+ 374 01d0 9AB2     		uxth	r2, r3
+ 375 01d2 1D4B     		ldr	r3, .L14+64
+ 376 01d4 1A80     		strh	r2, [r3]	@ movhi
+ 377              	.L5:
+  45:.\pid.c       ****     }
+  46:.\pid.c       ****     SetMotorSpeed(_LEFT, speed1, 255);
+ 378              		.loc 1 46 0
+ 379 01d6 1B4B     		ldr	r3, .L14+60
+ 380 01d8 1B88     		ldrh	r3, [r3]
+ 381 01da 1BB2     		sxth	r3, r3
+ 382 01dc 0120     		movs	r0, #1
+ 383 01de 1946     		mov	r1, r3
+ 384 01e0 FF22     		movs	r2, #255
+ 385 01e2 FFF7FEFF 		bl	SetMotorSpeed
+  47:.\pid.c       ****     SetMotorSpeed(_RIGHT, speed2, 255);
+ 386              		.loc 1 47 0
+ 387 01e6 164B     		ldr	r3, .L14+56
+ 388 01e8 1B88     		ldrh	r3, [r3]
+ 389 01ea 1BB2     		sxth	r3, r3
+ 390 01ec 0220     		movs	r0, #2
+ 391 01ee 1946     		mov	r1, r3
+ 392 01f0 FF22     		movs	r2, #255
+ 393 01f2 FFF7FEFF 		bl	SetMotorSpeed
+  48:.\pid.c       ****     SetServoPosition(_TOP, angle3, 0x03ff);
+ 394              		.loc 1 48 0
+ 395 01f6 144B     		ldr	r3, .L14+64
+ 396 01f8 1B88     		ldrh	r3, [r3]
+ 397 01fa 0020     		movs	r0, #0
+ 398 01fc 1946     		mov	r1, r3
+ 399 01fe 40F2FF32 		movw	r2, #1023
+ 400 0202 FFF7FEFF 		bl	SetServoPosition
+  49:.\pid.c       **** }...
+ 401              		.loc 1 49 0
+ 402 0206 B0BD     		pop	{r4, r5, r7, pc}
+ 403              	.L15:
+ 404              		.align	3
+ 405              	.L14:
+ 406 0208 66666666 		.word	1717986918
+ 407 020c 6666EE3F 		.word	1072588390
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 9
+
+
+ 408 0210 00000000 		.word	ADC_L
+ 409 0214 00000000 		.word	ADC_R
+ 410 0218 00000000 		.word	bias
+ 411 021c 00000000 		.word	Ek
+ 412 0220 00000000 		.word	Ek_1
+ 413 0224 00000000 		.word	Ki
+ 414 0228 00000000 		.word	Ek_2
+ 415 022c 00000000 		.word	Kd
+ 416 0230 00000000 		.word	Kp
+ 417 0234 00000000 		.word	Ukk
+ 418 0238 00000000 		.word	Uk
+ 419 023c 00000000 		.word	range
+ 420 0240 00000000 		.word	speed2
+ 421 0244 00000000 		.word	speed1
+ 422 0248 00000000 		.word	angle3
+ 423 024c 00C07F44 		.word	1149222912
+ 424 0250 00C07FC4 		.word	-998260736
+ 425 0254 00000000 		.word	TopMotorAngleCoeff
+ 426              		.cfi_endproc
+ 427              	.LFE63:
+ 428              		.size	PID, .-PID
+ 429              		.text
+ 430              	.Letext0:
+ 431              		.file 2 "d:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 432              		.file 3 "d:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 433              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 434              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 435              		.section	.debug_info,"",%progbits
+ 436              	.Ldebug_info0:
+ 437 0000 0D020000 		.4byte	0x20d
+ 438 0004 0400     		.2byte	0x4
+ 439 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 440 000a 04       		.byte	0x4
+ 441 000b 01       		.uleb128 0x1
+ 442 000c 27000000 		.4byte	.LASF31
+ 443 0010 01       		.byte	0x1
+ 444 0011 79010000 		.4byte	.LASF32
+ 445 0015 AB010000 		.4byte	.LASF33
+ 446 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 447 001d 00000000 		.4byte	0
+ 448 0021 00000000 		.4byte	.Ldebug_line0
+ 449 0025 02       		.uleb128 0x2
+ 450 0026 01       		.byte	0x1
+ 451 0027 06       		.byte	0x6
+ 452 0028 ED010000 		.4byte	.LASF0
+ 453 002c 02       		.uleb128 0x2
+ 454 002d 01       		.byte	0x1
+ 455 002e 08       		.byte	0x8
+ 456 002f 2E010000 		.4byte	.LASF1
+ 457 0033 02       		.uleb128 0x2
+ 458 0034 02       		.byte	0x2
+ 459 0035 05       		.byte	0x5
+ 460 0036 D6010000 		.4byte	.LASF2
+ 461 003a 02       		.uleb128 0x2
+ 462 003b 02       		.byte	0x2
+ 463 003c 07       		.byte	0x7
+ 464 003d EC000000 		.4byte	.LASF3
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 10
+
+
+ 465 0041 03       		.uleb128 0x3
+ 466 0042 0E000000 		.4byte	.LASF9
+ 467 0046 02       		.byte	0x2
+ 468 0047 3F       		.byte	0x3f
+ 469 0048 4C000000 		.4byte	0x4c
+ 470 004c 02       		.uleb128 0x2
+ 471 004d 04       		.byte	0x4
+ 472 004e 05       		.byte	0x5
+ 473 004f 1E000000 		.4byte	.LASF4
+ 474 0053 02       		.uleb128 0x2
+ 475 0054 04       		.byte	0x4
+ 476 0055 07       		.byte	0x7
+ 477 0056 DA000000 		.4byte	.LASF5
+ 478 005a 02       		.uleb128 0x2
+ 479 005b 08       		.byte	0x8
+ 480 005c 05       		.byte	0x5
+ 481 005d 81010000 		.4byte	.LASF6
+ 482 0061 02       		.uleb128 0x2
+ 483 0062 08       		.byte	0x8
+ 484 0063 07       		.byte	0x7
+ 485 0064 49010000 		.4byte	.LASF7
+ 486 0068 04       		.uleb128 0x4
+ 487 0069 04       		.byte	0x4
+ 488 006a 05       		.byte	0x5
+ 489 006b 696E7400 		.ascii	"int\000"
+ 490 006f 02       		.uleb128 0x2
+ 491 0070 04       		.byte	0x4
+ 492 0071 07       		.byte	0x7
+ 493 0072 3C010000 		.4byte	.LASF8
+ 494 0076 03       		.uleb128 0x3
+ 495 0077 67010000 		.4byte	.LASF10
+ 496 007b 03       		.byte	0x3
+ 497 007c 2C       		.byte	0x2c
+ 498 007d 41000000 		.4byte	0x41
+ 499 0081 05       		.uleb128 0x5
+ 500 0082 27010000 		.4byte	.LASF11
+ 501 0086 04       		.byte	0x4
+ 502 0087 3901     		.2byte	0x139
+ 503 0089 3A000000 		.4byte	0x3a
+ 504 008d 05       		.uleb128 0x5
+ 505 008e D4000000 		.4byte	.LASF12
+ 506 0092 04       		.byte	0x4
+ 507 0093 3C01     		.2byte	0x13c
+ 508 0095 33000000 		.4byte	0x33
+ 509 0099 05       		.uleb128 0x5
+ 510 009a E0010000 		.4byte	.LASF13
+ 511 009e 04       		.byte	0x4
+ 512 009f 3E01     		.2byte	0x13e
+ 513 00a1 A5000000 		.4byte	0xa5
+ 514 00a5 02       		.uleb128 0x2
+ 515 00a6 04       		.byte	0x4
+ 516 00a7 04       		.byte	0x4
+ 517 00a8 CE000000 		.4byte	.LASF14
+ 518 00ac 02       		.uleb128 0x2
+ 519 00ad 08       		.byte	0x8
+ 520 00ae 04       		.byte	0x4
+ 521 00af 20010000 		.4byte	.LASF15
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 11
+
+
+ 522 00b3 02       		.uleb128 0x2
+ 523 00b4 01       		.byte	0x1
+ 524 00b5 08       		.byte	0x8
+ 525 00b6 E8010000 		.4byte	.LASF16
+ 526 00ba 02       		.uleb128 0x2
+ 527 00bb 04       		.byte	0x4
+ 528 00bc 07       		.byte	0x7
+ 529 00bd A2010000 		.4byte	.LASF17
+ 530 00c1 06       		.uleb128 0x6
+ 531 00c2 50494400 		.ascii	"PID\000"
+ 532 00c6 01       		.byte	0x1
+ 533 00c7 1A       		.byte	0x1a
+ 534 00c8 00000000 		.4byte	.LFB63
+ 535 00cc 58020000 		.4byte	.LFE63-.LFB63
+ 536 00d0 01       		.uleb128 0x1
+ 537 00d1 9C       		.byte	0x9c
+ 538 00d2 07       		.uleb128 0x7
+ 539 00d3 0D010000 		.4byte	.LASF18
+ 540 00d7 05       		.byte	0x5
+ 541 00d8 5506     		.2byte	0x655
+ 542 00da DE000000 		.4byte	0xde
+ 543 00de 08       		.uleb128 0x8
+ 544 00df 76000000 		.4byte	0x76
+ 545 00e3 09       		.uleb128 0x9
+ 546 00e4 456B00   		.ascii	"Ek\000"
+ 547 00e7 01       		.byte	0x1
+ 548 00e8 05       		.byte	0x5
+ 549 00e9 99000000 		.4byte	0x99
+ 550 00ed 05       		.uleb128 0x5
+ 551 00ee 03       		.byte	0x3
+ 552 00ef 00000000 		.4byte	Ek
+ 553 00f3 0A       		.uleb128 0xa
+ 554 00f4 6F010000 		.4byte	.LASF19
+ 555 00f8 01       		.byte	0x1
+ 556 00f9 06       		.byte	0x6
+ 557 00fa 99000000 		.4byte	0x99
+ 558 00fe 05       		.uleb128 0x5
+ 559 00ff 03       		.byte	0x3
+ 560 0100 00000000 		.4byte	Ek_1
+ 561 0104 0A       		.uleb128 0xa
+ 562 0105 74010000 		.4byte	.LASF20
+ 563 0109 01       		.byte	0x1
+ 564 010a 07       		.byte	0x7
+ 565 010b 99000000 		.4byte	0x99
+ 566 010f 05       		.uleb128 0x5
+ 567 0110 03       		.byte	0x3
+ 568 0111 00000000 		.4byte	Ek_2
+ 569 0115 09       		.uleb128 0x9
+ 570 0116 556B00   		.ascii	"Uk\000"
+ 571 0119 01       		.byte	0x1
+ 572 011a 08       		.byte	0x8
+ 573 011b 99000000 		.4byte	0x99
+ 574 011f 05       		.uleb128 0x5
+ 575 0120 03       		.byte	0x3
+ 576 0121 00000000 		.4byte	Uk
+ 577 0125 09       		.uleb128 0x9
+ 578 0126 556B6B00 		.ascii	"Ukk\000"
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 12
+
+
+ 579 012a 01       		.byte	0x1
+ 580 012b 09       		.byte	0x9
+ 581 012c 99000000 		.4byte	0x99
+ 582 0130 05       		.uleb128 0x5
+ 583 0131 03       		.byte	0x3
+ 584 0132 00000000 		.4byte	Ukk
+ 585 0136 09       		.uleb128 0x9
+ 586 0137 4B7000   		.ascii	"Kp\000"
+ 587 013a 01       		.byte	0x1
+ 588 013b 0A       		.byte	0xa
+ 589 013c 99000000 		.4byte	0x99
+ 590 0140 05       		.uleb128 0x5
+ 591 0141 03       		.byte	0x3
+ 592 0142 00000000 		.4byte	Kp
+ 593 0146 09       		.uleb128 0x9
+ 594 0147 4B6900   		.ascii	"Ki\000"
+ 595 014a 01       		.byte	0x1
+ 596 014b 0B       		.byte	0xb
+ 597 014c 99000000 		.4byte	0x99
+ 598 0150 05       		.uleb128 0x5
+ 599 0151 03       		.byte	0x3
+ 600 0152 00000000 		.4byte	Ki
+ 601 0156 09       		.uleb128 0x9
+ 602 0157 4B6400   		.ascii	"Kd\000"
+ 603 015a 01       		.byte	0x1
+ 604 015b 0C       		.byte	0xc
+ 605 015c 99000000 		.4byte	0x99
+ 606 0160 05       		.uleb128 0x5
+ 607 0161 03       		.byte	0x3
+ 608 0162 00000000 		.4byte	Kd
+ 609 0166 0A       		.uleb128 0xa
+ 610 0167 BB000000 		.4byte	.LASF21
+ 611 016b 01       		.byte	0x1
+ 612 016c 0D       		.byte	0xd
+ 613 016d 99000000 		.4byte	0x99
+ 614 0171 05       		.uleb128 0x5
+ 615 0172 03       		.byte	0x3
+ 616 0173 00000000 		.4byte	TopMotorAngleCoeff
+ 617 0177 0A       		.uleb128 0xa
+ 618 0178 8F010000 		.4byte	.LASF22
+ 619 017c 01       		.byte	0x1
+ 620 017d 0E       		.byte	0xe
+ 621 017e 8D000000 		.4byte	0x8d
+ 622 0182 05       		.uleb128 0x5
+ 623 0183 03       		.byte	0x3
+ 624 0184 00000000 		.4byte	ADC_L_balance
+ 625 0188 0A       		.uleb128 0xa
+ 626 0189 00000000 		.4byte	.LASF23
+ 627 018d 01       		.byte	0x1
+ 628 018e 0F       		.byte	0xf
+ 629 018f 8D000000 		.4byte	0x8d
+ 630 0193 05       		.uleb128 0x5
+ 631 0194 03       		.byte	0x3
+ 632 0195 00000000 		.4byte	ADC_R_balance
+ 633 0199 0A       		.uleb128 0xa
+ 634 019a 18000000 		.4byte	.LASF24
+ 635 019e 01       		.byte	0x1
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 13
+
+
+ 636 019f 13       		.byte	0x13
+ 637 01a0 8D000000 		.4byte	0x8d
+ 638 01a4 05       		.uleb128 0x5
+ 639 01a5 03       		.byte	0x3
+ 640 01a6 00000000 		.4byte	ADC_L
+ 641 01aa 0A       		.uleb128 0xa
+ 642 01ab B5000000 		.4byte	.LASF25
+ 643 01af 01       		.byte	0x1
+ 644 01b0 14       		.byte	0x14
+ 645 01b1 8D000000 		.4byte	0x8d
+ 646 01b5 05       		.uleb128 0x5
+ 647 01b6 03       		.byte	0x3
+ 648 01b7 00000000 		.4byte	ADC_R
+ 649 01bb 0A       		.uleb128 0xa
+ 650 01bc 1A010000 		.4byte	.LASF26
+ 651 01c0 01       		.byte	0x1
+ 652 01c1 15       		.byte	0x15
+ 653 01c2 99000000 		.4byte	0x99
+ 654 01c6 05       		.uleb128 0x5
+ 655 01c7 03       		.byte	0x3
+ 656 01c8 00000000 		.4byte	range
+ 657 01cc 0A       		.uleb128 0xa
+ 658 01cd FF000000 		.4byte	.LASF27
+ 659 01d1 01       		.byte	0x1
+ 660 01d2 16       		.byte	0x16
+ 661 01d3 8D000000 		.4byte	0x8d
+ 662 01d7 05       		.uleb128 0x5
+ 663 01d8 03       		.byte	0x3
+ 664 01d9 00000000 		.4byte	speed1
+ 665 01dd 0A       		.uleb128 0xa
+ 666 01de 06010000 		.4byte	.LASF28
+ 667 01e2 01       		.byte	0x1
+ 668 01e3 17       		.byte	0x17
+ 669 01e4 8D000000 		.4byte	0x8d
+ 670 01e8 05       		.uleb128 0x5
+ 671 01e9 03       		.byte	0x3
+ 672 01ea 00000000 		.4byte	speed2
+ 673 01ee 0A       		.uleb128 0xa
+ 674 01ef 60010000 		.4byte	.LASF29
+ 675 01f3 01       		.byte	0x1
+ 676 01f4 18       		.byte	0x18
+ 677 01f5 81000000 		.4byte	0x81
+ 678 01f9 05       		.uleb128 0x5
+ 679 01fa 03       		.byte	0x3
+ 680 01fb 00000000 		.4byte	angle3
+ 681 01ff 0A       		.uleb128 0xa
+ 682 0200 9D010000 		.4byte	.LASF30
+ 683 0204 01       		.byte	0x1
+ 684 0205 11       		.byte	0x11
+ 685 0206 8D000000 		.4byte	0x8d
+ 686 020a 05       		.uleb128 0x5
+ 687 020b 03       		.byte	0x3
+ 688 020c 00000000 		.4byte	bias
+ 689 0210 00       		.byte	0
+ 690              		.section	.debug_abbrev,"",%progbits
+ 691              	.Ldebug_abbrev0:
+ 692 0000 01       		.uleb128 0x1
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 14
+
+
+ 693 0001 11       		.uleb128 0x11
+ 694 0002 01       		.byte	0x1
+ 695 0003 25       		.uleb128 0x25
+ 696 0004 0E       		.uleb128 0xe
+ 697 0005 13       		.uleb128 0x13
+ 698 0006 0B       		.uleb128 0xb
+ 699 0007 03       		.uleb128 0x3
+ 700 0008 0E       		.uleb128 0xe
+ 701 0009 1B       		.uleb128 0x1b
+ 702 000a 0E       		.uleb128 0xe
+ 703 000b 55       		.uleb128 0x55
+ 704 000c 17       		.uleb128 0x17
+ 705 000d 11       		.uleb128 0x11
+ 706 000e 01       		.uleb128 0x1
+ 707 000f 10       		.uleb128 0x10
+ 708 0010 17       		.uleb128 0x17
+ 709 0011 00       		.byte	0
+ 710 0012 00       		.byte	0
+ 711 0013 02       		.uleb128 0x2
+ 712 0014 24       		.uleb128 0x24
+ 713 0015 00       		.byte	0
+ 714 0016 0B       		.uleb128 0xb
+ 715 0017 0B       		.uleb128 0xb
+ 716 0018 3E       		.uleb128 0x3e
+ 717 0019 0B       		.uleb128 0xb
+ 718 001a 03       		.uleb128 0x3
+ 719 001b 0E       		.uleb128 0xe
+ 720 001c 00       		.byte	0
+ 721 001d 00       		.byte	0
+ 722 001e 03       		.uleb128 0x3
+ 723 001f 16       		.uleb128 0x16
+ 724 0020 00       		.byte	0
+ 725 0021 03       		.uleb128 0x3
+ 726 0022 0E       		.uleb128 0xe
+ 727 0023 3A       		.uleb128 0x3a
+ 728 0024 0B       		.uleb128 0xb
+ 729 0025 3B       		.uleb128 0x3b
+ 730 0026 0B       		.uleb128 0xb
+ 731 0027 49       		.uleb128 0x49
+ 732 0028 13       		.uleb128 0x13
+ 733 0029 00       		.byte	0
+ 734 002a 00       		.byte	0
+ 735 002b 04       		.uleb128 0x4
+ 736 002c 24       		.uleb128 0x24
+ 737 002d 00       		.byte	0
+ 738 002e 0B       		.uleb128 0xb
+ 739 002f 0B       		.uleb128 0xb
+ 740 0030 3E       		.uleb128 0x3e
+ 741 0031 0B       		.uleb128 0xb
+ 742 0032 03       		.uleb128 0x3
+ 743 0033 08       		.uleb128 0x8
+ 744 0034 00       		.byte	0
+ 745 0035 00       		.byte	0
+ 746 0036 05       		.uleb128 0x5
+ 747 0037 16       		.uleb128 0x16
+ 748 0038 00       		.byte	0
+ 749 0039 03       		.uleb128 0x3
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 15
+
+
+ 750 003a 0E       		.uleb128 0xe
+ 751 003b 3A       		.uleb128 0x3a
+ 752 003c 0B       		.uleb128 0xb
+ 753 003d 3B       		.uleb128 0x3b
+ 754 003e 05       		.uleb128 0x5
+ 755 003f 49       		.uleb128 0x49
+ 756 0040 13       		.uleb128 0x13
+ 757 0041 00       		.byte	0
+ 758 0042 00       		.byte	0
+ 759 0043 06       		.uleb128 0x6
+ 760 0044 2E       		.uleb128 0x2e
+ 761 0045 00       		.byte	0
+ 762 0046 3F       		.uleb128 0x3f
+ 763 0047 19       		.uleb128 0x19
+ 764 0048 03       		.uleb128 0x3
+ 765 0049 08       		.uleb128 0x8
+ 766 004a 3A       		.uleb128 0x3a
+ 767 004b 0B       		.uleb128 0xb
+ 768 004c 3B       		.uleb128 0x3b
+ 769 004d 0B       		.uleb128 0xb
+ 770 004e 11       		.uleb128 0x11
+ 771 004f 01       		.uleb128 0x1
+ 772 0050 12       		.uleb128 0x12
+ 773 0051 06       		.uleb128 0x6
+ 774 0052 40       		.uleb128 0x40
+ 775 0053 18       		.uleb128 0x18
+ 776 0054 9642     		.uleb128 0x2116
+ 777 0056 19       		.uleb128 0x19
+ 778 0057 00       		.byte	0
+ 779 0058 00       		.byte	0
+ 780 0059 07       		.uleb128 0x7
+ 781 005a 34       		.uleb128 0x34
+ 782 005b 00       		.byte	0
+ 783 005c 03       		.uleb128 0x3
+ 784 005d 0E       		.uleb128 0xe
+ 785 005e 3A       		.uleb128 0x3a
+ 786 005f 0B       		.uleb128 0xb
+ 787 0060 3B       		.uleb128 0x3b
+ 788 0061 05       		.uleb128 0x5
+ 789 0062 49       		.uleb128 0x49
+ 790 0063 13       		.uleb128 0x13
+ 791 0064 3F       		.uleb128 0x3f
+ 792 0065 19       		.uleb128 0x19
+ 793 0066 3C       		.uleb128 0x3c
+ 794 0067 19       		.uleb128 0x19
+ 795 0068 00       		.byte	0
+ 796 0069 00       		.byte	0
+ 797 006a 08       		.uleb128 0x8
+ 798 006b 35       		.uleb128 0x35
+ 799 006c 00       		.byte	0
+ 800 006d 49       		.uleb128 0x49
+ 801 006e 13       		.uleb128 0x13
+ 802 006f 00       		.byte	0
+ 803 0070 00       		.byte	0
+ 804 0071 09       		.uleb128 0x9
+ 805 0072 34       		.uleb128 0x34
+ 806 0073 00       		.byte	0
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 16
+
+
+ 807 0074 03       		.uleb128 0x3
+ 808 0075 08       		.uleb128 0x8
+ 809 0076 3A       		.uleb128 0x3a
+ 810 0077 0B       		.uleb128 0xb
+ 811 0078 3B       		.uleb128 0x3b
+ 812 0079 0B       		.uleb128 0xb
+ 813 007a 49       		.uleb128 0x49
+ 814 007b 13       		.uleb128 0x13
+ 815 007c 3F       		.uleb128 0x3f
+ 816 007d 19       		.uleb128 0x19
+ 817 007e 02       		.uleb128 0x2
+ 818 007f 18       		.uleb128 0x18
+ 819 0080 00       		.byte	0
+ 820 0081 00       		.byte	0
+ 821 0082 0A       		.uleb128 0xa
+ 822 0083 34       		.uleb128 0x34
+ 823 0084 00       		.byte	0
+ 824 0085 03       		.uleb128 0x3
+ 825 0086 0E       		.uleb128 0xe
+ 826 0087 3A       		.uleb128 0x3a
+ 827 0088 0B       		.uleb128 0xb
+ 828 0089 3B       		.uleb128 0x3b
+ 829 008a 0B       		.uleb128 0xb
+ 830 008b 49       		.uleb128 0x49
+ 831 008c 13       		.uleb128 0x13
+ 832 008d 3F       		.uleb128 0x3f
+ 833 008e 19       		.uleb128 0x19
+ 834 008f 02       		.uleb128 0x2
+ 835 0090 18       		.uleb128 0x18
+ 836 0091 00       		.byte	0
+ 837 0092 00       		.byte	0
+ 838 0093 00       		.byte	0
+ 839              		.section	.debug_aranges,"",%progbits
+ 840 0000 1C000000 		.4byte	0x1c
+ 841 0004 0200     		.2byte	0x2
+ 842 0006 00000000 		.4byte	.Ldebug_info0
+ 843 000a 04       		.byte	0x4
+ 844 000b 00       		.byte	0
+ 845 000c 0000     		.2byte	0
+ 846 000e 0000     		.2byte	0
+ 847 0010 00000000 		.4byte	.LFB63
+ 848 0014 58020000 		.4byte	.LFE63-.LFB63
+ 849 0018 00000000 		.4byte	0
+ 850 001c 00000000 		.4byte	0
+ 851              		.section	.debug_ranges,"",%progbits
+ 852              	.Ldebug_ranges0:
+ 853 0000 00000000 		.4byte	.LFB63
+ 854 0004 58020000 		.4byte	.LFE63
+ 855 0008 00000000 		.4byte	0
+ 856 000c 00000000 		.4byte	0
+ 857              		.section	.debug_line,"",%progbits
+ 858              	.Ldebug_line0:
+ 859 0000 87010000 		.section	.debug_str,"MS",%progbits,1
+ 859      02004801 
+ 859      00000201 
+ 859      FB0E0D00 
+ 859      01010101 
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 17
+
+
+ 860              	.LASF23:
+ 861 0000 4144435F 		.ascii	"ADC_R_balance\000"
+ 861      525F6261 
+ 861      6C616E63 
+ 861      6500
+ 862              	.LASF9:
+ 863 000e 5F5F696E 		.ascii	"__int32_t\000"
+ 863      7433325F 
+ 863      7400
+ 864              	.LASF24:
+ 865 0018 4144435F 		.ascii	"ADC_L\000"
+ 865      4C00
+ 866              	.LASF4:
+ 867 001e 6C6F6E67 		.ascii	"long int\000"
+ 867      20696E74 
+ 867      00
+ 868              	.LASF31:
+ 869 0027 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 869      4320342E 
+ 869      392E3320 
+ 869      32303135 
+ 869      30333033 
+ 870 005a 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 870      20726576 
+ 870      6973696F 
+ 870      6E203232 
+ 870      31323230 
+ 871 008d 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 871      66756E63 
+ 871      74696F6E 
+ 871      2D736563 
+ 871      74696F6E 
+ 872              	.LASF25:
+ 873 00b5 4144435F 		.ascii	"ADC_R\000"
+ 873      5200
+ 874              	.LASF21:
+ 875 00bb 546F704D 		.ascii	"TopMotorAngleCoeff\000"
+ 875      6F746F72 
+ 875      416E676C 
+ 875      65436F65 
+ 875      666600
+ 876              	.LASF14:
+ 877 00ce 666C6F61 		.ascii	"float\000"
+ 877      7400
+ 878              	.LASF12:
+ 879 00d4 696E7431 		.ascii	"int16\000"
+ 879      3600
+ 880              	.LASF5:
+ 881 00da 6C6F6E67 		.ascii	"long unsigned int\000"
+ 881      20756E73 
+ 881      69676E65 
+ 881      6420696E 
+ 881      7400
+ 882              	.LASF3:
+ 883 00ec 73686F72 		.ascii	"short unsigned int\000"
+ 883      7420756E 
+ 883      7369676E 
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 18
+
+
+ 883      65642069 
+ 883      6E7400
+ 884              	.LASF27:
+ 885 00ff 73706565 		.ascii	"speed1\000"
+ 885      643100
+ 886              	.LASF28:
+ 887 0106 73706565 		.ascii	"speed2\000"
+ 887      643200
+ 888              	.LASF18:
+ 889 010d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 889      52784275 
+ 889      66666572 
+ 889      00
+ 890              	.LASF26:
+ 891 011a 72616E67 		.ascii	"range\000"
+ 891      6500
+ 892              	.LASF15:
+ 893 0120 646F7562 		.ascii	"double\000"
+ 893      6C6500
+ 894              	.LASF11:
+ 895 0127 75696E74 		.ascii	"uint16\000"
+ 895      313600
+ 896              	.LASF1:
+ 897 012e 756E7369 		.ascii	"unsigned char\000"
+ 897      676E6564 
+ 897      20636861 
+ 897      7200
+ 898              	.LASF8:
+ 899 013c 756E7369 		.ascii	"unsigned int\000"
+ 899      676E6564 
+ 899      20696E74 
+ 899      00
+ 900              	.LASF7:
+ 901 0149 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 901      206C6F6E 
+ 901      6720756E 
+ 901      7369676E 
+ 901      65642069 
+ 902              	.LASF29:
+ 903 0160 616E676C 		.ascii	"angle3\000"
+ 903      653300
+ 904              	.LASF10:
+ 905 0167 696E7433 		.ascii	"int32_t\000"
+ 905      325F7400 
+ 906              	.LASF19:
+ 907 016f 456B5F31 		.ascii	"Ek_1\000"
+ 907      00
+ 908              	.LASF20:
+ 909 0174 456B5F32 		.ascii	"Ek_2\000"
+ 909      00
+ 910              	.LASF32:
+ 911 0179 2E5C7069 		.ascii	".\\pid.c\000"
+ 911      642E6300 
+ 912              	.LASF6:
+ 913 0181 6C6F6E67 		.ascii	"long long int\000"
+ 913      206C6F6E 
+ 913      6720696E 
+ARM GAS  C:\Users\JIANGL~1\AppData\Local\Temp\ccRF8EuX.s 			page 19
+
+
+ 913      7400
+ 914              	.LASF22:
+ 915 018f 4144435F 		.ascii	"ADC_L_balance\000"
+ 915      4C5F6261 
+ 915      6C616E63 
+ 915      6500
+ 916              	.LASF30:
+ 917 019d 62696173 		.ascii	"bias\000"
+ 917      00
+ 918              	.LASF17:
+ 919 01a2 73697A65 		.ascii	"sizetype\000"
+ 919      74797065 
+ 919      00
+ 920              	.LASF33:
+ 921 01ab 433A5C55 		.ascii	"C:\\Users\\Jiang Liu\\Desktop\\ee\\961901.cydsn\000"
+ 921      73657273 
+ 921      5C4A6961 
+ 921      6E67204C 
+ 921      69755C44 
+ 922              	.LASF2:
+ 923 01d6 73686F72 		.ascii	"short int\000"
+ 923      7420696E 
+ 923      7400
+ 924              	.LASF13:
+ 925 01e0 666C6F61 		.ascii	"float32\000"
+ 925      74333200 
+ 926              	.LASF16:
+ 927 01e8 63686172 		.ascii	"char\000"
+ 927      00
+ 928              	.LASF0:
+ 929 01ed 7369676E 		.ascii	"signed char\000"
+ 929      65642063 
+ 929      68617200 
+ 930              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

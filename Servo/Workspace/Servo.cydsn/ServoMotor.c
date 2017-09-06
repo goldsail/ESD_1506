@@ -152,3 +152,123 @@ void SetMotorSpeed(uint8 id, int16 speed, uint8 acceleration)
         CyDelay(2);
     }
 }
+
+void GetMotorSpeed(uint8 id, int16 *speed)
+{
+    uint8 checksum;
+    uint8 low;
+    uint8 high;
+    uint16 temp;
+    
+    if (id == _LEFT)
+    {
+        checksum = ID + 0x04 + 0x02 + 0x26 + 0x02;
+        checksum ^= 0xff;
+        
+        UART_2_PutChar(0xff);
+        UART_2_PutChar(0xff);
+        UART_2_PutChar(ID);
+        UART_2_PutChar(0x04);
+        UART_2_PutChar(0x02);
+        UART_2_PutChar(0x26);
+        UART_2_PutChar(0x02);
+        UART_2_PutChar(checksum);
+        
+        UART_2_GetChar();
+        UART_2_GetChar();
+        UART_2_GetChar();
+        UART_2_GetChar();
+        UART_2_GetChar();
+        low = UART_2_GetChar();
+        high = UART_2_GetChar();
+        UART_2_GetChar();
+        
+        temp = (((uint16)high) << 8) | (uint16)low;
+        
+        if (temp & 0x0400)
+        {
+            temp &= 0xfbff;
+            *speed = ((int16)temp);
+        }
+        else
+        {
+            *speed = ((int16)temp);
+        }
+        
+    }
+    
+    if (id == _RIGHT)
+    {
+        checksum = ID + 0x04 + 0x02 + 0x26 + 0x02;
+        checksum ^= 0xff;
+        
+        UART_3_PutChar(0xff);
+        UART_3_PutChar(0xff);
+        UART_3_PutChar(ID);
+        UART_3_PutChar(0x04);
+        UART_3_PutChar(0x02);
+        UART_3_PutChar(0x26);
+        UART_3_PutChar(0x02);
+        UART_3_PutChar(checksum);
+        
+        UART_3_GetChar();
+        UART_3_GetChar();
+        UART_3_GetChar();
+        UART_3_GetChar();
+        UART_3_GetChar();
+        low = UART_3_GetChar();
+        high = UART_3_GetChar();
+        UART_3_GetChar();
+        
+        temp = (((uint16)high) << 8) | (uint16)low;
+        
+        if (temp & 0x0400)
+        {
+            temp &= 0xfbff;
+            *speed = ((int16)temp);
+        }
+        else
+        {
+            *speed = ((int16)temp);
+        }
+        
+    }
+    
+}
+
+void GetServoPosition(uint8 id, uint16 *position)
+{
+    uint8 checksum;
+    uint8 low;
+    uint8 high;
+    uint16 temp;
+    
+    if (id == _TOP)
+    {
+        checksum = ID + 0x04 + 0x02 + 0x24 + 0x02;
+        checksum ^= 0xff;
+        
+        UART_1_PutChar(0xff);
+        UART_1_PutChar(0xff);
+        UART_1_PutChar(ID);
+        UART_1_PutChar(0x04);
+        UART_1_PutChar(0x02);
+        UART_1_PutChar(0x24);
+        UART_1_PutChar(0x02);
+        UART_1_PutChar(checksum);
+        
+        UART_1_GetChar();
+        UART_1_GetChar();
+        UART_1_GetChar();
+        UART_1_GetChar();
+        UART_1_GetChar();
+        low = UART_1_GetChar();
+        high = UART_1_GetChar();
+        UART_1_GetChar();
+        
+        temp = (((uint16)high) << 8) | (uint16)low;
+        *position = temp;
+        
+    }
+    
+}

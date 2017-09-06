@@ -1,21 +1,5 @@
---------------- Build Started: 09/05/2017 21:32:41 Project: Servo, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
-cydsfit.exe -.appdatapath "C:\Users\kingi\AppData\Local\Cypress Semiconductor\PSoC Creator\3.3" -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\Servo.cyprj -d CY8C5868AXI-LP035 -s D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
-Elaborating Design...
-HDL Generation ...
-Synthesis ...
-Place and Route ...
-Tech mapping ...
-Analog Placement ...
-Analog Routing ...
-Analog Code Generation ...
-Digital Placement ...
-Digital Routing ...
-Bitstream Generation ...
-Static timing analysis ...
-API Generation ...
-Dependency Generation ...
-Clean Temporary Files ...
-arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/main.lst -g -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\main.c -o .\ARM_GCC_493\Debug\main.o
+--------------- Build Started: 09/06/2017 23:47:41 Project: Servo, Configuration: ARM GCC 4.9-2015-q1-update Debug ---------------
+The code generation step is up to date.
 arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -Wno-main -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\ARM_GCC_493\Debug/ServoMotor.lst -g -Wall -ffunction-sections -O0 -ffat-lto-objects -c .\ServoMotor.c -o .\ARM_GCC_493\Debug\ServoMotor.o
 In file included from .\ServoMotor.c:3:0:
 .\ServoMotor.c: In function 'SetServoMode':
@@ -32,11 +16,31 @@ In file included from .\ServoMotor.c:3:0:
 .\ServoMotor.c:61:16: note: in expansion of macro 'ID'
      checksum = ID + 0x07 + 0x03 + 0x06 + 0x00 + 0x00 + 0x00 + 0x00;
                 ^
-arm-none-eabi-ar.exe -rs .\ARM_GCC_493\Debug\Servo.a .\ARM_GCC_493\Debug\cyfitter_cfg.o .\ARM_GCC_493\Debug\CyScBoostClk.o .\ARM_GCC_493\Debug\CyBootAsmGnu.o .\ARM_GCC_493\Debug\CyDmac.o .\ARM_GCC_493\Debug\CyFlash.o .\ARM_GCC_493\Debug\CyLib.o .\ARM_GCC_493\Debug\cyPm.o .\ARM_GCC_493\Debug\CySpc.o .\ARM_GCC_493\Debug\cyutils.o .\ARM_GCC_493\Debug\UART_1.o .\ARM_GCC_493\Debug\UART_1_PM.o .\ARM_GCC_493\Debug\UART_1_INT.o .\ARM_GCC_493\Debug\UART_1_BOOT.o .\ARM_GCC_493\Debug\UART_1_IntClock.o .\ARM_GCC_493\Debug\UART_2.o .\ARM_GCC_493\Debug\UART_2_PM.o .\ARM_GCC_493\Debug\UART_2_INT.o .\ARM_GCC_493\Debug\UART_2_BOOT.o .\ARM_GCC_493\Debug\UART_3.o .\ARM_GCC_493\Debug\UART_3_PM.o .\ARM_GCC_493\Debug\UART_3_INT.o .\ARM_GCC_493\Debug\UART_3_BOOT.o .\ARM_GCC_493\Debug\UART_2_IntClock.o .\ARM_GCC_493\Debug\UART_3_IntClock.o
+.\ServoMotor.c: In function 'GetMotorSpeed':
+.\ServoMotor.h:9:12: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define ID (254)
+            ^
+.\ServoMotor.c:165:20: note: in expansion of macro 'ID'
+         checksum = ID + 0x04 + 0x02 + 0x26 + 0x02;
+                    ^
+.\ServoMotor.h:9:12: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define ID (254)
+            ^
+.\ServoMotor.c:202:20: note: in expansion of macro 'ID'
+         checksum = ID + 0x04 + 0x02 + 0x26 + 0x02;
+                    ^
+.\ServoMotor.c: In function 'GetServoPosition':
+.\ServoMotor.h:9:12: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ #define ID (254)
+            ^
+.\ServoMotor.c:248:20: note: in expansion of macro 'ID'
+         checksum = ID + 0x04 + 0x02 + 0x24 + 0x02;
+                    ^
+arm-none-eabi-ar.exe -rs .\ARM_GCC_493\Debug\Servo.a .\ARM_GCC_493\Debug\cyfitter_cfg.o .\ARM_GCC_493\Debug\UART_1.o .\ARM_GCC_493\Debug\UART_1_PM.o .\ARM_GCC_493\Debug\UART_1_INT.o .\ARM_GCC_493\Debug\UART_1_BOOT.o .\ARM_GCC_493\Debug\UART_2.o .\ARM_GCC_493\Debug\UART_2_PM.o .\ARM_GCC_493\Debug\UART_2_INT.o .\ARM_GCC_493\Debug\UART_2_BOOT.o .\ARM_GCC_493\Debug\UART_3.o .\ARM_GCC_493\Debug\UART_3_PM.o .\ARM_GCC_493\Debug\UART_3_INT.o .\ARM_GCC_493\Debug\UART_3_BOOT.o .\ARM_GCC_493\Debug\Rx_2.o .\ARM_GCC_493\Debug\Rx_3.o .\ARM_GCC_493\Debug\UART_1_IntClock.o .\ARM_GCC_493\Debug\UART_2_IntClock.o .\ARM_GCC_493\Debug\UART_3_IntClock.o .\ARM_GCC_493\Debug\CyScBoostClk.o .\ARM_GCC_493\Debug\CyBootAsmGnu.o .\ARM_GCC_493\Debug\CyDmac.o .\ARM_GCC_493\Debug\CyFlash.o .\ARM_GCC_493\Debug\CyLib.o .\ARM_GCC_493\Debug\cyPm.o .\ARM_GCC_493\Debug\CySpc.o .\ARM_GCC_493\Debug\cyutils.o .\ARM_GCC_493\Debug\Rx_1.o
 arm-none-eabi-ar.exe: creating .\ARM_GCC_493\Debug\Servo.a
 arm-none-eabi-gcc.exe -Wl,--start-group -o .\ARM_GCC_493\Debug\Servo.elf .\ARM_GCC_493\Debug\main.o .\ARM_GCC_493\Debug\ServoMotor.o .\ARM_GCC_493\Debug\cymetadata.o .\ARM_GCC_493\Debug\Cm3Start.o .\ARM_GCC_493\Debug\Servo.a "C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CortexM3\ARM_GCC_493\Debug\CyComponentLibrary.a" -mcpu=cortex-m3 -mthumb -g -ffunction-sections -O0 -L Generated_Source\PSoC5 -Wl,-Map,.\ARM_GCC_493\Debug/Servo.map -T Generated_Source\PSoC5\cm3gcc.ld -specs=nano.specs -Wl,--gc-sections -Wl,--end-group
-cyelftool.exe -C D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\ARM_GCC_493\Debug\Servo.elf --flash_row_size 256 --flash_size 262144
-cyelftool.exe -S D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\ARM_GCC_493\Debug\Servo.elf
-Flash used: 5376 of 262144 bytes (2.1%).
-SRAM used: 2589 of 65536 bytes (4.0%). Stack: 2048 bytes. Heap: 128 bytes.
---------------- Build Succeeded: 09/05/2017 21:32:53 ---------------
+cyelftool.exe -C D:\Projects\ESD\Servo\Workspace\Servo.cydsn\ARM_GCC_493\Debug\Servo.elf --flash_row_size 256 --flash_size 262144
+cyelftool.exe -S D:\Projects\ESD\Servo\Workspace\Servo.cydsn\ARM_GCC_493\Debug\Servo.elf
+Flash used: 6656 of 262144 bytes (2.5%).
+SRAM used: 2493 of 65536 bytes (3.8%). Stack: 2048 bytes. Heap: 128 bytes.
+--------------- Build Succeeded: 09/06/2017 23:47:42 ---------------

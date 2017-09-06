@@ -29,10 +29,10 @@
 ***************************************/
 
 #define UART_3_RX_ENABLED                     (0u)
-#define UART_3_TX_ENABLED                     (1u)
-#define UART_3_HD_ENABLED                     (0u)
+#define UART_3_TX_ENABLED                     (0u)
+#define UART_3_HD_ENABLED                     (1u)
 #define UART_3_RX_INTERRUPT_ENABLED           (0u)
-#define UART_3_TX_INTERRUPT_ENABLED           (1u)
+#define UART_3_TX_INTERRUPT_ENABLED           (0u)
 #define UART_3_INTERNAL_CLOCK_USED            (1u)
 #define UART_3_RXHW_ADDRESS_ENABLED           (0u)
 #define UART_3_OVER_SAMPLE_COUNT              (8u)
@@ -45,7 +45,7 @@
 #define UART_3_USE23POLLING                   (1u)
 #define UART_3_FLOW_CONTROL                   (0u)
 #define UART_3_CLK_FREQ                       (0u)
-#define UART_3_TX_BUFFER_SIZE                 (27u)
+#define UART_3_TX_BUFFER_SIZE                 (4u)
 #define UART_3_RX_BUFFER_SIZE                 (4u)
 
 /* Check to see if required defines such as CY_PSOC5LP are available */
@@ -369,7 +369,7 @@ extern uint8 UART_3_initVar;
 
 #define UART_3_INIT_TX_INTERRUPTS_MASK \
                                   (uint8)((0 << UART_3_TX_STS_COMPLETE_SHIFT) \
-                                        | (1 << UART_3_TX_STS_FIFO_EMPTY_SHIFT) \
+                                        | (0 << UART_3_TX_STS_FIFO_EMPTY_SHIFT) \
                                         | (0 << UART_3_TX_STS_FIFO_FULL_SHIFT) \
                                         | (0 << UART_3_TX_STS_FIFO_NOT_FULL_SHIFT))
 

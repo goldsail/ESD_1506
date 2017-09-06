@@ -1,3 +1,3 @@
-# Component constraints for D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\TopDesign\PSoC5\TopDesign.cysch
-# Project: D:\Projects\ESD\ESD_1506\Servo\Workspace\Servo.cydsn\Servo.cyprj
-# Date: Tue, 05 Sep 2017 13:32:44 GMT
+# Component constraints for D:\Projects\ESD\Servo\Workspace\Servo.cydsn\TopDesign\PSoC5\TopDesign.cysch
+# Project: D:\Projects\ESD\Servo\Workspace\Servo.cydsn\Servo.cyprj
+# Date: Wed, 06 Sep 2017 15:45:43 GMT

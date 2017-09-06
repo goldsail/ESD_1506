@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
   27:.\main.c      **** #include <project.h>
   28:.\main.c      **** #include "stdio.h"
   29:.\main.c      **** 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 2
 
 
   30:.\main.c      **** #include "ServoMotor.h"
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
   41              		.loc 1 71 0
   42              	@ 71 ".\main.c" 1
   43 0006 62B6     		CPSIE   i
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 3
 
 
   44              	@ 0 "" 2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
   91:.\main.c      ****     
   92:.\main.c      ****     while (1) 
   93:.\main.c      ****     {
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 4
 
 
   94:.\main.c      ****         uint8 i;
@@ -238,42 +238,42 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  124 0004 0400     		.2byte	0x4
  125 0006 00000000 		.4byte	.Ldebug_abbrev0
  126 000a 04       		.byte	0x4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 5
 
 
  127 000b 01       		.uleb128 0x1
- 128 000c 7E000000 		.4byte	.LASF16
+ 128 000c 87000000 		.4byte	.LASF16
  129 0010 01       		.byte	0x1
- 130 0011 0C010000 		.4byte	.LASF17
- 131 0015 60010000 		.4byte	.LASF18
+ 130 0011 4B000000 		.4byte	.LASF17
+ 131 0015 15010000 		.4byte	.LASF18
  132 0019 00000000 		.4byte	.Ldebug_ranges0+0
  133 001d 00000000 		.4byte	0
  134 0021 00000000 		.4byte	.Ldebug_line0
  135 0025 02       		.uleb128 0x2
  136 0026 01       		.byte	0x1
  137 0027 06       		.byte	0x6
- 138 0028 32010000 		.4byte	.LASF0
+ 138 0028 55010000 		.4byte	.LASF0
  139 002c 02       		.uleb128 0x2
  140 002d 01       		.byte	0x1
  141 002e 08       		.byte	0x8
- 142 002f 62000000 		.4byte	.LASF1
+ 142 002f 6B000000 		.4byte	.LASF1
  143 0033 02       		.uleb128 0x2
  144 0034 02       		.byte	0x2
  145 0035 05       		.byte	0x5
- 146 0036 4E010000 		.4byte	.LASF2
+ 146 0036 71010000 		.4byte	.LASF2
  147 003a 02       		.uleb128 0x2
  148 003b 02       		.byte	0x2
  149 003c 07       		.byte	0x7
  150 003d 0E000000 		.4byte	.LASF3
  151 0041 03       		.uleb128 0x3
- 152 0042 3E010000 		.4byte	.LASF9
+ 152 0042 61010000 		.4byte	.LASF9
  153 0046 02       		.byte	0x2
  154 0047 3F       		.byte	0x3f
  155 0048 4C000000 		.4byte	0x4c
  156 004c 02       		.uleb128 0x2
  157 004d 04       		.byte	0x4
  158 004e 05       		.byte	0x5
- 159 004f 75000000 		.4byte	.LASF4
+ 159 004f 7E000000 		.4byte	.LASF4
  160 0053 02       		.uleb128 0x2
  161 0054 04       		.byte	0x4
  162 0055 07       		.byte	0x7
@@ -285,7 +285,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  168 0061 02       		.uleb128 0x2
  169 0062 08       		.byte	0x8
  170 0063 07       		.byte	0x7
- 171 0064 4B000000 		.4byte	.LASF7
+ 171 0064 54000000 		.4byte	.LASF7
  172 0068 04       		.uleb128 0x4
  173 0069 04       		.byte	0x4
  174 006a 05       		.byte	0x5
@@ -295,10 +295,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  178 0071 07       		.byte	0x7
  179 0072 21000000 		.4byte	.LASF8
  180 0076 03       		.uleb128 0x3
- 181 0077 58010000 		.4byte	.LASF10
+ 181 0077 7B010000 		.4byte	.LASF10
  182 007b 03       		.byte	0x3
  183 007c 2C       		.byte	0x2c
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 6
 
 
  184 007d 41000000 		.4byte	0x41
@@ -310,19 +310,19 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  190 008d 02       		.uleb128 0x2
  191 008e 04       		.byte	0x4
  192 008f 04       		.byte	0x4
- 193 0090 48010000 		.4byte	.LASF12
+ 193 0090 6B010000 		.4byte	.LASF12
  194 0094 02       		.uleb128 0x2
  195 0095 08       		.byte	0x8
  196 0096 04       		.byte	0x4
- 197 0097 15010000 		.4byte	.LASF13
+ 197 0097 41010000 		.4byte	.LASF13
  198 009b 02       		.uleb128 0x2
  199 009c 01       		.byte	0x1
  200 009d 08       		.byte	0x8
- 201 009e 70000000 		.4byte	.LASF14
+ 201 009e 79000000 		.4byte	.LASF14
  202 00a2 02       		.uleb128 0x2
  203 00a3 04       		.byte	0x4
  204 00a4 07       		.byte	0x7
- 205 00a5 1C010000 		.4byte	.LASF15
+ 205 00a5 83010000 		.4byte	.LASF15
  206 00a9 06       		.uleb128 0x6
  207 00aa 2E000000 		.4byte	.LASF19
  208 00ae 01       		.byte	0x1
@@ -347,7 +347,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  227 00d7 00       		.byte	0
  228 00d8 00       		.byte	0
  229 00d9 09       		.uleb128 0x9
- 230 00da 25010000 		.4byte	.LASF20
+ 230 00da 48010000 		.4byte	.LASF20
  231 00de 05       		.byte	0x5
  232 00df 5506     		.2byte	0x655
  233 00e1 E5000000 		.4byte	0xe5
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  238              	.Ldebug_abbrev0:
  239 0000 01       		.uleb128 0x1
  240 0001 11       		.uleb128 0x11
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 7
 
 
  241 0002 01       		.byte	0x1
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  295 0038 00       		.byte	0
  296 0039 03       		.uleb128 0x3
  297 003a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 8
 
 
  298 003b 3A       		.uleb128 0x3a
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  352 0072 18       		.uleb128 0x18
  353 0073 00       		.byte	0
  354 0074 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 9
 
 
  355 0075 09       		.uleb128 0x9
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  402      7400
  403              	.LASF3:
  404 000e 73686F72 		.ascii	"short unsigned int\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 10
 
 
  404      7420756E 
@@ -562,83 +562,81 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 1
  412      69676E65 
  412      6420696E 
  412      7400
- 413              	.LASF7:
- 414 004b 6C6F6E67 		.ascii	"long long unsigned int\000"
- 414      206C6F6E 
- 414      6720756E 
- 414      7369676E 
- 414      65642069 
- 415              	.LASF1:
- 416 0062 756E7369 		.ascii	"unsigned char\000"
- 416      676E6564 
- 416      20636861 
- 416      7200
- 417              	.LASF14:
- 418 0070 63686172 		.ascii	"char\000"
- 418      00
- 419              	.LASF4:
- 420 0075 6C6F6E67 		.ascii	"long int\000"
- 420      20696E74 
+ 413              	.LASF17:
+ 414 004b 2E5C6D61 		.ascii	".\\main.c\000"
+ 414      696E2E63 
+ 414      00
+ 415              	.LASF7:
+ 416 0054 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 416      206C6F6E 
+ 416      6720756E 
+ 416      7369676E 
+ 416      65642069 
+ 417              	.LASF1:
+ 418 006b 756E7369 		.ascii	"unsigned char\000"
+ 418      676E6564 
+ 418      20636861 
+ 418      7200
+ 419              	.LASF14:
+ 420 0079 63686172 		.ascii	"char\000"
  420      00
- 421              	.LASF16:
- 422 007e 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 422      4320342E 
- 422      392E3320 
- 422      32303135 
- 422      30333033 
- 423 00b1 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 423      20726576 
- 423      6973696F 
- 423      6E203232 
- 423      31323230 
- 424 00e4 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 424      66756E63 
- 424      74696F6E 
- 424      2D736563 
- 424      74696F6E 
- 425              	.LASF17:
- 426 010c 2E5C6D61 		.ascii	".\\main.c\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAvyLB0.s 			page 11
+ 421              	.LASF4:
+ 422 007e 6C6F6E67 		.ascii	"long int\000"
+ 422      20696E74 
+ 422      00
+ 423              	.LASF16:
+ 424 0087 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 424      4320342E 
+ 424      392E3320 
+ 424      32303135 
+ 424      30333033 
+ 425 00ba 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 425      20726576 
+ 425      6973696F 
+ 425      6E203232 
+ 425      31323230 
+ 426 00ed 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 426      66756E63 
+ 426      74696F6E 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc9TKD6g.s 			page 11
 
 
- 426      696E2E63 
- 426      00
- 427              	.LASF13:
- 428 0115 646F7562 		.ascii	"double\000"
- 428      6C6500
- 429              	.LASF15:
- 430 011c 73697A65 		.ascii	"sizetype\000"
- 430      74797065 
- 430      00
+ 426      2D736563 
+ 426      74696F6E 
+ 427              	.LASF18:
+ 428 0115 443A5C50 		.ascii	"D:\\Projects\\ESD\\Servo\\Workspace\\Servo.cydsn\000"
+ 428      726F6A65 
+ 428      6374735C 
+ 428      4553445C 
+ 428      53657276 
+ 429              	.LASF13:
+ 430 0141 646F7562 		.ascii	"double\000"
+ 430      6C6500
  431              	.LASF20:
- 432 0125 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 432 0148 49544D5F 		.ascii	"ITM_RxBuffer\000"
  432      52784275 
  432      66666572 
  432      00
  433              	.LASF0:
- 434 0132 7369676E 		.ascii	"signed char\000"
+ 434 0155 7369676E 		.ascii	"signed char\000"
  434      65642063 
  434      68617200 
  435              	.LASF9:
- 436 013e 5F5F696E 		.ascii	"__int32_t\000"
+ 436 0161 5F5F696E 		.ascii	"__int32_t\000"
  436      7433325F 
  436      7400
  437              	.LASF12:
- 438 0148 666C6F61 		.ascii	"float\000"
+ 438 016b 666C6F61 		.ascii	"float\000"
  438      7400
  439              	.LASF2:
- 440 014e 73686F72 		.ascii	"short int\000"
+ 440 0171 73686F72 		.ascii	"short int\000"
  440      7420696E 
  440      7400
  441              	.LASF10:
- 442 0158 696E7433 		.ascii	"int32_t\000"
+ 442 017b 696E7433 		.ascii	"int32_t\000"
  442      325F7400 
- 443              	.LASF18:
- 444 0160 443A5C50 		.ascii	"D:\\Projects\\ESD\\ESD_1506\\Servo\\Workspace\\Serv"
- 444      726F6A65 
- 444      6374735C 
- 444      4553445C 
- 444      4553445F 
- 445 018d 6F2E6379 		.ascii	"o.cydsn\000"
- 445      64736E00 
- 446              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 443              	.LASF15:
+ 444 0183 73697A65 		.ascii	"sizetype\000"
+ 444      74797065 
+ 444      00
+ 445              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

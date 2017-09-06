@@ -46,6 +46,32 @@ D:/Projects/ESD/Servo/Workspace/Servo.cydsn/ARM_GCC_493/Debug/CySpc.o : D:/Proje
 
 D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/CySpc.c : 
 
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/ARM_GCC_493/Debug/Rx_1.o : D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_1.c D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_1.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_1_aliases.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cypins.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cytypes.h 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_1.c : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_1.h : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_1_aliases.h : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/ARM_GCC_493/Debug/Rx_2.o : D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_2.c D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_2.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_2_aliases.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cypins.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cytypes.h 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_2.c : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_2.h : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_2_aliases.h : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/ARM_GCC_493/Debug/Rx_3.o : D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_3.c D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_3.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_3_aliases.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cypins.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cytypes.h 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_3.c : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_3.h : 
+
+D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/Rx_3_aliases.h : 
+
 D:/Projects/ESD/Servo/Workspace/Servo.cydsn/ARM_GCC_493/Debug/UART_1.o : D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/CyFlash.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/CyLib.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/CyScBoostClk.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/CySpc.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/UART_1.c D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/UART_1.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cyPm.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cydevice_trm.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cyfitter.h D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/cytypes.h 
 
 D:/Projects/ESD/Servo/Workspace/Servo.cydsn/Generated_Source/PSoC5/UART_1.c : 

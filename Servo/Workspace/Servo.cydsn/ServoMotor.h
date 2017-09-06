@@ -25,4 +25,8 @@ void SetMotorMode(uint8 id);
 // acceleration ranges from 0x00 to 0x20
 void SetMotorSpeed(uint8 id, int16 speed, uint8 acceleration);
 
+void GetMotorSpeed(uint8 id, int16 *speed);
+
+void GetServoPosition(uint8 id, uint16 *position);
+
 #endif

@@ -1,0 +1,1 @@
+'D:\Projects\ESD\Kinect_Demo\Workspace\Kinect_Demo.cydsn\main.c' -o .o -T C_FILE -I 'D:\Projects\ESD\Kinect_Demo\Workspace\Kinect_Demo.cydsn' -I 'D:\Projects\ESD\Kinect_Demo\Workspace\Kinect_Demo.cydsn\Generated_Source\PSoC5' -f 'D:\Projects\ESD\Kinect_Demo\Workspace\Kinect_Demo.cydsn\ARM_GCC_493\Debug\.deps\C_FILE.d'

@@ -1,0 +1,668 @@
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.section	.rodata
+  19              		.align	2
+  20              	.LC0:
+  21 0000 20202020 		.ascii	"                \000"
+  21      20202020 
+  21      20202020 
+  21      20202020 
+  21      00
+  22 0011 000000   		.section	.text.main,"ax",%progbits
+  23              		.align	2
+  24              		.global	main
+  25              		.thumb
+  26              		.thumb_func
+  27              		.type	main, %function
+  28              	main:
+  29              	.LFB63:
+  30              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 2.1
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  This project demonstrates the UART reception mechanism. 
+   8:.\main.c      **** *  Data typed on the hyperterminal is sent through serial port and displayed
+   9:.\main.c      **** *  on the LCD.
+  10:.\main.c      **** *
+  11:.\main.c      **** ********************************************************************************
+  12:.\main.c      **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  13:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  14:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  15:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  16:.\main.c      **** * accompanying the software package from which you obtained this software.
+  17:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  18:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  19:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  20:.\main.c      **** *******************************************************************************/
+  21:.\main.c      **** 
+  22:.\main.c      **** #include <device.h>
+  23:.\main.c      **** 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 2
+
+
+  24:.\main.c      **** #include "Bluetooth.h"
+  25:.\main.c      **** 
+  26:.\main.c      **** #define LCD_NUM_COLUMNS (16u)
+  27:.\main.c      **** 
+  28:.\main.c      **** 
+  29:.\main.c      **** int main()
+  30:.\main.c      **** {   
+  31              		.loc 1 30 0
+  32              		.cfi_startproc
+  33              		@ args = 0, pretend = 0, frame = 8
+  34              		@ frame_needed = 1, uses_anonymous_args = 0
+  35 0000 80B5     		push	{r7, lr}
+  36              		.cfi_def_cfa_offset 8
+  37              		.cfi_offset 7, -8
+  38              		.cfi_offset 14, -4
+  39 0002 82B0     		sub	sp, sp, #8
+  40              		.cfi_def_cfa_offset 16
+  41 0004 00AF     		add	r7, sp, #0
+  42              		.cfi_def_cfa_register 7
+  31:.\main.c      ****     char8 ch;       /* Data received from the Serial port */
+  32:.\main.c      ****     uint8 count = 0u;
+  43              		.loc 1 32 0
+  44 0006 0023     		movs	r3, #0
+  45 0008 FB71     		strb	r3, [r7, #7]
+  33:.\main.c      ****     uint8 pos = 0u;
+  46              		.loc 1 33 0
+  47 000a 0023     		movs	r3, #0
+  48 000c BB71     		strb	r3, [r7, #6]
+  34:.\main.c      **** 
+  35:.\main.c      ****     CyGlobalIntEnable; /* Enable all interrupts by the processor. */
+  49              		.loc 1 35 0
+  50              	@ 35 ".\main.c" 1
+  51 000e 62B6     		CPSIE   i
+  52              	@ 0 "" 2
+  36:.\main.c      **** 
+  37:.\main.c      ****     LCD_Char_1_Start();
+  53              		.loc 1 37 0
+  54              		.thumb
+  55 0010 FFF7FEFF 		bl	LCD_Char_1_Start
+  38:.\main.c      ****     UART_1_Start();
+  56              		.loc 1 38 0
+  57 0014 FFF7FEFF 		bl	UART_1_Start
+  58              	.L2:
+  39:.\main.c      ****     
+  40:.\main.c      ****     while(1)
+  41:.\main.c      ****     {
+  42:.\main.c      ****         GetBluetoothString(buffer);
+  59              		.loc 1 42 0 discriminator 1
+  60 0018 0B48     		ldr	r0, .L3
+  61 001a FFF7FEFF 		bl	GetBluetoothString
+  43:.\main.c      ****         
+  44:.\main.c      ****         LCD_Char_1_Position(0u, 0);
+  62              		.loc 1 44 0 discriminator 1
+  63 001e 0020     		movs	r0, #0
+  64 0020 0021     		movs	r1, #0
+  65 0022 FFF7FEFF 		bl	LCD_Char_1_Position
+  45:.\main.c      ****         LCD_Char_1_PrintString("                ");
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 3
+
+
+  66              		.loc 1 45 0 discriminator 1
+  67 0026 0948     		ldr	r0, .L3+4
+  68 0028 FFF7FEFF 		bl	LCD_Char_1_PrintString
+  46:.\main.c      ****         CyDelay(5);
+  69              		.loc 1 46 0 discriminator 1
+  70 002c 0520     		movs	r0, #5
+  71 002e FFF7FEFF 		bl	CyDelay
+  47:.\main.c      ****         LCD_Char_1_Position(0u, 0);
+  72              		.loc 1 47 0 discriminator 1
+  73 0032 0020     		movs	r0, #0
+  74 0034 0021     		movs	r1, #0
+  75 0036 FFF7FEFF 		bl	LCD_Char_1_Position
+  48:.\main.c      ****         LCD_Char_1_PrintString(buffer); 
+  76              		.loc 1 48 0 discriminator 1
+  77 003a 0348     		ldr	r0, .L3
+  78 003c FFF7FEFF 		bl	LCD_Char_1_PrintString
+  49:.\main.c      ****         CyDelay(20);
+  79              		.loc 1 49 0 discriminator 1
+  80 0040 1420     		movs	r0, #20
+  81 0042 FFF7FEFF 		bl	CyDelay
+  50:.\main.c      ****         
+  51:.\main.c      ****     }
+  82              		.loc 1 51 0 discriminator 1
+  83 0046 E7E7     		b	.L2
+  84              	.L4:
+  85              		.align	2
+  86              	.L3:
+  87 0048 00000000 		.word	buffer
+  88 004c 00000000 		.word	.LC0
+  89              		.cfi_endproc
+  90              	.LFE63:
+  91              		.size	main, .-main
+  92              		.text
+  93              	.Letext0:
+  94              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  95              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+  96              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+  97              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+  98              		.file 6 ".\\Bluetooth.h"
+  99              		.section	.debug_info,"",%progbits
+ 100              	.Ldebug_info0:
+ 101 0000 1E010000 		.4byte	0x11e
+ 102 0004 0400     		.2byte	0x4
+ 103 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 104 000a 04       		.byte	0x4
+ 105 000b 01       		.uleb128 0x1
+ 106 000c 8A000000 		.4byte	.LASF20
+ 107 0010 01       		.byte	0x1
+ 108 0011 18010000 		.4byte	.LASF21
+ 109 0015 41010000 		.4byte	.LASF22
+ 110 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 111 001d 00000000 		.4byte	0
+ 112 0021 00000000 		.4byte	.Ldebug_line0
+ 113 0025 02       		.uleb128 0x2
+ 114 0026 01       		.byte	0x1
+ 115 0027 06       		.byte	0x6
+ 116 0028 35010000 		.4byte	.LASF0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 4
+
+
+ 117 002c 02       		.uleb128 0x2
+ 118 002d 01       		.byte	0x1
+ 119 002e 08       		.byte	0x8
+ 120 002f 68000000 		.4byte	.LASF1
+ 121 0033 02       		.uleb128 0x2
+ 122 0034 02       		.byte	0x2
+ 123 0035 05       		.byte	0x5
+ 124 0036 89010000 		.4byte	.LASF2
+ 125 003a 02       		.uleb128 0x2
+ 126 003b 02       		.byte	0x2
+ 127 003c 07       		.byte	0x7
+ 128 003d 0E000000 		.4byte	.LASF3
+ 129 0041 03       		.uleb128 0x3
+ 130 0042 79010000 		.4byte	.LASF9
+ 131 0046 02       		.byte	0x2
+ 132 0047 3F       		.byte	0x3f
+ 133 0048 4C000000 		.4byte	0x4c
+ 134 004c 02       		.uleb128 0x2
+ 135 004d 04       		.byte	0x4
+ 136 004e 05       		.byte	0x5
+ 137 004f 81000000 		.4byte	.LASF4
+ 138 0053 02       		.uleb128 0x2
+ 139 0054 04       		.byte	0x4
+ 140 0055 07       		.byte	0x7
+ 141 0056 39000000 		.4byte	.LASF5
+ 142 005a 02       		.uleb128 0x2
+ 143 005b 08       		.byte	0x8
+ 144 005c 05       		.byte	0x5
+ 145 005d 00000000 		.4byte	.LASF6
+ 146 0061 02       		.uleb128 0x2
+ 147 0062 08       		.byte	0x8
+ 148 0063 07       		.byte	0x7
+ 149 0064 4B000000 		.4byte	.LASF7
+ 150 0068 04       		.uleb128 0x4
+ 151 0069 04       		.byte	0x4
+ 152 006a 05       		.byte	0x5
+ 153 006b 696E7400 		.ascii	"int\000"
+ 154 006f 02       		.uleb128 0x2
+ 155 0070 04       		.byte	0x4
+ 156 0071 07       		.byte	0x7
+ 157 0072 21000000 		.4byte	.LASF8
+ 158 0076 03       		.uleb128 0x3
+ 159 0077 93010000 		.4byte	.LASF10
+ 160 007b 03       		.byte	0x3
+ 161 007c 2C       		.byte	0x2c
+ 162 007d 41000000 		.4byte	0x41
+ 163 0081 05       		.uleb128 0x5
+ 164 0082 33000000 		.4byte	.LASF11
+ 165 0086 04       		.byte	0x4
+ 166 0087 3801     		.2byte	0x138
+ 167 0089 2C000000 		.4byte	0x2c
+ 168 008d 02       		.uleb128 0x2
+ 169 008e 04       		.byte	0x4
+ 170 008f 04       		.byte	0x4
+ 171 0090 83010000 		.4byte	.LASF12
+ 172 0094 02       		.uleb128 0x2
+ 173 0095 08       		.byte	0x8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 5
+
+
+ 174 0096 04       		.byte	0x4
+ 175 0097 21010000 		.4byte	.LASF13
+ 176 009b 05       		.uleb128 0x5
+ 177 009c 62000000 		.4byte	.LASF14
+ 178 00a0 04       		.byte	0x4
+ 179 00a1 4901     		.2byte	0x149
+ 180 00a3 A7000000 		.4byte	0xa7
+ 181 00a7 02       		.uleb128 0x2
+ 182 00a8 01       		.byte	0x1
+ 183 00a9 08       		.byte	0x8
+ 184 00aa 76000000 		.4byte	.LASF15
+ 185 00ae 02       		.uleb128 0x2
+ 186 00af 04       		.byte	0x4
+ 187 00b0 07       		.byte	0x7
+ 188 00b1 A2010000 		.4byte	.LASF16
+ 189 00b5 06       		.uleb128 0x6
+ 190 00b6 2E000000 		.4byte	.LASF23
+ 191 00ba 01       		.byte	0x1
+ 192 00bb 1D       		.byte	0x1d
+ 193 00bc 68000000 		.4byte	0x68
+ 194 00c0 00000000 		.4byte	.LFB63
+ 195 00c4 50000000 		.4byte	.LFE63-.LFB63
+ 196 00c8 01       		.uleb128 0x1
+ 197 00c9 9C       		.byte	0x9c
+ 198 00ca F5000000 		.4byte	0xf5
+ 199 00ce 07       		.uleb128 0x7
+ 200 00cf 636800   		.ascii	"ch\000"
+ 201 00d2 01       		.byte	0x1
+ 202 00d3 1F       		.byte	0x1f
+ 203 00d4 9B000000 		.4byte	0x9b
+ 204 00d8 08       		.uleb128 0x8
+ 205 00d9 7B000000 		.4byte	.LASF17
+ 206 00dd 01       		.byte	0x1
+ 207 00de 20       		.byte	0x20
+ 208 00df 81000000 		.4byte	0x81
+ 209 00e3 02       		.uleb128 0x2
+ 210 00e4 91       		.byte	0x91
+ 211 00e5 77       		.sleb128 -9
+ 212 00e6 09       		.uleb128 0x9
+ 213 00e7 706F7300 		.ascii	"pos\000"
+ 214 00eb 01       		.byte	0x1
+ 215 00ec 21       		.byte	0x21
+ 216 00ed 81000000 		.4byte	0x81
+ 217 00f1 02       		.uleb128 0x2
+ 218 00f2 91       		.byte	0x91
+ 219 00f3 76       		.sleb128 -10
+ 220 00f4 00       		.byte	0
+ 221 00f5 0A       		.uleb128 0xa
+ 222 00f6 28010000 		.4byte	.LASF18
+ 223 00fa 05       		.byte	0x5
+ 224 00fb 5506     		.2byte	0x655
+ 225 00fd 01010000 		.4byte	0x101
+ 226 0101 0B       		.uleb128 0xb
+ 227 0102 76000000 		.4byte	0x76
+ 228 0106 0C       		.uleb128 0xc
+ 229 0107 81000000 		.4byte	0x81
+ 230 010b 16010000 		.4byte	0x116
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 6
+
+
+ 231 010f 0D       		.uleb128 0xd
+ 232 0110 AE000000 		.4byte	0xae
+ 233 0114 63       		.byte	0x63
+ 234 0115 00       		.byte	0
+ 235 0116 0E       		.uleb128 0xe
+ 236 0117 9B010000 		.4byte	.LASF19
+ 237 011b 06       		.byte	0x6
+ 238 011c 08       		.byte	0x8
+ 239 011d 06010000 		.4byte	0x106
+ 240 0121 00       		.byte	0
+ 241              		.section	.debug_abbrev,"",%progbits
+ 242              	.Ldebug_abbrev0:
+ 243 0000 01       		.uleb128 0x1
+ 244 0001 11       		.uleb128 0x11
+ 245 0002 01       		.byte	0x1
+ 246 0003 25       		.uleb128 0x25
+ 247 0004 0E       		.uleb128 0xe
+ 248 0005 13       		.uleb128 0x13
+ 249 0006 0B       		.uleb128 0xb
+ 250 0007 03       		.uleb128 0x3
+ 251 0008 0E       		.uleb128 0xe
+ 252 0009 1B       		.uleb128 0x1b
+ 253 000a 0E       		.uleb128 0xe
+ 254 000b 55       		.uleb128 0x55
+ 255 000c 17       		.uleb128 0x17
+ 256 000d 11       		.uleb128 0x11
+ 257 000e 01       		.uleb128 0x1
+ 258 000f 10       		.uleb128 0x10
+ 259 0010 17       		.uleb128 0x17
+ 260 0011 00       		.byte	0
+ 261 0012 00       		.byte	0
+ 262 0013 02       		.uleb128 0x2
+ 263 0014 24       		.uleb128 0x24
+ 264 0015 00       		.byte	0
+ 265 0016 0B       		.uleb128 0xb
+ 266 0017 0B       		.uleb128 0xb
+ 267 0018 3E       		.uleb128 0x3e
+ 268 0019 0B       		.uleb128 0xb
+ 269 001a 03       		.uleb128 0x3
+ 270 001b 0E       		.uleb128 0xe
+ 271 001c 00       		.byte	0
+ 272 001d 00       		.byte	0
+ 273 001e 03       		.uleb128 0x3
+ 274 001f 16       		.uleb128 0x16
+ 275 0020 00       		.byte	0
+ 276 0021 03       		.uleb128 0x3
+ 277 0022 0E       		.uleb128 0xe
+ 278 0023 3A       		.uleb128 0x3a
+ 279 0024 0B       		.uleb128 0xb
+ 280 0025 3B       		.uleb128 0x3b
+ 281 0026 0B       		.uleb128 0xb
+ 282 0027 49       		.uleb128 0x49
+ 283 0028 13       		.uleb128 0x13
+ 284 0029 00       		.byte	0
+ 285 002a 00       		.byte	0
+ 286 002b 04       		.uleb128 0x4
+ 287 002c 24       		.uleb128 0x24
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 7
+
+
+ 288 002d 00       		.byte	0
+ 289 002e 0B       		.uleb128 0xb
+ 290 002f 0B       		.uleb128 0xb
+ 291 0030 3E       		.uleb128 0x3e
+ 292 0031 0B       		.uleb128 0xb
+ 293 0032 03       		.uleb128 0x3
+ 294 0033 08       		.uleb128 0x8
+ 295 0034 00       		.byte	0
+ 296 0035 00       		.byte	0
+ 297 0036 05       		.uleb128 0x5
+ 298 0037 16       		.uleb128 0x16
+ 299 0038 00       		.byte	0
+ 300 0039 03       		.uleb128 0x3
+ 301 003a 0E       		.uleb128 0xe
+ 302 003b 3A       		.uleb128 0x3a
+ 303 003c 0B       		.uleb128 0xb
+ 304 003d 3B       		.uleb128 0x3b
+ 305 003e 05       		.uleb128 0x5
+ 306 003f 49       		.uleb128 0x49
+ 307 0040 13       		.uleb128 0x13
+ 308 0041 00       		.byte	0
+ 309 0042 00       		.byte	0
+ 310 0043 06       		.uleb128 0x6
+ 311 0044 2E       		.uleb128 0x2e
+ 312 0045 01       		.byte	0x1
+ 313 0046 3F       		.uleb128 0x3f
+ 314 0047 19       		.uleb128 0x19
+ 315 0048 03       		.uleb128 0x3
+ 316 0049 0E       		.uleb128 0xe
+ 317 004a 3A       		.uleb128 0x3a
+ 318 004b 0B       		.uleb128 0xb
+ 319 004c 3B       		.uleb128 0x3b
+ 320 004d 0B       		.uleb128 0xb
+ 321 004e 49       		.uleb128 0x49
+ 322 004f 13       		.uleb128 0x13
+ 323 0050 11       		.uleb128 0x11
+ 324 0051 01       		.uleb128 0x1
+ 325 0052 12       		.uleb128 0x12
+ 326 0053 06       		.uleb128 0x6
+ 327 0054 40       		.uleb128 0x40
+ 328 0055 18       		.uleb128 0x18
+ 329 0056 9642     		.uleb128 0x2116
+ 330 0058 19       		.uleb128 0x19
+ 331 0059 01       		.uleb128 0x1
+ 332 005a 13       		.uleb128 0x13
+ 333 005b 00       		.byte	0
+ 334 005c 00       		.byte	0
+ 335 005d 07       		.uleb128 0x7
+ 336 005e 34       		.uleb128 0x34
+ 337 005f 00       		.byte	0
+ 338 0060 03       		.uleb128 0x3
+ 339 0061 08       		.uleb128 0x8
+ 340 0062 3A       		.uleb128 0x3a
+ 341 0063 0B       		.uleb128 0xb
+ 342 0064 3B       		.uleb128 0x3b
+ 343 0065 0B       		.uleb128 0xb
+ 344 0066 49       		.uleb128 0x49
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 8
+
+
+ 345 0067 13       		.uleb128 0x13
+ 346 0068 00       		.byte	0
+ 347 0069 00       		.byte	0
+ 348 006a 08       		.uleb128 0x8
+ 349 006b 34       		.uleb128 0x34
+ 350 006c 00       		.byte	0
+ 351 006d 03       		.uleb128 0x3
+ 352 006e 0E       		.uleb128 0xe
+ 353 006f 3A       		.uleb128 0x3a
+ 354 0070 0B       		.uleb128 0xb
+ 355 0071 3B       		.uleb128 0x3b
+ 356 0072 0B       		.uleb128 0xb
+ 357 0073 49       		.uleb128 0x49
+ 358 0074 13       		.uleb128 0x13
+ 359 0075 02       		.uleb128 0x2
+ 360 0076 18       		.uleb128 0x18
+ 361 0077 00       		.byte	0
+ 362 0078 00       		.byte	0
+ 363 0079 09       		.uleb128 0x9
+ 364 007a 34       		.uleb128 0x34
+ 365 007b 00       		.byte	0
+ 366 007c 03       		.uleb128 0x3
+ 367 007d 08       		.uleb128 0x8
+ 368 007e 3A       		.uleb128 0x3a
+ 369 007f 0B       		.uleb128 0xb
+ 370 0080 3B       		.uleb128 0x3b
+ 371 0081 0B       		.uleb128 0xb
+ 372 0082 49       		.uleb128 0x49
+ 373 0083 13       		.uleb128 0x13
+ 374 0084 02       		.uleb128 0x2
+ 375 0085 18       		.uleb128 0x18
+ 376 0086 00       		.byte	0
+ 377 0087 00       		.byte	0
+ 378 0088 0A       		.uleb128 0xa
+ 379 0089 34       		.uleb128 0x34
+ 380 008a 00       		.byte	0
+ 381 008b 03       		.uleb128 0x3
+ 382 008c 0E       		.uleb128 0xe
+ 383 008d 3A       		.uleb128 0x3a
+ 384 008e 0B       		.uleb128 0xb
+ 385 008f 3B       		.uleb128 0x3b
+ 386 0090 05       		.uleb128 0x5
+ 387 0091 49       		.uleb128 0x49
+ 388 0092 13       		.uleb128 0x13
+ 389 0093 3F       		.uleb128 0x3f
+ 390 0094 19       		.uleb128 0x19
+ 391 0095 3C       		.uleb128 0x3c
+ 392 0096 19       		.uleb128 0x19
+ 393 0097 00       		.byte	0
+ 394 0098 00       		.byte	0
+ 395 0099 0B       		.uleb128 0xb
+ 396 009a 35       		.uleb128 0x35
+ 397 009b 00       		.byte	0
+ 398 009c 49       		.uleb128 0x49
+ 399 009d 13       		.uleb128 0x13
+ 400 009e 00       		.byte	0
+ 401 009f 00       		.byte	0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 9
+
+
+ 402 00a0 0C       		.uleb128 0xc
+ 403 00a1 01       		.uleb128 0x1
+ 404 00a2 01       		.byte	0x1
+ 405 00a3 49       		.uleb128 0x49
+ 406 00a4 13       		.uleb128 0x13
+ 407 00a5 01       		.uleb128 0x1
+ 408 00a6 13       		.uleb128 0x13
+ 409 00a7 00       		.byte	0
+ 410 00a8 00       		.byte	0
+ 411 00a9 0D       		.uleb128 0xd
+ 412 00aa 21       		.uleb128 0x21
+ 413 00ab 00       		.byte	0
+ 414 00ac 49       		.uleb128 0x49
+ 415 00ad 13       		.uleb128 0x13
+ 416 00ae 2F       		.uleb128 0x2f
+ 417 00af 0B       		.uleb128 0xb
+ 418 00b0 00       		.byte	0
+ 419 00b1 00       		.byte	0
+ 420 00b2 0E       		.uleb128 0xe
+ 421 00b3 34       		.uleb128 0x34
+ 422 00b4 00       		.byte	0
+ 423 00b5 03       		.uleb128 0x3
+ 424 00b6 0E       		.uleb128 0xe
+ 425 00b7 3A       		.uleb128 0x3a
+ 426 00b8 0B       		.uleb128 0xb
+ 427 00b9 3B       		.uleb128 0x3b
+ 428 00ba 0B       		.uleb128 0xb
+ 429 00bb 49       		.uleb128 0x49
+ 430 00bc 13       		.uleb128 0x13
+ 431 00bd 3F       		.uleb128 0x3f
+ 432 00be 19       		.uleb128 0x19
+ 433 00bf 3C       		.uleb128 0x3c
+ 434 00c0 19       		.uleb128 0x19
+ 435 00c1 00       		.byte	0
+ 436 00c2 00       		.byte	0
+ 437 00c3 00       		.byte	0
+ 438              		.section	.debug_aranges,"",%progbits
+ 439 0000 1C000000 		.4byte	0x1c
+ 440 0004 0200     		.2byte	0x2
+ 441 0006 00000000 		.4byte	.Ldebug_info0
+ 442 000a 04       		.byte	0x4
+ 443 000b 00       		.byte	0
+ 444 000c 0000     		.2byte	0
+ 445 000e 0000     		.2byte	0
+ 446 0010 00000000 		.4byte	.LFB63
+ 447 0014 50000000 		.4byte	.LFE63-.LFB63
+ 448 0018 00000000 		.4byte	0
+ 449 001c 00000000 		.4byte	0
+ 450              		.section	.debug_ranges,"",%progbits
+ 451              	.Ldebug_ranges0:
+ 452 0000 00000000 		.4byte	.LFB63
+ 453 0004 50000000 		.4byte	.LFE63
+ 454 0008 00000000 		.4byte	0
+ 455 000c 00000000 		.4byte	0
+ 456              		.section	.debug_line,"",%progbits
+ 457              	.Ldebug_line0:
+ 458 0000 9C010000 		.section	.debug_str,"MS",%progbits,1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 10
+
+
+ 458      02005A01 
+ 458      00000201 
+ 458      FB0E0D00 
+ 458      01010101 
+ 459              	.LASF6:
+ 460 0000 6C6F6E67 		.ascii	"long long int\000"
+ 460      206C6F6E 
+ 460      6720696E 
+ 460      7400
+ 461              	.LASF3:
+ 462 000e 73686F72 		.ascii	"short unsigned int\000"
+ 462      7420756E 
+ 462      7369676E 
+ 462      65642069 
+ 462      6E7400
+ 463              	.LASF8:
+ 464 0021 756E7369 		.ascii	"unsigned int\000"
+ 464      676E6564 
+ 464      20696E74 
+ 464      00
+ 465              	.LASF23:
+ 466 002e 6D61696E 		.ascii	"main\000"
+ 466      00
+ 467              	.LASF11:
+ 468 0033 75696E74 		.ascii	"uint8\000"
+ 468      3800
+ 469              	.LASF5:
+ 470 0039 6C6F6E67 		.ascii	"long unsigned int\000"
+ 470      20756E73 
+ 470      69676E65 
+ 470      6420696E 
+ 470      7400
+ 471              	.LASF7:
+ 472 004b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 472      206C6F6E 
+ 472      6720756E 
+ 472      7369676E 
+ 472      65642069 
+ 473              	.LASF14:
+ 474 0062 63686172 		.ascii	"char8\000"
+ 474      3800
+ 475              	.LASF1:
+ 476 0068 756E7369 		.ascii	"unsigned char\000"
+ 476      676E6564 
+ 476      20636861 
+ 476      7200
+ 477              	.LASF15:
+ 478 0076 63686172 		.ascii	"char\000"
+ 478      00
+ 479              	.LASF17:
+ 480 007b 636F756E 		.ascii	"count\000"
+ 480      7400
+ 481              	.LASF4:
+ 482 0081 6C6F6E67 		.ascii	"long int\000"
+ 482      20696E74 
+ 482      00
+ 483              	.LASF20:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 11
+
+
+ 484 008a 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 484      4320342E 
+ 484      392E3320 
+ 484      32303135 
+ 484      30333033 
+ 485 00bd 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 485      20726576 
+ 485      6973696F 
+ 485      6E203232 
+ 485      31323230 
+ 486 00f0 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 486      66756E63 
+ 486      74696F6E 
+ 486      2D736563 
+ 486      74696F6E 
+ 487              	.LASF21:
+ 488 0118 2E5C6D61 		.ascii	".\\main.c\000"
+ 488      696E2E63 
+ 488      00
+ 489              	.LASF13:
+ 490 0121 646F7562 		.ascii	"double\000"
+ 490      6C6500
+ 491              	.LASF18:
+ 492 0128 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 492      52784275 
+ 492      66666572 
+ 492      00
+ 493              	.LASF0:
+ 494 0135 7369676E 		.ascii	"signed char\000"
+ 494      65642063 
+ 494      68617200 
+ 495              	.LASF22:
+ 496 0141 443A5C50 		.ascii	"D:\\Projects\\ESD\\Kinect_Demo\\Workspace\\Kinect_D"
+ 496      726F6A65 
+ 496      6374735C 
+ 496      4553445C 
+ 496      4B696E65 
+ 497 016f 656D6F2E 		.ascii	"emo.cydsn\000"
+ 497      63796473 
+ 497      6E00
+ 498              	.LASF9:
+ 499 0179 5F5F696E 		.ascii	"__int32_t\000"
+ 499      7433325F 
+ 499      7400
+ 500              	.LASF12:
+ 501 0183 666C6F61 		.ascii	"float\000"
+ 501      7400
+ 502              	.LASF2:
+ 503 0189 73686F72 		.ascii	"short int\000"
+ 503      7420696E 
+ 503      7400
+ 504              	.LASF10:
+ 505 0193 696E7433 		.ascii	"int32_t\000"
+ 505      325F7400 
+ 506              	.LASF19:
+ 507 019b 62756666 		.ascii	"buffer\000"
+ 507      657200
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccTnDUzX.s 			page 12
+
+
+ 508              	.LASF16:
+ 509 01a2 73697A65 		.ascii	"sizetype\000"
+ 509      74797065 
+ 509      00
+ 510              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

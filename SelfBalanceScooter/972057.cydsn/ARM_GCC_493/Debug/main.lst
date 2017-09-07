@@ -1,0 +1,1554 @@
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.file	"main.c"
+  15              		.text
+  16              	.Ltext0:
+  17              		.cfi_sections	.debug_frame
+  18              		.global _printf_float
+  19              		.thumb
+  20              		.global	dataReady_L
+  21              		.bss
+  22              		.type	dataReady_L, %object
+  23              		.size	dataReady_L, 1
+  24              	dataReady_L:
+  25 0000 00       		.space	1
+  26              		.global	result_L
+  27 0001 000000   		.align	2
+  28              		.type	result_L, %object
+  29              		.size	result_L, 40
+  30              	result_L:
+  31 0004 00000000 		.space	40
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  31      00000000 
+  32              		.global	dataReady_R
+  33              		.type	dataReady_R, %object
+  34              		.size	dataReady_R, 1
+  35              	dataReady_R:
+  36 002c 00       		.space	1
+  37              		.global	result_R
+  38 002d 000000   		.align	2
+  39              		.type	result_R, %object
+  40              		.size	result_R, 40
+  41              	result_R:
+  42 0030 00000000 		.space	40
+  42      00000000 
+  42      00000000 
+  42      00000000 
+  42      00000000 
+  43              		.section	.text.ADC_SAR_R_ISR_LOC,"ax",%progbits
+  44              		.align	2
+  45              		.global	ADC_SAR_R_ISR_LOC
+  46              		.thumb
+  47              		.thumb_func
+  48              		.type	ADC_SAR_R_ISR_LOC, %function
+  49              	ADC_SAR_R_ISR_LOC:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 2
+
+
+  50              	.LFB63:
+  51              		.file 1 ".\\main.c"
+   1:.\main.c      **** /*******************************************************************************
+   2:.\main.c      **** * File Name: main.c
+   3:.\main.c      **** *
+   4:.\main.c      **** * Version: 2.0
+   5:.\main.c      **** *
+   6:.\main.c      **** * Description:
+   7:.\main.c      **** *  The SAR ADC and PrISM datasheet example project.
+   8:.\main.c      **** *  This example project demonstrates SAR ADC measurements and transferring
+   9:.\main.c      **** *  results using ISR and DMA to the LCD and PrISM.
+  10:.\main.c      **** *
+  11:.\main.c      **** * Note:
+  12:.\main.c      **** *  Pin_Vin pin (P1[4]) should be connected to the VR.
+  13:.\main.c      **** *  Pin_LED pin (P1[6]) should be connected to the LED.
+  14:.\main.c      **** *  Verify that VR_PWR(J11) is jumpered to ON.
+  15:.\main.c      **** *
+  16:.\main.c      **** * Hardware Dependency:
+  17:.\main.c      **** *  CY8C55 Family Processor
+  18:.\main.c      **** *
+  19:.\main.c      **** ********************************************************************************
+  20:.\main.c      **** * Copyright 2012, Cypress Semiconductor Corporation. All rights reserved.
+  21:.\main.c      **** * This software is owned by Cypress Semiconductor Corporation and is protected
+  22:.\main.c      **** * by and subject to worldwide patent and copyright laws and treaties.
+  23:.\main.c      **** * Therefore, you may use this software only as provided in the license agreement
+  24:.\main.c      **** * accompanying the software package from which you obtained this software.
+  25:.\main.c      **** * CYPRESS AND ITS SUPPLIERS MAKE NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+  26:.\main.c      **** * WITH REGARD TO THIS SOFTWARE, INCLUDING, BUT NOT LIMITED TO, NONINFRINGEMENT,
+  27:.\main.c      **** * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+  28:.\main.c      **** *******************************************************************************/
+  29:.\main.c      **** 
+  30:.\main.c      **** #include <device.h>
+  31:.\main.c      **** #include <stdio.h>
+  32:.\main.c      **** #include "ServoMotor.h"
+  33:.\main.c      **** #include "pid.h"
+  34:.\main.c      **** #include "Bluetooth.h"
+  35:.\main.c      **** 
+  36:.\main.c      **** #if defined (__GNUC__)
+  37:.\main.c      ****     /* Add an explicit reference to the floating point printf library */
+  38:.\main.c      ****     /* to allow the usage of floating point conversion specifiers. */
+  39:.\main.c      ****     /* This is not linked in by default with the newlib-nano library. */
+  40:.\main.c      ****     asm (".global _printf_float");
+  41:.\main.c      **** #endif
+  42:.\main.c      **** 
+  43:.\main.c      **** #define size 20
+  44:.\main.c      **** 
+  45:.\main.c      **** uint8 dataReady_L = 0u;
+  46:.\main.c      **** uint16 result_L[size] = {0};
+  47:.\main.c      **** uint8 dataReady_R = 0u;
+  48:.\main.c      **** uint16 result_R[size] = {0};
+  49:.\main.c      **** 
+  50:.\main.c      **** //extern uint16 ADC_L;
+  51:.\main.c      **** //extern uint16 ADC_R;
+  52:.\main.c      **** 
+  53:.\main.c      **** CY_ISR(ADC_SAR_R_ISR_LOC)
+  54:.\main.c      **** {
+  52              		.loc 1 54 0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 3
+
+
+  53              		.cfi_startproc
+  54              		@ args = 0, pretend = 0, frame = 0
+  55              		@ frame_needed = 1, uses_anonymous_args = 0
+  56              		@ link register save eliminated.
+  57 0000 80B4     		push	{r7}
+  58              		.cfi_def_cfa_offset 4
+  59              		.cfi_offset 7, -4
+  60 0002 00AF     		add	r7, sp, #0
+  61              		.cfi_def_cfa_register 7
+  55:.\main.c      ****         ADC_R = CY_GET_REG16(ADC_SAR_R_SAR_WRK_PTR);
+  62              		.loc 1 55 0
+  63 0004 064B     		ldr	r3, .L2
+  64 0006 1B88     		ldrh	r3, [r3]	@ movhi
+  65 0008 9BB2     		uxth	r3, r3
+  66 000a 9AB2     		uxth	r2, r3
+  67 000c 054B     		ldr	r3, .L2+4
+  68 000e 1A80     		strh	r2, [r3]	@ movhi
+  56:.\main.c      ****         dataReady_R = 1u;
+  69              		.loc 1 56 0
+  70 0010 054B     		ldr	r3, .L2+8
+  71 0012 0122     		movs	r2, #1
+  72 0014 1A70     		strb	r2, [r3]
+  57:.\main.c      **** }
+  73              		.loc 1 57 0
+  74 0016 BD46     		mov	sp, r7
+  75              		.cfi_def_cfa_register 13
+  76              		@ sp needed
+  77 0018 5DF8047B 		ldr	r7, [sp], #4
+  78              		.cfi_restore 7
+  79              		.cfi_def_cfa_offset 0
+  80 001c 7047     		bx	lr
+  81              	.L3:
+  82 001e 00BF     		.align	2
+  83              	.L2:
+  84 0020 A25B0040 		.word	1073765282
+  85 0024 00000000 		.word	ADC_R
+  86 0028 00000000 		.word	dataReady_R
+  87              		.cfi_endproc
+  88              	.LFE63:
+  89              		.size	ADC_SAR_R_ISR_LOC, .-ADC_SAR_R_ISR_LOC
+  90              		.section	.text.ADC_SAR_L_ISR_LOC,"ax",%progbits
+  91              		.align	2
+  92              		.global	ADC_SAR_L_ISR_LOC
+  93              		.thumb
+  94              		.thumb_func
+  95              		.type	ADC_SAR_L_ISR_LOC, %function
+  96              	ADC_SAR_L_ISR_LOC:
+  97              	.LFB64:
+  58:.\main.c      **** CY_ISR(ADC_SAR_L_ISR_LOC)
+  59:.\main.c      **** {
+  98              		.loc 1 59 0
+  99              		.cfi_startproc
+ 100              		@ args = 0, pretend = 0, frame = 0
+ 101              		@ frame_needed = 1, uses_anonymous_args = 0
+ 102              		@ link register save eliminated.
+ 103 0000 80B4     		push	{r7}
+ 104              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 4
+
+
+ 105              		.cfi_offset 7, -4
+ 106 0002 00AF     		add	r7, sp, #0
+ 107              		.cfi_def_cfa_register 7
+  60:.\main.c      ****         ADC_L = CY_GET_REG16(ADC_SAR_L_SAR_WRK_PTR);
+ 108              		.loc 1 60 0
+ 109 0004 064B     		ldr	r3, .L5
+ 110 0006 1B88     		ldrh	r3, [r3]	@ movhi
+ 111 0008 9BB2     		uxth	r3, r3
+ 112 000a 9AB2     		uxth	r2, r3
+ 113 000c 054B     		ldr	r3, .L5+4
+ 114 000e 1A80     		strh	r2, [r3]	@ movhi
+  61:.\main.c      ****         dataReady_L = 1u;
+ 115              		.loc 1 61 0
+ 116 0010 054B     		ldr	r3, .L5+8
+ 117 0012 0122     		movs	r2, #1
+ 118 0014 1A70     		strb	r2, [r3]
+  62:.\main.c      **** }
+ 119              		.loc 1 62 0
+ 120 0016 BD46     		mov	sp, r7
+ 121              		.cfi_def_cfa_register 13
+ 122              		@ sp needed
+ 123 0018 5DF8047B 		ldr	r7, [sp], #4
+ 124              		.cfi_restore 7
+ 125              		.cfi_def_cfa_offset 0
+ 126 001c 7047     		bx	lr
+ 127              	.L6:
+ 128 001e 00BF     		.align	2
+ 129              	.L5:
+ 130 0020 A05B0040 		.word	1073765280
+ 131 0024 00000000 		.word	ADC_L
+ 132 0028 00000000 		.word	dataReady_L
+ 133              		.cfi_endproc
+ 134              	.LFE64:
+ 135              		.size	ADC_SAR_L_ISR_LOC, .-ADC_SAR_L_ISR_LOC
+ 136              		.section	.rodata
+ 137              		.align	2
+ 138              	.LC0:
+ 139 0000 41444331 		.ascii	"ADC1=      V\000"
+ 139      3D202020 
+ 139      20202056 
+ 139      00
+ 140 000d 000000   		.align	2
+ 141              	.LC1:
+ 142 0010 41444332 		.ascii	"ADC2=      V\000"
+ 142      3D202020 
+ 142      20202056 
+ 142      00
+ 143 001d 000000   		.align	2
+ 144              	.LC2:
+ 145 0020 256400   		.ascii	"%d\000"
+ 146              		.global	__aeabi_f2d
+ 147 0023 00       		.align	2
+ 148              	.LC3:
+ 149 0024 252B312E 		.ascii	"%+1.2f\000"
+ 149      326600
+ 150              		.global	__aeabi_i2f
+ 151              		.global	__aeabi_fadd
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 5
+
+
+ 152              		.global	__aeabi_fdiv
+ 153              		.global	__aeabi_f2uiz
+ 154 002b 00       		.align	2
+ 155              	.LC4:
+ 156 002c 20202020 		.ascii	"     \000"
+ 156      2000
+ 157 0032 0000     		.section	.text.main,"ax",%progbits
+ 158              		.align	2
+ 159              		.global	main
+ 160              		.thumb
+ 161              		.thumb_func
+ 162              		.type	main, %function
+ 163              	main:
+ 164              	.LFB65:
+  63:.\main.c      **** 
+  64:.\main.c      **** /*******************************************************************************
+  65:.\main.c      **** * Function Name: main
+  66:.\main.c      **** ********************************************************************************
+  67:.\main.c      **** *
+  68:.\main.c      **** * Summary:
+  69:.\main.c      **** *  Main function performs following functions:
+  70:.\main.c      **** *   1. Initialises the DMA to move data from ADC_SAR_1 work registers to the
+  71:.\main.c      **** *      PrISM pulse density registers.
+  72:.\main.c      **** *   2. Initialises the ISR connected to the DMA nrq terminal(DMA done).
+  73:.\main.c      **** *   3. Initialises the LCD.
+  74:.\main.c      **** *   4. Initialises the PrISM with 1Mhz clock.
+  75:.\main.c      **** *   5. Initialises the two SAR ADCs.
+  76:.\main.c      **** *   6. Displays the results of ADC_SAR_1 when DmaDone ISR rises.
+  77:.\main.c      **** *      The results are read from PrISM pulse density register.
+  78:.\main.c      **** *   7. Displays the results of ADC_SAR_2 when internal EOC ISR rises.
+  79:.\main.c      **** *
+  80:.\main.c      **** * Parameters:
+  81:.\main.c      **** *  None.
+  82:.\main.c      **** *
+  83:.\main.c      **** * Return:
+  84:.\main.c      **** *  None.
+  85:.\main.c      **** *
+  86:.\main.c      **** *******************************************************************************/
+  87:.\main.c      **** int main()
+  88:.\main.c      **** {
+ 165              		.loc 1 88 0
+ 166              		.cfi_startproc
+ 167              		@ args = 0, pretend = 0, frame = 40
+ 168              		@ frame_needed = 1, uses_anonymous_args = 0
+ 169 0000 B0B5     		push	{r4, r5, r7, lr}
+ 170              		.cfi_def_cfa_offset 16
+ 171              		.cfi_offset 4, -16
+ 172              		.cfi_offset 5, -12
+ 173              		.cfi_offset 7, -8
+ 174              		.cfi_offset 14, -4
+ 175 0002 8AB0     		sub	sp, sp, #40
+ 176              		.cfi_def_cfa_offset 56
+ 177 0004 00AF     		add	r7, sp, #0
+ 178              		.cfi_def_cfa_register 7
+  89:.\main.c      ****     int temp;
+  90:.\main.c      ****     char8 resultStr[16u];
+  91:.\main.c      ****     float res;
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 6
+
+
+  92:.\main.c      ****     float sum;
+  93:.\main.c      ****     uint16 L,R;
+  94:.\main.c      ****     /* Initializes the LCD. */
+  95:.\main.c      ****     LCD_Start();
+ 179              		.loc 1 95 0
+ 180 0006 FFF7FEFF 		bl	LCD_Start
+  96:.\main.c      ****     LCD_Position(0u,0u);
+ 181              		.loc 1 96 0
+ 182 000a 0020     		movs	r0, #0
+ 183 000c 0021     		movs	r1, #0
+ 184 000e FFF7FEFF 		bl	LCD_Position
+  97:.\main.c      ****     LCD_PrintString("ADC1=      V");
+ 185              		.loc 1 97 0
+ 186 0012 A048     		ldr	r0, .L19
+ 187 0014 FFF7FEFF 		bl	LCD_PrintString
+  98:.\main.c      ****     LCD_Position(1u,0u);
+ 188              		.loc 1 98 0
+ 189 0018 0120     		movs	r0, #1
+ 190 001a 0021     		movs	r1, #0
+ 191 001c FFF7FEFF 		bl	LCD_Position
+  99:.\main.c      ****     LCD_PrintString("ADC2=      V");
+ 192              		.loc 1 99 0
+ 193 0020 9D48     		ldr	r0, .L19+4
+ 194 0022 FFF7FEFF 		bl	LCD_PrintString
+ 100:.\main.c      **** 
+ 101:.\main.c      **** 
+ 102:.\main.c      **** 
+ 103:.\main.c      ****     ADC_SAR_L_Start();
+ 195              		.loc 1 103 0
+ 196 0026 FFF7FEFF 		bl	ADC_SAR_L_Start
+ 104:.\main.c      ****     ADC_SAR_L_IRQ_StartEx(ADC_SAR_L_ISR_LOC);
+ 197              		.loc 1 104 0
+ 198 002a 9C48     		ldr	r0, .L19+8
+ 199 002c FFF7FEFF 		bl	ADC_SAR_L_IRQ_StartEx
+ 105:.\main.c      ****     ADC_SAR_L_StartConvert();
+ 200              		.loc 1 105 0
+ 201 0030 FFF7FEFF 		bl	ADC_SAR_L_StartConvert
+ 106:.\main.c      ****     ADC_SAR_R_Start();
+ 202              		.loc 1 106 0
+ 203 0034 FFF7FEFF 		bl	ADC_SAR_R_Start
+ 107:.\main.c      ****     ADC_SAR_R_IRQ_StartEx(ADC_SAR_R_ISR_LOC);
+ 204              		.loc 1 107 0
+ 205 0038 9948     		ldr	r0, .L19+12
+ 206 003a FFF7FEFF 		bl	ADC_SAR_R_IRQ_StartEx
+ 108:.\main.c      ****     ADC_SAR_R_StartConvert();
+ 207              		.loc 1 108 0
+ 208 003e FFF7FEFF 		bl	ADC_SAR_R_StartConvert
+ 109:.\main.c      ****     CyGlobalIntEnable;
+ 209              		.loc 1 109 0
+ 210              	@ 109 ".\main.c" 1
+ 211 0042 62B6     		CPSIE   i
+ 212              	@ 0 "" 2
+ 110:.\main.c      ****     
+ 111:.\main.c      ****     UART_1_Start();
+ 213              		.loc 1 111 0
+ 214              		.thumb
+ 215 0044 FFF7FEFF 		bl	UART_1_Start
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 7
+
+
+ 112:.\main.c      ****     UART_2_Start();
+ 216              		.loc 1 112 0
+ 217 0048 FFF7FEFF 		bl	UART_2_Start
+ 113:.\main.c      ****     UART_3_Start();
+ 218              		.loc 1 113 0
+ 219 004c FFF7FEFF 		bl	UART_3_Start
+ 114:.\main.c      ****     UART_6_Start();
+ 220              		.loc 1 114 0
+ 221 0050 FFF7FEFF 		bl	UART_6_Start
+ 115:.\main.c      ****     
+ 116:.\main.c      ****     SetServoMode(_TOP);
+ 222              		.loc 1 116 0
+ 223 0054 0020     		movs	r0, #0
+ 224 0056 FFF7FEFF 		bl	SetServoMode
+ 117:.\main.c      ****     SetMotorMode(_LEFT);
+ 225              		.loc 1 117 0
+ 226 005a 0120     		movs	r0, #1
+ 227 005c FFF7FEFF 		bl	SetMotorMode
+ 118:.\main.c      ****     SetMotorMode(_RIGHT);
+ 228              		.loc 1 118 0
+ 229 0060 0220     		movs	r0, #2
+ 230 0062 FFF7FEFF 		bl	SetMotorMode
+ 119:.\main.c      ****     CyDelay(100);
+ 231              		.loc 1 119 0
+ 232 0066 6420     		movs	r0, #100
+ 233 0068 FFF7FEFF 		bl	CyDelay
+ 234              	.L18:
+ 235              	.LBB2:
+ 120:.\main.c      **** 
+ 121:.\main.c      ****     for(;;)
+ 122:.\main.c      ****     {
+ 123:.\main.c      ****         
+ 124:.\main.c      ****         GetBluetoothString(buffer);
+ 236              		.loc 1 124 0
+ 237 006c 8D48     		ldr	r0, .L19+16
+ 238 006e FFF7FEFF 		bl	GetBluetoothString
+ 125:.\main.c      ****         if (buffer[0] != '\0')
+ 239              		.loc 1 125 0
+ 240 0072 8C4B     		ldr	r3, .L19+16
+ 241 0074 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 242 0076 002B     		cmp	r3, #0
+ 243 0078 26D0     		beq	.L8
+ 126:.\main.c      ****         {
+ 127:.\main.c      ****             if (buffer[0] == '-')
+ 244              		.loc 1 127 0
+ 245 007a 8A4B     		ldr	r3, .L19+16
+ 246 007c 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 247 007e 2D2B     		cmp	r3, #45
+ 248 0080 0AD1     		bne	.L9
+ 128:.\main.c      ****             {
+ 129:.\main.c      ****                 sscanf(buffer + 1, "%d", &temp);
+ 249              		.loc 1 129 0
+ 250 0082 07F11403 		add	r3, r7, #20
+ 251 0086 8848     		ldr	r0, .L19+20
+ 252 0088 8849     		ldr	r1, .L19+24
+ 253 008a 1A46     		mov	r2, r3
+ 254 008c FFF7FEFF 		bl	sscanf
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 8
+
+
+ 130:.\main.c      ****                 temp = -temp;
+ 255              		.loc 1 130 0
+ 256 0090 7B69     		ldr	r3, [r7, #20]
+ 257 0092 5B42     		negs	r3, r3
+ 258 0094 7B61     		str	r3, [r7, #20]
+ 259 0096 06E0     		b	.L10
+ 260              	.L9:
+ 131:.\main.c      ****             }
+ 132:.\main.c      ****             else
+ 133:.\main.c      ****             {
+ 134:.\main.c      ****                 sscanf(buffer, "%d", &temp);
+ 261              		.loc 1 134 0
+ 262 0098 07F11403 		add	r3, r7, #20
+ 263 009c 8148     		ldr	r0, .L19+16
+ 264 009e 8349     		ldr	r1, .L19+24
+ 265 00a0 1A46     		mov	r2, r3
+ 266 00a2 FFF7FEFF 		bl	sscanf
+ 267              	.L10:
+ 135:.\main.c      ****             }
+ 136:.\main.c      ****             if (temp >= -200 && temp <= 200)
+ 268              		.loc 1 136 0
+ 269 00a6 7B69     		ldr	r3, [r7, #20]
+ 270 00a8 13F1C80F 		cmn	r3, #200
+ 271 00ac 06DB     		blt	.L11
+ 272              		.loc 1 136 0 is_stmt 0 discriminator 1
+ 273 00ae 7B69     		ldr	r3, [r7, #20]
+ 274 00b0 C82B     		cmp	r3, #200
+ 275 00b2 03DC     		bgt	.L11
+ 137:.\main.c      ****             {
+ 138:.\main.c      ****                 bias = temp;
+ 276              		.loc 1 138 0 is_stmt 1
+ 277 00b4 7B69     		ldr	r3, [r7, #20]
+ 278 00b6 9AB2     		uxth	r2, r3
+ 279 00b8 7D4B     		ldr	r3, .L19+28
+ 280 00ba 1A80     		strh	r2, [r3]	@ movhi
+ 281              	.L11:
+ 139:.\main.c      ****             }
+ 140:.\main.c      ****             LCD_ClearDisplay();
+ 282              		.loc 1 140 0
+ 283 00bc 0120     		movs	r0, #1
+ 284 00be FFF7FEFF 		bl	LCD_WriteControl
+ 141:.\main.c      ****             LCD_PrintString(buffer);
+ 285              		.loc 1 141 0
+ 286 00c2 7848     		ldr	r0, .L19+16
+ 287 00c4 FFF7FEFF 		bl	LCD_PrintString
+ 288              	.L8:
+ 142:.\main.c      ****         }
+ 143:.\main.c      ****         
+ 144:.\main.c      ****         
+ 145:.\main.c      ****         
+ 146:.\main.c      ****         uint8 i,j;
+ 147:.\main.c      ****         if(dataReady_L != 0u)
+ 289              		.loc 1 147 0
+ 290 00c8 7A4B     		ldr	r3, .L19+32
+ 291 00ca 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 292 00cc 002B     		cmp	r3, #0
+ 293 00ce 6BD0     		beq	.L12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 9
+
+
+ 148:.\main.c      ****         {
+ 149:.\main.c      ****             sum = 0;
+ 294              		.loc 1 149 0
+ 295 00d0 4FF00003 		mov	r3, #0
+ 296 00d4 7B62     		str	r3, [r7, #36]	@ float
+ 150:.\main.c      ****             res = ADC_SAR_L_CountsTo_Volts(ADC_L);
+ 297              		.loc 1 150 0
+ 298 00d6 784B     		ldr	r3, .L19+36
+ 299 00d8 1B88     		ldrh	r3, [r3]
+ 300 00da 1BB2     		sxth	r3, r3
+ 301 00dc 1846     		mov	r0, r3
+ 302 00de FFF7FEFF 		bl	ADC_SAR_L_CountsTo_Volts
+ 303 00e2 F861     		str	r0, [r7, #28]	@ float
+ 151:.\main.c      ****             sprintf((char *)resultStr,"%+1.2f",res);
+ 304              		.loc 1 151 0
+ 305 00e4 F869     		ldr	r0, [r7, #28]	@ float
+ 306 00e6 FFF7FEFF 		bl	__aeabi_f2d
+ 307 00ea 0446     		mov	r4, r0
+ 308 00ec 0D46     		mov	r5, r1
+ 309 00ee 3B1D     		adds	r3, r7, #4
+ 310 00f0 1846     		mov	r0, r3
+ 311 00f2 7249     		ldr	r1, .L19+40
+ 312 00f4 2246     		mov	r2, r4
+ 313 00f6 2B46     		mov	r3, r5
+ 314 00f8 FFF7FEFF 		bl	sprintf
+ 152:.\main.c      ****             for(j=0;j<size-1;j++)
+ 315              		.loc 1 152 0
+ 316 00fc 0023     		movs	r3, #0
+ 317 00fe 87F82330 		strb	r3, [r7, #35]
+ 318 0102 1FE0     		b	.L13
+ 319              	.L14:
+ 153:.\main.c      ****             {
+ 154:.\main.c      ****                 result_L[j] = result_L[j+1];
+ 320              		.loc 1 154 0 discriminator 3
+ 321 0104 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 322 0108 97F82320 		ldrb	r2, [r7, #35]	@ zero_extendqisi2
+ 323 010c 0132     		adds	r2, r2, #1
+ 324 010e 6C49     		ldr	r1, .L19+44
+ 325 0110 31F81210 		ldrh	r1, [r1, r2, lsl #1]
+ 326 0114 6A4A     		ldr	r2, .L19+44
+ 327 0116 22F81310 		strh	r1, [r2, r3, lsl #1]	@ movhi
+ 155:.\main.c      ****                 sum += result_L[j+1];
+ 328              		.loc 1 155 0 discriminator 3
+ 329 011a 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 330 011e 0133     		adds	r3, r3, #1
+ 331 0120 674A     		ldr	r2, .L19+44
+ 332 0122 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 333 0126 1846     		mov	r0, r3
+ 334 0128 FFF7FEFF 		bl	__aeabi_i2f
+ 335 012c 0346     		mov	r3, r0
+ 336 012e 786A     		ldr	r0, [r7, #36]	@ float
+ 337 0130 1946     		mov	r1, r3
+ 338 0132 FFF7FEFF 		bl	__aeabi_fadd
+ 339 0136 0346     		mov	r3, r0
+ 340 0138 7B62     		str	r3, [r7, #36]	@ float
+ 152:.\main.c      ****             for(j=0;j<size-1;j++)
+ 341              		.loc 1 152 0 discriminator 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 10
+
+
+ 342 013a 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 343 013e 0133     		adds	r3, r3, #1
+ 344 0140 87F82330 		strb	r3, [r7, #35]
+ 345              	.L13:
+ 152:.\main.c      ****             for(j=0;j<size-1;j++)
+ 346              		.loc 1 152 0 is_stmt 0 discriminator 1
+ 347 0144 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 348 0148 122B     		cmp	r3, #18
+ 349 014a DBD9     		bls	.L14
+ 156:.\main.c      ****             }
+ 157:.\main.c      ****             result_L[size - 1] = ADC_L;
+ 350              		.loc 1 157 0 is_stmt 1
+ 351 014c 5A4B     		ldr	r3, .L19+36
+ 352 014e 1B88     		ldrh	r3, [r3]
+ 353 0150 9AB2     		uxth	r2, r3
+ 354 0152 5B4B     		ldr	r3, .L19+44
+ 355 0154 DA84     		strh	r2, [r3, #38]	@ movhi
+ 158:.\main.c      ****             sum = (sum+ADC_L)/size;
+ 356              		.loc 1 158 0
+ 357 0156 584B     		ldr	r3, .L19+36
+ 358 0158 1B88     		ldrh	r3, [r3]
+ 359 015a 1BB2     		sxth	r3, r3
+ 360 015c 1846     		mov	r0, r3
+ 361 015e FFF7FEFF 		bl	__aeabi_i2f
+ 362 0162 0346     		mov	r3, r0
+ 363 0164 1846     		mov	r0, r3
+ 364 0166 796A     		ldr	r1, [r7, #36]	@ float
+ 365 0168 FFF7FEFF 		bl	__aeabi_fadd
+ 366 016c 0346     		mov	r3, r0
+ 367 016e 1846     		mov	r0, r3
+ 368 0170 5449     		ldr	r1, .L19+48
+ 369 0172 FFF7FEFF 		bl	__aeabi_fdiv
+ 370 0176 0346     		mov	r3, r0
+ 371 0178 7B62     		str	r3, [r7, #36]	@ float
+ 159:.\main.c      ****             L = sum;
+ 372              		.loc 1 159 0
+ 373 017a 786A     		ldr	r0, [r7, #36]	@ float
+ 374 017c FFF7FEFF 		bl	__aeabi_f2uiz
+ 375 0180 0346     		mov	r3, r0
+ 376 0182 3B83     		strh	r3, [r7, #24]	@ movhi
+ 160:.\main.c      ****             LCD_Position(0u,5u);
+ 377              		.loc 1 160 0
+ 378 0184 0020     		movs	r0, #0
+ 379 0186 0521     		movs	r1, #5
+ 380 0188 FFF7FEFF 		bl	LCD_Position
+ 161:.\main.c      ****             LCD_PrintString("     ");
+ 381              		.loc 1 161 0
+ 382 018c 4E48     		ldr	r0, .L19+52
+ 383 018e FFF7FEFF 		bl	LCD_PrintString
+ 162:.\main.c      ****             //LCD_PrintString(resultStr);
+ 163:.\main.c      ****             LCD_Position(0u,5u);
+ 384              		.loc 1 163 0
+ 385 0192 0020     		movs	r0, #0
+ 386 0194 0521     		movs	r1, #5
+ 387 0196 FFF7FEFF 		bl	LCD_Position
+ 164:.\main.c      ****             LCD_PrintNumber(L);
+ 388              		.loc 1 164 0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 11
+
+
+ 389 019a 3B8B     		ldrh	r3, [r7, #24]
+ 390 019c 1846     		mov	r0, r3
+ 391 019e FFF7FEFF 		bl	LCD_PrintU32Number
+ 165:.\main.c      ****             dataReady_L = 0u;
+ 392              		.loc 1 165 0
+ 393 01a2 444B     		ldr	r3, .L19+32
+ 394 01a4 0022     		movs	r2, #0
+ 395 01a6 1A70     		strb	r2, [r3]
+ 396              	.L12:
+ 166:.\main.c      ****             //CyDelay(1);
+ 167:.\main.c      ****         }
+ 168:.\main.c      ****         if(dataReady_R != 0u)
+ 397              		.loc 1 168 0
+ 398 01a8 484B     		ldr	r3, .L19+56
+ 399 01aa 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 400 01ac 002B     		cmp	r3, #0
+ 401 01ae 6BD0     		beq	.L15
+ 169:.\main.c      ****         {
+ 170:.\main.c      ****             sum = 0;
+ 402              		.loc 1 170 0
+ 403 01b0 4FF00003 		mov	r3, #0
+ 404 01b4 7B62     		str	r3, [r7, #36]	@ float
+ 171:.\main.c      ****             res = ADC_SAR_R_CountsTo_Volts(ADC_R);
+ 405              		.loc 1 171 0
+ 406 01b6 464B     		ldr	r3, .L19+60
+ 407 01b8 1B88     		ldrh	r3, [r3]
+ 408 01ba 1BB2     		sxth	r3, r3
+ 409 01bc 1846     		mov	r0, r3
+ 410 01be FFF7FEFF 		bl	ADC_SAR_R_CountsTo_Volts
+ 411 01c2 F861     		str	r0, [r7, #28]	@ float
+ 172:.\main.c      ****             sprintf((char *)resultStr,"%+1.2f",res);
+ 412              		.loc 1 172 0
+ 413 01c4 F869     		ldr	r0, [r7, #28]	@ float
+ 414 01c6 FFF7FEFF 		bl	__aeabi_f2d
+ 415 01ca 0446     		mov	r4, r0
+ 416 01cc 0D46     		mov	r5, r1
+ 417 01ce 3B1D     		adds	r3, r7, #4
+ 418 01d0 1846     		mov	r0, r3
+ 419 01d2 3A49     		ldr	r1, .L19+40
+ 420 01d4 2246     		mov	r2, r4
+ 421 01d6 2B46     		mov	r3, r5
+ 422 01d8 FFF7FEFF 		bl	sprintf
+ 173:.\main.c      ****             for(j=0;j<size-1;j++)
+ 423              		.loc 1 173 0
+ 424 01dc 0023     		movs	r3, #0
+ 425 01de 87F82330 		strb	r3, [r7, #35]
+ 426 01e2 1FE0     		b	.L16
+ 427              	.L17:
+ 174:.\main.c      ****             {
+ 175:.\main.c      ****                 result_R[j] = result_R[j+1];
+ 428              		.loc 1 175 0 discriminator 3
+ 429 01e4 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 430 01e8 97F82320 		ldrb	r2, [r7, #35]	@ zero_extendqisi2
+ 431 01ec 0132     		adds	r2, r2, #1
+ 432 01ee 3949     		ldr	r1, .L19+64
+ 433 01f0 31F81210 		ldrh	r1, [r1, r2, lsl #1]
+ 434 01f4 374A     		ldr	r2, .L19+64
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 12
+
+
+ 435 01f6 22F81310 		strh	r1, [r2, r3, lsl #1]	@ movhi
+ 176:.\main.c      ****                 sum += result_R[j+1];
+ 436              		.loc 1 176 0 discriminator 3
+ 437 01fa 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 438 01fe 0133     		adds	r3, r3, #1
+ 439 0200 344A     		ldr	r2, .L19+64
+ 440 0202 32F81330 		ldrh	r3, [r2, r3, lsl #1]
+ 441 0206 1846     		mov	r0, r3
+ 442 0208 FFF7FEFF 		bl	__aeabi_i2f
+ 443 020c 0346     		mov	r3, r0
+ 444 020e 786A     		ldr	r0, [r7, #36]	@ float
+ 445 0210 1946     		mov	r1, r3
+ 446 0212 FFF7FEFF 		bl	__aeabi_fadd
+ 447 0216 0346     		mov	r3, r0
+ 448 0218 7B62     		str	r3, [r7, #36]	@ float
+ 173:.\main.c      ****             for(j=0;j<size-1;j++)
+ 449              		.loc 1 173 0 discriminator 3
+ 450 021a 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 451 021e 0133     		adds	r3, r3, #1
+ 452 0220 87F82330 		strb	r3, [r7, #35]
+ 453              	.L16:
+ 173:.\main.c      ****             for(j=0;j<size-1;j++)
+ 454              		.loc 1 173 0 is_stmt 0 discriminator 1
+ 455 0224 97F82330 		ldrb	r3, [r7, #35]	@ zero_extendqisi2
+ 456 0228 122B     		cmp	r3, #18
+ 457 022a DBD9     		bls	.L17
+ 177:.\main.c      ****             }
+ 178:.\main.c      ****             result_R[size - 1] = ADC_R;
+ 458              		.loc 1 178 0 is_stmt 1
+ 459 022c 284B     		ldr	r3, .L19+60
+ 460 022e 1B88     		ldrh	r3, [r3]
+ 461 0230 9AB2     		uxth	r2, r3
+ 462 0232 284B     		ldr	r3, .L19+64
+ 463 0234 DA84     		strh	r2, [r3, #38]	@ movhi
+ 179:.\main.c      ****             sum = (sum+ADC_R)/size;
+ 464              		.loc 1 179 0
+ 465 0236 264B     		ldr	r3, .L19+60
+ 466 0238 1B88     		ldrh	r3, [r3]
+ 467 023a 1BB2     		sxth	r3, r3
+ 468 023c 1846     		mov	r0, r3
+ 469 023e FFF7FEFF 		bl	__aeabi_i2f
+ 470 0242 0346     		mov	r3, r0
+ 471 0244 1846     		mov	r0, r3
+ 472 0246 796A     		ldr	r1, [r7, #36]	@ float
+ 473 0248 FFF7FEFF 		bl	__aeabi_fadd
+ 474 024c 0346     		mov	r3, r0
+ 475 024e 1846     		mov	r0, r3
+ 476 0250 1C49     		ldr	r1, .L19+48
+ 477 0252 FFF7FEFF 		bl	__aeabi_fdiv
+ 478 0256 0346     		mov	r3, r0
+ 479 0258 7B62     		str	r3, [r7, #36]	@ float
+ 180:.\main.c      ****             R = sum;
+ 480              		.loc 1 180 0
+ 481 025a 786A     		ldr	r0, [r7, #36]	@ float
+ 482 025c FFF7FEFF 		bl	__aeabi_f2uiz
+ 483 0260 0346     		mov	r3, r0
+ 484 0262 7B83     		strh	r3, [r7, #26]	@ movhi
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 13
+
+
+ 181:.\main.c      ****             LCD_Position(1u,5u);
+ 485              		.loc 1 181 0
+ 486 0264 0120     		movs	r0, #1
+ 487 0266 0521     		movs	r1, #5
+ 488 0268 FFF7FEFF 		bl	LCD_Position
+ 182:.\main.c      ****             LCD_PrintString("     ");
+ 489              		.loc 1 182 0
+ 490 026c 1648     		ldr	r0, .L19+52
+ 491 026e FFF7FEFF 		bl	LCD_PrintString
+ 183:.\main.c      ****             LCD_Position(1u,5u);
+ 492              		.loc 1 183 0
+ 493 0272 0120     		movs	r0, #1
+ 494 0274 0521     		movs	r1, #5
+ 495 0276 FFF7FEFF 		bl	LCD_Position
+ 184:.\main.c      ****             //LCD_PrintString(resultStr);
+ 185:.\main.c      ****             LCD_PrintNumber(R);
+ 496              		.loc 1 185 0
+ 497 027a 7B8B     		ldrh	r3, [r7, #26]
+ 498 027c 1846     		mov	r0, r3
+ 499 027e FFF7FEFF 		bl	LCD_PrintU32Number
+ 186:.\main.c      ****             dataReady_R = 0u;
+ 500              		.loc 1 186 0
+ 501 0282 124B     		ldr	r3, .L19+56
+ 502 0284 0022     		movs	r2, #0
+ 503 0286 1A70     		strb	r2, [r3]
+ 504              	.L15:
+ 187:.\main.c      ****             //CyDelay(1);
+ 188:.\main.c      ****         }
+ 189:.\main.c      ****         //SetServoPosition(_TOP, 512, 0x01ff);
+ 190:.\main.c      ****         PID();
+ 505              		.loc 1 190 0
+ 506 0288 FFF7FEFF 		bl	PID
+ 191:.\main.c      ****         CyDelay(2);
+ 507              		.loc 1 191 0
+ 508 028c 0220     		movs	r0, #2
+ 509 028e FFF7FEFF 		bl	CyDelay
+ 510              	.LBE2:
+ 192:.\main.c      ****     }
+ 511              		.loc 1 192 0
+ 512 0292 EBE6     		b	.L18
+ 513              	.L20:
+ 514              		.align	2
+ 515              	.L19:
+ 516 0294 00000000 		.word	.LC0
+ 517 0298 10000000 		.word	.LC1
+ 518 029c 00000000 		.word	ADC_SAR_L_ISR_LOC
+ 519 02a0 00000000 		.word	ADC_SAR_R_ISR_LOC
+ 520 02a4 00000000 		.word	buffer
+ 521 02a8 01000000 		.word	buffer+1
+ 522 02ac 20000000 		.word	.LC2
+ 523 02b0 00000000 		.word	bias
+ 524 02b4 00000000 		.word	dataReady_L
+ 525 02b8 00000000 		.word	ADC_L
+ 526 02bc 24000000 		.word	.LC3
+ 527 02c0 00000000 		.word	result_L
+ 528 02c4 0000A041 		.word	1101004800
+ 529 02c8 2C000000 		.word	.LC4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 14
+
+
+ 530 02cc 00000000 		.word	dataReady_R
+ 531 02d0 00000000 		.word	ADC_R
+ 532 02d4 00000000 		.word	result_R
+ 533              		.cfi_endproc
+ 534              	.LFE65:
+ 535              		.size	main, .-main
+ 536              		.text
+ 537              	.Letext0:
+ 538              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 539              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\3.3\\psoc creator\\import\\gnu\\arm\\4.9.
+ 540              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 541              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 542              		.file 6 ".\\pid.h"
+ 543              		.file 7 ".\\Bluetooth.h"
+ 544              		.section	.debug_info,"",%progbits
+ 545              	.Ldebug_info0:
+ 546 0000 37020000 		.4byte	0x237
+ 547 0004 0400     		.2byte	0x4
+ 548 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 549 000a 04       		.byte	0x4
+ 550 000b 01       		.uleb128 0x1
+ 551 000c 16000000 		.4byte	.LASF33
+ 552 0010 01       		.byte	0x1
+ 553 0011 AA000000 		.4byte	.LASF34
+ 554 0015 C0010000 		.4byte	.LASF35
+ 555 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 556 001d 00000000 		.4byte	0
+ 557 0021 00000000 		.4byte	.Ldebug_line0
+ 558 0025 02       		.uleb128 0x2
+ 559 0026 01       		.byte	0x1
+ 560 0027 06       		.byte	0x6
+ 561 0028 B4010000 		.4byte	.LASF0
+ 562 002c 02       		.uleb128 0x2
+ 563 002d 01       		.byte	0x1
+ 564 002e 08       		.byte	0x8
+ 565 002f CB000000 		.4byte	.LASF1
+ 566 0033 02       		.uleb128 0x2
+ 567 0034 02       		.byte	0x2
+ 568 0035 05       		.byte	0x5
+ 569 0036 85010000 		.4byte	.LASF2
+ 570 003a 02       		.uleb128 0x2
+ 571 003b 02       		.byte	0x2
+ 572 003c 07       		.byte	0x7
+ 573 003d E4010000 		.4byte	.LASF3
+ 574 0041 03       		.uleb128 0x3
+ 575 0042 06000000 		.4byte	.LASF9
+ 576 0046 02       		.byte	0x2
+ 577 0047 3F       		.byte	0x3f
+ 578 0048 4C000000 		.4byte	0x4c
+ 579 004c 02       		.uleb128 0x2
+ 580 004d 04       		.byte	0x4
+ 581 004e 05       		.byte	0x5
+ 582 004f A6010000 		.4byte	.LASF4
+ 583 0053 02       		.uleb128 0x2
+ 584 0054 04       		.byte	0x4
+ 585 0055 07       		.byte	0x7
+ 586 0056 F1000000 		.4byte	.LASF5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 15
+
+
+ 587 005a 02       		.uleb128 0x2
+ 588 005b 08       		.byte	0x8
+ 589 005c 05       		.byte	0x5
+ 590 005d 72010000 		.4byte	.LASF6
+ 591 0061 02       		.uleb128 0x2
+ 592 0062 08       		.byte	0x8
+ 593 0063 07       		.byte	0x7
+ 594 0064 41010000 		.4byte	.LASF7
+ 595 0068 04       		.uleb128 0x4
+ 596 0069 04       		.byte	0x4
+ 597 006a 05       		.byte	0x5
+ 598 006b 696E7400 		.ascii	"int\000"
+ 599 006f 02       		.uleb128 0x2
+ 600 0070 04       		.byte	0x4
+ 601 0071 07       		.byte	0x7
+ 602 0072 34010000 		.4byte	.LASF8
+ 603 0076 03       		.uleb128 0x3
+ 604 0077 61010000 		.4byte	.LASF10
+ 605 007b 03       		.byte	0x3
+ 606 007c 2C       		.byte	0x2c
+ 607 007d 41000000 		.4byte	0x41
+ 608 0081 05       		.uleb128 0x5
+ 609 0082 A0010000 		.4byte	.LASF11
+ 610 0086 04       		.byte	0x4
+ 611 0087 3801     		.2byte	0x138
+ 612 0089 2C000000 		.4byte	0x2c
+ 613 008d 05       		.uleb128 0x5
+ 614 008e 2D010000 		.4byte	.LASF12
+ 615 0092 04       		.byte	0x4
+ 616 0093 3901     		.2byte	0x139
+ 617 0095 3A000000 		.4byte	0x3a
+ 618 0099 05       		.uleb128 0x5
+ 619 009a EB000000 		.4byte	.LASF13
+ 620 009e 04       		.byte	0x4
+ 621 009f 3C01     		.2byte	0x13c
+ 622 00a1 33000000 		.4byte	0x33
+ 623 00a5 02       		.uleb128 0x2
+ 624 00a6 04       		.byte	0x4
+ 625 00a7 04       		.byte	0x4
+ 626 00a8 B3000000 		.4byte	.LASF14
+ 627 00ac 02       		.uleb128 0x2
+ 628 00ad 08       		.byte	0x8
+ 629 00ae 04       		.byte	0x4
+ 630 00af 21010000 		.4byte	.LASF15
+ 631 00b3 05       		.uleb128 0x5
+ 632 00b4 E5000000 		.4byte	.LASF16
+ 633 00b8 04       		.byte	0x4
+ 634 00b9 4901     		.2byte	0x149
+ 635 00bb BF000000 		.4byte	0xbf
+ 636 00bf 02       		.uleb128 0x2
+ 637 00c0 01       		.byte	0x1
+ 638 00c1 08       		.byte	0x8
+ 639 00c2 AF010000 		.4byte	.LASF17
+ 640 00c6 05       		.uleb128 0x5
+ 641 00c7 00000000 		.4byte	.LASF18
+ 642 00cb 04       		.byte	0x4
+ 643 00cc E301     		.2byte	0x1e3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 16
+
+
+ 644 00ce D2000000 		.4byte	0xd2
+ 645 00d2 06       		.uleb128 0x6
+ 646 00d3 8D000000 		.4byte	0x8d
+ 647 00d7 02       		.uleb128 0x2
+ 648 00d8 04       		.byte	0x4
+ 649 00d9 07       		.byte	0x7
+ 650 00da 69010000 		.4byte	.LASF19
+ 651 00de 07       		.uleb128 0x7
+ 652 00df B9000000 		.4byte	.LASF20
+ 653 00e3 01       		.byte	0x1
+ 654 00e4 35       		.byte	0x35
+ 655 00e5 00000000 		.4byte	.LFB63
+ 656 00e9 2C000000 		.4byte	.LFE63-.LFB63
+ 657 00ed 01       		.uleb128 0x1
+ 658 00ee 9C       		.byte	0x9c
+ 659 00ef 07       		.uleb128 0x7
+ 660 00f0 00020000 		.4byte	.LASF21
+ 661 00f4 01       		.byte	0x1
+ 662 00f5 3A       		.byte	0x3a
+ 663 00f6 00000000 		.4byte	.LFB64
+ 664 00fa 2C000000 		.4byte	.LFE64-.LFB64
+ 665 00fe 01       		.uleb128 0x1
+ 666 00ff 9C       		.byte	0x9c
+ 667 0100 08       		.uleb128 0x8
+ 668 0101 28010000 		.4byte	.LASF36
+ 669 0105 01       		.byte	0x1
+ 670 0106 57       		.byte	0x57
+ 671 0107 68000000 		.4byte	0x68
+ 672 010b 00000000 		.4byte	.LFB65
+ 673 010f D8020000 		.4byte	.LFE65-.LFB65
+ 674 0113 01       		.uleb128 0x1
+ 675 0114 9C       		.byte	0x9c
+ 676 0115 89010000 		.4byte	0x189
+ 677 0119 09       		.uleb128 0x9
+ 678 011a 03010000 		.4byte	.LASF22
+ 679 011e 01       		.byte	0x1
+ 680 011f 59       		.byte	0x59
+ 681 0120 68000000 		.4byte	0x68
+ 682 0124 02       		.uleb128 0x2
+ 683 0125 91       		.byte	0x91
+ 684 0126 5C       		.sleb128 -36
+ 685 0127 09       		.uleb128 0x9
+ 686 0128 8F010000 		.4byte	.LASF23
+ 687 012c 01       		.byte	0x1
+ 688 012d 5A       		.byte	0x5a
+ 689 012e 89010000 		.4byte	0x189
+ 690 0132 02       		.uleb128 0x2
+ 691 0133 91       		.byte	0x91
+ 692 0134 4C       		.sleb128 -52
+ 693 0135 0A       		.uleb128 0xa
+ 694 0136 72657300 		.ascii	"res\000"
+ 695 013a 01       		.byte	0x1
+ 696 013b 5B       		.byte	0x5b
+ 697 013c A5000000 		.4byte	0xa5
+ 698 0140 02       		.uleb128 0x2
+ 699 0141 91       		.byte	0x91
+ 700 0142 64       		.sleb128 -28
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 17
+
+
+ 701 0143 0A       		.uleb128 0xa
+ 702 0144 73756D00 		.ascii	"sum\000"
+ 703 0148 01       		.byte	0x1
+ 704 0149 5C       		.byte	0x5c
+ 705 014a A5000000 		.4byte	0xa5
+ 706 014e 02       		.uleb128 0x2
+ 707 014f 91       		.byte	0x91
+ 708 0150 6C       		.sleb128 -20
+ 709 0151 0A       		.uleb128 0xa
+ 710 0152 4C00     		.ascii	"L\000"
+ 711 0154 01       		.byte	0x1
+ 712 0155 5D       		.byte	0x5d
+ 713 0156 8D000000 		.4byte	0x8d
+ 714 015a 02       		.uleb128 0x2
+ 715 015b 91       		.byte	0x91
+ 716 015c 60       		.sleb128 -32
+ 717 015d 0A       		.uleb128 0xa
+ 718 015e 5200     		.ascii	"R\000"
+ 719 0160 01       		.byte	0x1
+ 720 0161 5D       		.byte	0x5d
+ 721 0162 8D000000 		.4byte	0x8d
+ 722 0166 02       		.uleb128 0x2
+ 723 0167 91       		.byte	0x91
+ 724 0168 62       		.sleb128 -30
+ 725 0169 0B       		.uleb128 0xb
+ 726 016a 6C000000 		.4byte	.LBB2
+ 727 016e 26020000 		.4byte	.LBE2-.LBB2
+ 728 0172 0C       		.uleb128 0xc
+ 729 0173 6900     		.ascii	"i\000"
+ 730 0175 01       		.byte	0x1
+ 731 0176 92       		.byte	0x92
+ 732 0177 81000000 		.4byte	0x81
+ 733 017b 0A       		.uleb128 0xa
+ 734 017c 6A00     		.ascii	"j\000"
+ 735 017e 01       		.byte	0x1
+ 736 017f 92       		.byte	0x92
+ 737 0180 81000000 		.4byte	0x81
+ 738 0184 02       		.uleb128 0x2
+ 739 0185 91       		.byte	0x91
+ 740 0186 6B       		.sleb128 -21
+ 741 0187 00       		.byte	0
+ 742 0188 00       		.byte	0
+ 743 0189 0D       		.uleb128 0xd
+ 744 018a B3000000 		.4byte	0xb3
+ 745 018e 99010000 		.4byte	0x199
+ 746 0192 0E       		.uleb128 0xe
+ 747 0193 D7000000 		.4byte	0xd7
+ 748 0197 0F       		.byte	0xf
+ 749 0198 00       		.byte	0
+ 750 0199 0F       		.uleb128 0xf
+ 751 019a 14010000 		.4byte	.LASF24
+ 752 019e 05       		.byte	0x5
+ 753 019f 5506     		.2byte	0x655
+ 754 01a1 A5010000 		.4byte	0x1a5
+ 755 01a5 06       		.uleb128 0x6
+ 756 01a6 76000000 		.4byte	0x76
+ 757 01aa 10       		.uleb128 0x10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 18
+
+
+ 758 01ab 10000000 		.4byte	.LASF25
+ 759 01af 06       		.byte	0x6
+ 760 01b0 14       		.byte	0x14
+ 761 01b1 99000000 		.4byte	0x99
+ 762 01b5 10       		.uleb128 0x10
+ 763 01b6 A4000000 		.4byte	.LASF26
+ 764 01ba 06       		.byte	0x6
+ 765 01bb 15       		.byte	0x15
+ 766 01bc 99000000 		.4byte	0x99
+ 767 01c0 10       		.uleb128 0x10
+ 768 01c1 80010000 		.4byte	.LASF27
+ 769 01c5 06       		.byte	0x6
+ 770 01c6 1A       		.byte	0x1a
+ 771 01c7 99000000 		.4byte	0x99
+ 772 01cb 0D       		.uleb128 0xd
+ 773 01cc 81000000 		.4byte	0x81
+ 774 01d0 DB010000 		.4byte	0x1db
+ 775 01d4 0E       		.uleb128 0xe
+ 776 01d5 D7000000 		.4byte	0xd7
+ 777 01d9 63       		.byte	0x63
+ 778 01da 00       		.byte	0
+ 779 01db 10       		.uleb128 0x10
+ 780 01dc 99010000 		.4byte	.LASF28
+ 781 01e0 07       		.byte	0x7
+ 782 01e1 08       		.byte	0x8
+ 783 01e2 CB010000 		.4byte	0x1cb
+ 784 01e6 11       		.uleb128 0x11
+ 785 01e7 D9000000 		.4byte	.LASF29
+ 786 01eb 01       		.byte	0x1
+ 787 01ec 2D       		.byte	0x2d
+ 788 01ed 81000000 		.4byte	0x81
+ 789 01f1 05       		.uleb128 0x5
+ 790 01f2 03       		.byte	0x3
+ 791 01f3 00000000 		.4byte	dataReady_L
+ 792 01f7 0D       		.uleb128 0xd
+ 793 01f8 8D000000 		.4byte	0x8d
+ 794 01fc 07020000 		.4byte	0x207
+ 795 0200 0E       		.uleb128 0xe
+ 796 0201 D7000000 		.4byte	0xd7
+ 797 0205 13       		.byte	0x13
+ 798 0206 00       		.byte	0
+ 799 0207 11       		.uleb128 0x11
+ 800 0208 F7010000 		.4byte	.LASF30
+ 801 020c 01       		.byte	0x1
+ 802 020d 2E       		.byte	0x2e
+ 803 020e F7010000 		.4byte	0x1f7
+ 804 0212 05       		.uleb128 0x5
+ 805 0213 03       		.byte	0x3
+ 806 0214 00000000 		.4byte	result_L
+ 807 0218 11       		.uleb128 0x11
+ 808 0219 08010000 		.4byte	.LASF31
+ 809 021d 01       		.byte	0x1
+ 810 021e 2F       		.byte	0x2f
+ 811 021f 81000000 		.4byte	0x81
+ 812 0223 05       		.uleb128 0x5
+ 813 0224 03       		.byte	0x3
+ 814 0225 00000000 		.4byte	dataReady_R
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 19
+
+
+ 815 0229 11       		.uleb128 0x11
+ 816 022a 58010000 		.4byte	.LASF32
+ 817 022e 01       		.byte	0x1
+ 818 022f 30       		.byte	0x30
+ 819 0230 F7010000 		.4byte	0x1f7
+ 820 0234 05       		.uleb128 0x5
+ 821 0235 03       		.byte	0x3
+ 822 0236 00000000 		.4byte	result_R
+ 823 023a 00       		.byte	0
+ 824              		.section	.debug_abbrev,"",%progbits
+ 825              	.Ldebug_abbrev0:
+ 826 0000 01       		.uleb128 0x1
+ 827 0001 11       		.uleb128 0x11
+ 828 0002 01       		.byte	0x1
+ 829 0003 25       		.uleb128 0x25
+ 830 0004 0E       		.uleb128 0xe
+ 831 0005 13       		.uleb128 0x13
+ 832 0006 0B       		.uleb128 0xb
+ 833 0007 03       		.uleb128 0x3
+ 834 0008 0E       		.uleb128 0xe
+ 835 0009 1B       		.uleb128 0x1b
+ 836 000a 0E       		.uleb128 0xe
+ 837 000b 55       		.uleb128 0x55
+ 838 000c 17       		.uleb128 0x17
+ 839 000d 11       		.uleb128 0x11
+ 840 000e 01       		.uleb128 0x1
+ 841 000f 10       		.uleb128 0x10
+ 842 0010 17       		.uleb128 0x17
+ 843 0011 00       		.byte	0
+ 844 0012 00       		.byte	0
+ 845 0013 02       		.uleb128 0x2
+ 846 0014 24       		.uleb128 0x24
+ 847 0015 00       		.byte	0
+ 848 0016 0B       		.uleb128 0xb
+ 849 0017 0B       		.uleb128 0xb
+ 850 0018 3E       		.uleb128 0x3e
+ 851 0019 0B       		.uleb128 0xb
+ 852 001a 03       		.uleb128 0x3
+ 853 001b 0E       		.uleb128 0xe
+ 854 001c 00       		.byte	0
+ 855 001d 00       		.byte	0
+ 856 001e 03       		.uleb128 0x3
+ 857 001f 16       		.uleb128 0x16
+ 858 0020 00       		.byte	0
+ 859 0021 03       		.uleb128 0x3
+ 860 0022 0E       		.uleb128 0xe
+ 861 0023 3A       		.uleb128 0x3a
+ 862 0024 0B       		.uleb128 0xb
+ 863 0025 3B       		.uleb128 0x3b
+ 864 0026 0B       		.uleb128 0xb
+ 865 0027 49       		.uleb128 0x49
+ 866 0028 13       		.uleb128 0x13
+ 867 0029 00       		.byte	0
+ 868 002a 00       		.byte	0
+ 869 002b 04       		.uleb128 0x4
+ 870 002c 24       		.uleb128 0x24
+ 871 002d 00       		.byte	0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 20
+
+
+ 872 002e 0B       		.uleb128 0xb
+ 873 002f 0B       		.uleb128 0xb
+ 874 0030 3E       		.uleb128 0x3e
+ 875 0031 0B       		.uleb128 0xb
+ 876 0032 03       		.uleb128 0x3
+ 877 0033 08       		.uleb128 0x8
+ 878 0034 00       		.byte	0
+ 879 0035 00       		.byte	0
+ 880 0036 05       		.uleb128 0x5
+ 881 0037 16       		.uleb128 0x16
+ 882 0038 00       		.byte	0
+ 883 0039 03       		.uleb128 0x3
+ 884 003a 0E       		.uleb128 0xe
+ 885 003b 3A       		.uleb128 0x3a
+ 886 003c 0B       		.uleb128 0xb
+ 887 003d 3B       		.uleb128 0x3b
+ 888 003e 05       		.uleb128 0x5
+ 889 003f 49       		.uleb128 0x49
+ 890 0040 13       		.uleb128 0x13
+ 891 0041 00       		.byte	0
+ 892 0042 00       		.byte	0
+ 893 0043 06       		.uleb128 0x6
+ 894 0044 35       		.uleb128 0x35
+ 895 0045 00       		.byte	0
+ 896 0046 49       		.uleb128 0x49
+ 897 0047 13       		.uleb128 0x13
+ 898 0048 00       		.byte	0
+ 899 0049 00       		.byte	0
+ 900 004a 07       		.uleb128 0x7
+ 901 004b 2E       		.uleb128 0x2e
+ 902 004c 00       		.byte	0
+ 903 004d 3F       		.uleb128 0x3f
+ 904 004e 19       		.uleb128 0x19
+ 905 004f 03       		.uleb128 0x3
+ 906 0050 0E       		.uleb128 0xe
+ 907 0051 3A       		.uleb128 0x3a
+ 908 0052 0B       		.uleb128 0xb
+ 909 0053 3B       		.uleb128 0x3b
+ 910 0054 0B       		.uleb128 0xb
+ 911 0055 27       		.uleb128 0x27
+ 912 0056 19       		.uleb128 0x19
+ 913 0057 11       		.uleb128 0x11
+ 914 0058 01       		.uleb128 0x1
+ 915 0059 12       		.uleb128 0x12
+ 916 005a 06       		.uleb128 0x6
+ 917 005b 40       		.uleb128 0x40
+ 918 005c 18       		.uleb128 0x18
+ 919 005d 9742     		.uleb128 0x2117
+ 920 005f 19       		.uleb128 0x19
+ 921 0060 00       		.byte	0
+ 922 0061 00       		.byte	0
+ 923 0062 08       		.uleb128 0x8
+ 924 0063 2E       		.uleb128 0x2e
+ 925 0064 01       		.byte	0x1
+ 926 0065 3F       		.uleb128 0x3f
+ 927 0066 19       		.uleb128 0x19
+ 928 0067 03       		.uleb128 0x3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 21
+
+
+ 929 0068 0E       		.uleb128 0xe
+ 930 0069 3A       		.uleb128 0x3a
+ 931 006a 0B       		.uleb128 0xb
+ 932 006b 3B       		.uleb128 0x3b
+ 933 006c 0B       		.uleb128 0xb
+ 934 006d 49       		.uleb128 0x49
+ 935 006e 13       		.uleb128 0x13
+ 936 006f 11       		.uleb128 0x11
+ 937 0070 01       		.uleb128 0x1
+ 938 0071 12       		.uleb128 0x12
+ 939 0072 06       		.uleb128 0x6
+ 940 0073 40       		.uleb128 0x40
+ 941 0074 18       		.uleb128 0x18
+ 942 0075 9642     		.uleb128 0x2116
+ 943 0077 19       		.uleb128 0x19
+ 944 0078 01       		.uleb128 0x1
+ 945 0079 13       		.uleb128 0x13
+ 946 007a 00       		.byte	0
+ 947 007b 00       		.byte	0
+ 948 007c 09       		.uleb128 0x9
+ 949 007d 34       		.uleb128 0x34
+ 950 007e 00       		.byte	0
+ 951 007f 03       		.uleb128 0x3
+ 952 0080 0E       		.uleb128 0xe
+ 953 0081 3A       		.uleb128 0x3a
+ 954 0082 0B       		.uleb128 0xb
+ 955 0083 3B       		.uleb128 0x3b
+ 956 0084 0B       		.uleb128 0xb
+ 957 0085 49       		.uleb128 0x49
+ 958 0086 13       		.uleb128 0x13
+ 959 0087 02       		.uleb128 0x2
+ 960 0088 18       		.uleb128 0x18
+ 961 0089 00       		.byte	0
+ 962 008a 00       		.byte	0
+ 963 008b 0A       		.uleb128 0xa
+ 964 008c 34       		.uleb128 0x34
+ 965 008d 00       		.byte	0
+ 966 008e 03       		.uleb128 0x3
+ 967 008f 08       		.uleb128 0x8
+ 968 0090 3A       		.uleb128 0x3a
+ 969 0091 0B       		.uleb128 0xb
+ 970 0092 3B       		.uleb128 0x3b
+ 971 0093 0B       		.uleb128 0xb
+ 972 0094 49       		.uleb128 0x49
+ 973 0095 13       		.uleb128 0x13
+ 974 0096 02       		.uleb128 0x2
+ 975 0097 18       		.uleb128 0x18
+ 976 0098 00       		.byte	0
+ 977 0099 00       		.byte	0
+ 978 009a 0B       		.uleb128 0xb
+ 979 009b 0B       		.uleb128 0xb
+ 980 009c 01       		.byte	0x1
+ 981 009d 11       		.uleb128 0x11
+ 982 009e 01       		.uleb128 0x1
+ 983 009f 12       		.uleb128 0x12
+ 984 00a0 06       		.uleb128 0x6
+ 985 00a1 00       		.byte	0
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 22
+
+
+ 986 00a2 00       		.byte	0
+ 987 00a3 0C       		.uleb128 0xc
+ 988 00a4 34       		.uleb128 0x34
+ 989 00a5 00       		.byte	0
+ 990 00a6 03       		.uleb128 0x3
+ 991 00a7 08       		.uleb128 0x8
+ 992 00a8 3A       		.uleb128 0x3a
+ 993 00a9 0B       		.uleb128 0xb
+ 994 00aa 3B       		.uleb128 0x3b
+ 995 00ab 0B       		.uleb128 0xb
+ 996 00ac 49       		.uleb128 0x49
+ 997 00ad 13       		.uleb128 0x13
+ 998 00ae 00       		.byte	0
+ 999 00af 00       		.byte	0
+ 1000 00b0 0D       		.uleb128 0xd
+ 1001 00b1 01       		.uleb128 0x1
+ 1002 00b2 01       		.byte	0x1
+ 1003 00b3 49       		.uleb128 0x49
+ 1004 00b4 13       		.uleb128 0x13
+ 1005 00b5 01       		.uleb128 0x1
+ 1006 00b6 13       		.uleb128 0x13
+ 1007 00b7 00       		.byte	0
+ 1008 00b8 00       		.byte	0
+ 1009 00b9 0E       		.uleb128 0xe
+ 1010 00ba 21       		.uleb128 0x21
+ 1011 00bb 00       		.byte	0
+ 1012 00bc 49       		.uleb128 0x49
+ 1013 00bd 13       		.uleb128 0x13
+ 1014 00be 2F       		.uleb128 0x2f
+ 1015 00bf 0B       		.uleb128 0xb
+ 1016 00c0 00       		.byte	0
+ 1017 00c1 00       		.byte	0
+ 1018 00c2 0F       		.uleb128 0xf
+ 1019 00c3 34       		.uleb128 0x34
+ 1020 00c4 00       		.byte	0
+ 1021 00c5 03       		.uleb128 0x3
+ 1022 00c6 0E       		.uleb128 0xe
+ 1023 00c7 3A       		.uleb128 0x3a
+ 1024 00c8 0B       		.uleb128 0xb
+ 1025 00c9 3B       		.uleb128 0x3b
+ 1026 00ca 05       		.uleb128 0x5
+ 1027 00cb 49       		.uleb128 0x49
+ 1028 00cc 13       		.uleb128 0x13
+ 1029 00cd 3F       		.uleb128 0x3f
+ 1030 00ce 19       		.uleb128 0x19
+ 1031 00cf 3C       		.uleb128 0x3c
+ 1032 00d0 19       		.uleb128 0x19
+ 1033 00d1 00       		.byte	0
+ 1034 00d2 00       		.byte	0
+ 1035 00d3 10       		.uleb128 0x10
+ 1036 00d4 34       		.uleb128 0x34
+ 1037 00d5 00       		.byte	0
+ 1038 00d6 03       		.uleb128 0x3
+ 1039 00d7 0E       		.uleb128 0xe
+ 1040 00d8 3A       		.uleb128 0x3a
+ 1041 00d9 0B       		.uleb128 0xb
+ 1042 00da 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 23
+
+
+ 1043 00db 0B       		.uleb128 0xb
+ 1044 00dc 49       		.uleb128 0x49
+ 1045 00dd 13       		.uleb128 0x13
+ 1046 00de 3F       		.uleb128 0x3f
+ 1047 00df 19       		.uleb128 0x19
+ 1048 00e0 3C       		.uleb128 0x3c
+ 1049 00e1 19       		.uleb128 0x19
+ 1050 00e2 00       		.byte	0
+ 1051 00e3 00       		.byte	0
+ 1052 00e4 11       		.uleb128 0x11
+ 1053 00e5 34       		.uleb128 0x34
+ 1054 00e6 00       		.byte	0
+ 1055 00e7 03       		.uleb128 0x3
+ 1056 00e8 0E       		.uleb128 0xe
+ 1057 00e9 3A       		.uleb128 0x3a
+ 1058 00ea 0B       		.uleb128 0xb
+ 1059 00eb 3B       		.uleb128 0x3b
+ 1060 00ec 0B       		.uleb128 0xb
+ 1061 00ed 49       		.uleb128 0x49
+ 1062 00ee 13       		.uleb128 0x13
+ 1063 00ef 3F       		.uleb128 0x3f
+ 1064 00f0 19       		.uleb128 0x19
+ 1065 00f1 02       		.uleb128 0x2
+ 1066 00f2 18       		.uleb128 0x18
+ 1067 00f3 00       		.byte	0
+ 1068 00f4 00       		.byte	0
+ 1069 00f5 00       		.byte	0
+ 1070              		.section	.debug_aranges,"",%progbits
+ 1071 0000 2C000000 		.4byte	0x2c
+ 1072 0004 0200     		.2byte	0x2
+ 1073 0006 00000000 		.4byte	.Ldebug_info0
+ 1074 000a 04       		.byte	0x4
+ 1075 000b 00       		.byte	0
+ 1076 000c 0000     		.2byte	0
+ 1077 000e 0000     		.2byte	0
+ 1078 0010 00000000 		.4byte	.LFB63
+ 1079 0014 2C000000 		.4byte	.LFE63-.LFB63
+ 1080 0018 00000000 		.4byte	.LFB64
+ 1081 001c 2C000000 		.4byte	.LFE64-.LFB64
+ 1082 0020 00000000 		.4byte	.LFB65
+ 1083 0024 D8020000 		.4byte	.LFE65-.LFB65
+ 1084 0028 00000000 		.4byte	0
+ 1085 002c 00000000 		.4byte	0
+ 1086              		.section	.debug_ranges,"",%progbits
+ 1087              	.Ldebug_ranges0:
+ 1088 0000 00000000 		.4byte	.LFB63
+ 1089 0004 2C000000 		.4byte	.LFE63
+ 1090 0008 00000000 		.4byte	.LFB64
+ 1091 000c 2C000000 		.4byte	.LFE64
+ 1092 0010 00000000 		.4byte	.LFB65
+ 1093 0014 D8020000 		.4byte	.LFE65
+ 1094 0018 00000000 		.4byte	0
+ 1095 001c 00000000 		.4byte	0
+ 1096              		.section	.debug_line,"",%progbits
+ 1097              	.Ldebug_line0:
+ 1098 0000 0F020000 		.section	.debug_str,"MS",%progbits,1
+ 1098      02006501 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 24
+
+
+ 1098      00000201 
+ 1098      FB0E0D00 
+ 1098      01010101 
+ 1099              	.LASF18:
+ 1100 0000 72656731 		.ascii	"reg16\000"
+ 1100      3600
+ 1101              	.LASF9:
+ 1102 0006 5F5F696E 		.ascii	"__int32_t\000"
+ 1102      7433325F 
+ 1102      7400
+ 1103              	.LASF25:
+ 1104 0010 4144435F 		.ascii	"ADC_L\000"
+ 1104      4C00
+ 1105              	.LASF33:
+ 1106 0016 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1106      4320342E 
+ 1106      392E3320 
+ 1106      32303135 
+ 1106      30333033 
+ 1107 0049 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1107      20726576 
+ 1107      6973696F 
+ 1107      6E203232 
+ 1107      31323230 
+ 1108 007c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1108      66756E63 
+ 1108      74696F6E 
+ 1108      2D736563 
+ 1108      74696F6E 
+ 1109              	.LASF26:
+ 1110 00a4 4144435F 		.ascii	"ADC_R\000"
+ 1110      5200
+ 1111              	.LASF34:
+ 1112 00aa 2E5C6D61 		.ascii	".\\main.c\000"
+ 1112      696E2E63 
+ 1112      00
+ 1113              	.LASF14:
+ 1114 00b3 666C6F61 		.ascii	"float\000"
+ 1114      7400
+ 1115              	.LASF20:
+ 1116 00b9 4144435F 		.ascii	"ADC_SAR_R_ISR_LOC\000"
+ 1116      5341525F 
+ 1116      525F4953 
+ 1116      525F4C4F 
+ 1116      4300
+ 1117              	.LASF1:
+ 1118 00cb 756E7369 		.ascii	"unsigned char\000"
+ 1118      676E6564 
+ 1118      20636861 
+ 1118      7200
+ 1119              	.LASF29:
+ 1120 00d9 64617461 		.ascii	"dataReady_L\000"
+ 1120      52656164 
+ 1120      795F4C00 
+ 1121              	.LASF16:
+ 1122 00e5 63686172 		.ascii	"char8\000"
+ 1122      3800
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 25
+
+
+ 1123              	.LASF13:
+ 1124 00eb 696E7431 		.ascii	"int16\000"
+ 1124      3600
+ 1125              	.LASF5:
+ 1126 00f1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1126      20756E73 
+ 1126      69676E65 
+ 1126      6420696E 
+ 1126      7400
+ 1127              	.LASF22:
+ 1128 0103 74656D70 		.ascii	"temp\000"
+ 1128      00
+ 1129              	.LASF31:
+ 1130 0108 64617461 		.ascii	"dataReady_R\000"
+ 1130      52656164 
+ 1130      795F5200 
+ 1131              	.LASF24:
+ 1132 0114 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1132      52784275 
+ 1132      66666572 
+ 1132      00
+ 1133              	.LASF15:
+ 1134 0121 646F7562 		.ascii	"double\000"
+ 1134      6C6500
+ 1135              	.LASF36:
+ 1136 0128 6D61696E 		.ascii	"main\000"
+ 1136      00
+ 1137              	.LASF12:
+ 1138 012d 75696E74 		.ascii	"uint16\000"
+ 1138      313600
+ 1139              	.LASF8:
+ 1140 0134 756E7369 		.ascii	"unsigned int\000"
+ 1140      676E6564 
+ 1140      20696E74 
+ 1140      00
+ 1141              	.LASF7:
+ 1142 0141 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1142      206C6F6E 
+ 1142      6720756E 
+ 1142      7369676E 
+ 1142      65642069 
+ 1143              	.LASF32:
+ 1144 0158 72657375 		.ascii	"result_R\000"
+ 1144      6C745F52 
+ 1144      00
+ 1145              	.LASF10:
+ 1146 0161 696E7433 		.ascii	"int32_t\000"
+ 1146      325F7400 
+ 1147              	.LASF19:
+ 1148 0169 73697A65 		.ascii	"sizetype\000"
+ 1148      74797065 
+ 1148      00
+ 1149              	.LASF6:
+ 1150 0172 6C6F6E67 		.ascii	"long long int\000"
+ 1150      206C6F6E 
+ 1150      6720696E 
+ 1150      7400
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc6oabct.s 			page 26
+
+
+ 1151              	.LASF27:
+ 1152 0180 62696173 		.ascii	"bias\000"
+ 1152      00
+ 1153              	.LASF2:
+ 1154 0185 73686F72 		.ascii	"short int\000"
+ 1154      7420696E 
+ 1154      7400
+ 1155              	.LASF23:
+ 1156 018f 72657375 		.ascii	"resultStr\000"
+ 1156      6C745374 
+ 1156      7200
+ 1157              	.LASF28:
+ 1158 0199 62756666 		.ascii	"buffer\000"
+ 1158      657200
+ 1159              	.LASF11:
+ 1160 01a0 75696E74 		.ascii	"uint8\000"
+ 1160      3800
+ 1161              	.LASF4:
+ 1162 01a6 6C6F6E67 		.ascii	"long int\000"
+ 1162      20696E74 
+ 1162      00
+ 1163              	.LASF17:
+ 1164 01af 63686172 		.ascii	"char\000"
+ 1164      00
+ 1165              	.LASF0:
+ 1166 01b4 7369676E 		.ascii	"signed char\000"
+ 1166      65642063 
+ 1166      68617200 
+ 1167              	.LASF35:
+ 1168 01c0 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\962158.cydsn\000"
+ 1168      73657273 
+ 1168      5C6B696E 
+ 1168      67695C44 
+ 1168      65736B74 
+ 1169              	.LASF3:
+ 1170 01e4 73686F72 		.ascii	"short unsigned int\000"
+ 1170      7420756E 
+ 1170      7369676E 
+ 1170      65642069 
+ 1170      6E7400
+ 1171              	.LASF30:
+ 1172 01f7 72657375 		.ascii	"result_L\000"
+ 1172      6C745F4C 
+ 1172      00
+ 1173              	.LASF21:
+ 1174 0200 4144435F 		.ascii	"ADC_SAR_L_ISR_LOC\000"
+ 1174      5341525F 
+ 1174      4C5F4953 
+ 1174      525F4C4F 
+ 1174      4300
+ 1175              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

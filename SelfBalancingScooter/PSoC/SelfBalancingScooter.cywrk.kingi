@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="SelfBalanceScooter">
+<ExpandedNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\TopDesign</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\SelfBalancingScooter.cydwr</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files\Bluetooth.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files\cyapicallbacks.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files\device.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\Bluetooth.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\main.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\pid.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\pid.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\ServoMotor.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\ServoMotor.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass\ADC_SAR_L_Bypass.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass\ADC_SAR_L_Bypass.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass\ADC_SAR_L_Bypass_aliases.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_IRQ</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_IRQ\ADC_SAR_L_IRQ.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_IRQ\ADC_SAR_L_IRQ.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_theACLK</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_theACLK\ADC_SAR_L_theACLK.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_theACLK\ADC_SAR_L_theACLK.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_IRQ</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_IRQ\ADC_SAR_R_IRQ.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_IRQ\ADC_SAR_R_IRQ.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_theACLK</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_theACLK\ADC_SAR_R_theACLK.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_theACLK\ADC_SAR_R_theACLK.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\Cm3Start.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\core_cm3.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\core_cm3_psoc5.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\core_cmFunc.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\core_cmInstr.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyBootAsmGnu.s</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyBootAsmIar.s</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyBootAsmRv.s</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyDmac.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyDmac.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyFlash.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyFlash.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyLib.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CyLib.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cypins.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cyPm.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cyPm.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CySpc.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\CySpc.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cytypes.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cyutils.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD\LCD.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD\LCD.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD\LCD_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD_LCDPort</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\LCD_LCDPort\LCD_LCDPort_aliases.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\RX_1</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\RX_1\RX_1.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\RX_1\RX_1.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\RX_1\RX_1_aliases.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1\UART_1.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1\UART_1.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1\UART_1_BOOT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1\UART_1_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1\UART_1_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_1_IntClock\UART_1_IntClock.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2\UART_2.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2\UART_2.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2\UART_2_BOOT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2\UART_2_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2\UART_2_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2_IntClock</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2_IntClock\UART_2_IntClock.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_2_IntClock\UART_2_IntClock.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3\UART_3.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3\UART_3.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3\UART_3_BOOT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3\UART_3_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3\UART_3_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3_IntClock</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3_IntClock\UART_3_IntClock.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_3_IntClock\UART_3_IntClock.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6\UART_6.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6\UART_6.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6\UART_6_BOOT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6\UART_6_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6\UART_6_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6_IntClock</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6_IntClock\UART_6_IntClock.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\UART_6_IntClock\UART_6_IntClock.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydevice.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cyfitter.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cyfitterrv.inc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cymetadata.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\project.h</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\TopDesign</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\SelfBalancingScooter.cydwr</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files\Bluetooth.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files\cyapicallbacks.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Header Files\device.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\Bluetooth.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\main.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\pid.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\pid.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\ServoMotor.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Source Files\ServoMotor.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L\ADC_SAR_L_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass\ADC_SAR_L_Bypass.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass\ADC_SAR_L_Bypass.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_Bypass\ADC_SAR_L_Bypass_aliases.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_IRQ</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_IRQ\ADC_SAR_L_IRQ.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_IRQ\ADC_SAR_L_IRQ.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_theACLK</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_theACLK\ADC_SAR_L_theACLK.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_L_theACLK\ADC_SAR_L_theACLK.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R_INT.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R\ADC_SAR_R_PM.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_IRQ</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_IRQ\ADC_SAR_R_IRQ.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_IRQ\ADC_SAR_R_IRQ.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_theACLK</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_theACLK\ADC_SAR_R_theACLK.c</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\ADC_SAR_R_theACLK\ADC_SAR_R_theACLK.h</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\cm3gcc.ld</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\Cm3Iar.icf</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\Generated_Source\PSoC5\cy_boot\Cm3RealView.scat</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\TopDesign</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\TopDesign</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_L.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_L_Bypass.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_L_INT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_L_IRQ.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_L_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_L_theACLK.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_R.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_R_INT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_R_IRQ.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_R_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ADC_SAR_R_theACLK.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\Bluetooth.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\Cm3Start.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\CyDmac.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\CyFlash.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\CyLib.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\cymetadata.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\cyPm.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\CySpc.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\cyutils.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\LCD_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\main.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\pid.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\RX_1.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\ServoMotor.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_INT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_1_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_BOOT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_INT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_IntClock.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_2_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_3.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_3_BOOT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_3_INT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_3_IntClock.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_3_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_6.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_6_BOOT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_6_INT.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_6_IntClock.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\Listing Files\UART_6_PM.lst</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\SelfBalancingScooter.elf</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\SelfBalancingScooter.hex</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CortexM3\ARM_GCC_493\Debug\SelfBalancingScooter.map</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\SelfBalancingScooter.gpdsc</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\SelfBalancingScooter.rpt</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\SelfBalancingScooter_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\PSoC 5 Architecture TRM</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CY8C58LP Family Datasheet</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\System Reference Guides</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>SelfBalanceScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\PSoC 5 Architecture TRM</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\CY8C58LP Family Datasheet</v>
+<v>SelfBalanceScooter\SelfBalancingScooter\System Reference Guides</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+<dataGuid v="5f2be1a5-0687-4501-bb8c-cf21cb8211bf">
+<CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf type_name="CyDesigner.Common.ProjMgmt.GUI.CyBookmarkData" version="1">
+<indicators />
+</CyGuid_5f2be1a5-0687-4501-bb8c-cf21cb8211bf>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs />
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

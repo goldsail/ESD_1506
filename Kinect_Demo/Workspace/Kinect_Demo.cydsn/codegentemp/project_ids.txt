@@ -1,6 +1,0 @@
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|6c4e3b3d-e788-40e3-8268-d29cbe8f3c41
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|b3445d1b-6ff2-4331-8a52-441aaa9176bb
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|c5affb72-1840-457d-9aa8-6ec2fd9489a8
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|92e60898-67f9-473a-86f3-1f4bd7774399
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|06a532d2-a94c-4931-9591-9128ac30c203
-D:\Projects\ESD\Kinect_Demo\Workspace\Kinect_Demo.cydsn\Kinect_Demo.cyprj|96e878ac-a500-4fd4-a9d4-9e66e93078e2

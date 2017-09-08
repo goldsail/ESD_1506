@@ -1,6 +1,0 @@
-D:\Projects\ESD\Servo\Workspace\Servo.cydsn\Servo.cyprj|bd7ba01a-1b96-48c9-9135-eb9da77c5da5
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|47cd4fc4-d54c-4bce-929f-827f76229835
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|1ee3fe2f-4195-44b9-8f24-f1cfb0b6d6c9
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|30bd6423-732f-49d4-ab69-ec83a31102ca
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|8df7e631-e419-4cfd-baf1-de1202cb85db
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|3dab7875-084c-40b4-a8dd-fdd8d2f2979a

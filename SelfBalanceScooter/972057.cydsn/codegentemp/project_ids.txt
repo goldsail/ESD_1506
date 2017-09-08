@@ -1,6 +1,0 @@
-C:\Users\kingi\Desktop\972057.cydsn\972057.cyprj|157067d6-b381-4b10-9aba-96c29467d408
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|bf59f370-cdc9-4035-bbac-dc4bcb2ea42c
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|a5908c14-0619-4852-912c-cf04bfae46ec
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|21760b75-60e8-4c03-a487-67cf575d5641
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|e4971bf0-728b-4e71-b8c6-e789fedd5921
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|ddc5b8df-6bd7-44f6-93f2-302385ee0896

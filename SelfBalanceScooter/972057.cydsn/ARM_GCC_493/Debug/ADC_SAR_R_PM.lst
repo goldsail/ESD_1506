@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
   25:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** {
   26:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c ****     ADC_SAR_R_DISABLED
   27:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** };
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 2
 
 
   28:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
   53:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** *
   54:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** * Summary:
   55:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** *  Restores the current user configuration.
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 3
 
 
   56:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** *
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
   81:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** *
   82:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** * Return:
   83:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** *  None.
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 4
 
 
   84:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** *
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  124              		.loc 1 102 0
  125 002e FFF7FEFF 		bl	ADC_SAR_R_Stop
  126 0032 02E0     		b	.L3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 5
 
 
  127              	.L4:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  132:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** void ADC_SAR_R_Wakeup(void)
  133:.\Generated_Source\PSoC5/ADC_SAR_R_PM.c **** {
  152              		.loc 1 133 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 6
 
 
  153              		.cfi_startproc
@@ -357,13 +357,13 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  195 0006 00000000 		.4byte	.Ldebug_abbrev0
  196 000a 04       		.byte	0x4
  197 000b 01       		.uleb128 0x1
- 198 000c 24000000 		.4byte	.LASF19
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 7
+ 198 000c 00000000 		.4byte	.LASF19
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 7
 
 
  199 0010 01       		.byte	0x1
  200 0011 B2000000 		.4byte	.LASF20
- 201 0015 00000000 		.4byte	.LASF21
+ 201 0015 8E000000 		.4byte	.LASF21
  202 0019 00000000 		.4byte	.Ldebug_ranges0+0
  203 001d 00000000 		.4byte	0
  204 0021 00000000 		.4byte	.Ldebug_line0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  253 007a DA000000 		.4byte	.LASF9
  254 007e 02       		.uleb128 0x2
  255 007f 08       		.byte	0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 8
 
 
  256 0080 04       		.byte	0x4
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  310 00f0 0A       		.uleb128 0xa
  311 00f1 41010000 		.4byte	.LASF18
  312 00f5 01       		.byte	0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 9
 
 
  313 00f6 84       		.byte	0x84
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  367 0026 08       		.uleb128 0x8
  368 0027 00       		.byte	0
  369 0028 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 10
 
 
  370 0029 04       		.uleb128 0x4
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  424 005f 0B       		.uleb128 0xb
  425 0060 3B       		.uleb128 0x3b
  426 0061 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 11
 
 
  427 0062 49       		.uleb128 0x49
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  481 009a 0E       		.uleb128 0xe
  482 009b 3A       		.uleb128 0x3a
  483 009c 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 12
 
 
  484 009d 3B       		.uleb128 0x3b
@@ -707,31 +707,31 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  525      00000201 
  525      FB0E0D00 
  525      01010101 
- 526              	.LASF21:
- 527 0000 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\962158.cydsn\000"
- 527      73657273 
- 527      5C6B696E 
- 527      67695C44 
- 527      65736B74 
- 528              	.LASF19:
- 529 0024 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 529      4320342E 
- 529      392E3320 
- 529      32303135 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 13
+ 526              	.LASF19:
+ 527 0000 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 527      4320342E 
+ 527      392E3320 
+ 527      32303135 
+ 527      30333033 
+ 528 0033 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 528      20726576 
+ 528      6973696F 
+ 528      6E203232 
+ 528      31323230 
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 13
 
 
- 529      30333033 
- 530 0057 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 530      20726576 
- 530      6973696F 
- 530      6E203232 
- 530      31323230 
- 531 008a 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 531      66756E63 
- 531      74696F6E 
- 531      2D736563 
- 531      74696F6E 
+ 529 0066 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 529      66756E63 
+ 529      74696F6E 
+ 529      2D736563 
+ 529      74696F6E 
+ 530              	.LASF21:
+ 531 008e 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\972057.cydsn\000"
+ 531      73657273 
+ 531      5C6B696E 
+ 531      67695C44 
+ 531      65736B74 
  532              	.LASF20:
  533 00b2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_R_PM.c\000"
  533      6E657261 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  549      5341525F 
  549      525F5761 
  549      6B657570 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 14
 
 
  549      00
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 1
  573      61746500 
  574              	.LASF0:
  575 01f2 7369676E 		.ascii	"signed char\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccudd7kK.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccHC91wg.s 			page 15
 
 
  575      65642063 

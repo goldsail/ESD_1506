@@ -1,100 +1,88 @@
-C:/Users/kingi/Desktop/962158.cydsn/ARM_GCC_493/Debug/main.o : C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass_aliases.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_IRQ.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_theACLK.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_R.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_R_IRQ.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_R_theACLK.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/LCD.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX_1.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX_1_aliases.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX_aliases.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_1.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_2.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_2_IntClock.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_3.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_3_IntClock.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_4.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_4_IntClock.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_5.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_5_IntClock.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_6.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_6_IntClock.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cmFunc.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cmInstr.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/project.h C:/Users/kingi/Desktop/962158.cydsn/Bluetooth.h C:/Users/kingi/Desktop/962158.cydsn/ServoMotor.h C:/Users/kingi/Desktop/962158.cydsn/device.h C:/Users/kingi/Desktop/962158.cydsn/main.c C:/Users/kingi/Desktop/962158.cydsn/pid.h 
+C:/Users/kingi/Desktop/972057.cydsn/ARM_GCC_493/Debug/main.o : C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass_aliases.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_IRQ.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_theACLK.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_R.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_R_IRQ.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_R_theACLK.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/LCD.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/RX_1.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/RX_1_aliases.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_1.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_2.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_2_IntClock.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_3.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_3_IntClock.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_6.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_6_IntClock.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cmFunc.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cmInstr.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/project.h C:/Users/kingi/Desktop/972057.cydsn/Bluetooth.h C:/Users/kingi/Desktop/972057.cydsn/ServoMotor.h C:/Users/kingi/Desktop/972057.cydsn/device.h C:/Users/kingi/Desktop/972057.cydsn/main.c C:/Users/kingi/Desktop/972057.cydsn/pid.h 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass_aliases.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_Bypass_aliases.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_IRQ.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_IRQ.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_L_theACLK.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_L_theACLK.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_R.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_R.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_R_IRQ.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_R_IRQ.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/ADC_SAR_R_theACLK.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/ADC_SAR_R_theACLK.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CyDmac.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CyFlash.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CyLib.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CyLib.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/CySpc.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/LCD.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/LCD.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/LCD_LCDPort.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/LCD_LCDPort_aliases.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/RX_1.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX_1.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/RX_1_aliases.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX_1_aliases.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_1.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/RX_aliases.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_1.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_2.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_2_IntClock.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_2.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_3.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_2_IntClock.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_3_IntClock.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_3.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_6.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_3_IntClock.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/UART_6_IntClock.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_4.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cm3.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_4_IntClock.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_5.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_5_IntClock.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_6.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cyPm.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/UART_6_IntClock.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cydevice.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cmFunc.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cyfitter.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/core_cmInstr.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cyPm.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cypins.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cydevice.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/cytypes.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Generated_Source/PSoC5/project.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+C:/Users/kingi/Desktop/972057.cydsn/Bluetooth.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+C:/Users/kingi/Desktop/972057.cydsn/ServoMotor.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+C:/Users/kingi/Desktop/972057.cydsn/device.h : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cypins.h : 
+C:/Users/kingi/Desktop/972057.cydsn/main.c : 
 
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/cytypes.h : 
-
-C:/Users/kingi/Desktop/962158.cydsn/Generated_Source/PSoC5/project.h : 
-
-C:/Users/kingi/Desktop/962158.cydsn/Bluetooth.h : 
-
-C:/Users/kingi/Desktop/962158.cydsn/ServoMotor.h : 
-
-C:/Users/kingi/Desktop/962158.cydsn/device.h : 
-
-C:/Users/kingi/Desktop/962158.cydsn/main.c : 
-
-C:/Users/kingi/Desktop/962158.cydsn/pid.h : 
+C:/Users/kingi/Desktop/972057.cydsn/pid.h : 
 

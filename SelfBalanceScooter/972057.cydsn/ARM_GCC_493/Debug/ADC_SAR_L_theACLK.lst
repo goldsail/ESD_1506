@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
   29:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** 
   30:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** /*******************************************************************************
   31:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** * Function Name: ADC_SAR_L_theACLK_Start
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** ********************************************************************************
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
   62              		.align	2
   63              	.L2:
   64 002c A2430040 		.word	1073759138
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 3
 
 
   65 0030 B2430040 		.word	1073759154
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
   75:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** 	ADC_SAR_L_theACLK_CLKSTBY &= (uint8)(~ADC_SAR_L_theACLK_CLKSTBY_MASK);
   95              		.loc 1 75 0
   96 0014 064A     		ldr	r2, .L5+4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 4
 
 
   97 0016 064B     		ldr	r3, .L5+4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  100:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** void ADC_SAR_L_theACLK_StopBlock(void) 
  101:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** {
  127              		.loc 1 101 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 5
 
 
  128              		.cfi_startproc
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  164 002e 03F07F03 		and	r3, r3, #127
  165 0032 DBB2     		uxtb	r3, r3
  166 0034 1370     		strb	r3, [r2]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 6
 
 
  120:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  205              		.loc 1 135 0
  206 0078 064B     		ldr	r3, .L10+4
  207 007a 0022     		movs	r2, #0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 7
 
 
  208 007c 1A70     		strb	r2, [r3]
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  151:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *  state:  0 to disable clock during standby, nonzero to enable.
  152:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *
  153:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** * Returns:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 8
 
 
  154:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *  None
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  287 0034 BD46     		mov	sp, r7
  288              		.cfi_def_cfa_register 13
  289              		@ sp needed
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 9
 
 
  290 0036 5DF8047B 		ldr	r7, [sp], #4
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  316              		.cfi_offset 14, -4
  317 0002 84B0     		sub	sp, sp, #16
  318              		.cfi_def_cfa_offset 24
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 10
 
 
  319 0004 00AF     		add	r7, sp, #0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  360 004a 002B     		cmp	r3, #0
  361 004c 0BD1     		bne	.L21
  209:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****             {
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 11
 
 
  210:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****                 /* Moving away from SSS, set the divider first so when SSS is cleared we    */
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  228:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****             {
  229:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****                 CLK_DIST_LD = 0x00u;
  396              		.loc 1 229 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 12
 
 
  397 0084 314B     		ldr	r3, .L30+12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  433 00c0 224B     		ldr	r3, .L30+12
  434 00c2 0722     		movs	r2, #7
  435 00c4 1A70     		strb	r2, [r3]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 13
 
 
  248:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  268:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****                 CLK_DIST_LD = (CYCLK_LD_LOAD | ((restart != 0u) ? CYCLK_LD_SYNC_EN : 0x00u));
  470              		.loc 1 268 0
  471 0100 124A     		ldr	r2, .L30+12
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 14
 
 
  472 0102 7B79     		ldrb	r3, [r7, #5]	@ zero_extendqisi2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  515              		@ sp needed
  516 013c 80BD     		pop	{r7, pc}
  517              	.L31:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 15
 
 
  518 013e 00BF     		.align	2
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  552 0008 9BB2     		uxth	r3, r3
  300:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** }
  553              		.loc 1 300 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 16
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 16
 
 
  554 000a 1846     		mov	r0, r3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  332:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** void ADC_SAR_L_theACLK_SetModeRegister(uint8 modeBitMask) 
  333:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** {
  577              		.loc 1 333 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 17
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 17
 
 
  578              		.cfi_startproc
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  337:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** 
  338:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** /*******************************************************************************
  339:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** * Function Name: ADC_SAR_L_theACLK_ClearModeRegister
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 18
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 18
 
 
  340:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** ********************************************************************************
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  653 001e 1340     		ands	r3, r3, r2
  654 0020 DBB2     		uxtb	r3, r3
  655 0022 0B70     		strb	r3, [r1]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 19
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 19
 
 
  370:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** }
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  690              		.cfi_def_cfa_register 7
  390:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****     return ADC_SAR_L_theACLK_MOD_SRC & (uint8)(ADC_SAR_L_theACLK_MODE_MASK);
  691              		.loc 1 390 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 20
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 20
 
 
  692 0004 054B     		ldr	r3, .L44
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  416:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *  None
  417:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *
  418:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *******************************************************************************/
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 21
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 21
 
 
  419:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** void ADC_SAR_L_theACLK_SetSourceRegister(uint8 clkSource) 
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  763              		.loc 1 430 0
  764 003c 1E4B     		ldr	r3, .L50
  431:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c ****             (ADC_SAR_L_theACLK_MOD_SRC & (uint8)(~ADC_SAR_L_theACLK_SRC_SEL_MSK)) | clkSource;
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 22
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 22
 
 
  765              		.loc 1 431 0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  808 0084 0C4A     		ldr	r2, .L50
  809 0086 0C4B     		ldr	r3, .L50
  810 0088 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 23
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 23
 
 
  811 008a DBB2     		uxtb	r3, r3
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  450:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** /*******************************************************************************
  451:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** * Function Name: ADC_SAR_L_theACLK_GetSourceRegister
  452:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** ********************************************************************************
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 24
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 24
 
 
  453:.\Generated_Source\PSoC5/ADC_SAR_L_theACLK.c **** *
@@ -1438,13 +1438,13 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  894 0006 00000000 		.4byte	.Ldebug_abbrev0
  895 000a 04       		.byte	0x4
  896 000b 01       		.uleb128 0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 25
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 25
 
 
- 897 000c FB000000 		.4byte	.LASF37
+ 897 000c 1F010000 		.4byte	.LASF37
  898 0010 01       		.byte	0x1
- 899 0011 AD010000 		.4byte	.LASF38
- 900 0015 E0010000 		.4byte	.LASF39
+ 899 0011 D1010000 		.4byte	.LASF38
+ 900 0015 ED000000 		.4byte	.LASF39
  901 0019 00000000 		.4byte	.Ldebug_ranges0+0
  902 001d 00000000 		.4byte	0
  903 0021 00000000 		.4byte	.Ldebug_line0
@@ -1459,7 +1459,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  912 0033 02       		.uleb128 0x2
  913 0034 02       		.byte	0x2
  914 0035 05       		.byte	0x5
- 915 0036 0E000000 		.4byte	.LASF2
+ 915 0036 14000000 		.4byte	.LASF2
  916 003a 02       		.uleb128 0x2
  917 003b 02       		.byte	0x2
  918 003c 07       		.byte	0x7
@@ -1475,7 +1475,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  928 004f 02       		.uleb128 0x2
  929 0050 08       		.byte	0x8
  930 0051 05       		.byte	0x5
- 931 0052 ED000000 		.4byte	.LASF6
+ 931 0052 11010000 		.4byte	.LASF6
  932 0056 02       		.uleb128 0x2
  933 0057 08       		.byte	0x8
  934 0058 07       		.byte	0x7
@@ -1489,22 +1489,22 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  942 0066 07       		.byte	0x7
  943 0067 5D020000 		.4byte	.LASF8
  944 006b 04       		.uleb128 0x4
- 945 006c B1000000 		.4byte	.LASF9
+ 945 006c B7000000 		.4byte	.LASF9
  946 0070 02       		.byte	0x2
  947 0071 3801     		.2byte	0x138
  948 0073 2C000000 		.4byte	0x2c
  949 0077 04       		.uleb128 0x4
- 950 0078 9B000000 		.4byte	.LASF10
+ 950 0078 A1000000 		.4byte	.LASF10
  951 007c 02       		.byte	0x2
  952 007d 3901     		.2byte	0x139
  953 007f 3A000000 		.4byte	0x3a
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 26
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 26
 
 
  954 0083 02       		.uleb128 0x2
  955 0084 04       		.byte	0x4
  956 0085 04       		.byte	0x4
- 957 0086 E7000000 		.4byte	.LASF11
+ 957 0086 00000000 		.4byte	.LASF11
  958 008a 02       		.uleb128 0x2
  959 008b 08       		.byte	0x8
  960 008c 04       		.byte	0x4
@@ -1521,14 +1521,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  971 00a4 05       		.uleb128 0x5
  972 00a5 6B000000 		.4byte	0x6b
  973 00a9 04       		.uleb128 0x4
- 974 00aa 08000000 		.4byte	.LASF15
+ 974 00aa 0E000000 		.4byte	.LASF15
  975 00ae 02       		.byte	0x2
  976 00af E301     		.2byte	0x1e3
  977 00b1 B5000000 		.4byte	0xb5
  978 00b5 05       		.uleb128 0x5
  979 00b6 77000000 		.4byte	0x77
  980 00ba 06       		.uleb128 0x6
- 981 00bb 18000000 		.4byte	.LASF16
+ 981 00bb 1E000000 		.4byte	.LASF16
  982 00bf 01       		.byte	0x1
  983 00c0 2D       		.byte	0x2d
  984 00c1 00000000 		.4byte	.LFB0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1008 00fa 09       		.uleb128 0x9
  1009 00fb BF020000 		.4byte	.LASF24
  1010 00ff 01       		.byte	0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 27
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 27
 
 
  1011 0100 69       		.byte	0x69
@@ -1578,7 +1578,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1025 011a 9C       		.byte	0x9c
  1026 011b 2E010000 		.4byte	0x12e
  1027 011f 0A       		.uleb128 0xa
- 1028 0120 DA010000 		.4byte	.LASF21
+ 1028 0120 FE010000 		.4byte	.LASF21
  1029 0124 01       		.byte	0x1
  1030 0125 9D       		.byte	0x9d
  1031 0126 6B000000 		.4byte	0x6b
@@ -1587,7 +1587,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1034 012c 77       		.sleb128 -9
  1035 012d 00       		.byte	0
  1036 012e 0B       		.uleb128 0xb
- 1037 012f 76000000 		.4byte	.LASF20
+ 1037 012f 7C000000 		.4byte	.LASF20
  1038 0133 01       		.byte	0x1
  1039 0134 C1       		.byte	0xc1
  1040 0135 00000000 		.4byte	.LFB4
@@ -1596,7 +1596,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1043 013e 9C       		.byte	0x9c
  1044 013f 8A010000 		.4byte	0x18a
  1045 0143 0A       		.uleb128 0xa
- 1046 0144 B7000000 		.4byte	.LASF22
+ 1046 0144 BD000000 		.4byte	.LASF22
  1047 0148 01       		.byte	0x1
  1048 0149 C1       		.byte	0xc1
  1049 014a 77000000 		.4byte	0x77
@@ -1604,7 +1604,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1051 014f 91       		.byte	0x91
  1052 0150 6E       		.sleb128 -18
  1053 0151 0A       		.uleb128 0xa
- 1054 0152 A2000000 		.4byte	.LASF23
+ 1054 0152 A8000000 		.4byte	.LASF23
  1055 0156 01       		.byte	0x1
  1056 0157 C1       		.byte	0xc1
  1057 0158 6B000000 		.4byte	0x6b
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1065 0166 6B000000 		.4byte	0x6b
  1066 016a 02       		.uleb128 0x2
  1067 016b 91       		.byte	0x91
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 28
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 28
 
 
  1068 016c 73       		.sleb128 -13
@@ -1640,7 +1640,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1084 0188 74       		.sleb128 -12
  1085 0189 00       		.byte	0
  1086 018a 0C       		.uleb128 0xc
- 1087 018b C2000000 		.4byte	.LASF30
+ 1087 018b C8000000 		.4byte	.LASF30
  1088 018f 01       		.byte	0x1
  1089 0190 2901     		.2byte	0x129
  1090 0192 77000000 		.4byte	0x77
@@ -1649,7 +1649,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1093 019e 01       		.uleb128 0x1
  1094 019f 9C       		.byte	0x9c
  1095 01a0 0D       		.uleb128 0xd
- 1096 01a1 30000000 		.4byte	.LASF27
+ 1096 01a1 36000000 		.4byte	.LASF27
  1097 01a5 01       		.byte	0x1
  1098 01a6 4C01     		.2byte	0x14c
  1099 01a8 00000000 		.4byte	.LFB6
@@ -1667,7 +1667,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1111 01c4 77       		.sleb128 -9
  1112 01c5 00       		.byte	0
  1113 01c6 0D       		.uleb128 0xd
- 1114 01c7 89010000 		.4byte	.LASF29
+ 1114 01c7 AD010000 		.4byte	.LASF29
  1115 01cb 01       		.byte	0x1
  1116 01cc 6F01     		.2byte	0x16f
  1117 01ce 00000000 		.4byte	.LFB7
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1122 01dc 0E       		.uleb128 0xe
  1123 01dd 12020000 		.4byte	.LASF28
  1124 01e1 01       		.byte	0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 29
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 29
 
 
  1125 01e2 6F01     		.2byte	0x16f
@@ -1714,7 +1714,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1155 0225 91       		.byte	0x91
  1156 0226 6F       		.sleb128 -17
  1157 0227 10       		.uleb128 0x10
- 1158 0228 00000000 		.4byte	.LASF34
+ 1158 0228 06000000 		.4byte	.LASF34
  1159 022c 01       		.byte	0x1
  1160 022d A501     		.2byte	0x1a5
  1161 022f 77000000 		.4byte	0x77
@@ -1722,7 +1722,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1163 0234 91       		.byte	0x91
  1164 0235 76       		.sleb128 -10
  1165 0236 10       		.uleb128 0x10
- 1166 0237 AA000000 		.4byte	.LASF35
+ 1166 0237 B0000000 		.4byte	.LASF35
  1167 023b 01       		.byte	0x1
  1168 023c A601     		.2byte	0x1a6
  1169 023e 6B000000 		.4byte	0x6b
@@ -1731,14 +1731,14 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1172 0244 75       		.sleb128 -11
  1173 0245 00       		.byte	0
  1174 0246 0C       		.uleb128 0xc
- 1175 0247 52000000 		.4byte	.LASF36
+ 1175 0247 58000000 		.4byte	.LASF36
  1176 024b 01       		.byte	0x1
  1177 024c D001     		.2byte	0x1d0
  1178 024e 6B000000 		.4byte	0x6b
  1179 0252 00000000 		.4byte	.LFB10
  1180 0256 20000000 		.4byte	.LFE10-.LFB10
  1181 025a 01       		.uleb128 0x1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 30
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 30
 
 
  1182 025b 9C       		.byte	0x9c
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1236 0032 49       		.uleb128 0x49
  1237 0033 13       		.uleb128 0x13
  1238 0034 00       		.byte	0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 31
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 31
 
 
  1239 0035 00       		.byte	0
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1293 006d 00       		.byte	0
  1294 006e 00       		.byte	0
  1295 006f 08       		.uleb128 0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 32
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 32
 
 
  1296 0070 0B       		.uleb128 0xb
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1350 00a6 06       		.uleb128 0x6
  1351 00a7 40       		.uleb128 0x40
  1352 00a8 18       		.uleb128 0x18
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 33
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 33
 
 
  1353 00a9 9642     		.uleb128 0x2116
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1407 00e2 00       		.byte	0
  1408 00e3 00       		.byte	0
  1409 00e4 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 34
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 34
 
 
  1410 00e5 05       		.uleb128 0x5
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1464 011c 00       		.byte	0
  1465              		.section	.debug_aranges,"",%progbits
  1466 0000 6C000000 		.4byte	0x6c
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 35
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 35
 
 
  1467 0004 0200     		.2byte	0x2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1521 0058 00000000 		.4byte	0
  1522 005c 00000000 		.4byte	0
  1523              		.section	.debug_line,"",%progbits
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 36
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 36
 
 
  1524              	.Ldebug_line0:
@@ -2107,110 +2107,110 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1525      00000201 
  1525      FB0E0D00 
  1525      01010101 
- 1526              	.LASF34:
- 1527 0000 63757272 		.ascii	"currDiv\000"
- 1527      44697600 
- 1528              	.LASF15:
- 1529 0008 72656731 		.ascii	"reg16\000"
- 1529      3600
- 1530              	.LASF2:
- 1531 000e 73686F72 		.ascii	"short int\000"
- 1531      7420696E 
- 1531      7400
- 1532              	.LASF16:
- 1533 0018 4144435F 		.ascii	"ADC_SAR_L_theACLK_Start\000"
- 1533      5341525F 
- 1533      4C5F7468 
- 1533      6541434C 
- 1533      4B5F5374 
- 1534              	.LASF27:
- 1535 0030 4144435F 		.ascii	"ADC_SAR_L_theACLK_SetModeRegister\000"
+ 1526              	.LASF11:
+ 1527 0000 666C6F61 		.ascii	"float\000"
+ 1527      7400
+ 1528              	.LASF34:
+ 1529 0006 63757272 		.ascii	"currDiv\000"
+ 1529      44697600 
+ 1530              	.LASF15:
+ 1531 000e 72656731 		.ascii	"reg16\000"
+ 1531      3600
+ 1532              	.LASF2:
+ 1533 0014 73686F72 		.ascii	"short int\000"
+ 1533      7420696E 
+ 1533      7400
+ 1534              	.LASF16:
+ 1535 001e 4144435F 		.ascii	"ADC_SAR_L_theACLK_Start\000"
  1535      5341525F 
  1535      4C5F7468 
  1535      6541434C 
- 1535      4B5F5365 
- 1536              	.LASF36:
- 1537 0052 4144435F 		.ascii	"ADC_SAR_L_theACLK_GetSourceRegister\000"
+ 1535      4B5F5374 
+ 1536              	.LASF27:
+ 1537 0036 4144435F 		.ascii	"ADC_SAR_L_theACLK_SetModeRegister\000"
  1537      5341525F 
  1537      4C5F7468 
  1537      6541434C 
- 1537      4B5F4765 
- 1538              	.LASF20:
- 1539 0076 4144435F 		.ascii	"ADC_SAR_L_theACLK_SetDividerRegister\000"
+ 1537      4B5F5365 
+ 1538              	.LASF36:
+ 1539 0058 4144435F 		.ascii	"ADC_SAR_L_theACLK_GetSourceRegister\000"
  1539      5341525F 
  1539      4C5F7468 
  1539      6541434C 
- 1539      4B5F5365 
- 1540              	.LASF10:
- 1541 009b 75696E74 		.ascii	"uint16\000"
- 1541      313600
- 1542              	.LASF23:
- 1543 00a2 72657374 		.ascii	"restart\000"
- 1543      61727400 
- 1544              	.LASF35:
- 1545 00aa 6F6C6453 		.ascii	"oldSrc\000"
- 1545      726300
- 1546              	.LASF9:
- 1547 00b1 75696E74 		.ascii	"uint8\000"
- 1547      3800
- 1548              	.LASF22:
- 1549 00b7 636C6B44 		.ascii	"clkDivider\000"
- 1549      69766964 
- 1549      657200
- 1550              	.LASF30:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 37
+ 1539      4B5F4765 
+ 1540              	.LASF20:
+ 1541 007c 4144435F 		.ascii	"ADC_SAR_L_theACLK_SetDividerRegister\000"
+ 1541      5341525F 
+ 1541      4C5F7468 
+ 1541      6541434C 
+ 1541      4B5F5365 
+ 1542              	.LASF10:
+ 1543 00a1 75696E74 		.ascii	"uint16\000"
+ 1543      313600
+ 1544              	.LASF23:
+ 1545 00a8 72657374 		.ascii	"restart\000"
+ 1545      61727400 
+ 1546              	.LASF35:
+ 1547 00b0 6F6C6453 		.ascii	"oldSrc\000"
+ 1547      726300
+ 1548              	.LASF9:
+ 1549 00b7 75696E74 		.ascii	"uint8\000"
+ 1549      3800
+ 1550              	.LASF22:
+ 1551 00bd 636C6B44 		.ascii	"clkDivider\000"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 37
 
 
- 1551 00c2 4144435F 		.ascii	"ADC_SAR_L_theACLK_GetDividerRegister\000"
- 1551      5341525F 
- 1551      4C5F7468 
- 1551      6541434C 
- 1551      4B5F4765 
- 1552              	.LASF11:
- 1553 00e7 666C6F61 		.ascii	"float\000"
- 1553      7400
- 1554              	.LASF6:
- 1555 00ed 6C6F6E67 		.ascii	"long long int\000"
- 1555      206C6F6E 
- 1555      6720696E 
- 1555      7400
- 1556              	.LASF37:
- 1557 00fb 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 1557      4320342E 
- 1557      392E3320 
- 1557      32303135 
- 1557      30333033 
- 1558 012e 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 1558      20726576 
- 1558      6973696F 
- 1558      6E203232 
- 1558      31323230 
- 1559 0161 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 1559      66756E63 
- 1559      74696F6E 
- 1559      2D736563 
- 1559      74696F6E 
- 1560              	.LASF29:
- 1561 0189 4144435F 		.ascii	"ADC_SAR_L_theACLK_ClearModeRegister\000"
- 1561      5341525F 
- 1561      4C5F7468 
- 1561      6541434C 
- 1561      4B5F436C 
- 1562              	.LASF38:
- 1563 01ad 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_L_theACLK.c\000"
- 1563      6E657261 
- 1563      7465645F 
- 1563      536F7572 
- 1563      63655C50 
- 1564              	.LASF21:
- 1565 01da 73746174 		.ascii	"state\000"
- 1565      6500
- 1566              	.LASF39:
- 1567 01e0 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\962158.cydsn\000"
- 1567      73657273 
- 1567      5C6B696E 
- 1567      67695C44 
- 1567      65736B74 
+ 1551      69766964 
+ 1551      657200
+ 1552              	.LASF30:
+ 1553 00c8 4144435F 		.ascii	"ADC_SAR_L_theACLK_GetDividerRegister\000"
+ 1553      5341525F 
+ 1553      4C5F7468 
+ 1553      6541434C 
+ 1553      4B5F4765 
+ 1554              	.LASF39:
+ 1555 00ed 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\972057.cydsn\000"
+ 1555      73657273 
+ 1555      5C6B696E 
+ 1555      67695C44 
+ 1555      65736B74 
+ 1556              	.LASF6:
+ 1557 0111 6C6F6E67 		.ascii	"long long int\000"
+ 1557      206C6F6E 
+ 1557      6720696E 
+ 1557      7400
+ 1558              	.LASF37:
+ 1559 011f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 1559      4320342E 
+ 1559      392E3320 
+ 1559      32303135 
+ 1559      30333033 
+ 1560 0152 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 1560      20726576 
+ 1560      6973696F 
+ 1560      6E203232 
+ 1560      31323230 
+ 1561 0185 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1561      66756E63 
+ 1561      74696F6E 
+ 1561      2D736563 
+ 1561      74696F6E 
+ 1562              	.LASF29:
+ 1563 01ad 4144435F 		.ascii	"ADC_SAR_L_theACLK_ClearModeRegister\000"
+ 1563      5341525F 
+ 1563      4C5F7468 
+ 1563      6541434C 
+ 1563      4B5F436C 
+ 1564              	.LASF38:
+ 1565 01d1 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\ADC_SAR_L_theACLK.c\000"
+ 1565      6E657261 
+ 1565      7465645F 
+ 1565      536F7572 
+ 1565      63655C50 
+ 1566              	.LASF21:
+ 1567 01fe 73746174 		.ascii	"state\000"
+ 1567      6500
  1568              	.LASF1:
  1569 0204 756E7369 		.ascii	"unsigned char\000"
  1569      676E6564 
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1569      7200
  1570              	.LASF28:
  1571 0212 6D6F6465 		.ascii	"modeBitMask\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 38
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 38
 
 
  1571      4269744D 
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 1
  1595 02ca 4144435F 		.ascii	"ADC_SAR_L_theACLK_SetSourceRegister\000"
  1595      5341525F 
  1595      4C5F7468 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccOQx6FP.s 			page 39
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccF43bz8.s 			page 39
 
 
  1595      6541434C 

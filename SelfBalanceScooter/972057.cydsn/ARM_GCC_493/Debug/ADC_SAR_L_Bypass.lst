@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
   29:.\Generated_Source\PSoC5/ADC_SAR_L_Bypass.c **** * Summary:
   30:.\Generated_Source\PSoC5/ADC_SAR_L_Bypass.c **** *  Assign a new value to the digital port's data output register.  
   31:.\Generated_Source\PSoC5/ADC_SAR_L_Bypass.c **** *
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/ADC_SAR_L_Bypass.c **** * Parameters:  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
   69 0036 00BF     		.align	2
   70              	.L2:
   71 0038 00510040 		.word	1073762560
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 3
 
 
   72              		.cfi_endproc
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  107 0020 D2B2     		uxtb	r2, r2
  108 0022 0A43     		orrs	r2, r2, r1
  109 0024 D2B2     		uxtb	r2, r2
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 4
 
 
  110 0026 D2B2     		uxtb	r2, r2
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  141              		@ link register save eliminated.
  142 0000 80B4     		push	{r7}
  143              		.cfi_def_cfa_offset 4
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 5
 
 
  144              		.cfi_offset 7, -4
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  178              		.loc 1 105 0
  179              		.cfi_startproc
  180              		@ args = 0, pretend = 0, frame = 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 6
 
 
  181              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -343,10 +343,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  218 0006 00000000 		.4byte	.Ldebug_abbrev0
  219 000a 04       		.byte	0x4
  220 000b 01       		.uleb128 0x1
- 221 000c 35000000 		.4byte	.LASF20
+ 221 000c 11000000 		.4byte	.LASF20
  222 0010 01       		.byte	0x1
  223 0011 59010000 		.4byte	.LASF21
- 224 0015 00000000 		.4byte	.LASF22
+ 224 0015 9F000000 		.4byte	.LASF22
  225 0019 00000000 		.4byte	.Ldebug_ranges0+0
  226 001d 00000000 		.4byte	0
  227 0021 00000000 		.4byte	.Ldebug_line0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  233 002d 01       		.byte	0x1
  234 002e 08       		.byte	0x8
  235 002f 1A010000 		.4byte	.LASF1
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 7
 
 
  236 0033 02       		.uleb128 0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  290 0098 05       		.uleb128 0x5
  291 0099 6B000000 		.4byte	0x6b
  292 009d 06       		.uleb128 0x6
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 8
 
 
  293 009e AE010000 		.4byte	.LASF14
@@ -430,7 +430,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  299 00ad 9C       		.byte	0x9c
  300 00ae CF000000 		.4byte	0xcf
  301 00b2 07       		.uleb128 0x7
- 302 00b3 24000000 		.4byte	.LASF16
+ 302 00b3 00000000 		.4byte	.LASF16
  303 00b7 01       		.byte	0x1
  304 00b8 27       		.byte	0x27
  305 00b9 6B000000 		.4byte	0x6b
@@ -438,7 +438,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  307 00be 91       		.byte	0x91
  308 00bf 6F       		.sleb128 -17
  309 00c0 08       		.uleb128 0x8
- 310 00c1 2A000000 		.4byte	.LASF23
+ 310 00c1 06000000 		.4byte	.LASF23
  311 00c5 01       		.byte	0x1
  312 00c6 29       		.byte	0x29
  313 00c7 6B000000 		.4byte	0x6b
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  347 010d 01       		.byte	0x1
  348 010e 68       		.byte	0x68
  349 010f 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 9
 
 
  350 0113 00000000 		.4byte	.LFB3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  404 002f 0B       		.uleb128 0xb
  405 0030 3B       		.uleb128 0x3b
  406 0031 05       		.uleb128 0x5
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 10
 
 
  407 0032 49       		.uleb128 0x49
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  461 0069 03       		.uleb128 0x3
  462 006a 0E       		.uleb128 0xe
  463 006b 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 11
 
 
  464 006c 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  518              	.Ldebug_ranges0:
  519 0000 00000000 		.4byte	.LFB0
  520 0004 3C000000 		.4byte	.LFE0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 12
 
 
  521 0008 00000000 		.4byte	.LFB1
@@ -676,35 +676,35 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  531      00000201 
  531      FB0E0D00 
  531      01010101 
- 532              	.LASF22:
- 533 0000 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\962158.cydsn\000"
- 533      73657273 
- 533      5C6B696E 
- 533      67695C44 
- 533      65736B74 
- 534              	.LASF16:
- 535 0024 76616C75 		.ascii	"value\000"
- 535      6500
- 536              	.LASF23:
- 537 002a 73746174 		.ascii	"staticBits\000"
- 537      69634269 
- 537      747300
- 538              	.LASF20:
- 539 0035 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 539      4320342E 
- 539      392E3320 
- 539      32303135 
- 539      30333033 
- 540 0068 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 540      20726576 
- 540      6973696F 
- 540      6E203232 
- 540      31323230 
- 541 009b 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 541      66756E63 
- 541      74696F6E 
- 541      2D736563 
- 541      74696F6E 
+ 532              	.LASF16:
+ 533 0000 76616C75 		.ascii	"value\000"
+ 533      6500
+ 534              	.LASF23:
+ 535 0006 73746174 		.ascii	"staticBits\000"
+ 535      69634269 
+ 535      747300
+ 536              	.LASF20:
+ 537 0011 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 537      4320342E 
+ 537      392E3320 
+ 537      32303135 
+ 537      30333033 
+ 538 0044 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 538      20726576 
+ 538      6973696F 
+ 538      6E203232 
+ 538      31323230 
+ 539 0077 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 539      66756E63 
+ 539      74696F6E 
+ 539      2D736563 
+ 539      74696F6E 
+ 540              	.LASF22:
+ 541 009f 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\972057.cydsn\000"
+ 541      73657273 
+ 541      5C6B696E 
+ 541      67695C44 
+ 541      65736B74 
  542              	.LASF18:
  543 00c3 4144435F 		.ascii	"ADC_SAR_L_Bypass_Read\000"
  543      5341525F 
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  545      70617373 
  545      5F536574 
  546              	.LASF9:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 13
 
 
  547 00f7 666C6F61 		.ascii	"float\000"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 1
  569      4C5F4279 
  569      70617373 
  569      5F577269 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccmSFw1V.s 			page 14
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccAV7Yge.s 			page 14
 
 
  570              	.LASF6:

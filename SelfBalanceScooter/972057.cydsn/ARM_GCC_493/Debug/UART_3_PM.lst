@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
   25:.\Generated_Source\PSoC5/UART_3_PM.c **** {
   26:.\Generated_Source\PSoC5/UART_3_PM.c ****     /* enableState - disabled */
   27:.\Generated_Source\PSoC5/UART_3_PM.c ****     0u,
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 2
 
 
   28:.\Generated_Source\PSoC5/UART_3_PM.c **** };
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
   53              		.align	2
   54              		.global	UART_3_RestoreConfig
   55              		.thumb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 3
 
 
   56              		.thumb_func
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
   77 000a 7047     		bx	lr
   78              		.cfi_endproc
   79              	.LFE1:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 4
 
 
   80              		.size	UART_3_RestoreConfig, .-UART_3_RestoreConfig
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  128:.\Generated_Source\PSoC5/UART_3_PM.c ****         {
  129:.\Generated_Source\PSoC5/UART_3_PM.c ****             UART_3_backup.enableState = 0u;
  130:.\Generated_Source\PSoC5/UART_3_PM.c ****         }
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 5
 
 
  131:.\Generated_Source\PSoC5/UART_3_PM.c ****     #else
@@ -282,7 +282,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  123              	.L7:
  124 002a 00BF     		.align	2
  125              	.L6:
- 126 002c 97640040 		.word	1073767575
+ 126 002c 96650040 		.word	1073767830
  127 0030 00000000 		.word	UART_3_backup
  128              		.cfi_endproc
  129              	.LFE2:
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  145:.\Generated_Source\PSoC5/UART_3_PM.c **** 
  146:.\Generated_Source\PSoC5/UART_3_PM.c **** 
  147:.\Generated_Source\PSoC5/UART_3_PM.c **** /*******************************************************************************
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 6
 
 
  148:.\Generated_Source\PSoC5/UART_3_PM.c **** * Function Name: UART_3_Wakeup
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  183:.\Generated_Source\PSoC5/UART_3_PM.c ****     {
  184:.\Generated_Source\PSoC5/UART_3_PM.c ****         UART_3_Enable();
  158              		.loc 1 184 0
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 7
 
 
  159 0014 FFF7FEFF 		bl	UART_3_Enable
@@ -385,21 +385,21 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  178 0006 00000000 		.4byte	.Ldebug_abbrev0
  179 000a 04       		.byte	0x4
  180 000b 01       		.uleb128 0x1
- 181 000c ED000000 		.4byte	.LASF20
+ 181 000c C9000000 		.4byte	.LASF20
  182 0010 01       		.byte	0x1
- 183 0011 7B010000 		.4byte	.LASF21
- 184 0015 39000000 		.4byte	.LASF22
+ 183 0011 57010000 		.4byte	.LASF21
+ 184 0015 A2010000 		.4byte	.LASF22
  185 0019 00000000 		.4byte	.Ldebug_ranges0+0
  186 001d 00000000 		.4byte	0
  187 0021 00000000 		.4byte	.Ldebug_line0
  188 0025 02       		.uleb128 0x2
  189 0026 01       		.byte	0x1
  190 0027 06       		.byte	0x6
- 191 0028 BA010000 		.4byte	.LASF0
+ 191 0028 96010000 		.4byte	.LASF0
  192 002c 02       		.uleb128 0x2
  193 002d 01       		.byte	0x1
  194 002e 08       		.byte	0x8
- 195 002f C4000000 		.4byte	.LASF1
+ 195 002f A0000000 		.4byte	.LASF1
  196 0033 02       		.uleb128 0x2
  197 0034 02       		.byte	0x2
  198 0035 05       		.byte	0x5
@@ -407,18 +407,18 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  200 003a 02       		.uleb128 0x2
  201 003b 02       		.byte	0x2
  202 003c 07       		.byte	0x7
- 203 003d A7010000 		.4byte	.LASF3
+ 203 003d 83010000 		.4byte	.LASF3
  204 0041 02       		.uleb128 0x2
  205 0042 04       		.byte	0x4
  206 0043 05       		.byte	0x5
- 207 0044 E4000000 		.4byte	.LASF4
+ 207 0044 C0000000 		.4byte	.LASF4
  208 0048 02       		.uleb128 0x2
  209 0049 04       		.byte	0x4
  210 004a 07       		.byte	0x7
- 211 004b 71000000 		.4byte	.LASF5
+ 211 004b 4D000000 		.4byte	.LASF5
  212 004f 02       		.uleb128 0x2
  213 0050 08       		.byte	0x8
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 8
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 8
 
 
  214 0051 05       		.byte	0x5
@@ -426,7 +426,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  216 0056 02       		.uleb128 0x2
  217 0057 08       		.byte	0x8
  218 0058 07       		.byte	0x7
- 219 0059 83000000 		.4byte	.LASF7
+ 219 0059 5F000000 		.4byte	.LASF7
  220 005d 03       		.uleb128 0x3
  221 005e 04       		.byte	0x4
  222 005f 05       		.byte	0x5
@@ -436,7 +436,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  226 0066 07       		.byte	0x7
  227 0067 1A000000 		.4byte	.LASF8
  228 006b 04       		.uleb128 0x4
- 229 006c 6B000000 		.4byte	.LASF12
+ 229 006c 47000000 		.4byte	.LASF12
  230 0070 02       		.byte	0x2
  231 0071 3801     		.2byte	0x138
  232 0073 2C000000 		.4byte	0x2c
@@ -447,11 +447,11 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  237 007e 02       		.uleb128 0x2
  238 007f 08       		.byte	0x8
  239 0080 04       		.byte	0x4
- 240 0081 A0010000 		.4byte	.LASF10
+ 240 0081 7C010000 		.4byte	.LASF10
  241 0085 02       		.uleb128 0x2
  242 0086 01       		.byte	0x1
  243 0087 08       		.byte	0x8
- 244 0088 D2000000 		.4byte	.LASF11
+ 244 0088 AE000000 		.4byte	.LASF11
  245 008c 04       		.uleb128 0x4
  246 008d EB010000 		.4byte	.LASF13
  247 0091 02       		.byte	0x2
@@ -477,8 +477,8 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  267 00bb 00       		.byte	0
  268 00bc 00       		.byte	0
  269 00bd 08       		.uleb128 0x8
- 270 00be AF000000 		.4byte	.LASF15
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 9
+ 270 00be 8B000000 		.4byte	.LASF15
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 9
 
 
  271 00c2 03       		.byte	0x3
@@ -493,7 +493,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  280 00d7 01       		.uleb128 0x1
  281 00d8 9C       		.byte	0x9c
  282 00d9 09       		.uleb128 0x9
- 283 00da 9A000000 		.4byte	.LASF17
+ 283 00da 76000000 		.4byte	.LASF17
  284 00de 01       		.byte	0x1
  285 00df 57       		.byte	0x57
  286 00e0 00000000 		.4byte	.LFB1
@@ -501,7 +501,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  288 00e8 01       		.uleb128 0x1
  289 00e9 9C       		.byte	0x9c
  290 00ea 0A       		.uleb128 0xa
- 291 00eb D7000000 		.4byte	.LASF18
+ 291 00eb B3000000 		.4byte	.LASF18
  292 00ef 01       		.byte	0x1
  293 00f0 78       		.byte	0x78
  294 00f1 00000000 		.4byte	.LFB2
@@ -509,7 +509,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  296 00f9 01       		.uleb128 0x1
  297 00fa 9C       		.byte	0x9c
  298 00fb 0A       		.uleb128 0xa
- 299 00fc 5D000000 		.4byte	.LASF19
+ 299 00fc 39000000 		.4byte	.LASF19
  300 0100 01       		.byte	0x1
  301 0101 AC       		.byte	0xac
  302 0102 00000000 		.4byte	.LFB3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  325 0008 0E       		.uleb128 0xe
  326 0009 1B       		.uleb128 0x1b
  327 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 10
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 10
 
 
  328 000b 55       		.uleb128 0x55
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  382 0041 0E       		.uleb128 0xe
  383 0042 0B       		.uleb128 0xb
  384 0043 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 11
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 11
 
 
  385 0044 3A       		.uleb128 0x3a
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  439 007a 18       		.uleb128 0x18
  440 007b 9742     		.uleb128 0x2117
  441 007d 19       		.uleb128 0x19
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 12
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 12
 
 
  442 007e 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  496 0024 34000000 		.4byte	.LFE2-.LFB2
  497 0028 00000000 		.4byte	.LFB3
  498 002c 20000000 		.4byte	.LFE3-.LFB3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 13
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 13
 
 
  499 0030 00000000 		.4byte	0
@@ -762,102 +762,102 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 1
  523      61766543 
  523      6F6E6669 
  523      6700
- 524              	.LASF22:
- 525 0039 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\962158.cydsn\000"
- 525      73657273 
- 525      5C6B696E 
- 525      67695C44 
- 525      65736B74 
- 526              	.LASF19:
- 527 005d 55415254 		.ascii	"UART_3_Wakeup\000"
- 527      5F335F57 
- 527      616B6575 
- 527      7000
- 528              	.LASF12:
- 529 006b 75696E74 		.ascii	"uint8\000"
- 529      3800
- 530              	.LASF5:
- 531 0071 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 14
+ 524              	.LASF19:
+ 525 0039 55415254 		.ascii	"UART_3_Wakeup\000"
+ 525      5F335F57 
+ 525      616B6575 
+ 525      7000
+ 526              	.LASF12:
+ 527 0047 75696E74 		.ascii	"uint8\000"
+ 527      3800
+ 528              	.LASF5:
+ 529 004d 6C6F6E67 		.ascii	"long unsigned int\000"
+ 529      20756E73 
+ 529      69676E65 
+ 529      6420696E 
+ 529      7400
+ 530              	.LASF7:
+ 531 005f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 14
 
 
- 531      20756E73 
- 531      69676E65 
- 531      6420696E 
- 531      7400
- 532              	.LASF7:
- 533 0083 6C6F6E67 		.ascii	"long long unsigned int\000"
- 533      206C6F6E 
- 533      6720756E 
- 533      7369676E 
- 533      65642069 
- 534              	.LASF17:
- 535 009a 55415254 		.ascii	"UART_3_RestoreConfig\000"
- 535      5F335F52 
- 535      6573746F 
- 535      7265436F 
- 535      6E666967 
- 536              	.LASF15:
- 537 00af 55415254 		.ascii	"UART_3_BACKUP_STRUCT\000"
- 537      5F335F42 
- 537      41434B55 
- 537      505F5354 
- 537      52554354 
- 538              	.LASF1:
- 539 00c4 756E7369 		.ascii	"unsigned char\000"
- 539      676E6564 
- 539      20636861 
- 539      7200
- 540              	.LASF11:
- 541 00d2 63686172 		.ascii	"char\000"
+ 531      206C6F6E 
+ 531      6720756E 
+ 531      7369676E 
+ 531      65642069 
+ 532              	.LASF17:
+ 533 0076 55415254 		.ascii	"UART_3_RestoreConfig\000"
+ 533      5F335F52 
+ 533      6573746F 
+ 533      7265436F 
+ 533      6E666967 
+ 534              	.LASF15:
+ 535 008b 55415254 		.ascii	"UART_3_BACKUP_STRUCT\000"
+ 535      5F335F42 
+ 535      41434B55 
+ 535      505F5354 
+ 535      52554354 
+ 536              	.LASF1:
+ 537 00a0 756E7369 		.ascii	"unsigned char\000"
+ 537      676E6564 
+ 537      20636861 
+ 537      7200
+ 538              	.LASF11:
+ 539 00ae 63686172 		.ascii	"char\000"
+ 539      00
+ 540              	.LASF18:
+ 541 00b3 55415254 		.ascii	"UART_3_Sleep\000"
+ 541      5F335F53 
+ 541      6C656570 
  541      00
- 542              	.LASF18:
- 543 00d7 55415254 		.ascii	"UART_3_Sleep\000"
- 543      5F335F53 
- 543      6C656570 
+ 542              	.LASF4:
+ 543 00c0 6C6F6E67 		.ascii	"long int\000"
+ 543      20696E74 
  543      00
- 544              	.LASF4:
- 545 00e4 6C6F6E67 		.ascii	"long int\000"
- 545      20696E74 
- 545      00
- 546              	.LASF20:
- 547 00ed 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 547      4320342E 
- 547      392E3320 
- 547      32303135 
- 547      30333033 
- 548 0120 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 548      20726576 
- 548      6973696F 
- 548      6E203232 
- 548      31323230 
- 549 0153 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 549      66756E63 
- 549      74696F6E 
- 549      2D736563 
- 549      74696F6E 
- 550              	.LASF21:
- 551 017b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_3_PM.c\000"
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\cck7SFqg.s 			page 15
+ 544              	.LASF20:
+ 545 00c9 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 545      4320342E 
+ 545      392E3320 
+ 545      32303135 
+ 545      30333033 
+ 546 00fc 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 546      20726576 
+ 546      6973696F 
+ 546      6E203232 
+ 546      31323230 
+ 547 012f 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 547      66756E63 
+ 547      74696F6E 
+ 547      2D736563 
+ 547      74696F6E 
+ 548              	.LASF21:
+ 549 0157 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\UART_3_PM.c\000"
+ 549      6E657261 
+ 549      7465645F 
+ 549      536F7572 
+ 549      63655C50 
+ 550              	.LASF10:
+ 551 017c 646F7562 		.ascii	"double\000"
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccBgjThn.s 			page 15
 
 
- 551      6E657261 
- 551      7465645F 
- 551      536F7572 
- 551      63655C50 
- 552              	.LASF10:
- 553 01a0 646F7562 		.ascii	"double\000"
- 553      6C6500
- 554              	.LASF3:
- 555 01a7 73686F72 		.ascii	"short unsigned int\000"
- 555      7420756E 
- 555      7369676E 
- 555      65642069 
- 555      6E7400
- 556              	.LASF0:
- 557 01ba 7369676E 		.ascii	"signed char\000"
- 557      65642063 
- 557      68617200 
+ 551      6C6500
+ 552              	.LASF3:
+ 553 0183 73686F72 		.ascii	"short unsigned int\000"
+ 553      7420756E 
+ 553      7369676E 
+ 553      65642069 
+ 553      6E7400
+ 554              	.LASF0:
+ 555 0196 7369676E 		.ascii	"signed char\000"
+ 555      65642063 
+ 555      68617200 
+ 556              	.LASF22:
+ 557 01a2 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\972057.cydsn\000"
+ 557      73657273 
+ 557      5C6B696E 
+ 557      67695C44 
+ 557      65736B74 
  558              	.LASF23:
  559 01c6 55415254 		.ascii	"UART_3_backupStruct_\000"
  559      5F335F62 

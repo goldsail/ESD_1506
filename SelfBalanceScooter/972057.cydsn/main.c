@@ -124,16 +124,10 @@ int main()
         GetBluetoothString(buffer);
         if (buffer[0] != '\0')
         {
-            if (buffer[0] == '-')
-            {
-                sscanf(buffer + 1, "%d", &temp);
-                temp = -temp;
-            }
-            else
-            {
-                sscanf(buffer, "%d", &temp);
-            }
-            if (temp >= -200 && temp <= 200)
+            
+            sscanf(buffer, "%d", &temp);
+            
+            if (temp >= -80 && temp <= -20)
             {
                 bias = temp;
             }

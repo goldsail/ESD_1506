@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
   29:.\Generated_Source\PSoC5/cyutils.c ****     *
   30:.\Generated_Source\PSoC5/cyutils.c ****     * Return:
   31:.\Generated_Source\PSoC5/cyutils.c ****     *  None
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 2
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 2
 
 
   32:.\Generated_Source\PSoC5/cyutils.c ****     *
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
   66 0030 BD46     		mov	sp, r7
   67              		.cfi_def_cfa_register 13
   68              		@ sp needed
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 3
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 3
 
 
   69 0032 5DF8047B 		ldr	r7, [sp], #4
@@ -138,10 +138,10 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
   83 0006 00000000 		.4byte	.Ldebug_abbrev0
   84 000a 04       		.byte	0x4
   85 000b 01       		.uleb128 0x1
-  86 000c 58000000 		.4byte	.LASF16
+  86 000c 34000000 		.4byte	.LASF16
   87 0010 01       		.byte	0x1
-  88 0011 2A000000 		.4byte	.LASF17
-  89 0015 00000000 		.4byte	.LASF18
+  88 0011 06000000 		.4byte	.LASF17
+  89 0015 C2000000 		.4byte	.LASF18
   90 0019 00000000 		.4byte	.Ldebug_ranges0+0
   91 001d 00000000 		.4byte	0
   92 0021 00000000 		.4byte	.Ldebug_line0
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  123 0058 07       		.byte	0x7
  124 0059 47010000 		.4byte	.LASF7
  125 005d 03       		.uleb128 0x3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 4
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 4
 
 
  126 005e 04       		.byte	0x4
@@ -215,7 +215,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  157 009d 05       		.uleb128 0x5
  158 009e 77000000 		.4byte	0x77
  159 00a2 06       		.uleb128 0x6
- 160 00a3 4D000000 		.4byte	.LASF19
+ 160 00a3 29000000 		.4byte	.LASF19
  161 00a7 01       		.byte	0x1
  162 00a8 25       		.byte	0x25
  163 00a9 00000000 		.4byte	.LFB0
@@ -232,13 +232,13 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  174 00c3 91       		.byte	0x91
  175 00c4 6C       		.sleb128 -20
  176 00c5 07       		.uleb128 0x7
- 177 00c6 24000000 		.4byte	.LASF15
+ 177 00c6 00000000 		.4byte	.LASF15
  178 00ca 01       		.byte	0x1
  179 00cb 25       		.byte	0x25
  180 00cc 77000000 		.4byte	0x77
  181 00d0 02       		.uleb128 0x2
  182 00d1 91       		.byte	0x91
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 5
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 5
 
 
  183 00d2 68       		.sleb128 -24
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  237 0023 3E       		.uleb128 0x3e
  238 0024 0B       		.uleb128 0xb
  239 0025 03       		.uleb128 0x3
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 6
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 6
 
 
  240 0026 08       		.uleb128 0x8
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  294 005d 0B       		.uleb128 0xb
  295 005e 3B       		.uleb128 0x3b
  296 005f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 7
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 7
 
 
  297 0060 49       		.uleb128 0x49
@@ -417,44 +417,44 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  348      00000201 
  348      FB0E0D00 
  348      01010101 
- 349              	.LASF18:
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 8
+ 349              	.LASF15:
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 8
 
 
- 350 0000 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\962158.cydsn\000"
- 350      73657273 
- 350      5C6B696E 
- 350      67695C44 
- 350      65736B74 
- 351              	.LASF15:
- 352 0024 76616C75 		.ascii	"value\000"
- 352      6500
- 353              	.LASF17:
- 354 002a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cyutils.c\000"
- 354      6E657261 
- 354      7465645F 
- 354      536F7572 
- 354      63655C50 
- 355              	.LASF19:
- 356 004d 43795365 		.ascii	"CySetReg24\000"
- 356      74526567 
- 356      323400
- 357              	.LASF16:
- 358 0058 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 358      4320342E 
- 358      392E3320 
- 358      32303135 
- 358      30333033 
- 359 008b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
- 359      20726576 
- 359      6973696F 
- 359      6E203232 
- 359      31323230 
- 360 00be 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 360      66756E63 
- 360      74696F6E 
- 360      2D736563 
- 360      74696F6E 
+ 350 0000 76616C75 		.ascii	"value\000"
+ 350      6500
+ 351              	.LASF17:
+ 352 0006 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\cyutils.c\000"
+ 352      6E657261 
+ 352      7465645F 
+ 352      536F7572 
+ 352      63655C50 
+ 353              	.LASF19:
+ 354 0029 43795365 		.ascii	"CySetReg24\000"
+ 354      74526567 
+ 354      323400
+ 355              	.LASF16:
+ 356 0034 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 356      4320342E 
+ 356      392E3320 
+ 356      32303135 
+ 356      30333033 
+ 357 0067 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m3 -mthumb -g -O"
+ 357      20726576 
+ 357      6973696F 
+ 357      6E203232 
+ 357      31323230 
+ 358 009a 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 358      66756E63 
+ 358      74696F6E 
+ 358      2D736563 
+ 358      74696F6E 
+ 359              	.LASF18:
+ 360 00c2 433A5C55 		.ascii	"C:\\Users\\kingi\\Desktop\\972057.cydsn\000"
+ 360      73657273 
+ 360      5C6B696E 
+ 360      67695C44 
+ 360      65736B74 
  361              	.LASF14:
  362 00e6 61646472 		.ascii	"addr\000"
  362      00
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 1
  371              	.LASF3:
  372 0119 73686F72 		.ascii	"short unsigned int\000"
  372      7420756E 
-ARM GAS  C:\Users\kingi\AppData\Local\Temp\ccA2LiW6.s 			page 9
+ARM GAS  C:\Users\kingi\AppData\Local\Temp\cc4UGkio.s 			page 9
 
 
  372      7369676E 

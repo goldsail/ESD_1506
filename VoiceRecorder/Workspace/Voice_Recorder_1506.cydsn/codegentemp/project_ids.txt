@@ -1,6 +1,0 @@
-D:\Projects\ESD\ESD_1506\VoiceRecorder\Workspace\Voice_Recorder_1506.cydsn\Voice_Recorder_1506.cyprj|75bce930-30d2-49e2-9df9-5c9dd6cc36eb
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|423a5174-a0d5-4b4d-9e4f-0649ef70de77
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\default\CyReferenceLibrary\CyReferenceLibrary.cylib\CyReferenceLibrary.cyprj|29f882ce-ca82-45af-a5cb-c93277d31351
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|f2182d9e-500a-46f0-a377-bc384be7c138
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|f0b3617c-5504-4235-a224-3a7930948660
-C:\Program Files (x86)\Cypress\PSoC Creator\3.3\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|589e374e-1f48-4407-9144-de16c2defa60

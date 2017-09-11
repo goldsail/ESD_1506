@@ -1,1 +1,0 @@
-'C:\Users\kingi\Desktop\972057.cydsn\main.c' 'C:\Users\kingi\Desktop\972057.cydsn\pid.c' -o .o -T C_FILE -I 'C:\Users\kingi\Desktop\972057.cydsn' -I 'C:\Users\kingi\Desktop\972057.cydsn\Generated_Source\PSoC5' -f 'C:\Users\kingi\Desktop\972057.cydsn\ARM_GCC_493\Debug\.deps\C_FILE.d'

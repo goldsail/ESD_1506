@@ -1,0 +1,1 @@
+"./drivers/cfal96x64x16.obj" "./utils/uartstdio.obj" "./temperature.obj" "./startup_ccs.obj" -l"libc.a" -l"C:/StellarisWare/boards/ek-lm4f232/hello/ccs/../../../../driverlib/ccs-cm4f/Debug/driverlib-cm4f.lib" -l"C:/StellarisWare/boards/ek-lm4f232/hello/ccs/../../../../grlib/ccs-cm4f/Debug/grlib-cm4f.lib" "../temperature_ccs.cmd" 

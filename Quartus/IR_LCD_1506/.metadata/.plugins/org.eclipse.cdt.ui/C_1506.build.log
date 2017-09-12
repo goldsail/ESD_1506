@@ -1,0 +1,75 @@
+15:51:28 **** Incremental Build of configuration Nios II for project C_1506 ****
+make all 
+Info: Building ../C_1506_bsp/
+C:/altera/15.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../C_1506_bsp/
+[BSP build complete]
+Info: Compiling main_1506.c to obj/default/main_1506.o
+nios2-elf-gcc -xc -MP -MMD -c -I../C_1506_bsp//HAL/inc -I../C_1506_bsp/ -I../C_1506_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/main_1506.o main_1506.c
+main_1506.c:67:5: warning: built-in function 'index' declared as non-function
+ int index;
+     ^
+main_1506.c:73:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "1. Alma Mater   ",
+   ^
+main_1506.c:73:3: warning: (near initialization for 'titles[0]') [-Wpointer-sign]
+main_1506.c:74:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "2. Rock and Roll",
+   ^
+main_1506.c:74:3: warning: (near initialization for 'titles[1]') [-Wpointer-sign]
+main_1506.c:75:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "3. Rhythm Blues ",
+   ^
+main_1506.c:75:3: warning: (near initialization for 'titles[2]') [-Wpointer-sign]
+main_1506.c:76:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "4. Classical    ",
+   ^
+main_1506.c:76:3: warning: (near initialization for 'titles[3]') [-Wpointer-sign]
+main_1506.c:77:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "5. Rap          ",
+   ^
+main_1506.c:77:3: warning: (near initialization for 'titles[4]') [-Wpointer-sign]
+main_1506.c:78:3: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+   "6. Jazz         ",
+   ^
+main_1506.c:78:3: warning: (near initialization for 'titles[5]') [-Wpointer-sign]
+main_1506.c:80:1: warning: pointer targets in initialization differ in signedness [-Wpointer-sign]
+ };
+ ^
+main_1506.c:80:1: warning: (near initialization for 'titles[6]') [-Wpointer-sign]
+main_1506.c: In function 'main':
+main_1506.c:89:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+main_1506.c: In function 'displayTitle':
+main_1506.c:289:2: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
+  LCD_Disp(1, 0, "                ", 16); delay();
+  ^
+In file included from main_1506.c:18:0:
+LCD_1506_Qsys.h:22:6: note: expected 'unsigned char *' but argument is of type 'char *'
+ void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
+      ^
+main_1506.c:290:2: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
+  LCD_Disp(1, 0, buffer, 13); delay();
+  ^
+In file included from main_1506.c:18:0:
+LCD_1506_Qsys.h:22:6: note: expected 'unsigned char *' but argument is of type 'char *'
+ void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
+      ^
+main_1506.c:291:2: warning: pointer targets in passing argument 3 of 'LCD_Disp' differ in signedness [-Wpointer-sign]
+  LCD_Disp(2, 0, "                ", 16); delay();
+  ^
+In file included from main_1506.c:18:0:
+LCD_1506_Qsys.h:22:6: note: expected 'unsigned char *' but argument is of type 'char *'
+ void LCD_Disp(unsigned char Row, unsigned char position , unsigned char *pData , unsigned char len);
+      ^
+Info: Linking C_1506.elf
+nios2-elf-g++  -T'../C_1506_bsp//linker.x' -msys-crt0='../C_1506_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../C_1506_bsp/   -Wl,-Map=C_1506.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx  -o C_1506.elf obj/default/LCD_1506_Qsys.o obj/default/main_1506.o -lm -msys-lib=m
+nios2-elf-insert C_1506.elf --thread_model hal --cpu_name nios2_gen2 --qsys true --simulation_enabled false --id 2 --sidp 0x100016a0 --timestamp 1504073683 --stderr_dev jtag_uart --stdin_dev jtag_uart --stdout_dev jtag_uart --sopc_system_name kernel --quartus_project_dir "D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506" --jdi D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/software/C_1506_bsp/../../IR_LCD_Qsys.jdi --sopcinfo D:/Projects/ESD/tasks_1506/Quartus/IR_LCD_1506/software/C_1506_bsp/../../kernel.sopcinfo
+Info: (C_1506.elf) 31 KBytes program size (code + initialized data).
+Info:              131033 KBytes free for stack + heap.
+Info: Creating C_1506.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source C_1506.elf >C_1506.objdump
+[C_1506 build complete]
+
+15:51:30 Build Finished (took 1s.441ms)
+

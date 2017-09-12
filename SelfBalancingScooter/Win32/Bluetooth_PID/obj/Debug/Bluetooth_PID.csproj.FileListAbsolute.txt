@@ -1,0 +1,11 @@
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\bin\Debug\Bluetooth_PID.exe.config
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\bin\Debug\Bluetooth_PID.exe
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\bin\Debug\Bluetooth_PID.pdb
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\obj\Debug\Bluetooth_PID.csprojResolveAssemblyReference.cache
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\obj\Debug\Bluetooth_PID.Properties.Resources.resources
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\obj\Debug\Bluetooth_PID.csproj.GenerateResource.Cache
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\obj\Debug\Bluetooth_PID.exe
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\obj\Debug\Bluetooth_PID.pdb
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\obj\Debug\Bluetooth_PID.FormMain.resources
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\bin\Debug\Microsoft.Kinect.dll
+D:\Projects\ESD\Bluetooth_PID\Bluetooth_PID\bin\Debug\Microsoft.Kinect.xml

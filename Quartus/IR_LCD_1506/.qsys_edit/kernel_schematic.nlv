@@ -1,0 +1,96 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst kernel.sysid_qsys -pg 1 -lvl 3 -y 1510
+preplace inst kernel.pio_9 -pg 1 -lvl 3 -y 4190
+preplace inst kernel.pio_12 -pg 1 -lvl 3 -y 2790
+preplace inst kernel.nios2_gen2.cpu -pg 1
+preplace inst kernel.User_GIO_PWM_8 -pg 1 -lvl 3 -y 2390
+preplace inst kernel.pio_13 -pg 1 -lvl 3 -y 2890
+preplace inst kernel.User_GIO_PWM_9 -pg 1 -lvl 3 -y 2490
+preplace inst kernel.pio_14 -pg 1 -lvl 3 -y 2990
+preplace inst kernel.jtag_uart -pg 1 -lvl 3 -y 550
+preplace inst kernel.pio_15 -pg 1 -lvl 3 -y 3090
+preplace inst kernel.nios2_gen2.reset_bridge -pg 1
+preplace inst kernel.User_GIO_PWM_10 -pg 1 -lvl 3 -y 230
+preplace inst kernel.pio_16 -pg 1 -lvl 3 -y 3390
+preplace inst kernel.pio_0 -pg 1 -lvl 3 -y 1590
+preplace inst kernel.User_GIO_PWM_11 -pg 1 -lvl 3 -y 710
+preplace inst kernel.pio_17 -pg 1 -lvl 3 -y 3490
+preplace inst kernel.pio_1 -pg 1 -lvl 3 -y 1690
+preplace inst kernel.User_GIO_PWM_12 -pg 1 -lvl 3 -y 910
+preplace inst kernel.User_GIO_PWM_0 -pg 1 -lvl 3 -y 30
+preplace inst kernel.pio_2 -pg 1 -lvl 3 -y 3190
+preplace inst kernel.clk -pg 1 -lvl 1 -y 650
+preplace inst kernel.User_GIO_PWM_13 -pg 1 -lvl 3 -y 1010
+preplace inst kernel.User_GIO_PWM_1 -pg 1 -lvl 3 -y 130
+preplace inst kernel.pio_3 -pg 1 -lvl 3 -y 3290
+preplace inst kernel.User_GIO_PWM_2 -pg 1 -lvl 3 -y 1790
+preplace inst kernel.User_GIO_PWM_14 -pg 1 -lvl 3 -y 1110
+preplace inst kernel.pio_4 -pg 1 -lvl 3 -y 3590
+preplace inst kernel.User_GIO_PWM_3 -pg 1 -lvl 3 -y 1890
+preplace inst kernel.User_GIO_PWM_15 -pg 1 -lvl 3 -y 1210
+preplace inst kernel.LCD_1506 -pg 1 -lvl 3 -y 810
+preplace inst kernel -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst kernel.pio_5 -pg 1 -lvl 3 -y 3690
+preplace inst kernel.User_GIO_PWM_4 -pg 1 -lvl 3 -y 1990
+preplace inst kernel.User_GIO_PWM_16 -pg 1 -lvl 3 -y 1310
+preplace inst kernel.pio_6 -pg 1 -lvl 3 -y 3790
+preplace inst kernel.nios2_gen2.clock_bridge -pg 1
+preplace inst kernel.nios2_gen2 -pg 1 -lvl 2 -y 580
+preplace inst kernel.new_sdram_controller -pg 1 -lvl 3 -y 3890
+preplace inst kernel.User_GIO_PWM_5 -pg 1 -lvl 3 -y 2090
+preplace inst kernel.User_GIO_PWM_17 -pg 1 -lvl 3 -y 1410
+preplace inst kernel.pio_7 -pg 1 -lvl 3 -y 4090
+preplace inst kernel.pio_10 -pg 1 -lvl 3 -y 2590
+preplace inst kernel.User_GIO_PWM_6 -pg 1 -lvl 3 -y 2190
+preplace inst kernel.pio_8 -pg 1 -lvl 3 -y 3990
+preplace inst kernel.pio_11 -pg 1 -lvl 3 -y 2690
+preplace inst kernel.User_GIO_PWM_7 -pg 1 -lvl 3 -y 2290
+preplace inst kernel.IR_1506 -pg 1 -lvl 3 -y 430
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_0.conduit_end_0,(SLAVE)kernel.user_gio_pwm_0_conduit_end_0) 1 0 3 NJ 100 NJ 100 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_9_external_connection,(SLAVE)pio_9.external_connection) 1 0 3 NJ 4220 NJ 4220 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_13_external_connection,(SLAVE)pio_13.external_connection) 1 0 3 NJ 2920 NJ 2920 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_10_external_connection,(SLAVE)pio_10.external_connection) 1 0 3 NJ 2620 NJ 2620 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_6_external_connection,(SLAVE)pio_6.external_connection) 1 0 3 NJ 3820 NJ 3820 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_4.external_connection,(SLAVE)kernel.pio_4_external_connection) 1 0 3 NJ 3620 NJ 3620 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_3_external_connection,(SLAVE)pio_3.external_connection) 1 0 3 NJ 3320 NJ 3320 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)LCD_1506.conduit_end_0,(SLAVE)kernel.lcd_1506_conduit_end_0) 1 0 3 NJ 820 NJ 820 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_7.conduit_end_0,(SLAVE)kernel.user_gio_pwm_7_conduit_end_0) 1 0 3 NJ 2360 NJ 2360 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.user_gio_pwm_2_conduit_end_0,(SLAVE)User_GIO_PWM_2.conduit_end_0) 1 0 3 NJ 1860 NJ 1860 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.user_gio_pwm_10_conduit_end_0,(SLAVE)User_GIO_PWM_10.conduit_end_0) 1 0 3 NJ 300 NJ 300 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_12.external_connection,(SLAVE)kernel.pio_12_external_connection) 1 0 3 NJ 2820 NJ 2820 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_14.external_connection,(SLAVE)kernel.pio_14_external_connection) 1 0 3 NJ 3020 NJ 3020 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_9.conduit_end_0,(SLAVE)kernel.user_gio_pwm_9_conduit_end_0) 1 0 3 NJ 2560 NJ 2560 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_17.conduit_end_0,(SLAVE)kernel.user_gio_pwm_17_conduit_end_0) 1 0 3 NJ 1480 NJ 1480 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.user_gio_pwm_16_conduit_end_0,(SLAVE)User_GIO_PWM_16.conduit_end_0) 1 0 3 NJ 1380 NJ 1380 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_8.external_connection,(SLAVE)kernel.pio_8_external_connection) 1 0 3 NJ 4020 NJ 4020 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_0_external_connection,(SLAVE)pio_0.external_connection) 1 0 3 NJ 1620 NJ 1620 NJ
+preplace netloc FAN_OUT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_3.clock,(SLAVE)pio_16.clk,(SLAVE)LCD_1506.clock,(SLAVE)User_GIO_PWM_10.clock,(SLAVE)User_GIO_PWM_15.clock,(SLAVE)pio_9.clk,(SLAVE)User_GIO_PWM_2.clock,(SLAVE)nios2_gen2.clk,(SLAVE)User_GIO_PWM_12.clock,(SLAVE)User_GIO_PWM_6.clock,(SLAVE)User_GIO_PWM_9.clock,(SLAVE)pio_14.clk,(SLAVE)User_GIO_PWM_13.clock,(SLAVE)pio_7.clk,(SLAVE)User_GIO_PWM_1.clock,(SLAVE)User_GIO_PWM_5.clock,(SLAVE)pio_12.clk,(SLAVE)User_GIO_PWM_4.clock,(SLAVE)pio_15.clk,(SLAVE)pio_4.clk,(SLAVE)pio_17.clk,(SLAVE)pio_1.clk,(SLAVE)pio_2.clk,(SLAVE)IR_1506.clock,(SLAVE)pio_8.clk,(SLAVE)User_GIO_PWM_14.clock,(SLAVE)pio_13.clk,(SLAVE)User_GIO_PWM_8.clock,(MASTER)clk.clk,(SLAVE)pio_3.clk,(SLAVE)User_GIO_PWM_0.clock,(SLAVE)jtag_uart.clk,(SLAVE)pio_5.clk,(SLAVE)pio_6.clk,(SLAVE)sysid_qsys.clk,(SLAVE)User_GIO_PWM_11.clock,(SLAVE)User_GIO_PWM_16.clock,(SLAVE)pio_0.clk,(SLAVE)pio_10.clk,(SLAVE)User_GIO_PWM_7.clock,(SLAVE)User_GIO_PWM_17.clock,(SLAVE)pio_11.clk,(SLAVE)new_sdram_controller.clk) 1 1 2 400 540 860
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_11.conduit_end_0,(SLAVE)kernel.user_gio_pwm_11_conduit_end_0) 1 0 3 NJ 780 NJ 780 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)clk.clk_in,(SLAVE)kernel.clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.user_gio_pwm_5_conduit_end_0,(SLAVE)User_GIO_PWM_5.conduit_end_0) 1 0 3 NJ 2160 NJ 2160 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_13.conduit_end_0,(SLAVE)kernel.user_gio_pwm_13_conduit_end_0) 1 0 3 NJ 1080 NJ 1080 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)IR_1506.conduit_end_0,(SLAVE)kernel.ir_1506_conduit_end_0) 1 0 3 NJ 500 NJ 500 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_8.conduit_end_0,(SLAVE)kernel.user_gio_pwm_8_conduit_end_0) 1 0 3 NJ 2460 NJ 2460 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_5_external_connection,(SLAVE)pio_5.external_connection) 1 0 3 NJ 3720 NJ 3720 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_16_external_connection,(SLAVE)pio_16.external_connection) 1 0 3 NJ 3420 NJ 3420 NJ
+preplace netloc INTERCONNECT<net_container>kernel</net_container>(SLAVE)pio_6.reset,(SLAVE)pio_1.reset,(SLAVE)pio_5.reset,(SLAVE)pio_13.reset,(MASTER)nios2_gen2.debug_reset_request,(SLAVE)User_GIO_PWM_0.clock_reset,(SLAVE)User_GIO_PWM_14.clock_reset,(SLAVE)pio_11.reset,(SLAVE)pio_15.reset,(SLAVE)nios2_gen2.reset,(SLAVE)User_GIO_PWM_1.clock_reset,(SLAVE)User_GIO_PWM_13.clock_reset,(SLAVE)pio_3.reset,(SLAVE)sysid_qsys.reset,(SLAVE)pio_0.reset,(SLAVE)User_GIO_PWM_11.clock_reset,(SLAVE)User_GIO_PWM_5.clock_reset,(SLAVE)User_GIO_PWM_4.clock_reset,(SLAVE)jtag_uart.reset,(SLAVE)pio_10.reset,(SLAVE)pio_14.reset,(SLAVE)User_GIO_PWM_2.clock_reset,(SLAVE)User_GIO_PWM_8.clock_reset,(SLAVE)User_GIO_PWM_16.clock_reset,(SLAVE)IR_1506.clock_reset,(MASTER)clk.clk_reset,(SLAVE)User_GIO_PWM_12.clock_reset,(SLAVE)pio_16.reset,(SLAVE)User_GIO_PWM_17.clock_reset,(SLAVE)pio_7.reset,(SLAVE)pio_9.reset,(SLAVE)new_sdram_controller.reset,(SLAVE)User_GIO_PWM_3.clock_reset,(SLAVE)User_GIO_PWM_6.clock_reset,(SLAVE)pio_4.reset,(SLAVE)pio_17.reset,(SLAVE)User_GIO_PWM_15.clock_reset,(SLAVE)pio_8.reset,(SLAVE)pio_12.reset,(SLAVE)User_GIO_PWM_10.clock_reset,(SLAVE)User_GIO_PWM_9.clock_reset,(SLAVE)LCD_1506.clock_reset,(SLAVE)User_GIO_PWM_7.clock_reset,(SLAVE)pio_2.reset) 1 1 2 420 720 880
+preplace netloc INTERCONNECT<net_container>kernel</net_container>(SLAVE)pio_8.s1,(SLAVE)User_GIO_PWM_4.avalon_slave_0,(SLAVE)sysid_qsys.control_slave,(SLAVE)pio_11.s1,(SLAVE)User_GIO_PWM_16.avalon_slave_0,(SLAVE)pio_15.s1,(SLAVE)nios2_gen2.debug_mem_slave,(SLAVE)pio_1.s1,(SLAVE)pio_5.s1,(MASTER)nios2_gen2.instruction_master,(MASTER)nios2_gen2.data_master,(SLAVE)pio_14.s1,(SLAVE)User_GIO_PWM_6.avalon_slave_0,(SLAVE)User_GIO_PWM_5.avalon_slave_0,(SLAVE)User_GIO_PWM_10.avalon_slave_0,(SLAVE)IR_1506.avalon_slave_0,(SLAVE)User_GIO_PWM_7.avalon_slave_0,(SLAVE)LCD_1506.avalon_slave_0,(SLAVE)pio_4.s1,(SLAVE)pio_9.s1,(SLAVE)pio_16.s1,(SLAVE)pio_3.s1,(SLAVE)User_GIO_PWM_14.avalon_slave_0,(SLAVE)pio_12.s1,(SLAVE)pio_7.s1,(SLAVE)User_GIO_PWM_1.avalon_slave_0,(SLAVE)User_GIO_PWM_12.avalon_slave_0,(SLAVE)User_GIO_PWM_13.avalon_slave_0,(SLAVE)pio_10.s1,(SLAVE)User_GIO_PWM_17.avalon_slave_0,(SLAVE)User_GIO_PWM_9.avalon_slave_0,(SLAVE)pio_2.s1,(SLAVE)pio_13.s1,(SLAVE)pio_0.s1,(SLAVE)pio_17.s1,(SLAVE)new_sdram_controller.s1,(SLAVE)User_GIO_PWM_11.avalon_slave_0,(SLAVE)User_GIO_PWM_15.avalon_slave_0,(SLAVE)pio_6.s1,(SLAVE)jtag_uart.avalon_jtag_slave,(SLAVE)User_GIO_PWM_3.avalon_slave_0,(SLAVE)User_GIO_PWM_0.avalon_slave_0,(SLAVE)User_GIO_PWM_2.avalon_slave_0,(SLAVE)User_GIO_PWM_8.avalon_slave_0) 1 1 2 420 520 820
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_6.conduit_end_0,(SLAVE)kernel.user_gio_pwm_6_conduit_end_0) 1 0 3 NJ 2260 NJ 2260 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_3.conduit_end_0,(SLAVE)kernel.user_gio_pwm_3_conduit_end_0) 1 0 3 NJ 1960 NJ 1960 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_12.conduit_end_0,(SLAVE)kernel.user_gio_pwm_12_conduit_end_0) 1 0 3 NJ 980 NJ 980 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_7_external_connection,(SLAVE)pio_7.external_connection) 1 0 3 NJ 4120 NJ 4120 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)new_sdram_controller.wire,(SLAVE)kernel.new_sdram_controller_wire) 1 0 3 NJ 3960 NJ 3960 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_1.conduit_end_0,(SLAVE)kernel.user_gio_pwm_1_conduit_end_0) 1 0 3 NJ 200 NJ 200 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_15.conduit_end_0,(SLAVE)kernel.user_gio_pwm_15_conduit_end_0) 1 0 3 NJ 1280 NJ 1280 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.user_gio_pwm_14_conduit_end_0,(SLAVE)User_GIO_PWM_14.conduit_end_0) 1 0 3 NJ 1180 NJ 1180 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_17.external_connection,(SLAVE)kernel.pio_17_external_connection) 1 0 3 NJ 3520 NJ 3520 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_15_external_connection,(SLAVE)pio_15.external_connection) 1 0 3 NJ 3120 NJ 3120 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_11.external_connection,(SLAVE)kernel.pio_11_external_connection) 1 0 3 NJ 2720 NJ 2720 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)User_GIO_PWM_4.conduit_end_0,(SLAVE)kernel.user_gio_pwm_4_conduit_end_0) 1 0 3 NJ 2060 NJ 2060 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.reset,(SLAVE)clk.clk_in_reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)pio_1.external_connection,(SLAVE)kernel.pio_1_external_connection) 1 0 3 NJ 1720 NJ 1720 NJ
+preplace netloc EXPORT<net_container>kernel</net_container>(SLAVE)kernel.pio_2_external_connection,(SLAVE)pio_2.external_connection) 1 0 3 NJ 3220 NJ 3220 NJ
+preplace netloc FAN_OUT<net_container>kernel</net_container>(MASTER)nios2_gen2.irq,(SLAVE)IR_1506.interrupt_sender_0,(SLAVE)jtag_uart.irq) 1 2 1 840
+levelinfo -pg 1 0 190 1110
+levelinfo -hier kernel 200 230 560 950 1100

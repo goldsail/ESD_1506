@@ -1,0 +1,1 @@
+'D:\Projects\ESD\PSoC\Workspace\light_1506.cydsn\Generated_Source\PSoC5\CyBootAsmGnu.s' -o .o -T GNU_ARM_ASM_FILE -I 'D:\Projects\ESD\PSoC\Workspace\light_1506.cydsn' -I 'D:\Projects\ESD\PSoC\Workspace\light_1506.cydsn\Generated_Source\PSoC5' -f 'D:\Projects\ESD\PSoC\Workspace\light_1506.cydsn\ARM_GCC_493\Debug\.deps\GNU_ARM_ASM_FILE.d'

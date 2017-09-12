@@ -1,0 +1,19 @@
+# SystemID不匹配问题的排查经验
+
+很多同学在做 FPGA 提高实验的时候，在将程序从 Eclipse 写入 SOPC 的时候，遇到了“System ID 不匹配”或“timestamp 不匹配”之类的错误。我被这个错误困扰了一整天，在此分享一下我在排查错误中的一些经验：
+
+首先，我来谈谈我对于这个系统的理解。我们的系统有三大部分，Qsys、Verilog（Quartus）、C（Eclipse）。我觉得这三者之间的关系是，Qsys 是 parent，Verilog 和 C 是 Qsys 的两个 child。我们可以把 Qsys 看成是一个自动的代码生成工具，我们在 Qsys 里面指定各个模块的参数和接线，然后使用“Generate HDL”功能，就能将我们的设计图自动转化成 Verilog 代码（参见《基本实验指导》44页），并放在“synthesis/*.qip”文件中。在 Verilog 工程中包含该文件，并且按照“HDL Example”中的示例代码那样在顶层模块中，声明相应的子模块即可（《指导》58页）。同理，我们在 Eclipse 工程中导入由 Qsys 生成的 .sopcinfo 文件，即可使用由 Qsys 自动生成的 C 代码（例如 system.h）。
+
+因此，SystemID 和 timestamp 的作用也就出现了：上面提到，Verilog 和 C 代码必须由同一个版本的 Qsys 导出，才能保证不会不兼容。如果我们从 Qsys 中生成 Verilog 代码之后，对 Qsys 进行了修改但没有重新生成 Verilog 代码，那么 Verilog 代码就还是基于旧版本的 Qsys；假若 Eclipse 工程由新版本的 Qsys 生成的话，那么就会版本不一致，导致 SystemID 或者 timestamp 不匹配。
+
+我们在 Target Connection 界面（《指导》80页）中，有个按钮叫做“System ID Properties”，在这里我们可以看到两种 System ID：Expected System ID 是 C 代码中的（位于 system.h 文件中的 #define），一般是个较小的数字；另一个则是 FPGA 中实际运行的，由 Quartus 写入。如果两者不匹配，可能的原因有：
+
+1. Quartus 并没有将最新版的电路布局写入 FPGA 运行。排查办法是，全编译 Verilog 后，找到 .sof 和 .pof 两个文件，看看它们的修改时间是否是最新的。如果它们的修改时间还在很早以前，说明 Quartus 在全编译的过程中，并没有更新这两个文件，自然在 FPGA 中实际运行的程序就不是最新的，甚至根本没有写入 FPGA。据老师说，如果 Quartus 没有正确破解，是可能出现编译时不刷新 .sof 文件的情况的，可以考虑换台装有正确破解的 Quartus 的电脑试试。
+
+2. Verilog 和 C 程序不是由同一个版本的 Qsys 工程导出。解决方案是，确认 Qsys 文件设置正确后，重新由 Qsys 工程导出 Verilog 和 .sopcinfo 文件，并重新建立（注意是新建，不是重新导入原有的）Eclipse 工程。当在“System ID Properties”中看到匹配的 System ID 时，就说明我们配置成功了。
+
+3. 在 Verilog 看来，整个 SOPC（包含 C 代码）都是一个子模块（《指导》58页）。Verilog 只负责硬件电路的连接，而 SOPC 子模块内部则可以看成一个微型计算机，可以执行 C 语言程序，并通过定义在 system.h 中的接口，访问外设。Verilog 工程中定义的那些 wire 变量，就相当于连接线，将 SOPC 的外设端口，和 FPGA 开发板的物理端口（Pin Planner）连接起来，故需要那些 assign 语句（《指导》58页）。至于 Verilog 和 C 内部的错误，应该在编译的时候都会报错，不至于引起 System ID 不匹配的问题。
+
+补充一条张芙作同学提出的办法：
+在Quartus ii中顶层代码中，复位信号的配置是错误的，导致没有复位信号。 把代码改正就好了。
+谢谢补充！

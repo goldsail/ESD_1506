@@ -6,7 +6,7 @@
 * 展示PPT：根目录下的```presentation.pdf```。
 * ARM提高实验代码：```ARM```文件夹
 * PSoC提高实验代码：```PSoC```文件夹
-* FPGA提高实验代码：```FPGA```文件夹
+* FPGA提高实验代码：```Quartus```文件夹
 * 综合实验代码：```VoiceRecorder```文件夹
 * 创新实验代码：
   - PSoC部分：```SelfBalancingScooter/PSoC```文件夹
